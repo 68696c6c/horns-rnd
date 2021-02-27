@@ -2,6 +2,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 
 import { theme } from '../../test'
+
 import { Button } from '.'
 
 describe('Button', () => {

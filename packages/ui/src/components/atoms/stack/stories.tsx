@@ -10,8 +10,11 @@ export default {
   component: Stack,
 } as Meta
 
-// eslint-disable-next-line react/prop-types
-const Template: Story<StackProps> = ({ theme, breakpoint, children }) => (
+const Template: Story<StackProps> = ({
+  theme,
+  breakpoint,
+  children,
+}: StackProps) => (
   <>
     <p>Above the {breakpoint} breakpoint, these items will stack.</p>
     <Stack theme={theme} breakpoint={breakpoint}>

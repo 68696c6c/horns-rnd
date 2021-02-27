@@ -28,12 +28,12 @@ export interface BaseLinkProps extends ButtonProps {
   variant?: LinkVariant
 }
 
-export const Link = styled.a<BaseLinkProps>(({ theme, color }) => [
-  chromaticText(theme, color),
-])
+export const Link = styled.a<BaseLinkProps>(
+  ({ theme, color }: BaseLinkProps) => [chromaticText(theme, color)],
+)
 
 export const LinkButton = styled.a<ButtonProps>(
-  ({ theme, border, color, padding }) => [
+  ({ theme, border, color, padding }: ButtonProps) => [
     chromatic(theme, color),
     bordered(theme, border, theme.buttons.border),
     padded(theme, padding, theme.buttons.padding),
