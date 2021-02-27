@@ -1,0 +1,20 @@
+{
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "module": "es2015",
+    "declaration": true,
+    "moduleResolution": "node"
+  },
+  "include": [
+    "packages/ui/.storybook/main.js",
+    "packages/ui/.storybook/preview.js",
+    ".eslintrc.js",
+    "./**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "node_modules",
+    "coverage"
+  ]
+}

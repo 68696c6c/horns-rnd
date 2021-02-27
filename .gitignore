@@ -1,0 +1,11 @@
+.idea
+coverage
+dist
+node_modules
+.DS_Store
+notes.md
+yarn-error.log
+
+# Gatsby files
+.cache
+public

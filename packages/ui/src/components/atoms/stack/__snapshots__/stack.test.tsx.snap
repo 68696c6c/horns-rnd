@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stack should render as default 1`] = `
+<div>
+  <div
+    class="css-3zw93e"
+  >
+    <div>
+      one
+    </div>
+    <div>
+      two
+    </div>
+    <div>
+      three
+    </div>
+  </div>
+</div>
+`;

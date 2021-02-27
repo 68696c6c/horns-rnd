@@ -1,0 +1,45 @@
+{
+  "name": "root",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "packages/*",
+    "sites/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "docs": "yarn bootstrap && yarn workspace @horns/ui docs",
+    "docs:build": "yarn bootstrap && yarn workspace @horns/ui docs:build",
+    "build": "yarn bootstrap && yarn workspace @horns/ui build",
+    "build:watch": "yarn bootstrap && yarn workspace @horns/ui build:watch",
+    "develop": "yarn workspace gatsby-example develop",
+    "serve": "yarn workspace gatsby-example serve"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/jest": "^26.0.20",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "jest": "^26.6.3",
+    "lerna": "^3.22.1",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.5.2",
+    "ts-loader": "^8.0.17",
+    "typescript": "^4.1.5"
+  }
+}
