@@ -1,9 +1,15 @@
 {
   "name": "gatsby-example",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Example Gatsby project.",
+  "private": true,
+  "scripts": {
+    "analyze": "INTERACTIVE_ANALYZE=1 npm run build",
+    "clean": "gatsby clean",
+    "develop": "yarn clean && gatsby develop",
+    "build": "yarn clean && gatsby build",
+    "serve": "yarn build && gatsby serve"
+  },
   "dependencies": {
     "gatsby": "^2.32.3",
     "gatsby-image": "^2.11.0",
@@ -21,27 +27,6 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "prettier": "2.2.1",
     "webpack-bundle-analyzer": "^4.4.0"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "0BSD",
-  "scripts": {
-    "analyze": "INTERACTIVE_ANALYZE=1 npm run build",
-    "build": "gatsby build",
-    "serve": "gatsby build && gatsby serve",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "clean": "gatsby clean"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

@@ -7,20 +7,21 @@
     "sites/*"
   ],
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "boot": "lerna bootstrap",
     "clean": "lerna clean",
     "test": "jest --coverage",
     "test:watch": "jest --watch --coverage",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.css,.html",
+    "lint:fix": "eslint . --fix --ext .ts,.tsx,.js,.jsx,.css,.html",
     "docs": "yarn bootstrap && yarn workspace @horns/ui docs",
     "docs:build": "yarn bootstrap && yarn workspace @horns/ui docs:build",
     "build": "yarn bootstrap && yarn workspace @horns/ui build",
     "build:watch": "yarn bootstrap && yarn workspace @horns/ui build:watch",
-    "develop": "yarn workspace gatsby-example develop",
-    "serve": "yarn workspace gatsby-example serve"
+    "ex:dev": "yarn workspace gatsby-example develop",
+    "ex:serve": "yarn workspace gatsby-example serve",
+    "net:dev": "yarn workspace gatsby-netlify develop",
+    "net:serve": "yarn workspace gatsby-netlify serve"
   },
-  "dependencies": {},
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
