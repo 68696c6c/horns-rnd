@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Link should render as a button 1`] = `
+exports[`LinkEmail should render as a button 1`] = `
 <div>
   <a
     class="css-drk5ds"
@@ -11,7 +11,7 @@ exports[`Link should render as a button 1`] = `
 </div>
 `;
 
-exports[`Link should render as default 1`] = `
+exports[`LinkEmail should render as default 1`] = `
 <div>
   <a
     class="css-u6qrp8"

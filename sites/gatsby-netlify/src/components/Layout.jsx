@@ -5,7 +5,6 @@ import { withPrefix } from 'gatsby'
 import Footer from './Footer'
 import Navbar from './Navbar'
 import useSiteMetadata from './SiteMetadata'
-import './all.sass'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -50,9 +49,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div>
-        {children}
-      </div>
+      <div>{children}</div>
       <Footer />
     </div>
   )

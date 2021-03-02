@@ -1,5 +1,3 @@
-import { MinMaxBase } from './types'
-
 export enum FontFamilyFallback {
   Serif = 'serif',
   SansSerif = 'sans-serif',
