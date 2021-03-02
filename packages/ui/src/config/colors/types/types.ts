@@ -1,3 +1,5 @@
+import { UiState } from '../../utils'
+
 export enum Colorway {
   Primary = 'primary',
   Secondary = 'secondary',
