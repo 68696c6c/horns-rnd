@@ -19,21 +19,6 @@ export enum FontStyle {
   Inherit = 'inherit',
 }
 
-export enum HeadingLevel {
-  H1 = 'h1',
-  H2 = 'h2',
-  H3 = 'h3',
-  H4 = 'h4',
-  H5 = 'h5',
-  H6 = 'h6',
-}
-
-// export interface MinMaxBase {
-//   min: string
-//   max: string
-//   base: string
-// }
-
 export enum TextAlign {
   Left = 'left',
   Right = 'right',
@@ -57,7 +42,7 @@ export enum TextAlignLast {
 
 export enum TextJustify {
   None = 'none',
-  Auto = 'auto',
+  Auto = 'auto', // default
   InterWord = 'inter-word',
   InterCharacter = 'inter-character',
   Initial = 'initial',

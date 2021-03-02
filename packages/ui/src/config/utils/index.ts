@@ -18,3 +18,15 @@ export enum Side {
   Bottom = 'bottom',
   Left = 'left',
 }
+
+export enum HoverState {
+  Base = 'base',
+  Hover = 'hover',
+  Active = 'active',
+}
+
+export enum StatusState {
+  Inactive = 'inactive',
+}
+
+export type UiState = HoverState | StatusState

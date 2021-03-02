@@ -5,6 +5,11 @@ import { Breakpoints, BreakpointsConfig } from './breakpoints'
 import { Colors, ColorsConfig } from './colors'
 import { GridConfig, defaultGrid } from './grid'
 import { SizesConfig, defaultSizes } from './sizes'
+import {
+  TypographyConfig,
+  TypographyStyles,
+  makeTypographyStyles,
+} from './typography'
 
 export interface Config {
   name?: string
@@ -13,6 +18,7 @@ export interface Config {
   colors?: ColorsConfig
   grid?: Partial<GridConfig>
   sizes?: SizesConfig
+  typography?: TypographyConfig
 }
 
 export class Theme {
@@ -28,6 +34,8 @@ export class Theme {
 
   sizes: SizesConfig
 
+  typography: TypographyStyles
+
   constructor(themeConfig?: Partial<Config>) {
     const config = typeof themeConfig !== 'undefined' ? themeConfig : {}
 
@@ -38,5 +46,6 @@ export class Theme {
     this.sizes = _merge(defaultSizes, config.sizes)
     this.grid = _merge(defaultGrid, config.grid)
     this.buttons = _merge(defaultButtons, config.buttons)
+    this.typography = makeTypographyStyles(config.typography)
   }
 }

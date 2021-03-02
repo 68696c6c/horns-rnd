@@ -19,18 +19,6 @@ export enum Background {
   Secondary = 'secondary',
 }
 
-export enum BaseColorState {
-  Base = 'base',
-  Hover = 'hover',
-  Active = 'active',
-}
-
-export enum FinalColorState {
-  Inactive = 'inactive',
-}
-
-export type ColorState = BaseColorState | FinalColorState
-
 export enum BaseSwatch {
   Base = 'base',
   Border = 'border',
@@ -43,7 +31,7 @@ export enum FinalSwatch {
 export type Swatch = BaseSwatch | FinalSwatch
 
 export type ColorStates = {
-  [key in ColorState]: ColorSwatches
+  [key in UiState]: ColorSwatches
 }
 
 export type ColorSwatches = {

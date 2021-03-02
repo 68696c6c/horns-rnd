@@ -23,7 +23,7 @@ type TextDecorationStyleOption = `${TextDecorationStyle}`
 
 export interface TextDecoration {
   line: TextDecorationLineOption
-  style: TextDecorationStyleOption
+  style?: TextDecorationStyleOption
 }
 
 export enum Decoration {
@@ -43,35 +43,33 @@ export type Decorations = {
 
 export const defaultDecorations: Decorations = {
   base: {
-    line: null,
-    style: null,
+    line: TextDecorationLine.None,
   },
   none: {
-    line: 'none',
-    style: null,
+    line: TextDecorationLine.None,
   },
   overline: {
-    line: 'overline',
-    style: null,
+    line: TextDecorationLine.Overline,
+    style: TextDecorationStyle.Solid,
   },
   underline: {
-    line: 'underline',
-    style: null,
+    line: TextDecorationLine.Underline,
+    style: TextDecorationStyle.Solid,
   },
   underlineDotted: {
-    line: 'underline',
-    style: 'dotted',
+    line: TextDecorationLine.Underline,
+    style: TextDecorationStyle.Dotted,
   },
   underlineDouble: {
-    line: 'underline',
-    style: 'double',
+    line: TextDecorationLine.Underline,
+    style: TextDecorationStyle.Double,
   },
   underlineWave: {
-    line: 'underline',
-    style: 'wavy',
+    line: TextDecorationLine.Underline,
+    style: TextDecorationStyle.Wavy,
   },
   strikeThrough: {
-    line: 'line-through',
-    style: null,
+    line: TextDecorationLine.LineThrough,
+    style: TextDecorationStyle.Solid,
   },
 }

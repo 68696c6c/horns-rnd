@@ -1,13 +1,9 @@
 import Color from 'color'
 
+import { HoverState } from '../../utils'
+
 import { colorPallet, Config, Shaders } from './config'
-import {
-  BaseColorState,
-  Colorway,
-  BaseSwatch,
-  ColorStates,
-  ColorSwatches,
-} from './types'
+import { Colorway, BaseSwatch, ColorStates, ColorSwatches } from './types'
 
 export type Pallet = {
   [key in Colorway]: PalletShades
@@ -26,7 +22,7 @@ export enum Shade {
 }
 
 type BaseColorStates = {
-  [stateKey in BaseColorState]: {
+  [stateKey in HoverState]: {
     [swatchKey in BaseSwatch]: Color
   }
 }
