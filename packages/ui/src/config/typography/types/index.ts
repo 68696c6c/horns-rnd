@@ -1,6 +1,3 @@
-// export { defaultConfig, Config, ConfigFontStates } from './config'
-// export { computeFontFamily } from './families'
-// export { FontConfig, Font, makeDefaultFontConfig } from './fonts'
 export { defaultConfig, Config } from './config'
 export { Font, makeDefaultFontConfig } from './fonts'
 export { FontStates, makeFontStates } from './style'

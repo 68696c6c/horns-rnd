@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 
+import { Font } from '../../../config'
 import {
   Styled,
   Component,
@@ -37,7 +38,7 @@ export const buttonStyles = ({
   chromatic(theme, color),
   bordered(theme, border, theme.buttons.border),
   padded(theme, padding, theme.buttons.padding),
-  typographic(theme, font),
+  typographic(theme, font || Font.Button),
 ]
 
 export const StyledLinkButton = styled.a<ButtonProps>(buttonStyles)
@@ -51,18 +52,3 @@ export interface LinkProps extends ButtonProps {
 export const StyledLink = styled.a<LinkProps>(({ theme, color }: LinkProps) => [
   chromaticText(theme, color),
 ])
-
-// type LinkVariantProps = {
-//   Tag:
-// }
-//
-// export const getLinkVariantProps = (variant: string): LinkVariantProps => {
-//   if (variant === 'button') {
-//     return {
-//       Tag: LinkButton,
-//     }
-//   }
-//   return {
-//     Tag: Link,
-//   }
-// }

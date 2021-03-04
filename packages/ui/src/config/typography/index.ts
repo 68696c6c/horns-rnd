@@ -25,7 +25,11 @@ export const makeTypography = (input?: TypographyConfig): Typography => {
 
   const result: Partial<Typography> = {}
   Object.values(Font).forEach((font) => {
-    result[font] = makeFontStates(config.styles[font], defaultStyle, config)
+    result[font] = makeFontStates(
+      config.styles[font],
+      { ...defaultStyle },
+      config,
+    )
   })
 
   return result as Typography

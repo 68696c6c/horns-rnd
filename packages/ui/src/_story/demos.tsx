@@ -1,7 +1,7 @@
 import React, { FC, ReactNode, ElementType, PropsWithoutRef } from 'react'
 import styled from '@emotion/styled'
 
-import { BorderStyle, Colorway, Size } from '../config'
+import { BorderStyle, Colorway, Size, Font } from '../config'
 
 const StyledDemo = styled.div`
   display: flex;
@@ -93,6 +93,25 @@ export const paddedDemo = <T extends {}>(
   </Demo>
 )
 
+export const typographicDemo = <T extends {}>(
+  C: ElementType,
+  props: PropsWithoutRef<T>,
+) => (
+  <Demo>
+    <h1>typographic</h1>
+    <StyledDemo>
+      <C {...props} font={undefined}>
+        default
+      </C>
+      {Object.values(Font).map((font) => (
+        <C {...props} font={font} key={`typographic-${font}`}>
+          {font}
+        </C>
+      ))}
+    </StyledDemo>
+  </Demo>
+)
+
 export const clickableButtonDemo = <T extends {}>(
   C: ElementType,
   props: PropsWithoutRef<T>,
@@ -101,10 +120,16 @@ export const clickableButtonDemo = <T extends {}>(
     {borderedDemo(C, props)}
     {chromaticDemo(C, props)}
     {paddedDemo(C, props)}
+    {typographicDemo(C, props)}
   </>
 )
 
 export const clickableLinkDemo = <T extends {}>(
   C: ElementType,
   props: PropsWithoutRef<T>,
-) => chromaticDemo(C, props)
+) => (
+  <>
+    {chromaticDemo(C, props)}
+    {typographicDemo(C, props)}
+  </>
+)

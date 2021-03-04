@@ -56,11 +56,11 @@ export const makeFontStates = (
   config: Config,
 ): FontStates => {
   const { base: b, hover, active, inactive: i } = input
-  const base = _merge(b || {}, fontBase)
+  const base = _merge(fontBase, b || {})
   return {
     base: makeFontStyle(base, config),
-    hover: makeFontStyle(_merge(hover || {}, base), config),
-    active: makeFontStyle(_merge(active || {}, base), config),
-    inactive: makeFontStyle(_merge(i || {}, base), config),
+    hover: makeFontStyle(_merge(base, hover || {}), config),
+    active: makeFontStyle(_merge(base, active || {}), config),
+    inactive: makeFontStyle(_merge(base, i || {}), config),
   }
 }
