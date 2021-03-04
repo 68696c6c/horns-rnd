@@ -10,35 +10,47 @@ import {
   chromaticText,
   Padded,
   padded,
+  Typographic,
+  typographic,
 } from '../../../traits'
-
-export interface ButtonProps
-  extends Styled,
-    Component,
-    Bordered,
-    Chromatic,
-    Padded {}
 
 export enum LinkVariant {
   Link = 'link',
   Button = 'button',
 }
 
-export interface BaseLinkProps extends ButtonProps {
+export interface ButtonProps
+  extends Styled,
+    Component,
+    Bordered,
+    Chromatic,
+    Padded,
+    Typographic {}
+
+export const buttonStyles = ({
+  theme,
+  border,
+  color,
+  font,
+  padding,
+}: ButtonProps) => [
+  chromatic(theme, color),
+  bordered(theme, border, theme.buttons.border),
+  padded(theme, padding, theme.buttons.padding),
+  typographic(theme, font),
+]
+
+export const StyledLinkButton = styled.a<ButtonProps>(buttonStyles)
+
+export const StyledButton = styled.button<ButtonProps>(buttonStyles)
+
+export interface LinkProps extends ButtonProps {
   variant?: LinkVariant
 }
 
-export const Link = styled.a<BaseLinkProps>(
-  ({ theme, color }: BaseLinkProps) => [chromaticText(theme, color)],
-)
-
-export const LinkButton = styled.a<ButtonProps>(
-  ({ theme, border, color, padding }: ButtonProps) => [
-    chromatic(theme, color),
-    bordered(theme, border, theme.buttons.border),
-    padded(theme, padding, theme.buttons.padding),
-  ],
-)
+export const StyledLink = styled.a<LinkProps>(({ theme, color }: LinkProps) => [
+  chromaticText(theme, color),
+])
 
 // type LinkVariantProps = {
 //   Tag:

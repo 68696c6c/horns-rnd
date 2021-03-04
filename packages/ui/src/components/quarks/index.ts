@@ -4,9 +4,11 @@
 // traits and export styled components, making them distinctly different than traits, which are
 // neither composed nor components and exist only to apply theming to specific css properties.
 export {
+  StyledButton,
   LinkVariant,
   ButtonProps,
-  BaseLinkProps,
-  LinkButton,
-  Link,
+  buttonStyles,
+  LinkProps,
+  StyledLinkButton,
+  StyledLink,
 } from './clickable'

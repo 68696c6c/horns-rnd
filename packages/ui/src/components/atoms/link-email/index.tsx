@@ -1,6 +1,11 @@
 import React, { FC } from 'react'
 
-import { BaseLinkProps, LinkButton, Link } from '../../quarks'
+import {
+  LinkVariant,
+  LinkProps as BaseLinkProps,
+  StyledLink,
+  StyledLinkButton,
+} from '../../quarks'
 
 const getEmailHref = (email: string, subject: string, body: string): string => {
   let href = `mailto:${email}?`
@@ -23,7 +28,7 @@ export const LinkEmail: FC<LinkEmailProps> = ({
   body,
   ...others
 }: LinkEmailProps) => {
-  const Tag = variant === 'button' ? LinkButton : Link
+  const Tag = variant === LinkVariant.Button ? StyledLinkButton : StyledLink
   const href = getEmailHref(email, subject, body)
   return (
     <Tag {...others} href={href}>

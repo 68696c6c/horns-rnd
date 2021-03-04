@@ -1,5 +1,6 @@
 export enum TextSpacing {
   Min = 'min',
+  Base = 'base',
   Max = 'max',
 }
 
@@ -9,5 +10,6 @@ export type TextSpacings = {
 
 export const defaultTextSpacings: TextSpacings = {
   min: '0.67em',
+  base: '',
   max: '1em',
 }

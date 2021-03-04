@@ -3,7 +3,7 @@
 exports[`LinkEmail should render as a button 1`] = `
 <div>
   <a
-    class="css-drk5ds"
+    class="css-28rk0m"
     href="mailto:example@example.com?subject=example subject&body=example body"
   >
     example

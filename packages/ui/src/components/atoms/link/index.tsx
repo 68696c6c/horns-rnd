@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
 
 import {
-  BaseLinkProps,
-  Link as StyledLink,
-  LinkButton,
   LinkVariant,
+  LinkProps as BaseLinkProps,
+  StyledLink,
+  StyledLinkButton,
 } from '../../quarks'
 
 export interface LinkProps extends BaseLinkProps {
@@ -17,7 +17,7 @@ export const Link: FC<LinkProps> = ({
   href,
   ...others
 }: LinkProps) => {
-  const Tag = variant === LinkVariant.Button ? LinkButton : StyledLink
+  const Tag = variant === LinkVariant.Button ? StyledLinkButton : StyledLink
   return (
     <Tag {...others} href={href}>
       {children}

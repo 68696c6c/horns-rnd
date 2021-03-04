@@ -39,6 +39,7 @@ module.exports = {
         '**/gatsby-browser.js',
         '**/gatsby-node.js',
         '**/gatsby-ssr.js',
+        '**/preview.jsx',
         'jest.setup.ts',
         'rollup.config.js',
       ],

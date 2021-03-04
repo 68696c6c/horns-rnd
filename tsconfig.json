@@ -8,7 +8,7 @@
   },
   "include": [
     "packages/ui/.storybook/main.js",
-    "packages/ui/.storybook/preview.js",
+    "packages/ui/.storybook/preview.jsx",
     ".eslintrc.js",
     "./**/*"
   ],

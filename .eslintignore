@@ -1,6 +1,7 @@
-!.storybook
+!packages/ui/.storybook
 coverage
 dist
 node_modules
 .cache
 public
+sites/gatsby-netlify

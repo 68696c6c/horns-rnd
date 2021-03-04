@@ -34,6 +34,9 @@ export type FontFamilies = {
   [key in FontFamily]: FontFamilyStyle
 }
 
+export const computeFontFamily = (style: FontFamilyStyle): string =>
+  [style.base, style.fallback].join(', ')
+
 export const defaultFontFamilies: FontFamilies = {
   primary: {
     base: 'Helvetica',
