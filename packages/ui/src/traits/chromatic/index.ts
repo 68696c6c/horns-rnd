@@ -1,28 +1,43 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Theme, Colorway, Background } from '../../config'
+import { Theme, Colorway, Background, UiState, HoverState } from '../../config'
+import { Styled } from '../styled'
 
 export interface Chromatic {
   color?: Colorway
 }
 
-export const chromatic = (theme: Theme, color?: Colorway): SerializedStyles => {
-  const { base } = theme.colors.colorways[color || Colorway.Neutral]
+interface ChromaticArgs extends Styled, Chromatic {
+  colorDefault?: Colorway
+  state?: UiState
+}
+
+export const chromatic = ({
+  theme,
+  color,
+  state,
+}: ChromaticArgs): SerializedStyles => {
+  const colorway = theme.colors.colorways[color || Colorway.Neutral]
+  const s = typeof state === 'undefined' ? HoverState.Base : state
+  const c = colorway[s]
   return css`
-    border-color: ${base.border};
-    background-color: ${base.base};
-    color: ${base.readable};
+    border-color: ${c.border};
+    background-color: ${c.base};
+    color: ${c.readable};
   `
 }
 
-export const chromaticText = (
-  theme: Theme,
-  color?: Colorway,
-): SerializedStyles => {
+export const chromaticText = ({
+  theme,
+  color,
+  state,
+}: ChromaticArgs): SerializedStyles => {
   const defaultColor = theme.colors.isDarkMode ? Colorway.Light : Colorway.Dark
-  const { base } = theme.colors.colorways[color || defaultColor]
+  const colorway = theme.colors.colorways[color || defaultColor]
+  const s = typeof state === 'undefined' ? HoverState.Base : state
+  const c = colorway[s]
   return css`
-    color: ${base.base};
+    color: ${c.base};
   `
 }
 

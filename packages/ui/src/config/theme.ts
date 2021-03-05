@@ -1,10 +1,11 @@
 import _merge from 'lodash.merge'
 
-import { ButtonsConfig, defaultButtons } from './buttons'
+import { defaultButtons, ButtonsConfig } from './buttons'
 import { Breakpoints, BreakpointsConfig } from './breakpoints'
 import { Colors, ColorsConfig } from './colors'
-import { GridConfig, defaultGrid } from './grid'
-import { SizesConfig, defaultSizes } from './sizes'
+import { defaultGrid, GridConfig } from './grid'
+import { defaultLinks, LinksConfig } from './links'
+import { defaultSizes, SizesConfig } from './sizes'
 import { TypographyConfig, Typography, makeTypography } from './typography'
 
 export interface Config {
@@ -13,6 +14,7 @@ export interface Config {
   breakpoints?: BreakpointsConfig
   colors?: ColorsConfig
   grid?: Partial<GridConfig>
+  links?: Partial<LinksConfig>
   sizes?: SizesConfig
   typography?: TypographyConfig
 }
@@ -28,6 +30,8 @@ export class Theme {
 
   grid: GridConfig
 
+  links: LinksConfig
+
   sizes: SizesConfig
 
   typography: Typography
@@ -37,11 +41,12 @@ export class Theme {
 
     this.name = typeof config.name === 'string' ? config.name : 'horns-theme'
 
+    this.buttons = _merge(defaultButtons, config.buttons)
     this.breakpoints = new Breakpoints(config.breakpoints)
     this.colors = new Colors(config.colors)
     this.sizes = _merge(defaultSizes, config.sizes)
     this.grid = _merge(defaultGrid, config.grid)
-    this.buttons = _merge(defaultButtons, config.buttons)
+    this.links = _merge(defaultLinks, config.links)
     this.typography = makeTypography(config.typography)
   }
 }

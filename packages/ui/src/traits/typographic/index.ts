@@ -1,26 +1,39 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Theme, Font } from '../../config'
+import { Font, UiState, HoverState } from '../../config'
+import { Styled } from '../styled'
 
 export interface Typographic {
   font?: Font
 }
 
-export const typographic = (theme: Theme, font?: Font): SerializedStyles => {
-  const { base } = theme.typography[font || Font.Text]
+interface TypographicArgs extends Styled, Typographic {
+  fontDefault?: Font
+  state?: UiState
+}
+
+export const typographic = ({
+  theme,
+  font,
+  fontDefault,
+  state,
+}: TypographicArgs): SerializedStyles => {
+  const fontStyle = theme.typography[font || fontDefault || Font.Text]
+  const s = typeof state === 'undefined' ? HoverState.Base : state
+  const f = fontStyle[s]
   return css`
-    font-family: ${base.family};
-    font-kerning: ${base.kerning};
-    font-size: ${base.size};
-    font-style: ${base.style};
-    font-weight: ${base.weight};
-    line-height: ${base.letting};
-    text-align: ${base.align};
-    text-decoration-line: ${base.decoration.line};
-    text-decoration-style: ${base.decoration.style};
-    text-indent: ${base.indent};
-    text-transform: ${base.transform};
-    word-spacing: ${base.tracking};
-    margin: ${base.spacing};
+    font-family: ${f.family};
+    font-kerning: ${f.kerning};
+    font-size: ${f.size};
+    font-style: ${f.style};
+    font-weight: ${f.weight};
+    line-height: ${f.letting};
+    text-align: ${f.align};
+    text-decoration-line: ${f.decoration.line};
+    text-decoration-style: ${f.decoration.style};
+    text-indent: ${f.indent};
+    text-transform: ${f.transform};
+    word-spacing: ${f.tracking};
+    margin: ${f.spacing};
   `
 }

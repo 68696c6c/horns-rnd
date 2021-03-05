@@ -20,7 +20,7 @@ export interface SectionProps
 
 export const Section = styled.button<SectionProps>(
   ({ theme, color, fluid, padding }) => [
-    chromatic(theme, color),
+    chromatic({ theme, color }),
     padded(theme, padding),
     contained(theme, fluid),
   ],

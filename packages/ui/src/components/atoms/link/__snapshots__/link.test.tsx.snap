@@ -3,7 +3,7 @@
 exports[`Link should render as a button 1`] = `
 <div>
   <a
-    class="css-28rk0m"
+    class="css-wnzrvu"
     href="#"
   >
     example
@@ -14,7 +14,7 @@ exports[`Link should render as a button 1`] = `
 exports[`Link should render as default 1`] = `
 <div>
   <a
-    class="css-u6qrp8"
+    class="css-1ybzjnu"
     href="#"
   >
     example
