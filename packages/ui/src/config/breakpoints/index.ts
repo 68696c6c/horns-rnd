@@ -22,27 +22,23 @@ export const defaultConfig: BreakpointsConfig = {
   max: '1200px',
 }
 
-export class Breakpoints {
-  mobile: string
+export interface Breakpoints {
+  readonly mobile: string
+  readonly min: string
+  readonly small: string
+  readonly medium: string
+  readonly large: string
+  readonly max: string
+}
 
-  min: string
-
-  small: string
-
-  medium: string
-
-  large: string
-
-  max: string
-
-  constructor(config?: Partial<BreakpointsConfig>) {
-    const mergedConfig = _merge(defaultConfig, config)
-
-    this.mobile = mergedConfig[mergedConfig.mobile as Breakpoint]
-    this.min = mergedConfig.min
-    this.small = mergedConfig.small
-    this.medium = mergedConfig.medium
-    this.large = mergedConfig.large
-    this.max = mergedConfig.max
+export const makeBreakpoints = (config?: Partial<BreakpointsConfig>) => {
+  const mergedConfig = _merge(defaultConfig, config)
+  return {
+    mobile: mergedConfig[mergedConfig.mobile as Breakpoint],
+    min: mergedConfig.min,
+    small: mergedConfig.small,
+    medium: mergedConfig.medium,
+    large: mergedConfig.large,
+    max: mergedConfig.max,
   }
 }

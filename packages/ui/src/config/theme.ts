@@ -1,12 +1,12 @@
 import _merge from 'lodash.merge'
 
 import { defaultButtons, ButtonsConfig } from './buttons'
-import { Breakpoints, BreakpointsConfig } from './breakpoints'
-import { Colors, ColorsConfig } from './colors'
+import { makeBreakpoints, Breakpoints, BreakpointsConfig } from './breakpoints'
+import { makeColors, Colors, ColorsConfig } from './colors'
 import { defaultGrid, GridConfig } from './grid'
 import { defaultLinks, LinksConfig } from './links'
 import { defaultSizes, SizesConfig } from './sizes'
-import { TypographyConfig, Typography, makeTypography } from './typography'
+import { makeTypography, TypographyConfig, Typography } from './typography'
 
 export interface Config {
   name?: string
@@ -19,34 +19,27 @@ export interface Config {
   typography?: TypographyConfig
 }
 
-export class Theme {
+export interface Theme {
   name: string
-
   buttons: ButtonsConfig
-
   breakpoints: Breakpoints
-
   colors: Colors
-
   grid: GridConfig
-
   links: LinksConfig
-
   sizes: SizesConfig
-
   typography: Typography
+}
 
-  constructor(themeConfig?: Partial<Config>) {
-    const config = typeof themeConfig !== 'undefined' ? themeConfig : {}
-
-    this.name = typeof config.name === 'string' ? config.name : 'horns-theme'
-
-    this.buttons = _merge(defaultButtons, config.buttons)
-    this.breakpoints = new Breakpoints(config.breakpoints)
-    this.colors = new Colors(config.colors)
-    this.sizes = _merge(defaultSizes, config.sizes)
-    this.grid = _merge(defaultGrid, config.grid)
-    this.links = _merge(defaultLinks, config.links)
-    this.typography = makeTypography(config.typography)
+export const makeTheme = (themeConfig?: Partial<Config>): Theme => {
+  const config = typeof themeConfig !== 'undefined' ? themeConfig : {}
+  return {
+    name: typeof config.name === 'string' ? config.name : 'horns-theme',
+    buttons: _merge(defaultButtons, config.buttons),
+    breakpoints: makeBreakpoints(config.breakpoints),
+    colors: makeColors(config.colors),
+    sizes: _merge(defaultSizes, config.sizes),
+    grid: _merge(defaultGrid, config.grid),
+    links: _merge(defaultLinks, config.links),
+    typography: makeTypography(config.typography),
   }
 }

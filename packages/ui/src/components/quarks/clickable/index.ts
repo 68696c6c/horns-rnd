@@ -23,22 +23,21 @@ export enum LinkVariant {
 }
 
 export interface ButtonProps
-  extends Styled,
-    Component,
+  extends Component,
     Bordered,
     Chromatic,
     Interactive,
     Padded,
     Typographic {}
 
-export const buttonStyles = ({
+const buttonStyles = ({
   theme,
   border,
   color,
   cursor,
   font,
   padding,
-}: ButtonProps) => {
+}: Styled & ButtonProps) => {
   const { buttons } = theme
   return [
     chromatic({ theme, color }),
@@ -58,16 +57,16 @@ export const buttonStyles = ({
   ]
 }
 
-export const StyledLinkButton = styled.a<ButtonProps>(buttonStyles)
+export const StyledLinkButton = styled.a(buttonStyles)
 
-export const StyledButton = styled.button<ButtonProps>(buttonStyles)
+export const StyledButton = styled.button(buttonStyles)
 
 export interface LinkProps extends ButtonProps {
   variant?: LinkVariant
 }
 
-export const StyledLink = styled.a<LinkProps>(
-  ({ theme, color, cursor, font }: LinkProps) => {
+export const StyledLink = styled.a(
+  ({ theme, color, cursor, font }: Styled & LinkProps) => {
     const { links } = theme
     const chromaticArgs = { theme, color }
     const typographicArgs = { theme, font, fontDefault: links.font }

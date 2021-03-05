@@ -7,7 +7,6 @@ export {
   StyledButton,
   LinkVariant,
   ButtonProps,
-  buttonStyles,
   LinkProps,
   StyledLinkButton,
   StyledLink,

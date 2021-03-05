@@ -16,21 +16,37 @@ export { Colorway, Background } from './types'
 
 export type ColorsConfig = DeepPartial<Config>
 
-export class Colors {
-  public readonly isDarkMode: boolean
+// export class Colors {
+//   public readonly isDarkMode: boolean
+//
+//   public readonly config: Config
+//
+//   public readonly colorways: Colorways
+//
+//   public readonly backgrounds: Backgrounds
+//
+//   constructor(config?: ColorsConfig) {
+//     this.config = _merge(defaultConfig, config)
+//     this.isDarkMode = this.config.mode === Mode.Dark
+//
+//     const pallet = makePallet(this.config)
+//     this.colorways = makeColorways(pallet, this.config)
+//     this.backgrounds = makeBackgrounds(pallet, this.config)
+//   }
+// }
 
-  public readonly config: Config
+export interface Colors {
+  readonly isDarkMode: boolean
+  readonly colorways: Colorways
+  readonly backgrounds: Backgrounds
+}
 
-  public readonly colorways: Colorways
-
-  public readonly backgrounds: Backgrounds
-
-  constructor(config?: ColorsConfig) {
-    this.config = _merge(defaultConfig, config)
-    this.isDarkMode = this.config.mode === Mode.Dark
-
-    const pallet = makePallet(this.config)
-    this.colorways = makeColorways(pallet, this.config)
-    this.backgrounds = makeBackgrounds(pallet, this.config)
+export const makeColors = (config?: ColorsConfig) => {
+  const mergedConfig = _merge(defaultConfig, config)
+  const pallet = makePallet(mergedConfig)
+  return {
+    isDarkMode: mergedConfig.mode === Mode.Dark,
+    colorways: makeColorways(pallet, mergedConfig),
+    backgrounds: makeBackgrounds(pallet, mergedConfig),
   }
 }

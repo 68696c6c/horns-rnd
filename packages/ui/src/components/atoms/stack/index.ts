@@ -12,15 +12,10 @@ import {
   Responsive,
 } from '../../../traits'
 
-export interface StackProps
-  extends Styled,
-    Component,
-    Gridded,
-    Padded,
-    Responsive {}
+interface StackProps extends Component, Gridded, Padded, Responsive {}
 
-export const Stack = styled.div<StackProps>(
-  ({ theme, breakpoint, gapped, gap, padding }) => [
+export const Stack = styled.div(
+  ({ theme, breakpoint, gapped, gap, padding }: Styled & StackProps) => [
     padded(theme, padding),
     responsive(theme, breakpoint, gridded(theme, gapped, gap)),
     () => css`

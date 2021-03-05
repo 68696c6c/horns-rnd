@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react'
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
 
-import { Theme, Config } from '../config'
+import { makeTheme, Config } from '../config'
 
 interface ThemeProviderProps {
   children: ReactNode
@@ -12,7 +12,7 @@ const ThemeProvider: FC<ThemeProviderProps> = ({
   children,
   theme,
 }: ThemeProviderProps) => (
-  <EmotionThemeProvider theme={new Theme(theme)}>
+  <EmotionThemeProvider theme={makeTheme(theme)}>
     {children}
   </EmotionThemeProvider>
 )

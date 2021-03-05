@@ -1,11 +1,11 @@
 import React from 'react'
 import { ThemeProvider } from '@storybook/theming'
 
-import { Theme } from '../src'
+import { makeTheme } from '../src/config/theme'
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={new Theme()}>
+    <ThemeProvider theme={makeTheme()}>
       <Story />
     </ThemeProvider>
   ),
