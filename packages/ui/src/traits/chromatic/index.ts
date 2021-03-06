@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Theme, Colorway, Background, UiState, HoverState } from '../../config'
+import { Colorway, Background, UiState, HoverState } from '../../config'
 import { Styled } from '../styled'
 
 export interface Chromatic {
