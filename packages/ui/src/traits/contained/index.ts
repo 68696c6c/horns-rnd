@@ -1,12 +1,15 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Theme } from '../../config'
+import { Styled } from '../styled'
 
 export interface Contained {
   fluid?: boolean
 }
 
-export const contained = (theme: Theme, fluid?: boolean): SerializedStyles => {
+export const contained = ({
+  theme,
+  fluid,
+}: Styled & Contained): SerializedStyles => {
   if (fluid) {
     return css``
   }

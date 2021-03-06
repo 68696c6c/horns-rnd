@@ -1,16 +1,21 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Theme, Breakpoint } from '../../config'
+import { Breakpoint } from '../../config'
+import { Styled } from '../styled'
 
 export interface Responsive {
   breakpoint?: Breakpoint
 }
 
-export const responsive = (
-  theme: Theme,
-  breakpoint?: Breakpoint,
-  responsiveStyles?: SerializedStyles | string,
-): SerializedStyles => css`
+interface ResponsiveArgs extends Responsive {
+  responsiveStyles?: SerializedStyles | string
+}
+
+export const responsive = ({
+  theme,
+  breakpoint,
+  responsiveStyles,
+}: Styled & ResponsiveArgs): SerializedStyles => css`
   @media (min-width: ${theme.breakpoints[breakpoint || Breakpoint.Mobile]}) {
     ${responsiveStyles}
   }

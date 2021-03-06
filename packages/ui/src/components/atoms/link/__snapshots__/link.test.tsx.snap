@@ -14,7 +14,7 @@ exports[`Link should render as a button 1`] = `
 exports[`Link should render as default 1`] = `
 <div>
   <a
-    class="css-1ybzjnu"
+    class="css-1dzkoa2"
     href="#"
   >
     example

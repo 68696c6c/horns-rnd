@@ -5,6 +5,7 @@ import {
   makeColorway,
   makeLightColorway,
   makeDarkColorway,
+  makeColorwayStates,
 } from './pallet'
 
 export type Colorways = {
@@ -38,13 +39,31 @@ export const makeBackgrounds = (
 ): Backgrounds => {
   const isDark = config.mode === Mode.Dark
   if (isDark) {
+    const { lighter, light, base, dark, darker } = pallet.dark
     return {
-      primary: makeDarkColorway(pallet.dark),
-      secondary: makeColorway(pallet.neutral, true),
+      primary: makeColorwayStates({
+        base: { base: darker, border: dark },
+        hover: { base: dark, border: base },
+        active: { base, border: light },
+      }),
+      secondary: makeColorwayStates({
+        base: { base: dark, border: base },
+        hover: { base, border: light },
+        active: { base: light, border: lighter },
+      }),
     }
   }
+  const { lighter, light, base, dark, darker } = pallet.light
   return {
-    primary: makeLightColorway(pallet.light),
-    secondary: makeColorway(pallet.neutral, false),
+    primary: makeColorwayStates({
+      base: { base: lighter, border: light },
+      hover: { base: light, border: base },
+      active: { base, border: dark },
+    }),
+    secondary: makeColorwayStates({
+      base: { base: light, border: base },
+      hover: { base, border: dark },
+      active: { base: dark, border: darker },
+    }),
   }
 }

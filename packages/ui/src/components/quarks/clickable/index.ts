@@ -40,8 +40,8 @@ const buttonStyles = ({
 }: Styled & ButtonProps) => {
   const { buttons } = theme
   return [
-    chromatic({ theme, color }),
-    bordered(theme, border, buttons.border),
+    chromatic,
+    bordered({ theme, border, borderDefault: buttons.border }),
     interactive({
       theme,
       cursor,
@@ -52,7 +52,7 @@ const buttonStyles = ({
         chromatic({ theme, color, state: StatusState.Inactive }),
       ],
     }),
-    padded(theme, padding, buttons.padding),
+    padded({ theme, padding, paddingDefault: buttons.padding }),
     typographic({ theme, font, fontDefault: buttons.font }),
   ]
 }
@@ -71,8 +71,8 @@ export const StyledLink = styled.a(
     const chromaticArgs = { theme, color }
     const typographicArgs = { theme, font, fontDefault: links.font }
     return [
-      chromaticText(chromaticArgs),
-      typographic(typographicArgs),
+      chromaticText,
+      typographic,
       interactive({
         theme,
         cursor,

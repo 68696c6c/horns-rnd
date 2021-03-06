@@ -38,7 +38,9 @@ const makeSwatches = (base: Color, border: Color): ColorSwatches => {
   }
 }
 
-const makeColorwayStates = (baseStates: BaseColorStates): ColorStates => {
+export const makeColorwayStates = (
+  baseStates: BaseColorStates,
+): ColorStates => {
   const { base, hover, active } = baseStates
   const inactive = {
     base: base.base.mix(colorPallet.gray, 0.5),
@@ -104,7 +106,7 @@ const makeDarkShades = (colorValue: string, shaders: Shaders): PalletShades => {
   const base = Color(colorValue)
   const diff = lightestShade / 4
   return {
-    darker: base.lightness(0),
+    darker: base,
     dark: base.lightness(lightestShade - diff * 3),
     base: base.lightness(lightestShade - diff * 2),
     light: base.lightness(lightestShade - diff),
@@ -124,7 +126,7 @@ const makeLightShades = (
     dark: base.lightness(darkestShade + diff),
     base: base.lightness(darkestShade + diff * 2),
     light: base.lightness(darkestShade + diff * 3),
-    lighter: base.lightness(100),
+    lighter: base,
   }
 }
 

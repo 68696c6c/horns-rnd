@@ -11,13 +11,13 @@ export default {
 } as Meta
 
 const Template: Story<StackProps> = ({
-  theme,
   breakpoint,
   children,
+  ...others
 }: StackProps) => (
   <>
     <p>Above the {breakpoint} breakpoint, these items will stack.</p>
-    <Stack theme={theme} breakpoint={breakpoint}>
+    <Stack breakpoint={breakpoint} {...others}>
       {children}
     </Stack>
   </>
@@ -26,6 +26,19 @@ const Template: Story<StackProps> = ({
 export const Default = Template.bind({})
 Default.args = {
   breakpoint: Breakpoint.Mobile,
+  children: (
+    <>
+      <div>one</div>
+      <div>two</div>
+      <div>three</div>
+    </>
+  ),
+}
+
+export const Gapped = Template.bind({})
+Gapped.args = {
+  breakpoint: Breakpoint.Mobile,
+  gapped: true,
   children: (
     <>
       <div>one</div>

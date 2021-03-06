@@ -1,6 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Theme, BordersConfig, BorderProperties } from '../../config'
+import { BordersConfig, BorderProperties } from '../../config'
+import { Styled } from '../styled'
 
 export interface Bordered {
   border?: BordersConfig | BorderProperties
@@ -77,12 +78,16 @@ export const evalBorderSides = (
   }
 }
 
-export const bordered = (
-  theme: Theme,
-  border?: BordersConfig | BorderProperties,
-  defaults?: BordersConfig,
-): SerializedStyles => {
-  if (typeof border === 'undefined' && typeof defaults === 'undefined') {
+interface BorderedArgs extends Bordered {
+  borderDefault?: BordersConfig
+}
+
+export const bordered = ({
+  theme,
+  border,
+  borderDefault,
+}: Styled & BorderedArgs): SerializedStyles => {
+  if (typeof border === 'undefined' && typeof borderDefault === 'undefined') {
     return css``
   }
   const borderProps = border as BorderProperties
@@ -97,7 +102,7 @@ export const bordered = (
   }
   const b: BordersConfig =
     typeof border === 'undefined' ? {} : (border as BordersConfig)
-  const { top, right, bottom, left } = evalBorderSides(b, defaults || {})
+  const { top, right, bottom, left } = evalBorderSides(b, borderDefault || {})
   return css`
     border-top-width: ${top.width && theme.sizes[top.width]};
     border-top-style: ${top.style};

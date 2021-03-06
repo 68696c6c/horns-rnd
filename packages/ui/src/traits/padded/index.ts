@@ -1,7 +1,8 @@
 import _merge from 'lodash.merge'
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Theme, Size, SizeOption, SideSizeOptions, Side } from '../../config'
+import { Size, SizeOption, SideSizeOptions, Side } from '../../config'
+import { Styled } from '../styled'
 
 export type Sides = {
   [key in Side]: Size | undefined
@@ -21,12 +22,16 @@ export interface Padded {
   padding?: SideSizeOptions | SizeOption
 }
 
-export const padded = (
-  theme: Theme,
-  padding?: SideSizeOptions | SizeOption,
-  defaults?: SideSizeOptions,
-): SerializedStyles => {
-  if (typeof padding === 'undefined' && typeof defaults === 'undefined') {
+interface PaddedArgs extends Styled, Padded {
+  paddingDefault?: SideSizeOptions
+}
+
+export const padded = ({
+  theme,
+  padding,
+  paddingDefault,
+}: PaddedArgs): SerializedStyles => {
+  if (typeof padding === 'undefined' && typeof paddingDefault === 'undefined') {
     return css``
   }
   const paddingSize = theme.sizes[padding as Size]
@@ -35,7 +40,7 @@ export const padded = (
       padding: ${paddingSize};
     `
   }
-  const sides = evalSides(_merge(padding || {}, defaults || {}))
+  const sides = evalSides(_merge(padding || {}, paddingDefault || {}))
   return css`
     padding-top: ${sides.top && theme.sizes[sides.top]};
     padding-right: ${sides.right && theme.sizes[sides.right]};

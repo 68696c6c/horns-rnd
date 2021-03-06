@@ -45,10 +45,10 @@ export interface ChromaticSurface {
   color?: Background
 }
 
-export const chromaticSurface = (
-  theme: Theme,
-  color?: Background,
-): SerializedStyles => {
+export const chromaticSurface = ({
+  theme,
+  color,
+}: Styled & ChromaticSurface): SerializedStyles => {
   const { base } = theme.colors.backgrounds[color || Background.Primary]
   return css`
     border-color: ${base.border};

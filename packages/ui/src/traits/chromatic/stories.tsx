@@ -1,22 +1,15 @@
 import styled from '@emotion/styled'
 import { Meta, Story } from '@storybook/react/types-6-0'
 
-import { chromaticDemo } from '../../_story'
-import { Styled, Component } from '../styled'
+import { chromaticDemo, chromaticSurfaceDemo } from '../../_story'
 
-import { chromatic, Chromatic as ChromaticTrait } from '.'
-
-interface ChromaticDemoProps extends Styled, Component, ChromaticTrait {}
-
-const Chromatic = styled.div<ChromaticDemoProps>(({ theme, color }) =>
-  chromatic(theme, color),
-)
+import { chromatic, chromaticSurface } from '.'
 
 export default {
   title: 'Traits/Chromatic',
-  component: Chromatic,
 } as Meta
 
-const ChromaticStory: Story = () => chromaticDemo(Chromatic, {})
+export const Chromatic: Story = () => chromaticDemo(styled.div(chromatic), {})
 
-export { ChromaticStory as Chromatic }
+export const ChromaticSurface: Story = () =>
+  chromaticSurfaceDemo(styled.div(chromaticSurface), {})

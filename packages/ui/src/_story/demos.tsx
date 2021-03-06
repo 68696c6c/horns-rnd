@@ -1,7 +1,7 @@
 import React, { FC, ReactNode, ElementType, PropsWithoutRef } from 'react'
 import styled from '@emotion/styled'
 
-import { BorderStyle, Colorway, Size, Font } from '../config'
+import { BorderStyle, Colorway, Size, Font, Background } from '../config'
 
 const StyledDemo = styled.div`
   display: flex;
@@ -39,9 +39,7 @@ export const borderedDemo = <T extends {}>(
     </StyledDemo>
     <h2>width</h2>
     <StyledDemo>
-      <C {...props} border={{ all: { width: 'small' } }}>
-        default
-      </C>
+      <C {...props}>default</C>
       {Object.values(Size).map((size) => (
         <C
           {...props}
@@ -67,6 +65,25 @@ export const chromaticDemo = <T extends {}>(
       </C>
       {Object.values(Colorway).map((color) => (
         <C {...props} color={color} key={`colorway-${color}`}>
+          {color}
+        </C>
+      ))}
+    </StyledDemo>
+  </Demo>
+)
+
+export const chromaticSurfaceDemo = <T extends {}>(
+  C: ElementType,
+  props: PropsWithoutRef<T>,
+) => (
+  <Demo>
+    <h1>chromaticSurface</h1>
+    <StyledDemo>
+      <C {...props} color={undefined}>
+        default
+      </C>
+      {Object.values(Background).map((color) => (
+        <C {...props} color={color} key={`background-${color}`}>
           {color}
         </C>
       ))}
