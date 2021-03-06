@@ -1,11 +1,3570 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button should render as default 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
 <div>
   <button
-    class="css-wnzrvu"
+    class="emotion-0"
   >
     example
+  </button>
+</div>
+`;
+
+exports[`Button should render border style dashed 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 12px;
+  border-top-style: dashed;
+  border-right-width: 12px;
+  border-right-style: dashed;
+  border-bottom-width: 12px;
+  border-bottom-style: dashed;
+  border-left-width: 12px;
+  border-left-style: dashed;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    dashed
+  </button>
+</div>
+`;
+
+exports[`Button should render border style dotted 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 12px;
+  border-top-style: dotted;
+  border-right-width: 12px;
+  border-right-style: dotted;
+  border-bottom-width: 12px;
+  border-bottom-style: dotted;
+  border-left-width: 12px;
+  border-left-style: dotted;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    dotted
+  </button>
+</div>
+`;
+
+exports[`Button should render border style double 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 12px;
+  border-top-style: double;
+  border-right-width: 12px;
+  border-right-style: double;
+  border-bottom-width: 12px;
+  border-bottom-style: double;
+  border-left-width: 12px;
+  border-left-style: double;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    double
+  </button>
+</div>
+`;
+
+exports[`Button should render border style groove 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 12px;
+  border-top-style: groove;
+  border-right-width: 12px;
+  border-right-style: groove;
+  border-bottom-width: 12px;
+  border-bottom-style: groove;
+  border-left-width: 12px;
+  border-left-style: groove;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    groove
+  </button>
+</div>
+`;
+
+exports[`Button should render border style hidden 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 12px;
+  border-top-style: hidden;
+  border-right-width: 12px;
+  border-right-style: hidden;
+  border-bottom-width: 12px;
+  border-bottom-style: hidden;
+  border-left-width: 12px;
+  border-left-style: hidden;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    hidden
+  </button>
+</div>
+`;
+
+exports[`Button should render border style inherit 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 12px;
+  border-top-style: inherit;
+  border-right-width: 12px;
+  border-right-style: inherit;
+  border-bottom-width: 12px;
+  border-bottom-style: inherit;
+  border-left-width: 12px;
+  border-left-style: inherit;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    inherit
+  </button>
+</div>
+`;
+
+exports[`Button should render border style initial 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 12px;
+  border-top-style: initial;
+  border-right-width: 12px;
+  border-right-style: initial;
+  border-bottom-width: 12px;
+  border-bottom-style: initial;
+  border-left-width: 12px;
+  border-left-style: initial;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    initial
+  </button>
+</div>
+`;
+
+exports[`Button should render border style inset 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 12px;
+  border-top-style: inset;
+  border-right-width: 12px;
+  border-right-style: inset;
+  border-bottom-width: 12px;
+  border-bottom-style: inset;
+  border-left-width: 12px;
+  border-left-style: inset;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    inset
+  </button>
+</div>
+`;
+
+exports[`Button should render border style none 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 12px;
+  border-top-style: none;
+  border-right-width: 12px;
+  border-right-style: none;
+  border-bottom-width: 12px;
+  border-bottom-style: none;
+  border-left-width: 12px;
+  border-left-style: none;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    none
+  </button>
+</div>
+`;
+
+exports[`Button should render border style outset 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 12px;
+  border-top-style: outset;
+  border-right-width: 12px;
+  border-right-style: outset;
+  border-bottom-width: 12px;
+  border-bottom-style: outset;
+  border-left-width: 12px;
+  border-left-style: outset;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    outset
+  </button>
+</div>
+`;
+
+exports[`Button should render border style ridge 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 12px;
+  border-top-style: ridge;
+  border-right-width: 12px;
+  border-right-style: ridge;
+  border-bottom-width: 12px;
+  border-bottom-style: ridge;
+  border-left-width: 12px;
+  border-left-style: ridge;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    ridge
+  </button>
+</div>
+`;
+
+exports[`Button should render border style solid 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 12px;
+  border-top-style: solid;
+  border-right-width: 12px;
+  border-right-style: solid;
+  border-bottom-width: 12px;
+  border-bottom-style: solid;
+  border-left-width: 12px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    solid
+  </button>
+</div>
+`;
+
+exports[`Button should render border width giant 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 64px;
+  border-top-style: solid;
+  border-right-width: 64px;
+  border-right-style: solid;
+  border-bottom-width: 64px;
+  border-bottom-style: solid;
+  border-left-width: 64px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    giant
+  </button>
+</div>
+`;
+
+exports[`Button should render border width large 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 24px;
+  border-top-style: solid;
+  border-right-width: 24px;
+  border-right-style: solid;
+  border-bottom-width: 24px;
+  border-bottom-style: solid;
+  border-left-width: 24px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    large
+  </button>
+</div>
+`;
+
+exports[`Button should render border width max 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 88px;
+  border-top-style: solid;
+  border-right-width: 88px;
+  border-right-style: solid;
+  border-bottom-width: 88px;
+  border-bottom-style: solid;
+  border-left-width: 88px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    max
+  </button>
+</div>
+`;
+
+exports[`Button should render border width medium 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 16px;
+  border-top-style: solid;
+  border-right-width: 16px;
+  border-right-style: solid;
+  border-bottom-width: 16px;
+  border-bottom-style: solid;
+  border-left-width: 16px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    medium
+  </button>
+</div>
+`;
+
+exports[`Button should render border width min 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 0px;
+  border-top-style: solid;
+  border-right-width: 0px;
+  border-right-style: solid;
+  border-bottom-width: 0px;
+  border-bottom-style: solid;
+  border-left-width: 0px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    min
+  </button>
+</div>
+`;
+
+exports[`Button should render border width small 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 12px;
+  border-top-style: solid;
+  border-right-width: 12px;
+  border-right-style: solid;
+  border-bottom-width: 12px;
+  border-bottom-style: solid;
+  border-left-width: 12px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    small
+  </button>
+</div>
+`;
+
+exports[`Button should render border width tiny 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    tiny
+  </button>
+</div>
+`;
+
+exports[`Button should render border width xLarge 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 32px;
+  border-top-style: solid;
+  border-right-width: 32px;
+  border-right-style: solid;
+  border-bottom-width: 32px;
+  border-bottom-style: solid;
+  border-left-width: 32px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    xLarge
+  </button>
+</div>
+`;
+
+exports[`Button should render border width xSmall 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 8px;
+  border-top-style: solid;
+  border-right-width: 8px;
+  border-right-style: solid;
+  border-bottom-width: 8px;
+  border-bottom-style: solid;
+  border-left-width: 8px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    xSmall
+  </button>
+</div>
+`;
+
+exports[`Button should render border width xxLarge 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 48px;
+  border-top-style: solid;
+  border-right-width: 48px;
+  border-right-style: solid;
+  border-bottom-width: 48px;
+  border-bottom-style: solid;
+  border-left-width: 48px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    xxLarge
+  </button>
+</div>
+`;
+
+exports[`Button should render border width xxSmall 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 4px;
+  border-top-style: solid;
+  border-right-width: 4px;
+  border-right-style: solid;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-left-width: 4px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    xxSmall
+  </button>
+</div>
+`;
+
+exports[`Button should render colorway danger 1`] = `
+.emotion-0 {
+  border-color: rgb(186, 32, 47);
+  background-color: rgb(220, 53, 69);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(155, 105, 110);
+  background-color: rgb(174, 90, 98);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(220, 53, 69);
+  background-color: rgb(186, 32, 47);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(186, 32, 47);
+  background-color: rgb(123, 21, 31);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    color="danger"
+  >
+    danger
+  </button>
+</div>
+`;
+
+exports[`Button should render colorway dark 1`] = `
+.emotion-0 {
+  border-color: rgb(51, 51, 51);
+  background-color: rgb(26, 26, 26);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(97, 97, 97);
+  background-color: rgb(76, 76, 76);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(51, 51, 51);
+  background-color: rgb(38, 38, 38);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(38, 38, 38);
+  background-color: rgb(51, 51, 51);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    color="dark"
+  >
+    dark
+  </button>
+</div>
+`;
+
+exports[`Button should render colorway info 1`] = `
+.emotion-0 {
+  border-color: rgb(18, 130, 147);
+  background-color: rgb(23, 162, 184);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(96, 138, 144);
+  background-color: rgb(75, 145, 156);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(23, 162, 184);
+  background-color: rgb(18, 130, 147);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(18, 130, 147);
+  background-color: rgb(12, 86, 98);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    color="info"
+  >
+    info
+  </button>
+</div>
+`;
+
+exports[`Button should render colorway light 1`] = `
+.emotion-0 {
+  border-color: rgb(224, 224, 224);
+  background-color: rgb(240, 240, 240);
+  color: rgb(1, 1, 1);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(161, 161, 161);
+  background-color: rgb(183, 183, 183);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(224, 224, 224);
+  background-color: rgb(232, 232, 232);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(232, 232, 232);
+  background-color: rgb(224, 224, 224);
+  color: rgb(1, 1, 1);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    color="light"
+  >
+    light
+  </button>
+</div>
+`;
+
+exports[`Button should render colorway neutral 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    color="neutral"
+  >
+    neutral
+  </button>
+</div>
+`;
+
+exports[`Button should render colorway primary 1`] = `
+.emotion-0 {
+  border-color: rgb(204, 136, 0);
+  background-color: rgb(255, 170, 0);
+  color: rgb(1, 1, 1);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(165, 140, 89);
+  background-color: rgb(191, 149, 64);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(255, 170, 0);
+  background-color: rgb(204, 136, 0);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(204, 136, 0);
+  background-color: rgb(135, 90, 0);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    color="primary"
+  >
+    primary
+  </button>
+</div>
+`;
+
+exports[`Button should render colorway prominent 1`] = `
+.emotion-0 {
+  border-color: rgb(204, 136, 0);
+  background-color: rgb(255, 170, 0);
+  color: rgb(1, 1, 1);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(165, 140, 89);
+  background-color: rgb(191, 149, 64);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(255, 170, 0);
+  background-color: rgb(204, 136, 0);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(204, 136, 0);
+  background-color: rgb(135, 90, 0);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    color="prominent"
+  >
+    prominent
+  </button>
+</div>
+`;
+
+exports[`Button should render colorway secondary 1`] = `
+.emotion-0 {
+  border-color: rgb(0, 125, 225);
+  background-color: rgb(26, 153, 255);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(97, 135, 165);
+  background-color: rgb(77, 140, 191);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(26, 153, 255);
+  background-color: rgb(0, 125, 225);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(0, 125, 225);
+  background-color: rgb(0, 83, 149);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    color="secondary"
+  >
+    secondary
+  </button>
+</div>
+`;
+
+exports[`Button should render colorway success 1`] = `
+.emotion-0 {
+  border-color: rgb(32, 134, 55);
+  background-color: rgb(40, 167, 69);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(101, 139, 110);
+  background-color: rgb(84, 147, 98);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(40, 167, 69);
+  background-color: rgb(32, 134, 55);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(32, 134, 55);
+  background-color: rgb(21, 89, 37);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    color="success"
+  >
+    success
+  </button>
+</div>
+`;
+
+exports[`Button should render colorway tertiary 1`] = `
+.emotion-0 {
+  border-color: rgb(0, 122, 122);
+  background-color: rgb(0, 153, 153);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(89, 135, 135);
+  background-color: rgb(64, 140, 140);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(0, 153, 153);
+  background-color: rgb(0, 122, 122);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(0, 122, 122);
+  background-color: rgb(0, 81, 81);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    color="tertiary"
+  >
+    tertiary
+  </button>
+</div>
+`;
+
+exports[`Button should render colorway warning 1`] = `
+.emotion-0 {
+  border-color: rgb(210, 157, 0);
+  background-color: rgb(255, 193, 7);
+  color: rgb(1, 1, 1);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(165, 147, 91);
+  background-color: rgb(191, 160, 67);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(255, 193, 7);
+  background-color: rgb(210, 157, 0);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(210, 157, 0);
+  background-color: rgb(139, 104, 0);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    color="warning"
+  >
+    warning
+  </button>
+</div>
+`;
+
+exports[`Button should render font button 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    button
+  </button>
+</div>
+`;
+
+exports[`Button should render font caption 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 200;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    caption
+  </button>
+</div>
+`;
+
+exports[`Button should render font code 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Monaco,monospace;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    code
+  </button>
+</div>
+`;
+
+exports[`Button should render font control 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0px;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    control
+  </button>
+</div>
+`;
+
+exports[`Button should render font emphasized 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: italic;
+  font-weight: 400;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    emphasized
+  </button>
+</div>
+`;
+
+exports[`Button should render font heading 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    heading
+  </button>
+</div>
+`;
+
+exports[`Button should render font label 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    label
+  </button>
+</div>
+`;
+
+exports[`Button should render font legal 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Times New Roman,serif;
+  font-kerning: normal;
+  font-size: 0.75em;
+  font-style: italic;
+  font-weight: 400;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    legal
+  </button>
+</div>
+`;
+
+exports[`Button should render font link 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    link
+  </button>
+</div>
+`;
+
+exports[`Button should render font message 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0px;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    message
+  </button>
+</div>
+`;
+
+exports[`Button should render font mistake 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    mistake
+  </button>
+</div>
+`;
+
+exports[`Button should render font nav 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0px;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    nav
+  </button>
+</div>
+`;
+
+exports[`Button should render font paragraph 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  text-align: justify;
+  text-decoration-line: none;
+  text-transform: none;
+  margin: 1em 0;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    paragraph
+  </button>
+</div>
+`;
+
+exports[`Button should render font quote 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: italic;
+  font-weight: 400;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    quote
+  </button>
+</div>
+`;
+
+exports[`Button should render font strong 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 200;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    strong
+  </button>
+</div>
+`;
+
+exports[`Button should render font table 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0px;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    table
+  </button>
+</div>
+`;
+
+exports[`Button should render font text 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    text
+  </button>
+</div>
+`;
+
+exports[`Button should render font variable 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Monaco,monospace;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: italic;
+  font-weight: 400;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    variable
+  </button>
+</div>
+`;
+
+exports[`Button should render padding giant 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding: 64px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    giant
+  </button>
+</div>
+`;
+
+exports[`Button should render padding large 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding: 24px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    large
+  </button>
+</div>
+`;
+
+exports[`Button should render padding max 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding: 88px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    max
+  </button>
+</div>
+`;
+
+exports[`Button should render padding medium 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    medium
+  </button>
+</div>
+`;
+
+exports[`Button should render padding min 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding: 0px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    min
+  </button>
+</div>
+`;
+
+exports[`Button should render padding small 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding: 12px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    small
+  </button>
+</div>
+`;
+
+exports[`Button should render padding tiny 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding: 2px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    tiny
+  </button>
+</div>
+`;
+
+exports[`Button should render padding xLarge 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding: 32px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    xLarge
+  </button>
+</div>
+`;
+
+exports[`Button should render padding xSmall 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding: 8px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    xSmall
+  </button>
+</div>
+`;
+
+exports[`Button should render padding xxLarge 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding: 48px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    xxLarge
+  </button>
+</div>
+`;
+
+exports[`Button should render padding xxSmall 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding: 4px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+<div>
+  <button
+    class="emotion-0"
+  >
+    xxSmall
   </button>
 </div>
 `;

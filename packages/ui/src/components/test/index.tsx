@@ -1,7 +1,3 @@
-// import { makeTheme } from '../../config'
-//
-// export const theme = makeTheme()
-
 import React from 'react'
 import { ThemeProvider } from '@emotion/react'
 import { render as rtlRender } from '@testing-library/react'

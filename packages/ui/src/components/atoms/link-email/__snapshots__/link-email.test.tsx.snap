@@ -1,9 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LinkEmail should render as a button 1`] = `
+.emotion-0 {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(127, 127, 127);
+  background-color: rgb(102, 102, 102);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(102, 102, 102);
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
 <div>
   <a
-    class="css-wnzrvu"
+    class="emotion-0"
     href="mailto:example@example.com?subject=example subject&body=example body"
   >
     example
@@ -12,9 +58,62 @@ exports[`LinkEmail should render as a button 1`] = `
 `;
 
 exports[`LinkEmail should render as default 1`] = `
+.emotion-0 {
+  color: rgb(26, 26, 26);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  color: rgb(76, 76, 76);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  text-transform: none;
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  color: rgb(38, 38, 38);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  text-transform: none;
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  color: rgb(51, 51, 51);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  text-transform: none;
+}
+
 <div>
   <a
-    class="css-1dzkoa2"
+    class="emotion-0"
     href="mailto:example@example.com?subject=example subject&body=example body"
   >
     example
