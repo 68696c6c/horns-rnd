@@ -22,7 +22,7 @@ export interface Padded {
   padding?: SideSizeOptions | SizeOption
 }
 
-interface PaddedArgs extends Styled, Padded {
+export interface PaddedArgs extends Styled, Padded {
   paddingDefault?: SideSizeOptions
 }
 

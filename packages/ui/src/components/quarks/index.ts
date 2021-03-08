@@ -3,6 +3,7 @@
 // Button and Link, to share certain styles with each other.  Like atoms, they are composed of
 // traits and export styled components, making them distinctly different than traits, which are
 // neither composed nor components and exist only to apply theming to specific css properties.
+export { BlockProps, blockStyles } from './block'
 export {
   StyledButton,
   LinkVariant,

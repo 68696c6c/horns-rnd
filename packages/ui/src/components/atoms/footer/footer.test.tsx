@@ -1,34 +1,29 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react'
 
 import { render } from '../../test'
 import { Colorway, Size } from '../../../config'
 
-import { Section } from '.'
+import { Footer } from '.'
 
-describe('Section', () => {
+describe('Footer', () => {
   it('should render as default', () => {
     const { container } = render(
-      <Section>
-        <h1>section</h1>
-        <p>content can go anywhere</p>
-        <div>a div</div>
-        <div>another div</div>
-      </Section>,
+      <Footer>
+        <h1>footer</h1>
+      </Footer>,
     )
     expect(container).toMatchSnapshot()
   })
   it.each(Object.values(Colorway))('should render colorway %s', (color) => {
     const { container } = render(
-      <Section color={color}>
-        <h1>{color} section</h1>
-        <p>{color} content</p>
-      </Section>,
+      <Footer color={color}>
+        <h1>{color}</h1>
+      </Footer>,
     )
     expect(container).toMatchSnapshot()
   })
   it.each(Object.values(Size))('should render padding %s', (size) => {
-    const { container } = render(<Section padding={size}>{size}</Section>)
+    const { container } = render(<Footer padding={size}>{size}</Footer>)
     expect(container).toMatchSnapshot()
   })
 })

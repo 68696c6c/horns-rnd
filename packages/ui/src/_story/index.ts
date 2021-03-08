@@ -5,4 +5,5 @@ export {
   paddedDemo,
   clickableButtonDemo,
   clickableLinkDemo,
+  blockDemo,
 } from './demos'

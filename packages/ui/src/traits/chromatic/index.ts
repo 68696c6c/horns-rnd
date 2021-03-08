@@ -7,7 +7,7 @@ export interface Chromatic {
   color?: Colorway
 }
 
-interface ChromaticArgs extends Chromatic {
+export interface ChromaticArgs extends Chromatic {
   colorDefault?: Colorway
   state?: UiState
 }

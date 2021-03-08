@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Section should render as default 1`] = `
+exports[`Footer should render as default 1`] = `
 .emotion-0 {
   border-color: rgb(247, 247, 247);
   background-color: rgb(255, 255, 255);
@@ -15,26 +15,17 @@ exports[`Section should render as default 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
   >
     <h1>
-      section
+      footer
     </h1>
-    <p>
-      content can go anywhere
-    </p>
-    <div>
-      a div
-    </div>
-    <div>
-      another div
-    </div>
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render colorway background 1`] = `
+exports[`Footer should render colorway background 1`] = `
 .emotion-0 {
   border-color: rgb(247, 247, 247);
   background-color: rgb(255, 255, 255);
@@ -49,23 +40,18 @@ exports[`Section should render colorway background 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
     color="background"
   >
     <h1>
       background
-       section
     </h1>
-    <p>
-      background
-       content
-    </p>
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render colorway backgroundAlt 1`] = `
+exports[`Footer should render colorway backgroundAlt 1`] = `
 .emotion-0 {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
@@ -80,23 +66,18 @@ exports[`Section should render colorway backgroundAlt 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
     color="backgroundAlt"
   >
     <h1>
       backgroundAlt
-       section
     </h1>
-    <p>
-      backgroundAlt
-       content
-    </p>
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render colorway danger 1`] = `
+exports[`Footer should render colorway danger 1`] = `
 .emotion-0 {
   border-color: rgb(186, 32, 47);
   background-color: rgb(220, 53, 69);
@@ -111,23 +92,18 @@ exports[`Section should render colorway danger 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
     color="danger"
   >
     <h1>
       danger
-       section
     </h1>
-    <p>
-      danger
-       content
-    </p>
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render colorway dark 1`] = `
+exports[`Footer should render colorway dark 1`] = `
 .emotion-0 {
   border-color: rgb(51, 51, 51);
   background-color: rgb(26, 26, 26);
@@ -142,23 +118,18 @@ exports[`Section should render colorway dark 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
     color="dark"
   >
     <h1>
       dark
-       section
     </h1>
-    <p>
-      dark
-       content
-    </p>
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render colorway info 1`] = `
+exports[`Footer should render colorway info 1`] = `
 .emotion-0 {
   border-color: rgb(18, 130, 147);
   background-color: rgb(23, 162, 184);
@@ -173,23 +144,18 @@ exports[`Section should render colorway info 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
     color="info"
   >
     <h1>
       info
-       section
     </h1>
-    <p>
-      info
-       content
-    </p>
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render colorway light 1`] = `
+exports[`Footer should render colorway light 1`] = `
 .emotion-0 {
   border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
@@ -204,23 +170,18 @@ exports[`Section should render colorway light 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
     color="light"
   >
     <h1>
       light
-       section
     </h1>
-    <p>
-      light
-       content
-    </p>
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render colorway neutral 1`] = `
+exports[`Footer should render colorway neutral 1`] = `
 .emotion-0 {
   border-color: rgb(102, 102, 102);
   background-color: rgb(127, 127, 127);
@@ -235,23 +196,18 @@ exports[`Section should render colorway neutral 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
     color="neutral"
   >
     <h1>
       neutral
-       section
     </h1>
-    <p>
-      neutral
-       content
-    </p>
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render colorway primary 1`] = `
+exports[`Footer should render colorway primary 1`] = `
 .emotion-0 {
   border-color: rgb(204, 136, 0);
   background-color: rgb(255, 170, 0);
@@ -266,23 +222,18 @@ exports[`Section should render colorway primary 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
     color="primary"
   >
     <h1>
       primary
-       section
     </h1>
-    <p>
-      primary
-       content
-    </p>
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render colorway prominent 1`] = `
+exports[`Footer should render colorway prominent 1`] = `
 .emotion-0 {
   border-color: rgb(204, 136, 0);
   background-color: rgb(255, 170, 0);
@@ -297,23 +248,18 @@ exports[`Section should render colorway prominent 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
     color="prominent"
   >
     <h1>
       prominent
-       section
     </h1>
-    <p>
-      prominent
-       content
-    </p>
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render colorway secondary 1`] = `
+exports[`Footer should render colorway secondary 1`] = `
 .emotion-0 {
   border-color: rgb(0, 125, 225);
   background-color: rgb(26, 153, 255);
@@ -328,23 +274,18 @@ exports[`Section should render colorway secondary 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
     color="secondary"
   >
     <h1>
       secondary
-       section
     </h1>
-    <p>
-      secondary
-       content
-    </p>
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render colorway success 1`] = `
+exports[`Footer should render colorway success 1`] = `
 .emotion-0 {
   border-color: rgb(32, 134, 55);
   background-color: rgb(40, 167, 69);
@@ -359,23 +300,18 @@ exports[`Section should render colorway success 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
     color="success"
   >
     <h1>
       success
-       section
     </h1>
-    <p>
-      success
-       content
-    </p>
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render colorway tertiary 1`] = `
+exports[`Footer should render colorway tertiary 1`] = `
 .emotion-0 {
   border-color: rgb(0, 122, 122);
   background-color: rgb(0, 153, 153);
@@ -390,23 +326,18 @@ exports[`Section should render colorway tertiary 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
     color="tertiary"
   >
     <h1>
       tertiary
-       section
     </h1>
-    <p>
-      tertiary
-       content
-    </p>
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render colorway warning 1`] = `
+exports[`Footer should render colorway warning 1`] = `
 .emotion-0 {
   border-color: rgb(210, 157, 0);
   background-color: rgb(255, 193, 7);
@@ -421,23 +352,18 @@ exports[`Section should render colorway warning 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
     color="warning"
   >
     <h1>
       warning
-       section
     </h1>
-    <p>
-      warning
-       content
-    </p>
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render padding giant 1`] = `
+exports[`Footer should render padding giant 1`] = `
 .emotion-0 {
   border-color: rgb(247, 247, 247);
   background-color: rgb(255, 255, 255);
@@ -453,15 +379,15 @@ exports[`Section should render padding giant 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
   >
     giant
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render padding large 1`] = `
+exports[`Footer should render padding large 1`] = `
 .emotion-0 {
   border-color: rgb(247, 247, 247);
   background-color: rgb(255, 255, 255);
@@ -477,15 +403,15 @@ exports[`Section should render padding large 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
   >
     large
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render padding max 1`] = `
+exports[`Footer should render padding max 1`] = `
 .emotion-0 {
   border-color: rgb(247, 247, 247);
   background-color: rgb(255, 255, 255);
@@ -501,15 +427,15 @@ exports[`Section should render padding max 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
   >
     max
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render padding medium 1`] = `
+exports[`Footer should render padding medium 1`] = `
 .emotion-0 {
   border-color: rgb(247, 247, 247);
   background-color: rgb(255, 255, 255);
@@ -525,15 +451,15 @@ exports[`Section should render padding medium 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
   >
     medium
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render padding min 1`] = `
+exports[`Footer should render padding min 1`] = `
 .emotion-0 {
   border-color: rgb(247, 247, 247);
   background-color: rgb(255, 255, 255);
@@ -549,15 +475,15 @@ exports[`Section should render padding min 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
   >
     min
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render padding small 1`] = `
+exports[`Footer should render padding small 1`] = `
 .emotion-0 {
   border-color: rgb(247, 247, 247);
   background-color: rgb(255, 255, 255);
@@ -573,15 +499,15 @@ exports[`Section should render padding small 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
   >
     small
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render padding tiny 1`] = `
+exports[`Footer should render padding tiny 1`] = `
 .emotion-0 {
   border-color: rgb(247, 247, 247);
   background-color: rgb(255, 255, 255);
@@ -597,15 +523,15 @@ exports[`Section should render padding tiny 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
   >
     tiny
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render padding xLarge 1`] = `
+exports[`Footer should render padding xLarge 1`] = `
 .emotion-0 {
   border-color: rgb(247, 247, 247);
   background-color: rgb(255, 255, 255);
@@ -621,15 +547,15 @@ exports[`Section should render padding xLarge 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
   >
     xLarge
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render padding xSmall 1`] = `
+exports[`Footer should render padding xSmall 1`] = `
 .emotion-0 {
   border-color: rgb(247, 247, 247);
   background-color: rgb(255, 255, 255);
@@ -645,15 +571,15 @@ exports[`Section should render padding xSmall 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
   >
     xSmall
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render padding xxLarge 1`] = `
+exports[`Footer should render padding xxLarge 1`] = `
 .emotion-0 {
   border-color: rgb(247, 247, 247);
   background-color: rgb(255, 255, 255);
@@ -669,15 +595,15 @@ exports[`Section should render padding xxLarge 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
   >
     xxLarge
-  </section>
+  </footer>
 </div>
 `;
 
-exports[`Section should render padding xxSmall 1`] = `
+exports[`Footer should render padding xxSmall 1`] = `
 .emotion-0 {
   border-color: rgb(247, 247, 247);
   background-color: rgb(255, 255, 255);
@@ -693,10 +619,10 @@ exports[`Section should render padding xxSmall 1`] = `
 }
 
 <div>
-  <section
+  <footer
     class="emotion-0"
   >
     xxSmall
-  </section>
+  </footer>
 </div>
 `;

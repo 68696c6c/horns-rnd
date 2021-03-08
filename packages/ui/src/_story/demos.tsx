@@ -91,6 +91,20 @@ export const chromaticTextDemo = <T extends {}>(
   </Demo>
 )
 
+export const containedDemo = <T extends {}>(
+  C: ElementType,
+  props: PropsWithoutRef<T>,
+) => (
+  <C {...props}>
+    <h1>contained</h1>
+    <p>
+      Above the &quot;max&quot; breakpoint, the component will include left and
+      right padding for centering the content within the content area of the
+      page.
+    </p>
+  </C>
+)
+
 export const paddedDemo = <T extends {}>(
   C: ElementType,
   props: PropsWithoutRef<T>,
@@ -148,5 +162,16 @@ export const clickableLinkDemo = <T extends {}>(
   <>
     {chromaticTextDemo(C, props)}
     {typographicDemo(C, props)}
+  </>
+)
+
+export const blockDemo = <T extends {}>(
+  C: ElementType,
+  props: PropsWithoutRef<T>,
+) => (
+  <>
+    {chromaticDemo(C, props)}
+    {paddedDemo(C, props)}
+    {containedDemo(C, props)}
   </>
 )
