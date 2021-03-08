@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { render } from '../../test'
+import { render, screen } from '../../test'
 import { BorderStyle, Colorway, Size, Font } from '../../../config'
 
 import { Button } from '.'
@@ -43,22 +43,18 @@ describe('Button', () => {
   })
   describe('ui states', () => {
     it('should render hover state', () => {
-      const testId = 'button-hover'
-      const { getByTestId } = render(
-        <Button data-testid={testId}>{testId}</Button>,
-      )
-      const button = getByTestId(testId)
+      const text = 'button-hover'
+      render(<Button>{text}</Button>)
+      const button = screen.getByText(text)
       expect(button).toHaveStyleRule('background-color', 'rgb(102, 102, 102)', {
         target: ':hover',
       })
       expect(button).toHaveStyleRule('background-color', 'rgb(127, 127, 127)')
     })
     it('should render active state', () => {
-      const testId = 'button-active'
-      const { getByTestId } = render(
-        <Button data-testid={testId}>{testId}</Button>,
-      )
-      const button = getByTestId(testId)
+      const text = 'button-active'
+      render(<Button>{text}</Button>)
+      const button = screen.getByText(text)
       expect(button).toHaveStyleRule('background-color', 'rgb(67, 67, 67)', {
         target: ':active',
       })
