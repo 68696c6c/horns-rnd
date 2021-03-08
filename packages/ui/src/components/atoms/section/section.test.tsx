@@ -1,7 +1,8 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react'
 
 import { render } from '../../test'
-import { Background } from '../../../config'
+import { Colorway } from '../../../config'
 
 import { Section } from '.'
 
@@ -17,11 +18,11 @@ describe('Section', () => {
     )
     expect(container).toMatchSnapshot()
   })
-  it.each(Object.values(Background))('should render background %s', (color) => {
+  it.each(Object.values(Colorway))('should render colorway %s', (color) => {
     const { container } = render(
-      <Section color={color as Background}>
-        <h1>primary section</h1>
-        <p>primary content</p>
+      <Section color={color}>
+        <h1>{color} section</h1>
+        <p>{color} content</p>
       </Section>,
     )
     expect(container).toMatchSnapshot()

@@ -2,7 +2,7 @@ import _merge from 'lodash.merge'
 
 import { defaultButtons, ButtonsConfig } from './buttons'
 import { makeBreakpoints, Breakpoints, BreakpointsConfig } from './breakpoints'
-import { makeColors, Colors, ColorsConfig } from './colors'
+import { makeColors, ColorsConfig, Colorways } from './colors'
 import { defaultGrid, GridConfig } from './grid'
 import { defaultLinks, LinksConfig } from './links'
 import { defaultSizes, SizesConfig } from './sizes'
@@ -23,7 +23,7 @@ export interface Theme {
   name: string
   buttons: ButtonsConfig
   breakpoints: Breakpoints
-  colors: Colors
+  colors: Colorways
   grid: GridConfig
   links: LinksConfig
   sizes: SizesConfig

@@ -1,7 +1,7 @@
 export {
   borderedDemo,
   chromaticDemo,
-  chromaticSurfaceDemo,
+  chromaticTextDemo,
   paddedDemo,
   clickableButtonDemo,
   clickableLinkDemo,

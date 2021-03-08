@@ -1,7 +1,7 @@
 export { ButtonsConfig, defaultButtons } from './buttons'
 export { BorderStyle, BordersConfig, BorderProperties } from './borders'
 export { Breakpoint } from './breakpoints'
-export { Colorway, Background } from './colors'
+export { Colorway } from './colors'
 export { Cursor } from './cursors'
 export { makeTheme, Theme, Config } from './theme'
 export { Size, SizeOption, SideSizeOptions } from './sizes'

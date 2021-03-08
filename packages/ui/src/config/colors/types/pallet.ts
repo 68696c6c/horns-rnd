@@ -5,9 +5,11 @@ import { HoverState } from '../../utils'
 import { colorPallet, Config, Shaders } from './config'
 import { Colorway, BaseSwatch, ColorStates, ColorSwatches } from './types'
 
-export type Pallet = {
+type BasePallet = {
   [key in Colorway]: PalletShades
 }
+
+export type Pallet = Omit<BasePallet, 'background' | 'backgroundAlt'>
 
 export type PalletShades = {
   [key in Shade]: Color
@@ -38,9 +40,7 @@ const makeSwatches = (base: Color, border: Color): ColorSwatches => {
   }
 }
 
-export const makeColorwayStates = (
-  baseStates: BaseColorStates,
-): ColorStates => {
+const makeColorwayStates = (baseStates: BaseColorStates): ColorStates => {
   const { base, hover, active } = baseStates
   const inactive = {
     base: base.base.mix(colorPallet.gray, 0.5),
@@ -70,6 +70,46 @@ export const makeColorway = (
     base: { base, border: dark },
     hover: { base: dark, border: base },
     active: { base: darker, border: dark },
+  })
+}
+
+export const makeBackground = (
+  pallet: Pallet,
+  isDark: boolean,
+): ColorStates => {
+  if (isDark) {
+    const { base, dark, darker, light } = pallet.dark
+    return makeColorwayStates({
+      base: { base: darker, border: dark },
+      hover: { base: dark, border: base },
+      active: { base, border: light },
+    })
+  }
+  const { base, dark, light, lighter } = pallet.light
+  return makeColorwayStates({
+    base: { base: lighter, border: light },
+    hover: { base: light, border: base },
+    active: { base, border: dark },
+  })
+}
+
+export const makeBackgroundAlt = (
+  pallet: Pallet,
+  isDark: boolean,
+): ColorStates => {
+  if (isDark) {
+    const { base, dark, light, lighter } = pallet.dark
+    return makeColorwayStates({
+      base: { base: dark, border: base },
+      hover: { base, border: light },
+      active: { base: light, border: lighter },
+    })
+  }
+  const { base, dark, darker, light } = pallet.light
+  return makeColorwayStates({
+    base: { base: light, border: base },
+    hover: { base, border: dark },
+    active: { base: dark, border: darker },
   })
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
-import { chromaticSurfaceDemo, paddedDemo } from '../../../_story'
+import { chromaticDemo, paddedDemo } from '../../../_story'
 
 import { Section } from '.'
 
@@ -20,6 +20,6 @@ export const Default: Story = () => (
 )
 
 export const Traits = () => [
-  chromaticSurfaceDemo(Section, {}),
+  chromaticDemo(Section, {}),
   paddedDemo(Section, {}),
 ]

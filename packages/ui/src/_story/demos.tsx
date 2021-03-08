@@ -1,7 +1,7 @@
 import React, { FC, ReactNode, ElementType, PropsWithoutRef } from 'react'
 import styled from '@emotion/styled'
 
-import { BorderStyle, Colorway, Size, Font, Background } from '../config'
+import { BorderStyle, Colorway, Size, Font } from '../config'
 
 const StyledDemo = styled.div`
   display: flex;
@@ -72,18 +72,18 @@ export const chromaticDemo = <T extends {}>(
   </Demo>
 )
 
-export const chromaticSurfaceDemo = <T extends {}>(
+export const chromaticTextDemo = <T extends {}>(
   C: ElementType,
   props: PropsWithoutRef<T>,
 ) => (
   <Demo>
-    <h1>chromaticSurface</h1>
+    <h1>chromaticText</h1>
     <StyledDemo>
       <C {...props} color={undefined}>
         default
       </C>
-      {Object.values(Background).map((color) => (
-        <C {...props} color={color} key={`background-${color}`}>
+      {Object.values(Colorway).map((color) => (
+        <C {...props} color={color} key={`colorway-${color}`}>
           {color}
         </C>
       ))}
@@ -146,7 +146,7 @@ export const clickableLinkDemo = <T extends {}>(
   props: PropsWithoutRef<T>,
 ) => (
   <>
-    {chromaticDemo(C, props)}
+    {chromaticTextDemo(C, props)}
     {typographicDemo(C, props)}
   </>
 )

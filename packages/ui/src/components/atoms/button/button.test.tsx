@@ -46,19 +46,19 @@ describe('Button', () => {
       const text = 'button-hover'
       render(<Button>{text}</Button>)
       const button = screen.getByText(text)
-      expect(button).toHaveStyleRule('background-color', 'rgb(102, 102, 102)', {
+      expect(button).toHaveStyleRule('background-color', 'rgb(247, 247, 247)', {
         target: ':hover',
       })
-      expect(button).toHaveStyleRule('background-color', 'rgb(127, 127, 127)')
+      expect(button).toHaveStyleRule('background-color', 'rgb(255, 255, 255)')
     })
     it('should render active state', () => {
       const text = 'button-active'
       render(<Button>{text}</Button>)
       const button = screen.getByText(text)
-      expect(button).toHaveStyleRule('background-color', 'rgb(67, 67, 67)', {
+      expect(button).toHaveStyleRule('background-color', 'rgb(240, 240, 240)', {
         target: ':active',
       })
-      expect(button).toHaveStyleRule('background-color', 'rgb(127, 127, 127)')
+      expect(button).toHaveStyleRule('background-color', 'rgb(255, 255, 255)')
     })
   })
 })

@@ -1,11 +1,5 @@
 export { bordered, Bordered } from './bordered'
-export {
-  Chromatic,
-  chromatic,
-  chromaticText,
-  ChromaticSurface,
-  chromaticSurface,
-} from './chromatic'
+export { Chromatic, chromatic, chromaticText } from './chromatic'
 export { contained, Contained } from './contained'
 export { gridded, Gridded } from './gridded'
 export { interactive, Interactive } from './interactive'

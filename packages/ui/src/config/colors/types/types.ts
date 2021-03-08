@@ -12,11 +12,8 @@ export enum Colorway {
   Warning = 'warning',
   Danger = 'danger',
   Prominent = 'prominent',
-}
-
-export enum Background {
-  Primary = 'primary',
-  Secondary = 'secondary',
+  Background = 'background',
+  BackgroundAlt = 'backgroundAlt',
 }
 
 export enum BaseSwatch {

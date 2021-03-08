@@ -1,6 +1,7 @@
+// Clickables are interactive elements that can be clicked on, like buttons, links, and nav items.
 import styled from '@emotion/styled'
 
-import { HoverState, StatusState } from '../../../config'
+import { HoverState, StatusState } from '../../config'
 import {
   Bordered,
   bordered,
@@ -15,7 +16,7 @@ import {
   Styled,
   Typographic,
   typographic,
-} from '../../../traits'
+} from '../../traits'
 
 export enum LinkVariant {
   Link = 'link',

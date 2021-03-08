@@ -1,5 +1,19 @@
-import styled from '@emotion/styled'
+import styled, { StyledComponent } from '@emotion/styled'
 
-import { chromaticSurface, contained, padded } from '../../../traits'
+import {
+  chromatic,
+  contained,
+  padded,
+  Component,
+  Chromatic,
+  Contained,
+  Padded,
+} from '../../../traits'
 
-export const Section = styled.section(chromaticSurface, padded, contained)
+interface SectionProps extends Component, Chromatic, Contained, Padded {}
+
+export const Section: StyledComponent<SectionProps> = styled.section(
+  chromatic,
+  padded,
+  contained,
+)

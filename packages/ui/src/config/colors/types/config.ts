@@ -19,7 +19,7 @@ type ProminentOption = `${Colorway}`
 export interface Config {
   mode: ModeOption
   prominent: ProminentOption
-  pallet: Omit<PalletConfig, 'prominent'>
+  pallet: Omit<PalletConfig, 'prominent' | 'background' | 'backgroundAlt'>
   shaders: Shaders
 }
 
