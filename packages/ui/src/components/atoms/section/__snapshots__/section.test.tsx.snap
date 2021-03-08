@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Section should render as default 1`] = `
+.emotion-0 {
+  border-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
+  color: rgb(1, 1, 1);
+}
+
+@media (min-width: 1200px) {
+  .emotion-0 {
+    padding-left: calc(((100vw - 1200px) / 2));
+    padding-right: calc(((100vw - 1200px) / 2));
+  }
+}
+
+<div>
+  <section
+    class="emotion-0"
+  >
+    <h1>
+      section
+    </h1>
+    <p>
+      content can go anywhere
+    </p>
+    <div>
+      a div
+    </div>
+    <div>
+      another div
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Section should render background primary 1`] = `
+.emotion-0 {
+  border-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
+  color: rgb(1, 1, 1);
+}
+
+@media (min-width: 1200px) {
+  .emotion-0 {
+    padding-left: calc(((100vw - 1200px) / 2));
+    padding-right: calc(((100vw - 1200px) / 2));
+  }
+}
+
+<div>
+  <section
+    class="emotion-0"
+    color="primary"
+  >
+    <h1>
+      primary section
+    </h1>
+    <p>
+      primary content
+    </p>
+  </section>
+</div>
+`;
+
+exports[`Section should render background secondary 1`] = `
+.emotion-0 {
+  border-color: rgb(240, 240, 240);
+  background-color: rgb(247, 247, 247);
+  color: rgb(1, 1, 1);
+}
+
+@media (min-width: 1200px) {
+  .emotion-0 {
+    padding-left: calc(((100vw - 1200px) / 2));
+    padding-right: calc(((100vw - 1200px) / 2));
+  }
+}
+
+<div>
+  <section
+    class="emotion-0"
+    color="secondary"
+  >
+    <h1>
+      primary section
+    </h1>
+    <p>
+      primary content
+    </p>
+  </section>
+</div>
+`;
