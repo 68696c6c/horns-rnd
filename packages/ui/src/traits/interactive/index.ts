@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Cursor, Theme } from '../../config'
+import { Cursor } from '../../config'
 import { Styled } from '../styled'
 
 export interface Interactive {
