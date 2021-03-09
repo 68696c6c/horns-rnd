@@ -11,14 +11,9 @@ export type PalletConfig = {
   [key in Colorway]: string
 }
 
-// These template literal types exist to allow users to provide config values as strings instead of
-// enums since they won't have access to our enums.
-type ModeOption = `${Mode}`
-type ProminentOption = `${Colorway}`
-
 export interface Config {
-  mode: ModeOption
-  prominent: ProminentOption
+  mode: Mode
+  prominent: Colorway
   pallet: Omit<PalletConfig, 'prominent' | 'background' | 'backgroundAlt'>
   shaders: Shaders
 }
@@ -73,8 +68,8 @@ export const colorPallet = {
 }
 
 export const defaultConfig: Config = {
-  mode: 'light',
-  prominent: 'primary',
+  mode: Mode.Light,
+  prominent: Colorway.Primary,
   pallet: {
     primary: hexPallet.tangerine,
     secondary: hexPallet.blue,

@@ -56,7 +56,7 @@ const evalBorder = (
 export const evalBorderSides = (
   input: BordersConfig,
   defaults: BordersConfig,
-): Required<Pick<BordersConfig, 'top' | 'bottom' | 'left' | 'right'>> => {
+): Required<Omit<BordersConfig, 'all' | 'x' | 'y'>> => {
   const { all, x, y, top, bottom, left, right } = evalBorder(input, defaults)
   return {
     top: {

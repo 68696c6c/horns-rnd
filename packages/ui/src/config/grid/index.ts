@@ -1,11 +1,11 @@
-import { SizeOption } from '../sizes'
+import { Size } from '../sizes'
 
 export type GridConfig = {
-  gap: SizeOption
+  gap: Size
   columnMin: string
 }
 
 export const defaultGrid: GridConfig = {
-  gap: 'small',
+  gap: Size.Small,
   columnMin: '280px',
 }

@@ -1,4 +1,5 @@
-import { SizeOption } from '../sizes'
+import { Size } from '../sizes'
+import { Side } from '../utils'
 
 export enum BorderStyle {
   None = 'none',
@@ -15,19 +16,11 @@ export enum BorderStyle {
   Inherit = 'inherit',
 }
 
-export type BorderStyleOption = `${BorderStyle}`
-
 export type BorderProperties = {
-  width?: SizeOption
-  style?: BorderStyleOption
+  width?: Size
+  style?: BorderStyle
 }
 
 export type BordersConfig = {
-  all?: BorderProperties
-  x?: BorderProperties
-  y?: BorderProperties
-  top?: BorderProperties
-  bottom?: BorderProperties
-  left?: BorderProperties
-  right?: BorderProperties
+  [key in Side]?: BorderProperties
 }

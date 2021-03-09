@@ -7,8 +7,6 @@ export enum TextDecorationLine {
   Inherit = 'inherit',
 }
 
-type TextDecorationLineOption = `${TextDecorationLine}`
-
 export enum TextDecorationStyle {
   Solid = 'solid',
   Double = 'double',
@@ -19,11 +17,9 @@ export enum TextDecorationStyle {
   Inherit = 'inherit',
 }
 
-type TextDecorationStyleOption = `${TextDecorationStyle}`
-
 export interface TextDecoration {
-  line: TextDecorationLineOption
-  style?: TextDecorationStyleOption
+  line: TextDecorationLine
+  style?: TextDecorationStyle
 }
 
 export enum Decoration {

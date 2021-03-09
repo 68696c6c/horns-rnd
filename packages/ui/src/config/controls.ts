@@ -1,4 +1,4 @@
-import { BordersConfig } from './borders'
+import { BordersConfig, BorderStyle } from './borders'
 import { CornerSizeOptions, SideSizeOptions, Size } from './sizes'
 
 export type ControlsConfig = {
@@ -11,11 +11,27 @@ export const defaultControls: ControlsConfig = {
   border: {
     all: {
       width: Size.Tiny,
-      style: 'solid',
+      style: BorderStyle.Solid,
     },
   },
   padding: {
-    all: Size.Small,
+    all: Size.XSmall,
+  },
+  radius: {
+    all: Size.Tiny,
+  },
+}
+
+export const defaultButtons: ControlsConfig = {
+  border: {
+    all: {
+      width: Size.Tiny,
+      style: BorderStyle.Solid,
+    },
+  },
+  padding: {
+    x: Size.Medium,
+    y: Size.Small,
   },
   radius: {
     all: Size.Tiny,

@@ -9,7 +9,7 @@ import {
   makeColorways,
 } from './types'
 
-export { Colorway, Colorways } from './types'
+export { Mode, Colorway, Colorways } from './types'
 
 export type ColorsConfig = DeepPartial<Config>
 

@@ -6,12 +6,7 @@ import { FontConfig, Font } from './fonts'
 import { defaultFontSizes, BaseFontSize, FontSizes } from './sizes'
 import { defaultTextSpacings, TextSpacing, TextSpacings } from './spacings'
 import { defaultFontWeights, FontWeight, FontWeights } from './weights'
-import {
-  Direction,
-  DirectionOption,
-  FontStyle as FontStyleCss,
-  TextAlign,
-} from './types'
+import { Direction, FontStyle as FontStyleCss, TextAlign } from './types'
 
 export type ConfigFontStyles = {
   [key in Font]: ConfigFontStates
@@ -22,7 +17,7 @@ export type ConfigFontStates = {
 }
 
 export interface Config {
-  direction: DirectionOption
+  direction: Direction.LTR
   families: FontFamilies
   decorations: Decorations
   weights: FontWeights

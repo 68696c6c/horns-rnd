@@ -1,7 +1,7 @@
 import _merge from 'lodash.merge'
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Size, SizeOption, CornerSizeOptions, Corner } from '../../config'
+import { Size, CornerSizeOptions, Corner } from '../../config'
 import { Styled } from '../styled'
 
 export type Corners = {
@@ -21,7 +21,7 @@ export const evalCorners = (
 }
 
 export interface Rounded {
-  radius?: CornerSizeOptions | SizeOption
+  radius?: CornerSizeOptions | Size
 }
 
 export interface RoundedArgs extends Styled, Rounded {

@@ -14,11 +14,9 @@ export enum FontFamilyFallback {
   Fangsong = 'fangsong',
 }
 
-type FontFamilyFallbackOption = `${FontFamilyFallback}`
-
 export interface FontFamilyStyle {
   base: string
-  fallback: FontFamilyFallbackOption
+  fallback: FontFamilyFallback
   // these are set here because they will be specific to the font
   letting: string // i.e. line-height
   tracking: string // i.e. word-spacing
@@ -40,19 +38,19 @@ export const computeFontFamily = (style: FontFamilyStyle): string =>
 export const defaultFontFamilies: FontFamilies = {
   primary: {
     base: 'Helvetica',
-    fallback: 'sans-serif',
+    fallback: FontFamilyFallback.SansSerif,
     letting: '',
     tracking: '',
   },
   secondary: {
     base: 'Times New Roman',
-    fallback: 'serif',
+    fallback: FontFamilyFallback.Serif,
     letting: '',
     tracking: '',
   },
   tertiary: {
     base: 'Monaco',
-    fallback: 'monospace',
+    fallback: FontFamilyFallback.Monospace,
     letting: '',
     tracking: '',
   },

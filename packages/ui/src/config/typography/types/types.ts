@@ -3,8 +3,6 @@ export enum Direction {
   LTR = 'ltr',
 }
 
-export type DirectionOption = `${Direction}`
-
 export enum FontKerning {
   Auto = 'auto',
   Normal = 'normal',

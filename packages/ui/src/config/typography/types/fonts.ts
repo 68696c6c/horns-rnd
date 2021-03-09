@@ -1,5 +1,5 @@
 import {
-  DirectionOption,
+  Direction,
   FontKerning,
   FontStyle as FontStyleCss,
   TextAlign,
@@ -60,9 +60,7 @@ export interface FontConfig {
   // mode: string, // writing-mode
 }
 
-export const makeDefaultFontConfig = (
-  direction: DirectionOption,
-): FontConfig => ({
+export const makeDefaultFontConfig = (direction: Direction): FontConfig => ({
   family: FontFamily.Primary,
   style: FontStyleCss.Normal,
   weight: FontWeight.Base,

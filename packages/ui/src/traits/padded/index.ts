@@ -1,14 +1,16 @@
 import _merge from 'lodash.merge'
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Size, SizeOption, SideSizeOptions, Side } from '../../config'
+import { Size, SideSizeOptions, Side } from '../../config'
 import { Styled } from '../styled'
 
 export type Sides = {
   [key in Side]: Size | undefined
 }
 
-export const evalSides = (options: Partial<SideSizeOptions>): Sides => {
+export const evalSides = (
+  options: Partial<SideSizeOptions>,
+): Omit<Sides, 'all' | 'x' | 'y'> => {
   const { all, x, y, top, bottom, left, right } = options
   return {
     top: top || y || all,
@@ -19,7 +21,7 @@ export const evalSides = (options: Partial<SideSizeOptions>): Sides => {
 }
 
 export interface Padded {
-  padding?: SideSizeOptions | SizeOption
+  padding?: SideSizeOptions | Size
 }
 
 export interface PaddedArgs extends Styled, Padded {
