@@ -73,16 +73,15 @@ export interface LinkProps extends ButtonProps {
 
 export const StyledLink = styled.a(
   ({ theme, color, cursor, font }: Styled & LinkProps) => {
-    const { links } = theme
     const chromaticArgs = { theme, color }
-    const typographicArgs = { theme, font, fontDefault: links.font }
+    const typographicArgs = { theme, font, fontDefault: Font.Link }
     return [
       chromaticText,
       typographic,
       interactive({
         theme,
         cursor,
-        cursorDefault: links.cursor,
+        cursorDefault: Cursor.Pointer,
         hoverStyles: [
           chromaticText({ ...chromaticArgs, state: HoverState.Hover }),
           typographic({ ...typographicArgs, state: HoverState.Hover }),

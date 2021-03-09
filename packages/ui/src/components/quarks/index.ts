@@ -12,3 +12,9 @@ export {
   StyledLinkButton,
   StyledLink,
 } from './clickable'
+export {
+  ControlProps,
+  StyledInput,
+  StyledInputHidden,
+  StyledInputMasked,
+} from './control'

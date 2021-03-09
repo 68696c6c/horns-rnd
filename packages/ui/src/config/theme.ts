@@ -1,10 +1,10 @@
 import _merge from 'lodash.merge'
 
 import { defaultButtons, ButtonsConfig } from './buttons'
+import { defaultControls, ControlsConfig } from './controls'
 import { makeBreakpoints, Breakpoints, BreakpointsConfig } from './breakpoints'
 import { makeColors, ColorsConfig, Colorways } from './colors'
 import { defaultGrid, GridConfig } from './grid'
-import { defaultLinks, LinksConfig } from './links'
 import { defaultSizes, SizesConfig } from './sizes'
 import { makeTypography, TypographyConfig, Typography } from './typography'
 
@@ -13,8 +13,8 @@ export interface Config {
   buttons?: ButtonsConfig
   breakpoints?: BreakpointsConfig
   colors?: ColorsConfig
+  controls?: ControlsConfig
   grid?: Partial<GridConfig>
-  links?: Partial<LinksConfig>
   sizes?: SizesConfig
   typography?: TypographyConfig
 }
@@ -24,8 +24,8 @@ export interface Theme {
   buttons: ButtonsConfig
   breakpoints: Breakpoints
   colors: Colorways
+  controls: ControlsConfig
   grid: GridConfig
-  links: LinksConfig
   sizes: SizesConfig
   typography: Typography
 }
@@ -37,9 +37,9 @@ export const makeTheme = (themeConfig?: Partial<Config>): Theme => {
     buttons: _merge(defaultButtons, config.buttons),
     breakpoints: makeBreakpoints(config.breakpoints),
     colors: makeColors(config.colors),
+    controls: _merge(defaultControls, config.controls),
     sizes: _merge(defaultSizes, config.sizes),
     grid: _merge(defaultGrid, config.grid),
-    links: _merge(defaultLinks, config.links),
     typography: makeTypography(config.typography),
   }
 }
