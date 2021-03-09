@@ -124,6 +124,25 @@ export const paddedDemo = <T extends {}>(
   </Demo>
 )
 
+export const roundedDemo = <T extends {}>(
+  C: ElementType,
+  props: PropsWithoutRef<T>,
+) => (
+  <Demo>
+    <h1>rounded</h1>
+    <StyledDemo>
+      <C {...props} radius={undefined}>
+        default
+      </C>
+      {Object.values(Size).map((size) => (
+        <C {...props} radius={size} key={`radius-${size}`}>
+          {size}
+        </C>
+      ))}
+    </StyledDemo>
+  </Demo>
+)
+
 export const typographicDemo = <T extends {}>(
   C: ElementType,
   props: PropsWithoutRef<T>,
@@ -151,6 +170,7 @@ export const clickableButtonDemo = <T extends {}>(
     {borderedDemo(C, props)}
     {chromaticDemo(C, props)}
     {paddedDemo(C, props)}
+    {roundedDemo(C, props)}
     {typographicDemo(C, props)}
   </>
 )

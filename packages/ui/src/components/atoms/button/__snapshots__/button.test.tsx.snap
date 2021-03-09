@@ -18,6 +18,10 @@ exports[`Button should render as default 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -74,6 +78,10 @@ exports[`Button should render border style dashed 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -130,6 +138,10 @@ exports[`Button should render border style dotted 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -186,6 +198,10 @@ exports[`Button should render border style double 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -242,6 +258,10 @@ exports[`Button should render border style groove 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -298,6 +318,10 @@ exports[`Button should render border style hidden 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -354,6 +378,10 @@ exports[`Button should render border style inherit 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -410,6 +438,10 @@ exports[`Button should render border style initial 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -466,6 +498,10 @@ exports[`Button should render border style inset 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -522,6 +558,10 @@ exports[`Button should render border style none 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -578,6 +618,10 @@ exports[`Button should render border style outset 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -634,6 +678,10 @@ exports[`Button should render border style ridge 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -690,6 +738,10 @@ exports[`Button should render border style solid 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -746,6 +798,10 @@ exports[`Button should render border width giant 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -802,6 +858,10 @@ exports[`Button should render border width large 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -858,6 +918,10 @@ exports[`Button should render border width max 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -914,6 +978,10 @@ exports[`Button should render border width medium 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -970,6 +1038,10 @@ exports[`Button should render border width min 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -1026,6 +1098,10 @@ exports[`Button should render border width small 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -1082,6 +1158,10 @@ exports[`Button should render border width tiny 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -1138,6 +1218,10 @@ exports[`Button should render border width xLarge 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -1194,6 +1278,10 @@ exports[`Button should render border width xSmall 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -1250,6 +1338,10 @@ exports[`Button should render border width xxLarge 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -1306,6 +1398,10 @@ exports[`Button should render border width xxSmall 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -1362,6 +1458,10 @@ exports[`Button should render colorway background 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -1419,6 +1519,10 @@ exports[`Button should render colorway backgroundAlt 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -1476,6 +1580,10 @@ exports[`Button should render colorway danger 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -1533,6 +1641,10 @@ exports[`Button should render colorway dark 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -1590,6 +1702,10 @@ exports[`Button should render colorway info 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -1647,6 +1763,10 @@ exports[`Button should render colorway light 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -1704,6 +1824,10 @@ exports[`Button should render colorway neutral 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -1761,6 +1885,10 @@ exports[`Button should render colorway primary 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -1818,6 +1946,10 @@ exports[`Button should render colorway prominent 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -1875,6 +2007,10 @@ exports[`Button should render colorway secondary 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -1932,6 +2068,10 @@ exports[`Button should render colorway success 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -1989,6 +2129,10 @@ exports[`Button should render colorway tertiary 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -2046,6 +2190,10 @@ exports[`Button should render colorway warning 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -2103,6 +2251,10 @@ exports[`Button should render font button 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -2159,6 +2311,10 @@ exports[`Button should render font caption 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -2215,6 +2371,10 @@ exports[`Button should render font code 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Monaco,monospace;
   font-kerning: normal;
   font-size: medium;
@@ -2271,6 +2431,10 @@ exports[`Button should render font control 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -2328,6 +2492,10 @@ exports[`Button should render font emphasized 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -2384,6 +2552,10 @@ exports[`Button should render font heading 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -2440,6 +2612,10 @@ exports[`Button should render font label 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -2496,6 +2672,10 @@ exports[`Button should render font legal 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Times New Roman,serif;
   font-kerning: normal;
   font-size: 0.75em;
@@ -2552,6 +2732,10 @@ exports[`Button should render font link 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -2609,6 +2793,10 @@ exports[`Button should render font message 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -2666,6 +2854,10 @@ exports[`Button should render font mistake 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -2723,6 +2915,10 @@ exports[`Button should render font nav 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -2780,6 +2976,10 @@ exports[`Button should render font paragraph 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -2837,6 +3037,10 @@ exports[`Button should render font quote 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -2893,6 +3097,10 @@ exports[`Button should render font strong 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -2949,6 +3157,10 @@ exports[`Button should render font table 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -3006,6 +3218,10 @@ exports[`Button should render font text 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -3062,6 +3278,10 @@ exports[`Button should render font variable 1`] = `
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Monaco,monospace;
   font-kerning: normal;
   font-size: medium;
@@ -3115,6 +3335,10 @@ exports[`Button should render padding giant 1`] = `
   border-left-style: solid;
   cursor: pointer;
   padding: 64px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -3168,6 +3392,10 @@ exports[`Button should render padding large 1`] = `
   border-left-style: solid;
   cursor: pointer;
   padding: 24px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -3221,6 +3449,10 @@ exports[`Button should render padding max 1`] = `
   border-left-style: solid;
   cursor: pointer;
   padding: 88px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -3274,6 +3506,10 @@ exports[`Button should render padding medium 1`] = `
   border-left-style: solid;
   cursor: pointer;
   padding: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -3327,6 +3563,10 @@ exports[`Button should render padding min 1`] = `
   border-left-style: solid;
   cursor: pointer;
   padding: 0px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -3380,6 +3620,10 @@ exports[`Button should render padding small 1`] = `
   border-left-style: solid;
   cursor: pointer;
   padding: 12px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -3433,6 +3677,10 @@ exports[`Button should render padding tiny 1`] = `
   border-left-style: solid;
   cursor: pointer;
   padding: 2px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -3486,6 +3734,10 @@ exports[`Button should render padding xLarge 1`] = `
   border-left-style: solid;
   cursor: pointer;
   padding: 32px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -3539,6 +3791,10 @@ exports[`Button should render padding xSmall 1`] = `
   border-left-style: solid;
   cursor: pointer;
   padding: 8px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -3592,6 +3848,10 @@ exports[`Button should render padding xxLarge 1`] = `
   border-left-style: solid;
   cursor: pointer;
   padding: 48px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -3645,6 +3905,10 @@ exports[`Button should render padding xxSmall 1`] = `
   border-left-style: solid;
   cursor: pointer;
   padding: 4px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
@@ -3677,6 +3941,644 @@ exports[`Button should render padding xxSmall 1`] = `
 <div>
   <button
     class="emotion-0"
+  >
+    xxSmall
+  </button>
+</div>
+`;
+
+exports[`Button should render radius giant 1`] = `
+.emotion-0 {
+  border-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
+  color: rgb(1, 1, 1);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  border-radius: 64px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(165, 165, 165);
+  background-color: rgb(191, 191, 191);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(240, 240, 240);
+  background-color: rgb(247, 247, 247);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(232, 232, 232);
+  background-color: rgb(240, 240, 240);
+  color: rgb(1, 1, 1);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    radius="giant"
+  >
+    giant
+  </button>
+</div>
+`;
+
+exports[`Button should render radius large 1`] = `
+.emotion-0 {
+  border-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
+  color: rgb(1, 1, 1);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  border-radius: 24px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(165, 165, 165);
+  background-color: rgb(191, 191, 191);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(240, 240, 240);
+  background-color: rgb(247, 247, 247);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(232, 232, 232);
+  background-color: rgb(240, 240, 240);
+  color: rgb(1, 1, 1);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    radius="large"
+  >
+    large
+  </button>
+</div>
+`;
+
+exports[`Button should render radius max 1`] = `
+.emotion-0 {
+  border-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
+  color: rgb(1, 1, 1);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  border-radius: 88px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(165, 165, 165);
+  background-color: rgb(191, 191, 191);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(240, 240, 240);
+  background-color: rgb(247, 247, 247);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(232, 232, 232);
+  background-color: rgb(240, 240, 240);
+  color: rgb(1, 1, 1);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    radius="max"
+  >
+    max
+  </button>
+</div>
+`;
+
+exports[`Button should render radius medium 1`] = `
+.emotion-0 {
+  border-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
+  color: rgb(1, 1, 1);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  border-radius: 16px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(165, 165, 165);
+  background-color: rgb(191, 191, 191);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(240, 240, 240);
+  background-color: rgb(247, 247, 247);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(232, 232, 232);
+  background-color: rgb(240, 240, 240);
+  color: rgb(1, 1, 1);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    radius="medium"
+  >
+    medium
+  </button>
+</div>
+`;
+
+exports[`Button should render radius min 1`] = `
+.emotion-0 {
+  border-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
+  color: rgb(1, 1, 1);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  border-radius: 0px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(165, 165, 165);
+  background-color: rgb(191, 191, 191);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(240, 240, 240);
+  background-color: rgb(247, 247, 247);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(232, 232, 232);
+  background-color: rgb(240, 240, 240);
+  color: rgb(1, 1, 1);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    radius="min"
+  >
+    min
+  </button>
+</div>
+`;
+
+exports[`Button should render radius small 1`] = `
+.emotion-0 {
+  border-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
+  color: rgb(1, 1, 1);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  border-radius: 12px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(165, 165, 165);
+  background-color: rgb(191, 191, 191);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(240, 240, 240);
+  background-color: rgb(247, 247, 247);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(232, 232, 232);
+  background-color: rgb(240, 240, 240);
+  color: rgb(1, 1, 1);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    radius="small"
+  >
+    small
+  </button>
+</div>
+`;
+
+exports[`Button should render radius tiny 1`] = `
+.emotion-0 {
+  border-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
+  color: rgb(1, 1, 1);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  border-radius: 2px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(165, 165, 165);
+  background-color: rgb(191, 191, 191);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(240, 240, 240);
+  background-color: rgb(247, 247, 247);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(232, 232, 232);
+  background-color: rgb(240, 240, 240);
+  color: rgb(1, 1, 1);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    radius="tiny"
+  >
+    tiny
+  </button>
+</div>
+`;
+
+exports[`Button should render radius xLarge 1`] = `
+.emotion-0 {
+  border-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
+  color: rgb(1, 1, 1);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  border-radius: 32px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(165, 165, 165);
+  background-color: rgb(191, 191, 191);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(240, 240, 240);
+  background-color: rgb(247, 247, 247);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(232, 232, 232);
+  background-color: rgb(240, 240, 240);
+  color: rgb(1, 1, 1);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    radius="xLarge"
+  >
+    xLarge
+  </button>
+</div>
+`;
+
+exports[`Button should render radius xSmall 1`] = `
+.emotion-0 {
+  border-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
+  color: rgb(1, 1, 1);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  border-radius: 8px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(165, 165, 165);
+  background-color: rgb(191, 191, 191);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(240, 240, 240);
+  background-color: rgb(247, 247, 247);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(232, 232, 232);
+  background-color: rgb(240, 240, 240);
+  color: rgb(1, 1, 1);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    radius="xSmall"
+  >
+    xSmall
+  </button>
+</div>
+`;
+
+exports[`Button should render radius xxLarge 1`] = `
+.emotion-0 {
+  border-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
+  color: rgb(1, 1, 1);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  border-radius: 48px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(165, 165, 165);
+  background-color: rgb(191, 191, 191);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(240, 240, 240);
+  background-color: rgb(247, 247, 247);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(232, 232, 232);
+  background-color: rgb(240, 240, 240);
+  color: rgb(1, 1, 1);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    radius="xxLarge"
+  >
+    xxLarge
+  </button>
+</div>
+`;
+
+exports[`Button should render radius xxSmall 1`] = `
+.emotion-0 {
+  border-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
+  color: rgb(1, 1, 1);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  border-radius: 4px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(165, 165, 165);
+  background-color: rgb(191, 191, 191);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover {
+  border-color: rgb(240, 240, 240);
+  background-color: rgb(247, 247, 247);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active {
+  border-color: rgb(232, 232, 232);
+  background-color: rgb(240, 240, 240);
+  color: rgb(1, 1, 1);
+}
+
+<div>
+  <button
+    class="emotion-0"
+    radius="xxSmall"
   >
     xxSmall
   </button>

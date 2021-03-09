@@ -1,26 +1,24 @@
 import { BordersConfig } from '../borders'
-import { Cursor } from '../cursors'
-import { Font } from '../typography'
-import { SideSizeOptions } from '../sizes'
+import { CornerSizeOptions, SideSizeOptions, Size } from '../sizes'
 
 export type ButtonsConfig = {
   border: BordersConfig
-  cursor: Cursor
-  font: Font
   padding: SideSizeOptions
+  radius: CornerSizeOptions
 }
 
-export const defaultButtons = {
+export const defaultButtons: ButtonsConfig = {
   border: {
     all: {
-      width: 'tiny',
+      width: Size.Tiny,
       style: 'solid',
     },
   },
-  cursor: 'pointer',
-  font: 'button',
   padding: {
-    x: 'medium',
-    y: 'small',
+    x: Size.Medium,
+    y: Size.Small,
+  },
+  radius: {
+    all: Size.Tiny,
   },
 }

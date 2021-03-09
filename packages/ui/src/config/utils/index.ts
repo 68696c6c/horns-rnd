@@ -19,6 +19,14 @@ export enum Side {
   Left = 'left',
 }
 
+export enum Corner {
+  All = 'all',
+  TopLeft = 'topLeft',
+  TopRight = 'topRight',
+  BottomLeft = 'bottomLeft',
+  BottomRight = 'bottomRight',
+}
+
 export enum HoverState {
   Base = 'base',
   Hover = 'hover',

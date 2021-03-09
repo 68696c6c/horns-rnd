@@ -1,7 +1,7 @@
 // Clickables are interactive elements that can be clicked on, like buttons, links, and nav items.
 import styled from '@emotion/styled'
 
-import { HoverState, StatusState } from '../../config'
+import { Cursor, Font, HoverState, StatusState } from '../../config'
 import {
   Bordered,
   bordered,
@@ -13,6 +13,8 @@ import {
   Interactive,
   Padded,
   padded,
+  Rounded,
+  rounded,
   Styled,
   Typographic,
   typographic,
@@ -29,6 +31,7 @@ export interface ButtonProps
     Chromatic,
     Interactive,
     Padded,
+    Rounded,
     Typographic {}
 
 const buttonStyles = ({
@@ -38,6 +41,7 @@ const buttonStyles = ({
   cursor,
   font,
   padding,
+  radius,
 }: Styled & ButtonProps) => {
   const { buttons } = theme
   return [
@@ -46,7 +50,7 @@ const buttonStyles = ({
     interactive({
       theme,
       cursor,
-      cursorDefault: buttons.cursor,
+      cursorDefault: Cursor.Pointer,
       hoverStyles: [chromatic({ theme, color, state: HoverState.Hover })],
       activeStyles: [chromatic({ theme, color, state: HoverState.Active })],
       inactiveStyles: [
@@ -54,7 +58,8 @@ const buttonStyles = ({
       ],
     }),
     padded({ theme, padding, paddingDefault: buttons.padding }),
-    typographic({ theme, font, fontDefault: buttons.font }),
+    rounded({ theme, radius, radiusDefault: buttons.radius }),
+    typographic({ theme, font, fontDefault: Font.Button }),
   ]
 }
 

@@ -4,6 +4,13 @@ export { Breakpoint } from './breakpoints'
 export { Colorway } from './colors'
 export { Cursor } from './cursors'
 export { makeTheme, Theme, Config } from './theme'
-export { Size, SizeOption, SideSizeOptions } from './sizes'
+export { Size, SizeOption, SideSizeOptions, CornerSizeOptions } from './sizes'
 export { Font } from './typography'
-export { SideOption, Side, UiState, HoverState, StatusState } from './utils'
+export {
+  SideOption,
+  Side,
+  UiState,
+  HoverState,
+  StatusState,
+  Corner,
+} from './utils'

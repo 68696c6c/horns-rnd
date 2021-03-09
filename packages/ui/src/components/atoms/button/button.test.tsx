@@ -37,6 +37,10 @@ describe('Button', () => {
     const { container } = render(<Button padding={size}>{size}</Button>)
     expect(container).toMatchSnapshot()
   })
+  it.each(Object.values(Size))('should render radius %s', (size) => {
+    const { container } = render(<Button radius={size}>{size}</Button>)
+    expect(container).toMatchSnapshot()
+  })
   it.each(Object.values(Font))('should render font %s', (font) => {
     const { container } = render(<Button font={font}>{font}</Button>)
     expect(container).toMatchSnapshot()
