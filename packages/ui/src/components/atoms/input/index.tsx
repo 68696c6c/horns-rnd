@@ -1,6 +1,7 @@
-import React, { FC } from 'react'
+import React, { forwardRef, FC, Ref, ForwardedRef, LegacyRef } from 'react'
 import { createNumberMask } from 'text-mask-addons'
 
+import MaskedInput from 'react-text-mask'
 import {
   ControlProps,
   StyledInputHidden,
@@ -12,14 +13,16 @@ import {
 const phoneMask = [ /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, /\d/ ]
 
 export enum InputType {
-  Hidden = 'hidden',
   Color = 'color',
+  Currency = 'currency',
   Date = 'date',
   DatetimeLocal = 'datetime-local',
   Email = 'email',
+  Hidden = 'hidden',
   Month = 'month',
   Number = 'number',
   Password = 'password',
+  Percentage = 'percentage',
   Range = 'range',
   Search = 'search',
   Tel = 'tel',
@@ -27,23 +30,31 @@ export enum InputType {
   Time = 'time',
   Url = 'url',
   Week = 'week',
-  Currency = 'currency',
-  Percentage = 'percentage',
 }
+
+export type InputRef = HTMLInputElement | MaskedInput | null | undefined
 
 export interface InputProps extends ControlProps {
   currency?: string
   type?: InputType
+  forwardedRef?: ForwardedRef<InputRef>
 }
 
-export const Input: FC<InputProps> = ({
+const BaseInput: FC<InputProps> = ({
   currency,
   type,
+  forwardedRef,
   ...others
 }: InputProps) => {
   switch (type) {
     case 'hidden':
-      return <StyledInputHidden {...others} type={type} />
+      return (
+        <StyledInputHidden
+          {...others}
+          type={type}
+          ref={forwardedRef as LegacyRef<HTMLInputElement>}
+        />
+      )
     case 'tel':
       return (
         <StyledInputMasked
@@ -51,6 +62,7 @@ export const Input: FC<InputProps> = ({
           placeholderChar="_"
           {...others}
           type={type}
+          ref={forwardedRef as Ref<MaskedInput>}
         />
       )
     case 'currency':
@@ -60,9 +72,10 @@ export const Input: FC<InputProps> = ({
             prefix: currency,
             allowDecimal: true,
           })}
-          currency={currency}
           type={InputType.Text}
           {...others}
+          currency={currency}
+          ref={forwardedRef as Ref<MaskedInput>}
         />
       )
     case 'percentage':
@@ -75,9 +88,20 @@ export const Input: FC<InputProps> = ({
           })}
           type={InputType.Text}
           {...others}
+          ref={forwardedRef as Ref<MaskedInput>}
         />
       )
     default:
-      return <StyledInput {...others} type={type} />
+      return (
+        <StyledInput
+          {...others}
+          type={type}
+          ref={forwardedRef as LegacyRef<HTMLInputElement>}
+        />
+      )
   }
 }
+
+export const Input = forwardRef((props: InputProps, ref: Ref<InputRef>) => (
+  <BaseInput {...props} forwardedRef={ref} />
+))

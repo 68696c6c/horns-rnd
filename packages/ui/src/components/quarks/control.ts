@@ -1,4 +1,5 @@
 // Controls are form elements.
+import { EventHandler } from 'react'
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 import MaskedInput from 'react-text-mask'
@@ -26,7 +27,9 @@ export interface ControlProps
     Interactive,
     Padded,
     Rounded,
-    Typographic {}
+    Typographic {
+  onKeyUp?: EventHandler<any>
+}
 
 const controlStyles = ({
   theme,
