@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react'
 import { ThemeProvider } from '@emotion/react'
 import { StyleRuleOptions } from '@emotion/jest'

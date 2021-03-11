@@ -35,7 +35,6 @@ module.exports = {
         'import/no-extraneous-dependencies': 0,
       },
       files: [
-        'packages/ui/src/components/test/index.tsx',
         '**/*.stories.tsx',
         '**/stories.tsx',
         '**/*.test.tsx',
@@ -44,8 +43,6 @@ module.exports = {
         '**/gatsby-node.js',
         '**/gatsby-ssr.js',
         '**/preview.jsx',
-        'jest.setup.ts',
-        'rollup.config.js',
       ],
     },
   ],

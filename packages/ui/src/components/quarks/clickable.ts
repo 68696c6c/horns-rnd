@@ -71,34 +71,42 @@ export interface LinkProps extends ButtonProps {
   variant?: LinkVariant
 }
 
-export const StyledLink = styled.a(
-  ({ theme, color, cursor, font }: Styled & LinkProps) => {
-    const chromaticArgs = { theme, color }
-    const typographicArgs = { theme, font, fontDefault: Font.Link }
-    return [
-      chromaticText,
-      typographic({ ...typographicArgs }),
-      interactive({
-        theme,
-        cursor,
-        cursorDefault: Cursor.Pointer,
-        hoverStyles: [
-          chromaticText({ ...chromaticArgs, state: HoverState.Hover }),
-          typographic({ ...typographicArgs, state: HoverState.Hover }),
-        ],
-        activeStyles: [
-          chromaticText({ ...chromaticArgs, state: HoverState.Active }),
-          typographic({ ...typographicArgs, state: HoverState.Active }),
-        ],
-        inactiveStyles: [
-          chromaticText({ ...chromaticArgs, state: StatusState.Inactive }),
-          typographic({ ...typographicArgs, state: StatusState.Inactive }),
-        ],
-        visitedStyles: [
-          chromaticText({ ...chromaticArgs, state: HoverState.Hover }),
-          typographic({ ...typographicArgs, state: StatusState.Visited }),
-        ],
-      }),
-    ]
-  },
-)
+export const linkStyles = ({
+  theme,
+  color,
+  cursor,
+  font,
+}: Styled & LinkProps) => {
+  const chromaticArgs = { theme, color }
+  const typographicArgs = { theme, font, fontDefault: Font.Link }
+  return [
+    chromaticText,
+    typographic({ ...typographicArgs }),
+    interactive({
+      theme,
+      cursor,
+      cursorDefault: Cursor.Pointer,
+      hoverStyles: [
+        chromaticText({ ...chromaticArgs, state: HoverState.Hover }),
+        typographic({ ...typographicArgs, state: HoverState.Hover }),
+      ],
+      activeStyles: [
+        chromaticText({ ...chromaticArgs, state: HoverState.Active }),
+        typographic({ ...typographicArgs, state: HoverState.Active }),
+      ],
+      inactiveStyles: [
+        chromaticText({ ...chromaticArgs, state: StatusState.Inactive }),
+        typographic({ ...typographicArgs, state: StatusState.Inactive }),
+      ],
+      visitedStyles: [
+        chromaticText({ ...chromaticArgs, state: HoverState.Hover }),
+        typographic({ ...typographicArgs, state: StatusState.Visited }),
+      ],
+    }),
+  ]
+}
+
+export const StyledLink = styled.a(linkStyles)
+
+export const styleLink = (CustomComponent: any) =>
+  styled(CustomComponent)(linkStyles)

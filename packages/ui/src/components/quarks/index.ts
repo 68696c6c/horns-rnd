@@ -11,6 +11,7 @@ export {
   LinkProps,
   StyledLinkButton,
   StyledLink,
+  styleLink,
 } from './clickable'
 export {
   ControlProps,
