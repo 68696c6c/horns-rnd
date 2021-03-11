@@ -28,18 +28,17 @@ export const T: FC<TypographyProps> = ({
 }: TypographyProps) => {
   switch (variant) {
     case HeadingLevel.H1:
-    case Font.Heading:
-      return <Styled.H1 font={Font.Heading} {...others} />
+      return <Styled.H1 font={HeadingLevel.H1} {...others} />
     case HeadingLevel.H2:
-      return <Styled.H2 font={Font.Heading} {...others} />
+      return <Styled.H2 font={HeadingLevel.H2} {...others} />
     case HeadingLevel.H3:
-      return <Styled.H3 font={Font.Heading} {...others} />
+      return <Styled.H3 font={HeadingLevel.H3} {...others} />
     case HeadingLevel.H4:
-      return <Styled.H4 font={Font.Heading} {...others} />
+      return <Styled.H4 font={HeadingLevel.H4} {...others} />
     case HeadingLevel.H5:
-      return <Styled.H5 font={Font.Heading} {...others} />
+      return <Styled.H5 font={HeadingLevel.H5} {...others} />
     case HeadingLevel.H6:
-      return <Styled.H6 font={Font.Heading} {...others} />
+      return <Styled.H6 font={HeadingLevel.H6} {...others} />
     case FontTag.Blockquote:
       return <Styled.Blockquote font={Font.Quote} {...others} />
     case FontTag.Del:

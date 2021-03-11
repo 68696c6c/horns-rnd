@@ -1,10 +1,13 @@
+import _cloneDeep from 'lodash.clonedeep'
 import _merge from 'lodash.merge'
 
 import { UiState } from '../../utils'
+import { Colorway } from '../../colors'
 
 import { Config, ConfigFontStates } from './config'
 import { FontConfig } from './fonts'
 import { computeFontFamily } from './families'
+import { FontSize, HeadingLevel } from './sizes'
 
 interface FontStyle {
   family: string // font-family
@@ -16,6 +19,7 @@ interface FontStyle {
   decoration: {
     line: string
     style: string
+    color: Colorway
   } // text-decoration
   kerning: string // font-kerning
   spacing: string // margin; the space before and after typographic block-level elements
@@ -24,19 +28,24 @@ interface FontStyle {
   tracking: string // word-spacing - overrides font-family value
 }
 
-const makeFontStyle = (font: FontConfig, config: Config): FontStyle => {
+const makeFontStyle = (
+  font: FontConfig,
+  config: Config,
+  size?: FontSize,
+): FontStyle => {
   const { families, decorations, weights, spacing, sizes } = config
   const fontDecoration = decorations[font.decoration]
   return {
     family: computeFontFamily(families[font.family]),
     style: font.style,
     weight: weights[font.weight],
-    size: sizes[font.size],
+    size: sizes[size || font.size],
     align: font.align,
     transform: font.transform,
     decoration: {
       line: fontDecoration.line,
       style: fontDecoration.style || '',
+      color: fontDecoration.color || Colorway.Typography,
     },
     kerning: font.kerning,
     spacing: spacing[font.spacing],
@@ -46,23 +55,33 @@ const makeFontStyle = (font: FontConfig, config: Config): FontStyle => {
   }
 }
 
+const merge = (defaults: FontConfig, style?: Partial<FontConfig>) =>
+  _merge(_cloneDeep(defaults), _cloneDeep(style))
+
 export type FontStates = {
   [key in UiState]: FontStyle
 }
 
-// TODO: font decoration bug; link inactive states are ending up with double underlines instead of the default single underline
-export const makeFontStates = (
-  input: ConfigFontStates,
-  fontBase: FontConfig,
-  config: Config,
-): FontStates => {
-  const { base: b, hover, active, inactive, visited } = input
-  const base = _merge(fontBase, b || {})
+export interface FontStateArgs {
+  fontStyle: ConfigFontStates
+  fontBase: Readonly<FontConfig>
+  config: Readonly<Config>
+  size?: HeadingLevel
+}
+
+export const makeFontStates = ({
+  fontStyle,
+  fontBase,
+  config,
+  size,
+}: FontStateArgs): FontStates => {
+  const { base: inputBase, hover, active, inactive, visited } = fontStyle
+  const base = merge(fontBase, inputBase)
   return {
-    base: makeFontStyle(base, config),
-    hover: makeFontStyle(_merge(base, hover || {}), config),
-    active: makeFontStyle(_merge(base, active || {}), config),
-    inactive: makeFontStyle(_merge(base, inactive || {}), config),
-    visited: makeFontStyle(_merge(base, visited || {}), config),
+    base: makeFontStyle(base, config, size),
+    hover: makeFontStyle(merge(base, hover), config, size),
+    active: makeFontStyle(merge(base, active), config, size),
+    inactive: makeFontStyle(merge(base, inactive), config, size),
+    visited: makeFontStyle(merge(base, visited), config, size),
   }
 }

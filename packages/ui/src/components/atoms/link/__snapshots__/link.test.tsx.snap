@@ -29,6 +29,7 @@ exports[`Link should render as a button 1`] = `
   font-weight: 700;
   text-align: left;
   text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -74,6 +75,7 @@ exports[`Link should render as default 1`] = `
   text-align: left;
   text-decoration-line: underline;
   text-decoration-style: solid;
+  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
   cursor: pointer;
 }
@@ -84,11 +86,12 @@ exports[`Link should render as default 1`] = `
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
-  font-style: italic;
+  font-style: normal;
   font-weight: 400;
   text-align: left;
   text-decoration-line: underline;
-  text-decoration-style: double;
+  text-decoration-style: solid;
+  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -103,6 +106,7 @@ exports[`Link should render as default 1`] = `
   text-align: left;
   text-decoration-line: underline;
   text-decoration-style: solid;
+  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -117,6 +121,7 @@ exports[`Link should render as default 1`] = `
   text-align: left;
   text-decoration-line: underline;
   text-decoration-style: double;
+  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -131,6 +136,7 @@ exports[`Link should render as default 1`] = `
   text-align: left;
   text-decoration-line: underline;
   text-decoration-style: solid;
+  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 

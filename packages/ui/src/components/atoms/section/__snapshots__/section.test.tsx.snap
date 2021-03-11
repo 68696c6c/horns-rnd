@@ -406,6 +406,37 @@ exports[`Section should render colorway tertiary 1`] = `
 </div>
 `;
 
+exports[`Section should render colorway typography 1`] = `
+.emotion-0 {
+  border-color: rgb(1, 1, 1);
+  background-color: rgb(1, 1, 1);
+  color: rgb(255, 255, 255);
+}
+
+@media (min-width: 1200px) {
+  .emotion-0 {
+    padding-left: calc(((100vw - 1200px) / 2));
+    padding-right: calc(((100vw - 1200px) / 2));
+  }
+}
+
+<div>
+  <section
+    class="emotion-0"
+    color="typography"
+  >
+    <h1>
+      typography
+       section
+    </h1>
+    <p>
+      typography
+       content
+    </p>
+  </section>
+</div>
+`;
+
 exports[`Section should render colorway warning 1`] = `
 .emotion-0 {
   border-color: rgb(210, 157, 0);

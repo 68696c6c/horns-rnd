@@ -37,6 +37,7 @@ export const defaultConfig: Config = {
     heading: {
       base: {
         weight: FontWeight.Bold,
+        spacing: TextSpacing.Max,
       },
     },
     paragraph: {
@@ -97,6 +98,9 @@ export const defaultConfig: Config = {
         style: FontStyle.Italic,
         decoration: Decoration.Underline,
       },
+      inactive: {
+        decoration: Decoration.Underline,
+      },
     },
     caption: {
       base: {
@@ -133,7 +137,7 @@ export const defaultConfig: Config = {
     },
     mistake: {
       base: {
-        decoration: Decoration.UnderlineDotted,
+        decoration: Decoration.Mistake,
       },
     },
   },

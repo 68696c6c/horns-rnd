@@ -1,14 +1,14 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Font, UiState, HoverState } from '../../config'
+import { Font, UiState, HoverState, HeadingLevel } from '../../config'
 import { Styled } from '../styled'
 
 export interface Typographic {
-  font?: Font
+  font?: Font | HeadingLevel
 }
 
 export interface TypographicArgs extends Typographic {
-  fontDefault?: Font
+  fontDefault?: Font | HeadingLevel
   state?: UiState
 }
 
@@ -31,6 +31,7 @@ export const typographic = ({
     text-align: ${f.align};
     text-decoration-line: ${f.decoration.line};
     text-decoration-style: ${f.decoration.style};
+    text-decoration-color: ${theme.colors[f.decoration.color].base.base};
     text-indent: ${f.indent};
     text-transform: ${f.transform};
     word-spacing: ${f.tracking};

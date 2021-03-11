@@ -9,7 +9,7 @@ export type TextSpacings = {
 }
 
 export const defaultTextSpacings: TextSpacings = {
-  min: '0.67em 0',
+  min: '0 0 0.67em 0',
   base: '',
-  max: '1em 0',
+  max: '0 0 1em 0',
 }

@@ -9,7 +9,10 @@ type BasePallet = {
   [key in Colorway]: PalletShades
 }
 
-export type Pallet = Omit<BasePallet, 'background' | 'backgroundAlt'>
+export type Pallet = Omit<
+  BasePallet,
+  'background' | 'backgroundAlt' | 'typography'
+>
 
 export type PalletShades = {
   [key in Shade]: Color
@@ -111,6 +114,26 @@ export const makeBackgroundAlt = (
     base: { base: light, border: base },
     hover: { base, border: dark },
     active: { base: dark, border: darker },
+  })
+}
+
+export const makeTypography = (
+  pallet: Pallet,
+  isDark: boolean,
+): ColorStates => {
+  if (isDark) {
+    const { lighter } = pallet.light
+    return makeColorwayStates({
+      base: { base: lighter, border: lighter },
+      hover: { base: lighter, border: lighter },
+      active: { base: lighter, border: lighter },
+    })
+  }
+  const { darker } = pallet.dark
+  return makeColorwayStates({
+    base: { base: darker, border: darker },
+    hover: { base: darker, border: darker },
+    active: { base: darker, border: darker },
   })
 }
 

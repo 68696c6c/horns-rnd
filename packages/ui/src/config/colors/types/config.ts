@@ -14,7 +14,10 @@ export type PalletConfig = {
 export interface Config {
   mode: Mode
   prominent: Colorway
-  pallet: Omit<PalletConfig, 'prominent' | 'background' | 'backgroundAlt'>
+  pallet: Omit<
+    PalletConfig,
+    'prominent' | 'background' | 'backgroundAlt' | 'typography'
+  >
   shaders: Shaders
 }
 

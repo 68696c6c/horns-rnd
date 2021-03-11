@@ -7,6 +7,7 @@ import {
   makeDarkColorway,
   makeBackground,
   makeBackgroundAlt,
+  makeTypography,
 } from './pallet'
 
 export type Colorways = {
@@ -29,5 +30,6 @@ export const makeColorways = (pallet: Pallet, config: Config): Colorways => {
     prominent: makeColorway(pallet.prominent, isDark),
     background: makeBackground(pallet, isDark),
     backgroundAlt: makeBackgroundAlt(pallet, isDark),
+    typography: makeTypography(pallet, isDark),
   }
 }

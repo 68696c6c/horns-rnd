@@ -2,44 +2,37 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
 import {
-  Styled,
   Chromatic,
-  chromatic,
+  chromaticText,
   Typographic,
   typographic,
 } from '../../../traits'
 
 export type TypographyProps = Chromatic & Typographic
 
-export const P = styled.p<TypographyProps>(chromatic, typographic)
-export const Span = styled.span<TypographyProps>(chromatic, typographic)
-export const Label = styled.label<TypographyProps>(chromatic, typographic)
-export const Pre = styled.pre<TypographyProps>(chromatic, typographic)
+export const P = styled.p<TypographyProps>(chromaticText, typographic)
+export const Span = styled.span<TypographyProps>(chromaticText, typographic)
+export const Label = styled.label<TypographyProps>(chromaticText, typographic)
+export const Pre = styled.pre<TypographyProps>(chromaticText, typographic)
 
 // Phrase elements.
-export const Em = styled.em<TypographyProps>(chromatic, typographic)
-export const Strong = styled.strong<TypographyProps>(chromatic, typographic)
-export const Small = styled.small<TypographyProps>(chromatic, typographic)
-export const Code = styled.code<TypographyProps>(chromatic, typographic)
-export const Samp = styled.samp<TypographyProps>(chromatic, typographic)
-export const Kbd = styled.kbd<TypographyProps>(chromatic, typographic)
-export const Var = styled.var<TypographyProps>(chromatic, typographic)
-export const Sub = styled.sub<TypographyProps>(chromatic, typographic)
-export const Sup = styled.sup<TypographyProps>(chromatic, typographic)
-export const Del = styled.del<TypographyProps>(chromatic, typographic)
-export const S = styled.s<TypographyProps>(chromatic, typographic)
-export const U = styled.u<TypographyProps>(
-  chromatic,
-  typographic,
-  ({ theme }: Styled) => css`
-    text-decoration-color: ${theme.colors.danger.base.base};
-  `,
-)
+export const Em = styled.em<TypographyProps>(chromaticText, typographic)
+export const Strong = styled.strong<TypographyProps>(chromaticText, typographic)
+export const Small = styled.small<TypographyProps>(chromaticText, typographic)
+export const Code = styled.code<TypographyProps>(chromaticText, typographic)
+export const Samp = styled.samp<TypographyProps>(chromaticText, typographic)
+export const Kbd = styled.kbd<TypographyProps>(chromaticText, typographic)
+export const Var = styled.var<TypographyProps>(chromaticText, typographic)
+export const Sub = styled.sub<TypographyProps>(chromaticText, typographic)
+export const Sup = styled.sup<TypographyProps>(chromaticText, typographic)
+export const Del = styled.del<TypographyProps>(chromaticText, typographic)
+export const S = styled.s<TypographyProps>(chromaticText, typographic)
+export const U = styled.u<TypographyProps>(chromaticText, typographic)
 
 // Quote elements.
-export const Q = styled.q<TypographyProps>(chromatic, typographic)
+export const Q = styled.q<TypographyProps>(chromaticText, typographic)
 export const Blockquote = styled.blockquote<TypographyProps>(
-  chromatic,
+  chromaticText,
   typographic,
   () => css`
     border-left: 0.25em solid;
@@ -49,9 +42,9 @@ export const Blockquote = styled.blockquote<TypographyProps>(
 )
 
 // Heading elements.
-export const H1 = styled.h1<TypographyProps>(chromatic, typographic)
-export const H2 = styled.h2<TypographyProps>(chromatic, typographic)
-export const H3 = styled.h3<TypographyProps>(chromatic, typographic)
-export const H4 = styled.h4<TypographyProps>(chromatic, typographic)
-export const H5 = styled.h5<TypographyProps>(chromatic, typographic)
-export const H6 = styled.h6<TypographyProps>(chromatic, typographic)
+export const H1 = styled.h1<TypographyProps>(chromaticText, typographic)
+export const H2 = styled.h2<TypographyProps>(chromaticText, typographic)
+export const H3 = styled.h3<TypographyProps>(chromaticText, typographic)
+export const H4 = styled.h4<TypographyProps>(chromaticText, typographic)
+export const H5 = styled.h5<TypographyProps>(chromaticText, typographic)
+export const H6 = styled.h6<TypographyProps>(chromaticText, typographic)

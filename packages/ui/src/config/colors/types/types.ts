@@ -14,6 +14,7 @@ export enum Colorway {
   Prominent = 'prominent',
   Background = 'background',
   BackgroundAlt = 'backgroundAlt',
+  Typography = 'typography',
 }
 
 export enum BaseSwatch {

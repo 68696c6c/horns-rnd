@@ -10,11 +10,24 @@ import {
   StatusState,
 } from '../config'
 
+export const StyledCode = styled.code`
+  display: block;
+  padding: 1em;
+  border-radius: 0.33em;
+  border: 2px solid #e8bf6a;
+  background: #202020;
+  color: #eeffff;
+`
+
 export const StyledDemo = styled.div`
   display: flex;
   grid-gap: 1em;
   flex-wrap: wrap;
   align-items: center;
+`
+
+export const StyledDivider = styled.hr`
+  margin: 1em 0;
 `
 
 interface DemoProps {
@@ -70,11 +83,15 @@ export const chromaticDemo = <T extends {}>(
       <C {...props} color={undefined}>
         default
       </C>
-      {Object.values(Colorway).map((color) => (
-        <C {...props} color={color} key={`colorway-${color}`}>
-          {color}
-        </C>
-      ))}
+      {Object.values(Colorway).map((color) =>
+        color === Colorway.Typography ? (
+          <></>
+        ) : (
+          <C {...props} color={color} key={`colorway-${color}`}>
+            {color}
+          </C>
+        ),
+      )}
     </StyledDemo>
   </Demo>
 )
@@ -89,11 +106,15 @@ export const chromaticTextDemo = <T extends {}>(
       <C {...props} color={undefined}>
         default
       </C>
-      {Object.values(Colorway).map((color) => (
-        <C {...props} color={color} key={`colorway-${color}`}>
-          {color}
-        </C>
-      ))}
+      {Object.values(Colorway).map((color) =>
+        color === Colorway.Typography ? (
+          <></>
+        ) : (
+          <C {...props} color={color} key={`colorway-${color}`}>
+            {color}
+          </C>
+        ),
+      )}
     </StyledDemo>
   </Demo>
 )

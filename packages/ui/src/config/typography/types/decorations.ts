@@ -1,3 +1,5 @@
+import { Colorway } from '../../colors'
+
 export enum TextDecorationLine {
   None = 'none',
   Underline = 'underline',
@@ -20,6 +22,7 @@ export enum TextDecorationStyle {
 export interface TextDecoration {
   line: TextDecorationLine
   style?: TextDecorationStyle
+  color?: Colorway
 }
 
 export enum Decoration {
@@ -31,6 +34,7 @@ export enum Decoration {
   UnderlineDouble = 'underlineDouble',
   UnderlineWave = 'underlineWave',
   StrikeThrough = 'strikeThrough',
+  Mistake = 'mistake',
 }
 
 export type Decorations = {
@@ -67,5 +71,10 @@ export const defaultDecorations: Decorations = {
   strikeThrough: {
     line: TextDecorationLine.LineThrough,
     style: TextDecorationStyle.Solid,
+  },
+  mistake: {
+    line: TextDecorationLine.Underline,
+    style: TextDecorationStyle.Dotted,
+    color: Colorway.Danger,
   },
 }
