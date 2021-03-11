@@ -1,7 +1,7 @@
 import React, { forwardRef, FC, Ref, ForwardedRef, LegacyRef } from 'react'
 import { createNumberMask } from 'text-mask-addons'
-
 import MaskedInput from 'react-text-mask'
+
 import {
   ControlProps,
   StyledInputHidden,

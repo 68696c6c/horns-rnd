@@ -18,18 +18,16 @@ describe('Button', () => {
     'should render border style %s',
     (style) => {
       const { container } = render(
-        <Button
-          border={{ all: { style: style as BorderStyle, width: 'small' } }}
-        >
-          {style}
-        </Button>,
+        <Button border={{ all: { style, width: Size.Small } }}>{style}</Button>,
       )
       expect(container).toMatchSnapshot()
     },
   )
   it.each(Object.values(Size))('should render border width %s', (size) => {
     const { container } = render(
-      <Button border={{ all: { style: 'solid', width: size } }}>{size}</Button>,
+      <Button border={{ all: { style: BorderStyle.Solid, width: size } }}>
+        {size}
+      </Button>,
     )
     expect(container).toMatchSnapshot()
   })

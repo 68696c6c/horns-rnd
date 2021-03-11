@@ -39,13 +39,15 @@ exports[`Button should render as default 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -99,13 +101,15 @@ exports[`Button should render border style dashed 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -159,13 +163,15 @@ exports[`Button should render border style dotted 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -219,13 +225,15 @@ exports[`Button should render border style double 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -279,13 +287,15 @@ exports[`Button should render border style groove 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -339,13 +349,15 @@ exports[`Button should render border style hidden 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -399,13 +411,15 @@ exports[`Button should render border style inherit 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -459,13 +473,15 @@ exports[`Button should render border style initial 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -519,13 +535,15 @@ exports[`Button should render border style inset 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -579,13 +597,15 @@ exports[`Button should render border style none 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -639,13 +659,15 @@ exports[`Button should render border style outset 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -699,13 +721,15 @@ exports[`Button should render border style ridge 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -759,13 +783,15 @@ exports[`Button should render border style solid 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -819,13 +845,15 @@ exports[`Button should render border width giant 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -879,13 +907,15 @@ exports[`Button should render border width large 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -939,13 +969,15 @@ exports[`Button should render border width max 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -999,13 +1031,15 @@ exports[`Button should render border width medium 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -1059,13 +1093,15 @@ exports[`Button should render border width min 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -1119,13 +1155,15 @@ exports[`Button should render border width small 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -1179,13 +1217,15 @@ exports[`Button should render border width tiny 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -1239,13 +1279,15 @@ exports[`Button should render border width xLarge 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -1299,13 +1341,15 @@ exports[`Button should render border width xSmall 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -1359,13 +1403,15 @@ exports[`Button should render border width xxLarge 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -1419,13 +1465,15 @@ exports[`Button should render border width xxSmall 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -1479,13 +1527,15 @@ exports[`Button should render colorway background 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -1540,13 +1590,15 @@ exports[`Button should render colorway backgroundAlt 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(224, 224, 224);
   background-color: rgb(232, 232, 232);
   color: rgb(1, 1, 1);
@@ -1601,13 +1653,15 @@ exports[`Button should render colorway danger 1`] = `
   color: rgb(255, 255, 255);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(220, 53, 69);
   background-color: rgb(186, 32, 47);
   color: rgb(255, 255, 255);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(186, 32, 47);
   background-color: rgb(123, 21, 31);
   color: rgb(255, 255, 255);
@@ -1662,13 +1716,15 @@ exports[`Button should render colorway dark 1`] = `
   color: rgb(255, 255, 255);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(51, 51, 51);
   background-color: rgb(38, 38, 38);
   color: rgb(255, 255, 255);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(38, 38, 38);
   background-color: rgb(51, 51, 51);
   color: rgb(255, 255, 255);
@@ -1723,13 +1779,15 @@ exports[`Button should render colorway info 1`] = `
   color: rgb(255, 255, 255);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(23, 162, 184);
   background-color: rgb(18, 130, 147);
   color: rgb(255, 255, 255);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(18, 130, 147);
   background-color: rgb(12, 86, 98);
   color: rgb(255, 255, 255);
@@ -1784,13 +1842,15 @@ exports[`Button should render colorway light 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(224, 224, 224);
   background-color: rgb(232, 232, 232);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(224, 224, 224);
   color: rgb(1, 1, 1);
@@ -1845,13 +1905,15 @@ exports[`Button should render colorway neutral 1`] = `
   color: rgb(255, 255, 255);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(127, 127, 127);
   background-color: rgb(102, 102, 102);
   color: rgb(255, 255, 255);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(102, 102, 102);
   background-color: rgb(67, 67, 67);
   color: rgb(255, 255, 255);
@@ -1906,13 +1968,15 @@ exports[`Button should render colorway primary 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(255, 170, 0);
   background-color: rgb(204, 136, 0);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(204, 136, 0);
   background-color: rgb(135, 90, 0);
   color: rgb(255, 255, 255);
@@ -1967,13 +2031,15 @@ exports[`Button should render colorway prominent 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(255, 170, 0);
   background-color: rgb(204, 136, 0);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(204, 136, 0);
   background-color: rgb(135, 90, 0);
   color: rgb(255, 255, 255);
@@ -2028,13 +2094,15 @@ exports[`Button should render colorway secondary 1`] = `
   color: rgb(255, 255, 255);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(26, 153, 255);
   background-color: rgb(0, 125, 225);
   color: rgb(255, 255, 255);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(0, 125, 225);
   background-color: rgb(0, 83, 149);
   color: rgb(255, 255, 255);
@@ -2089,13 +2157,15 @@ exports[`Button should render colorway success 1`] = `
   color: rgb(255, 255, 255);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(40, 167, 69);
   background-color: rgb(32, 134, 55);
   color: rgb(255, 255, 255);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(32, 134, 55);
   background-color: rgb(21, 89, 37);
   color: rgb(255, 255, 255);
@@ -2150,13 +2220,15 @@ exports[`Button should render colorway tertiary 1`] = `
   color: rgb(255, 255, 255);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(0, 153, 153);
   background-color: rgb(0, 122, 122);
   color: rgb(255, 255, 255);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(0, 122, 122);
   background-color: rgb(0, 81, 81);
   color: rgb(255, 255, 255);
@@ -2211,13 +2283,15 @@ exports[`Button should render colorway warning 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(255, 193, 7);
   background-color: rgb(210, 157, 0);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(210, 157, 0);
   background-color: rgb(139, 104, 0);
   color: rgb(255, 255, 255);
@@ -2272,13 +2346,15 @@ exports[`Button should render font button 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -2332,13 +2408,15 @@ exports[`Button should render font caption 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -2392,13 +2470,15 @@ exports[`Button should render font code 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -2453,13 +2533,15 @@ exports[`Button should render font control 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -2513,13 +2595,15 @@ exports[`Button should render font emphasized 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -2573,13 +2657,15 @@ exports[`Button should render font heading 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -2633,13 +2719,15 @@ exports[`Button should render font label 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -2693,13 +2781,15 @@ exports[`Button should render font legal 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -2754,13 +2844,15 @@ exports[`Button should render font link 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -2815,13 +2907,15 @@ exports[`Button should render font message 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -2876,13 +2970,15 @@ exports[`Button should render font mistake 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -2937,13 +3033,15 @@ exports[`Button should render font nav 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -2998,13 +3096,15 @@ exports[`Button should render font paragraph 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -3058,13 +3158,15 @@ exports[`Button should render font quote 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -3118,13 +3220,15 @@ exports[`Button should render font strong 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -3179,13 +3283,15 @@ exports[`Button should render font table 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -3239,13 +3345,15 @@ exports[`Button should render font text 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -3299,13 +3407,15 @@ exports[`Button should render font variable 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -3356,13 +3466,15 @@ exports[`Button should render padding giant 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -3413,13 +3525,15 @@ exports[`Button should render padding large 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -3470,13 +3584,15 @@ exports[`Button should render padding max 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -3527,13 +3643,15 @@ exports[`Button should render padding medium 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -3584,13 +3702,15 @@ exports[`Button should render padding min 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -3641,13 +3761,15 @@ exports[`Button should render padding small 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -3698,13 +3820,15 @@ exports[`Button should render padding tiny 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -3755,13 +3879,15 @@ exports[`Button should render padding xLarge 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -3812,13 +3938,15 @@ exports[`Button should render padding xSmall 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -3869,13 +3997,15 @@ exports[`Button should render padding xxLarge 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -3926,13 +4056,15 @@ exports[`Button should render padding xxSmall 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -3983,13 +4115,15 @@ exports[`Button should render radius giant 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -4041,13 +4175,15 @@ exports[`Button should render radius large 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -4099,13 +4235,15 @@ exports[`Button should render radius max 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -4157,13 +4295,15 @@ exports[`Button should render radius medium 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -4215,13 +4355,15 @@ exports[`Button should render radius min 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -4273,13 +4415,15 @@ exports[`Button should render radius small 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -4331,13 +4475,15 @@ exports[`Button should render radius tiny 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -4389,13 +4535,15 @@ exports[`Button should render radius xLarge 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -4447,13 +4595,15 @@ exports[`Button should render radius xSmall 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -4505,13 +4655,15 @@ exports[`Button should render radius xxLarge 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -4563,13 +4715,15 @@ exports[`Button should render radius xxSmall 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);

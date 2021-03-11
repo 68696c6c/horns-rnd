@@ -51,6 +51,7 @@ const makeColorwayStates = (baseStates: BaseColorStates): ColorStates => {
     hover: makeSwatches(hover.base, hover.border),
     active: makeSwatches(active.base, active.border),
     inactive: makeSwatches(inactive.base, inactive.border),
+    visited: makeSwatches(base.base, base.border),
   }
 }
 

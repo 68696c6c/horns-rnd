@@ -7,7 +7,7 @@ export interface Typographic {
   font?: Font
 }
 
-interface TypographicArgs extends Styled, Typographic {
+export interface TypographicArgs extends Typographic {
   fontDefault?: Font
   state?: UiState
 }
@@ -17,7 +17,7 @@ export const typographic = ({
   font,
   fontDefault,
   state,
-}: TypographicArgs): SerializedStyles => {
+}: Styled & TypographicArgs): SerializedStyles => {
   const fontStyle = theme.typography[font || fontDefault || Font.Text]
   const s = typeof state === 'undefined' ? HoverState.Base : state
   const f = fontStyle[s]

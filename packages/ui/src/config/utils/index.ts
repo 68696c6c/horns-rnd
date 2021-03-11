@@ -28,6 +28,7 @@ export enum HoverState {
 
 export enum StatusState {
   Inactive = 'inactive',
+  Visited = 'visited',
 }
 
 export type UiState = HoverState | StatusState

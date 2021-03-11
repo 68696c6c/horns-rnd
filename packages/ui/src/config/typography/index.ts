@@ -11,7 +11,7 @@ import {
   makeFontStates,
 } from './types'
 
-export { Font } from './types'
+export { Font, HeadingLevel } from './types'
 
 export type TypographyConfig = DeepPartial<Config>
 

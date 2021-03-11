@@ -1,9 +1,16 @@
 import React, { FC, ReactNode, ElementType, PropsWithoutRef } from 'react'
 import styled from '@emotion/styled'
 
-import { BorderStyle, Colorway, Size, Font } from '../config'
+import {
+  BorderStyle,
+  Colorway,
+  Size,
+  Font,
+  HoverState,
+  StatusState,
+} from '../config'
 
-const StyledDemo = styled.div`
+export const StyledDemo = styled.div`
   display: flex;
   grid-gap: 1em;
   flex-wrap: wrap;
@@ -156,6 +163,30 @@ export const typographicDemo = <T extends {}>(
       {Object.values(Font).map((font) => (
         <C {...props} font={font} key={`typographic-${font}`}>
           {font}
+        </C>
+      ))}
+    </StyledDemo>
+  </Demo>
+)
+
+export const uiStateDemo = <T extends {}>(
+  C: ElementType,
+  props: PropsWithoutRef<T>,
+) => (
+  <Demo>
+    <h1>UI States</h1>
+    <StyledDemo>
+      <C {...props} padding={undefined}>
+        default
+      </C>
+      {Object.values(HoverState).map((state) => (
+        <C {...props} className={state} key={`ui-state-${state}`}>
+          {state}
+        </C>
+      ))}
+      {Object.values(StatusState).map((state) => (
+        <C {...props} className={state} key={`ui-state-${state}`}>
+          {state}
         </C>
       ))}
     </StyledDemo>

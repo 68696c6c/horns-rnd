@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 
+import { StyledDemo } from '../../../_story'
 import { Input, InputType, InputRef } from '.'
 
 export default {
@@ -8,14 +9,14 @@ export default {
   component: Input,
 } as Meta
 
-export const Default: Story = () => (
-  <>
+export const Types: Story = () => (
+  <StyledDemo>
     {Object.values(InputType).map((type) => (
       <div key={`input-${type}`}>
         <Input type={type} />
       </div>
     ))}
-  </>
+  </StyledDemo>
 )
 
 export const Color: Story = () => <Input type={InputType.Color} />

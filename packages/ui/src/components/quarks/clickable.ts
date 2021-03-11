@@ -77,7 +77,7 @@ export const StyledLink = styled.a(
     const typographicArgs = { theme, font, fontDefault: Font.Link }
     return [
       chromaticText,
-      typographic,
+      typographic({ ...typographicArgs }),
       interactive({
         theme,
         cursor,
@@ -93,6 +93,10 @@ export const StyledLink = styled.a(
         inactiveStyles: [
           chromaticText({ ...chromaticArgs, state: StatusState.Inactive }),
           typographic({ ...typographicArgs, state: StatusState.Inactive }),
+        ],
+        visitedStyles: [
+          chromaticText({ ...chromaticArgs, state: HoverState.Hover }),
+          typographic({ ...typographicArgs, state: StatusState.Visited }),
         ],
       }),
     ]

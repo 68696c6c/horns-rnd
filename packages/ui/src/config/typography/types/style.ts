@@ -50,17 +50,19 @@ export type FontStates = {
   [key in UiState]: FontStyle
 }
 
+// TODO: font decoration bug; link inactive states are ending up with double underlines instead of the default single underline
 export const makeFontStates = (
   input: ConfigFontStates,
   fontBase: FontConfig,
   config: Config,
 ): FontStates => {
-  const { base: b, hover, active, inactive: i } = input
+  const { base: b, hover, active, inactive, visited } = input
   const base = _merge(fontBase, b || {})
   return {
     base: makeFontStyle(base, config),
     hover: makeFontStyle(_merge(base, hover || {}), config),
     active: makeFontStyle(_merge(base, active || {}), config),
-    inactive: makeFontStyle(_merge(base, i || {}), config),
+    inactive: makeFontStyle(_merge(base, inactive || {}), config),
+    visited: makeFontStyle(_merge(base, visited || {}), config),
   }
 }

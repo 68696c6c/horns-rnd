@@ -39,13 +39,15 @@ exports[`Link should render as a button 1`] = `
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   border-color: rgb(240, 240, 240);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
   border-color: rgb(232, 232, 232);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
@@ -70,7 +72,8 @@ exports[`Link should render as default 1`] = `
   font-style: normal;
   font-weight: 400;
   text-align: left;
-  text-decoration-line: none;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
   text-transform: none;
   cursor: pointer;
 }
@@ -81,7 +84,7 @@ exports[`Link should render as default 1`] = `
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
-  font-style: normal;
+  font-style: italic;
   font-weight: 400;
   text-align: left;
   text-decoration-line: underline;
@@ -89,12 +92,27 @@ exports[`Link should render as default 1`] = `
   text-transform: none;
 }
 
-.emotion-0:not(:disabled):not(.inactive):hover {
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
   color: rgb(1, 1, 1);
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
-  font-style: normal;
+  font-style: italic;
+  font-weight: 400;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-transform: none;
+}
+
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: italic;
   font-weight: 400;
   text-align: left;
   text-decoration-line: underline;
@@ -102,16 +120,17 @@ exports[`Link should render as default 1`] = `
   text-transform: none;
 }
 
-.emotion-0:not(:disabled):not(.inactive):active {
+.emotion-0:not(:disabled):not(.inactive):visited,
+.emotion-0:not(:disabled):not(.inactive).visited {
   color: rgb(1, 1, 1);
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
-  font-style: normal;
+  font-style: italic;
   font-weight: 400;
   text-align: left;
   text-decoration-line: underline;
-  text-decoration-style: double;
+  text-decoration-style: solid;
   text-transform: none;
 }
 

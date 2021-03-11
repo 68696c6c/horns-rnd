@@ -1,12 +1,12 @@
 import { UiState } from '../../utils'
 
-import { defaultDecorations, Decorations, Decoration } from './decorations'
+import { Decoration, Decorations, defaultDecorations } from './decorations'
 import { defaultFontFamilies, FontFamilies, FontFamily } from './families'
-import { FontConfig, Font } from './fonts'
-import { defaultFontSizes, BaseFontSize, FontSizes } from './sizes'
+import { Font, FontConfig } from './fonts'
+import { BaseFontSize, defaultFontSizes, FontSizes } from './sizes'
 import { defaultTextSpacings, TextSpacing, TextSpacings } from './spacings'
 import { defaultFontWeights, FontWeight, FontWeights } from './weights'
-import { Direction, FontStyle as FontStyleCss, TextAlign } from './types'
+import { Direction, FontStyle, TextAlign } from './types'
 
 export type ConfigFontStyles = {
   [key in Font]: ConfigFontStates
@@ -47,7 +47,7 @@ export const defaultConfig: Config = {
     },
     quote: {
       base: {
-        style: FontStyleCss.Italic,
+        style: FontStyle.Italic,
       },
     },
     text: {},
@@ -86,10 +86,16 @@ export const defaultConfig: Config = {
         decoration: Decoration.Underline,
       },
       hover: {
-        decoration: Decoration.UnderlineDouble,
+        style: FontStyle.Italic,
+        decoration: Decoration.Underline,
       },
       active: {
+        style: FontStyle.Italic,
         decoration: Decoration.UnderlineDouble,
+      },
+      visited: {
+        style: FontStyle.Italic,
+        decoration: Decoration.Underline,
       },
     },
     caption: {
@@ -100,7 +106,7 @@ export const defaultConfig: Config = {
     legal: {
       base: {
         family: FontFamily.Secondary,
-        style: FontStyleCss.Italic,
+        style: FontStyle.Italic,
         size: BaseFontSize.Small,
       },
     },
@@ -111,7 +117,7 @@ export const defaultConfig: Config = {
     },
     emphasized: {
       base: {
-        style: FontStyleCss.Italic,
+        style: FontStyle.Italic,
       },
     },
     strong: {
@@ -122,7 +128,7 @@ export const defaultConfig: Config = {
     variable: {
       base: {
         family: FontFamily.Tertiary,
-        style: FontStyleCss.Italic,
+        style: FontStyle.Italic,
       },
     },
     mistake: {
