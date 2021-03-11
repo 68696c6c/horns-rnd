@@ -1,4 +1,4 @@
-import { Size } from '../sizes'
+import { Size } from './sizes'
 
 export type GridConfig = {
   gap: Size

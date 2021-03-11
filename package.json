@@ -15,7 +15,7 @@
     "lint:fix": "eslint . --fix --ext .ts,.tsx,.js,.jsx,.html",
     "lint:watch": "esw -w . --ext .ts,.tsx,.js,.jsx,.html",
     "docs": "yarn boot && yarn workspace @horns/ui docs",
-    "docs:build": "yarn boot && yarn workspace @horns/ui docs:build",
+    "docs:watch": "yarn boot && yarn workspace @horns/ui docs:watch",
     "build": "yarn boot && yarn workspace @horns/ui build",
     "build:watch": "yarn boot && yarn workspace @horns/ui build:watch",
     "ex:dev": "yarn workspace gatsby-example develop",

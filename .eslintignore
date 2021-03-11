@@ -4,4 +4,5 @@ dist
 node_modules
 .cache
 public
+sites/gatsby-example/src/pages/index.jsx
 sites/gatsby-netlify

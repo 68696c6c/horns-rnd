@@ -1,4 +1,4 @@
-import { Side, Corner } from '../utils'
+import { Side, Corner } from './utils'
 
 export enum Size {
   Min = 'min',

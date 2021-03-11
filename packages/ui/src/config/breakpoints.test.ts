@@ -1,4 +1,4 @@
-import { makeBreakpoints, defaultConfig } from '.'
+import { makeBreakpoints, defaultConfig } from './breakpoints'
 
 describe('Breakpoints', () => {
   it('should use default values if no config is provided', () => {
