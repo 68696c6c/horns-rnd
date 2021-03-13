@@ -1,5 +1,6 @@
 // Clickables are interactive elements that can be clicked on, like buttons, links, and nav items.
 import styled from '@emotion/styled'
+import { css } from '@emotion/react'
 
 import { Cursor, Font, HoverState, StatusState } from '../../config'
 import {
@@ -45,6 +46,9 @@ const buttonStyles = ({
 }: Styled & ButtonProps) => {
   const { buttons } = theme
   return [
+    css`
+      display: inline-block;
+    `,
     chromatic,
     bordered({ theme, border, borderDefault: buttons.border }),
     interactive({
@@ -110,3 +114,6 @@ export const StyledLink = styled.a(linkStyles)
 
 export const styleLink = (CustomComponent: any) =>
   styled(CustomComponent)(linkStyles)
+
+export const styleButton = (CustomComponent: any) =>
+  styled(CustomComponent)(buttonStyles)

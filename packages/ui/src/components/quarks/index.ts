@@ -12,6 +12,7 @@ export {
   StyledLinkButton,
   StyledLink,
   styleLink,
+  styleButton,
 } from './clickable'
 export {
   ControlProps,

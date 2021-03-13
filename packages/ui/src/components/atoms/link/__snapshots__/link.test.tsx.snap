@@ -2,6 +2,7 @@
 
 exports[`Link should render as a button 1`] = `
 .emotion-0 {
+  display: inline-block;
   border-color: rgb(247, 247, 247);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);

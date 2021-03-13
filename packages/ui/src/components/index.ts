@@ -5,6 +5,7 @@ export {
   Input,
   Link,
   LinkEmail,
+  Main,
   Section,
   Stack,
   T,
@@ -12,6 +13,6 @@ export {
   SubHeading,
 } from './atoms'
 
-export { StyledLink, StyledLinkButton, styleLink } from './quarks'
+export { StyledLink, StyledLinkButton, styleLink, styleButton } from './quarks'
 
 export { default as ThemeProvider } from './theme-provider'

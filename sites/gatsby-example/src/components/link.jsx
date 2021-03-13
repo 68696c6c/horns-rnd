@@ -1,6 +1,9 @@
 import { Link } from 'gatsby'
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { styleLink } from '@horns/ui'
+import { styleLink, styleButton } from '@horns/ui'
 
-export default styleLink(Link)
+export const GatsbyLink = styleLink(Link)
+export const GatsbyLinkButton = styleButton(Link)
+
+export default GatsbyLink

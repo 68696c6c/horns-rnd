@@ -1,15 +1,16 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
-import Layout from '../components/layout'
-import Seo from '../components/seo'
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { T, Heading } from '@horns/ui'
+
+import { Layout, GatsbyLink, Seo } from '../components'
 
 const SecondPage = () => (
   <Layout>
     <Seo title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <Heading>Hi from the second page</Heading>
+    <T>Welcome to page 2</T>
+    <GatsbyLink to="/">Go back to the homepage</GatsbyLink>
   </Layout>
 )
 

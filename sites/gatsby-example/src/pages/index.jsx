@@ -1,25 +1,36 @@
+import { graphql } from 'gatsby'
 import React from 'react'
-import { Link } from 'gatsby'
 
-import { Button } from '@horns/ui'
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { T, Heading } from '@horns/ui'
 
-import Layout from '../components/layout'
-import Image from '../components/image'
-import Seo from '../components/seo'
+import { Layout, GatsbyLinkButton, Image, Seo } from '../components'
 
-const IndexPage = () => (
+// eslint-disable-next-line react/prop-types
+const IndexPage = ({ data }) => (
   <Layout>
     <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-    <br />
-    <Button color="primary">Horns button</Button>
+    <Heading>Hi people</Heading>
+    <T>Welcome to your new Gatsby site.</T>
+    <T>Now go build something great.</T>
+    {/* eslint-disable-next-line react/prop-types */}
+    <Image maxWidth="300px" image={data.placeholderImage} />
+    <GatsbyLinkButton to="/page-2/" color="primary">
+      Go to page 2
+    </GatsbyLinkButton>
   </Layout>
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

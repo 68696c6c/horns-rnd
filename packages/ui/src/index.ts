@@ -5,6 +5,7 @@ export {
   Input,
   Link,
   LinkEmail,
+  Main,
   Section,
   Stack,
   T,
@@ -13,6 +14,7 @@ export {
   StyledLink,
   StyledLinkButton,
   styleLink,
+  styleButton,
   ThemeProvider,
 } from './components'
 

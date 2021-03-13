@@ -1,18 +1,12 @@
 /* eslint-disable react/jsx-one-expression-per-line */
-
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import Header from './header'
-import './layout.css'
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Header, Link, Main, Footer } from '@horns/ui'
+
+import { GatsbyLink } from './link'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,24 +21,19 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || 'Title'} />
-      <div
-        style={{
-          margin: '0 auto',
-          maxWidth: 960,
-          padding: '0 1.0875rem 1.45rem',
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: '2rem',
-          }}
-        >
-          © {new Date().getFullYear()}, Built with{' '}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+      <Header>
+        <nav>
+          <GatsbyLink to="/">
+            {data.site.siteMetadata?.title || 'Title'}
+          </GatsbyLink>
+          <Link href="/page-2">Not a gatsby link</Link>
+        </nav>
+      </Header>
+      <Main>{children}</Main>
+      <Footer>
+        © {new Date().getFullYear()}, Built with{' '}
+        <Link href="https://www.gatsbyjs.com">Gatsby</Link>
+      </Footer>
     </>
   )
 }
