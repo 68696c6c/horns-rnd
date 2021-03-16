@@ -1,4 +1,6 @@
 export { Button } from './button'
+export { Dropdown } from './dropdown'
+export { DropdownOption } from './dropdown-option'
 export { Footer } from './footer'
 export { Header } from './header'
 export { Input } from './input'

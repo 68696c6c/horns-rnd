@@ -20,3 +20,4 @@ export {
   StyledInputHidden,
   StyledInputMasked,
 } from './control'
+export { MenuProps, menuStyles } from './menu'
