@@ -1,15 +1,21 @@
 import { css } from '@emotion/react'
 
-export interface MenuProps {
+import { chromatic, Chromatic, shadowed, Shadowed, Styled } from '../../traits'
+
+export interface MenuProps extends Chromatic, Shadowed {
   open?: boolean
 }
 
 export const menuStyles = () => [
-  ({ open }: MenuProps) =>
-    !open &&
-    css`
+  chromatic,
+  ({ theme, open, shadow }: Styled & MenuProps) => {
+    if (open) {
+      return shadowed({ theme, shadow })
+    }
+    return css`
       display: none;
-    `,
+    `
+  },
   () => css`
     position: absolute;
     box-sizing: border-box;

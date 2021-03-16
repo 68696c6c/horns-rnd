@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
 import { Styled } from '../../../traits'
+import { Size } from '../../../config'
 import { MenuProps, menuStyles } from '../../quarks'
 
 export const Dropdown = styled.ul<MenuProps>(
@@ -10,7 +11,9 @@ export const Dropdown = styled.ul<MenuProps>(
     border-top: none;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
-    top: -${theme.controls.border.top};
+    top: -${theme.sizes[theme.controls.border.all?.width as Size]};
     padding: 0;
+    margin: 0;
+    list-style-type: none;
   `,
 )
