@@ -33,7 +33,7 @@ const makeFontStyle = (
   config: Config,
   size?: FontSize,
 ): FontStyle => {
-  const { families, decorations, weights, spacing, sizes } = config
+  const { families, decorations, weights, spacing, sizes, letting } = config
   const fontDecoration = decorations[font.decoration]
   return {
     family: computeFontFamily(families[font.family]),
@@ -50,7 +50,7 @@ const makeFontStyle = (
     kerning: font.kerning,
     spacing: spacing[font.spacing],
     indent: font.indent,
-    letting: font.letting,
+    letting: letting[font.letting],
     tracking: font.tracking,
   }
 }

@@ -1,4 +1,4 @@
-export { defaultConfig, Config } from './config'
-export { Font, makeDefaultFontConfig } from './fonts'
+export { defaultConfig, Config, makeDefaultFontConfig } from './config'
+export { Font } from './fonts'
 export { FontStates, makeFontStates } from './style'
 export { HeadingLevel } from './sizes'

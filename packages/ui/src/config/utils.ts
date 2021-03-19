@@ -32,3 +32,23 @@ export enum StatusState {
 }
 
 export type UiState = HoverState | StatusState
+
+export enum InputType {
+  Color = 'color',
+  Currency = 'currency',
+  Date = 'date',
+  DatetimeLocal = 'datetime-local',
+  Email = 'email',
+  Hidden = 'hidden',
+  Month = 'month',
+  Number = 'number',
+  Password = 'password',
+  Percentage = 'percentage',
+  Range = 'range',
+  Search = 'search',
+  Tel = 'tel',
+  Text = 'text',
+  Time = 'time',
+  Url = 'url',
+  Week = 'week',
+}

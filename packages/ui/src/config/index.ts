@@ -5,4 +5,11 @@ export { Cursor } from './cursors'
 export { makeTheme, Theme, Config } from './theme'
 export { Size, SideSizeOptions, CornerSizeOptions } from './sizes'
 export { Font, HeadingLevel } from './typography'
-export { Side, UiState, HoverState, StatusState, Corner } from './utils'
+export {
+  Side,
+  UiState,
+  HoverState,
+  StatusState,
+  Corner,
+  InputType,
+} from './utils'

@@ -24,7 +24,7 @@ export const makeTypography = (
   input?: TypographyConfig,
 ): Readonly<Typography> => {
   const config = _merge(defaultConfig, input)
-  const fontBase = makeDefaultFontConfig(config.direction)
+  const fontBase = makeDefaultFontConfig(config)
 
   const result: Partial<Typography> = {}
   Object.values(ConfigFont).forEach((font) => {

@@ -1,5 +1,4 @@
 import {
-  Direction,
   FontKerning,
   FontStyle as FontStyleCss,
   TextAlign,
@@ -7,7 +6,8 @@ import {
 } from './types'
 import { FontFamily } from './families'
 import { FontWeight } from './weights'
-import { BaseFontSize, FontSize } from './sizes'
+import { Letting } from './lettings'
+import { FontSize } from './sizes'
 import { Decoration } from './decorations'
 import { TextSpacing } from './spacings'
 
@@ -44,7 +44,7 @@ export interface FontConfig {
   kerning: FontKerning // font-kerning
   spacing: TextSpacing // margin; the space before and after typographic block-level elements
   indent: string // text-indent
-  letting: string // line-height - overrides font-family value
+  letting: Letting // line-height - overrides font-family value
   tracking: string // word-spacing - overrides font-family value
   // TODO: implement remaining CSS typographic properties
   // justify: TextJustify // text-justify
@@ -59,18 +59,3 @@ export interface FontConfig {
   // wrap: string, // word-wrap
   // mode: string, // writing-mode
 }
-
-export const makeDefaultFontConfig = (direction: Direction): FontConfig => ({
-  family: FontFamily.Primary,
-  style: FontStyleCss.Normal,
-  weight: FontWeight.Base,
-  size: BaseFontSize.Base,
-  align: direction === 'ltr' ? TextAlign.Left : TextAlign.Right,
-  transform: TextTransform.None,
-  decoration: Decoration.Base,
-  kerning: FontKerning.Normal,
-  spacing: TextSpacing.Base,
-  indent: '',
-  letting: '',
-  tracking: '',
-})

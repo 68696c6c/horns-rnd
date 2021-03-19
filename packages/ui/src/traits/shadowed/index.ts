@@ -23,7 +23,7 @@ export const shadowed = ({
   const s = typeof shadow === 'undefined' ? {} : (shadow as ShadowConfig)
   const x = theme.sizes[s.x || Size.Min]
   const y = theme.sizes[s.y || Size.XXSmall]
-  const blur = theme.sizes[s.blur || Size.XSmall]
+  const blur = theme.sizes[s.blur || Size.XXSmall]
   const spread = theme.sizes[s.spread || Size.Min]
   return css`
     box-shadow: ${x} ${y} ${blur} ${spread} ${theme.colors.typography.base.base};

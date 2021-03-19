@@ -28,6 +28,9 @@ export interface ControlProps
     Padded,
     Rounded,
     Typographic {
+  id?: string
+  name?: string
+  value?: string | number
   onKeyUp?: EventHandler<any>
 }
 
@@ -67,6 +70,19 @@ const controlStyles = ({
 
 export const StyledInput = styled.input(controlStyles)
 export const StyledInputHidden = styled.input()
+
+// Instead of exporting a styled.select and using withComponent to change the tag e.g. a div in the
+// Select molecule, it is preferable to just export the styles according to this thread:
+// https://github.com/emotion-js/emotion/issues/2012
+export const selectStyles = () => [
+  controlStyles,
+  () => css`
+    appearance: none;
+    &::-ms-expand {
+      display: none;
+    }
+  `,
+]
 
 export interface InputMaskedProps extends ControlProps {
   currency?: string

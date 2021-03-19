@@ -1,12 +1,20 @@
 import { UiState } from '../../utils'
 
-import { Decoration, Decorations, defaultDecorations } from './decorations'
+import { defaultDecorations, Decoration, Decorations } from './decorations'
 import { defaultFontFamilies, FontFamilies, FontFamily } from './families'
 import { Font, FontConfig } from './fonts'
-import { BaseFontSize, defaultFontSizes, FontSizes } from './sizes'
+import { defaultLettings, Letting, Lettings } from './lettings'
+import { defaultFontSizes, BaseFontSize, FontSizes } from './sizes'
 import { defaultTextSpacings, TextSpacing, TextSpacings } from './spacings'
 import { defaultFontWeights, FontWeight, FontWeights } from './weights'
-import { Direction, FontStyle, TextAlign } from './types'
+import {
+  Direction,
+  FontKerning,
+  FontStyle as FontStyleCss,
+  FontStyle,
+  TextAlign,
+  TextTransform,
+} from './types'
 
 export type ConfigFontStyles = {
   [key in Font]: ConfigFontStates
@@ -23,8 +31,24 @@ export interface Config {
   weights: FontWeights
   sizes: FontSizes
   spacing: TextSpacings
+  letting: Lettings
   styles: ConfigFontStyles
 }
+
+export const makeDefaultFontConfig = (config: Config): FontConfig => ({
+  family: FontFamily.Primary,
+  style: FontStyleCss.Normal,
+  weight: FontWeight.Base,
+  size: BaseFontSize.Base,
+  align: config.direction === 'ltr' ? TextAlign.Left : TextAlign.Right,
+  transform: TextTransform.None,
+  decoration: Decoration.Base,
+  kerning: FontKerning.Normal,
+  spacing: TextSpacing.Base,
+  indent: '',
+  letting: Letting.Base,
+  tracking: '',
+})
 
 export const defaultConfig: Config = {
   direction: Direction.LTR,
@@ -33,6 +57,7 @@ export const defaultConfig: Config = {
   weights: defaultFontWeights,
   sizes: defaultFontSizes,
   spacing: defaultTextSpacings,
+  letting: defaultLettings,
   styles: {
     heading: {
       base: {
@@ -54,17 +79,17 @@ export const defaultConfig: Config = {
     text: {},
     table: {
       base: {
-        letting: '0px',
+        letting: Letting.Min,
       },
     },
     nav: {
       base: {
-        letting: '0px',
+        letting: Letting.Min,
       },
     },
     control: {
       base: {
-        letting: '0px',
+        letting: Letting.Min,
       },
     },
     label: {
@@ -74,7 +99,7 @@ export const defaultConfig: Config = {
     },
     message: {
       base: {
-        letting: '0px',
+        letting: Letting.Min,
       },
     },
     button: {

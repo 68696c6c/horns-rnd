@@ -12,7 +12,6 @@ export const Container = styled.div<MenuContainerProps>(
   ({ theme, color }) => css`
     > *:first-child {
       ${chromatic({ theme, color })};
-      z-index: 1;
     }
   `,
   ({ theme, open, shadow }) => open && shadowed({ theme, shadow }),

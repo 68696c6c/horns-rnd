@@ -2,6 +2,7 @@ import React, { forwardRef, FC, Ref, ForwardedRef, LegacyRef } from 'react'
 import { createNumberMask } from 'text-mask-addons'
 import MaskedInput from 'react-text-mask'
 
+import { InputType } from '../../../config'
 import {
   ControlProps,
   StyledInputHidden,
@@ -11,26 +12,6 @@ import {
 
 // eslint-disable-next-line
 const phoneMask = [ /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, /\d/ ]
-
-export enum InputType {
-  Color = 'color',
-  Currency = 'currency',
-  Date = 'date',
-  DatetimeLocal = 'datetime-local',
-  Email = 'email',
-  Hidden = 'hidden',
-  Month = 'month',
-  Number = 'number',
-  Password = 'password',
-  Percentage = 'percentage',
-  Range = 'range',
-  Search = 'search',
-  Tel = 'tel',
-  Text = 'text',
-  Time = 'time',
-  Url = 'url',
-  Week = 'week',
-}
 
 export type InputRef = HTMLInputElement | MaskedInput | null | undefined
 
