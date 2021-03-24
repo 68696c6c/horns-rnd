@@ -12,4 +12,5 @@ export {
   StatusState,
   Corner,
   InputType,
+  ToggleType,
 } from './utils'

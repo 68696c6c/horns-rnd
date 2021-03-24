@@ -91,3 +91,6 @@ export const Heading = (props: TypographyProps) => (
 export const SubHeading = (props: TypographyProps) => (
   <T variant={HeadingLevel.H3} {...props} />
 )
+export const Label = (props: TypographyProps) => (
+  <T variant={Font.Label} {...props} />
+)

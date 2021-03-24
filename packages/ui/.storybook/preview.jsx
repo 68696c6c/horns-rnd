@@ -1,7 +1,7 @@
 import React from 'react'
 import { ThemeProvider } from '@storybook/theming'
 
-import { makeTheme } from '../src/config/theme'
+import { makeTheme } from '../src/config'
 
 export const decorators = [
   (Story) => (

@@ -52,3 +52,8 @@ export enum InputType {
   Url = 'url',
   Week = 'week',
 }
+
+export enum ToggleType {
+  Checkbox = 'checkbox',
+  Radio = 'radio',
+}

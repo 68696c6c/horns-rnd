@@ -10,6 +10,8 @@ import {
   bordered,
   Chromatic,
   chromatic,
+  Inline,
+  inline,
   interactive,
   Interactive,
   Padded,
@@ -24,6 +26,7 @@ import {
 export interface ControlProps
   extends Bordered,
     Chromatic,
+    Inline,
     Interactive,
     Padded,
     Rounded,
@@ -34,7 +37,7 @@ export interface ControlProps
   onKeyUp?: EventHandler<any>
 }
 
-const controlStyles = ({
+export const controlStyles = ({
   theme,
   border,
   color,
@@ -47,6 +50,7 @@ const controlStyles = ({
   return [
     chromatic,
     bordered({ theme, border, borderDefault: controls.border }),
+    inline,
     interactive({
       theme,
       cursor,

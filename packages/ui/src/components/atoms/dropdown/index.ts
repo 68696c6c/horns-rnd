@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-import { Styled } from '../../../traits'
 import { Size } from '../../../config'
+import { Styled } from '../../../traits'
 import { MenuProps, menuStyles } from '../../quarks'
 
 export const Dropdown = styled.ul<MenuProps>(

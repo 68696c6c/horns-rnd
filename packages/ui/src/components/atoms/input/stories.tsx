@@ -2,7 +2,9 @@ import React, { useRef } from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 
 import { StyledDemo } from '../../../_story'
-import { Input, InputType, InputRef } from '.'
+import { InputType } from '../../../config'
+
+import { Input, InputRef } from '.'
 
 export default {
   title: 'Atoms/Input',
