@@ -1,7 +1,13 @@
 import React from 'react'
 
-import { render, screen } from '../../test'
-import { BorderStyle, Colorway, Size, Font } from '../../../config'
+import { assertButtonStateStyles, render, screen } from '../../test'
+import {
+  BorderStyle,
+  Colorway,
+  Size,
+  Font,
+  HeadingLevel,
+} from '../../../config'
 
 import { Button } from '.'
 
@@ -39,28 +45,34 @@ describe('Button', () => {
     const { container } = render(<Button radius={size}>{size}</Button>)
     expect(container).toMatchSnapshot()
   })
-  it.each(Object.values(Font))('should render font %s', (font) => {
-    const { container } = render(<Button font={font}>{font}</Button>)
-    expect(container).toMatchSnapshot()
-  })
+  it.each([...Object.values(Font), ...Object.values(HeadingLevel)])(
+    'should render font %s',
+    (font) => {
+      const { container } = render(<Button font={font}>{font}</Button>)
+      expect(container).toMatchSnapshot()
+    },
+  )
   describe('ui states', () => {
+    it('should render default state', () => {
+      const text = 'button-default'
+      render(<Button>{text}</Button>)
+      assertButtonStateStyles(screen.getByText(text), '', {
+        'background-color': 'rgb(255, 255, 255)',
+      })
+    })
     it('should render hover state', () => {
       const text = 'button-hover'
       render(<Button>{text}</Button>)
-      const button = screen.getByText(text)
-      expect(button).toHaveStyleRule('background-color', 'rgb(247, 247, 247)', {
-        target: ':hover',
+      assertButtonStateStyles(screen.getByText(text), ':hover', {
+        'background-color': 'rgb(247, 247, 247)',
       })
-      expect(button).toHaveStyleRule('background-color', 'rgb(255, 255, 255)')
     })
     it('should render active state', () => {
       const text = 'button-active'
       render(<Button>{text}</Button>)
-      const button = screen.getByText(text)
-      expect(button).toHaveStyleRule('background-color', 'rgb(240, 240, 240)', {
-        target: ':active',
+      assertButtonStateStyles(screen.getByText(text), ':active', {
+        'background-color': 'rgb(240, 240, 240)',
       })
-      expect(button).toHaveStyleRule('background-color', 'rgb(255, 255, 255)')
     })
   })
 })

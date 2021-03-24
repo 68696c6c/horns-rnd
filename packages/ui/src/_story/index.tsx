@@ -36,39 +36,71 @@ interface DemoProps {
 
 const Demo: FC<DemoProps> = ({ children }: DemoProps) => <div>{children}</div>
 
+interface RenderArgs {
+  key?: string
+  label: string
+  selfClosing?: boolean
+}
+
+// This helper function makes it easier to dynamically render either self-closing or non-self-closing components.
+const renderDemoComponent = <T extends {}>(
+  C: ElementType,
+  props: PropsWithoutRef<T>,
+  args: RenderArgs,
+) =>
+  args.selfClosing ? (
+    <div key={args.key}>
+      <C {...props} defaultValue={args.label} />
+    </div>
+  ) : (
+    <C {...props} />
+  )
+
 export const borderedDemo = <T extends {}>(
   C: ElementType,
   props: PropsWithoutRef<T>,
+  selfClosing?: boolean,
 ) => (
   <Demo>
     <h1>bordered</h1>
     <h2>style</h2>
     <StyledDemo>
-      <C {...props} border={{ all: { width: 'small' } }}>
-        default
-      </C>
-      {Object.values(BorderStyle).map((style) => (
-        <C
-          {...props}
-          border={{ all: { width: 'small', style } }}
-          key={`border-style-${style}`}
-        >
-          {style}
-        </C>
-      ))}
+      {renderDemoComponent<T>(
+        C,
+        {
+          ...props,
+          border: { all: { width: 'small' } },
+        },
+        { label: 'default', selfClosing },
+      )}
+      {Object.values(BorderStyle).map((style) =>
+        renderDemoComponent<T>(
+          C,
+          {
+            ...props,
+            border: { all: { width: 'small', style } },
+          },
+          {
+            key: `border-style-${style}`,
+            label: style,
+            selfClosing,
+          },
+        ),
+      )}
     </StyledDemo>
     <h2>width</h2>
     <StyledDemo>
-      <C {...props}>default</C>
-      {Object.values(Size).map((size) => (
-        <C
-          {...props}
-          border={{ all: { width: size, style: 'solid' } }}
-          key={`border-width-${size}`}
-        >
-          {size}
-        </C>
-      ))}
+      {renderDemoComponent<T>(C, props, { label: 'default', selfClosing })}
+      {Object.values(Size).map((size) =>
+        renderDemoComponent<T>(
+          C,
+          {
+            ...props,
+            border: { all: { width: size, style: 'solid' } },
+          },
+          { key: `border-width-${size}`, label: size, selfClosing },
+        ),
+      )}
     </StyledDemo>
   </Demo>
 )
@@ -76,20 +108,31 @@ export const borderedDemo = <T extends {}>(
 export const chromaticDemo = <T extends {}>(
   C: ElementType,
   props: PropsWithoutRef<T>,
+  selfClosing?: boolean,
 ) => (
   <Demo>
     <h1>chromatic</h1>
     <StyledDemo>
-      <C {...props} color={undefined}>
-        default
-      </C>
+      {renderDemoComponent<T>(
+        C,
+        {
+          ...props,
+          color: undefined,
+        },
+        { label: 'default', selfClosing },
+      )}
       {Object.values(Colorway).map((color) =>
         color === Colorway.Typography ? (
           <></>
         ) : (
-          <C {...props} color={color} key={`colorway-${color}`}>
-            {color}
-          </C>
+          renderDemoComponent<T>(
+            C,
+            {
+              ...props,
+              color,
+            },
+            { key: `colorway-${color}`, label: color, selfClosing },
+          )
         ),
       )}
     </StyledDemo>
@@ -136,18 +179,29 @@ export const containedDemo = <T extends {}>(
 export const paddedDemo = <T extends {}>(
   C: ElementType,
   props: PropsWithoutRef<T>,
+  selfClosing?: boolean,
 ) => (
   <Demo>
     <h1>padded</h1>
     <StyledDemo>
-      <C {...props} padding={undefined}>
-        default
-      </C>
-      {Object.values(Size).map((size) => (
-        <C {...props} padding={size} key={`padding-${size}`}>
-          {size}
-        </C>
-      ))}
+      {renderDemoComponent<T>(
+        C,
+        {
+          ...props,
+          padding: undefined,
+        },
+        { label: 'default', selfClosing },
+      )}
+      {Object.values(Size).map((size) =>
+        renderDemoComponent<T>(
+          C,
+          {
+            ...props,
+            padding: size,
+          },
+          { key: `padding-${size}`, label: size, selfClosing },
+        ),
+      )}
     </StyledDemo>
   </Demo>
 )
@@ -155,18 +209,29 @@ export const paddedDemo = <T extends {}>(
 export const roundedDemo = <T extends {}>(
   C: ElementType,
   props: PropsWithoutRef<T>,
+  selfClosing?: boolean,
 ) => (
   <Demo>
     <h1>rounded</h1>
     <StyledDemo>
-      <C {...props} radius={undefined}>
-        default
-      </C>
-      {Object.values(Size).map((size) => (
-        <C {...props} radius={size} key={`radius-${size}`}>
-          {size}
-        </C>
-      ))}
+      {renderDemoComponent<T>(
+        C,
+        {
+          ...props,
+          radius: undefined,
+        },
+        { label: 'default', selfClosing },
+      )}
+      {Object.values(Size).map((size) =>
+        renderDemoComponent<T>(
+          C,
+          {
+            ...props,
+            radius: size,
+          },
+          { key: `radius-${size}`, label: size, selfClosing },
+        ),
+      )}
     </StyledDemo>
   </Demo>
 )
@@ -174,18 +239,29 @@ export const roundedDemo = <T extends {}>(
 export const typographicDemo = <T extends {}>(
   C: ElementType,
   props: PropsWithoutRef<T>,
+  selfClosing?: boolean,
 ) => (
   <Demo>
     <h1>typographic</h1>
     <StyledDemo>
-      <C {...props} font={undefined}>
-        default
-      </C>
-      {Object.values(Font).map((font) => (
-        <C {...props} font={font} key={`typographic-${font}`}>
-          {font}
-        </C>
-      ))}
+      {renderDemoComponent<T>(
+        C,
+        {
+          ...props,
+          font: undefined,
+        },
+        { label: 'default', selfClosing },
+      )}
+      {Object.values(Font).map((font) =>
+        renderDemoComponent<T>(
+          C,
+          {
+            ...props,
+            font,
+          },
+          { key: `typographic-${font}`, label: font, selfClosing },
+        ),
+      )}
     </StyledDemo>
   </Demo>
 )
@@ -245,5 +321,18 @@ export const blockDemo = <T extends {}>(
     {chromaticDemo(C, props)}
     {paddedDemo(C, props)}
     {containedDemo(C, props)}
+  </>
+)
+
+export const controlDemo = <T extends {}>(
+  C: ElementType,
+  props: PropsWithoutRef<T>,
+) => (
+  <>
+    {borderedDemo(C, props, true)}
+    {chromaticDemo(C, props, true)}
+    {paddedDemo(C, props, true)}
+    {roundedDemo(C, props, true)}
+    {typographicDemo(C, props, true)}
   </>
 )

@@ -6,6 +6,7 @@ import {
   StyledCode,
   StyledDemo,
   StyledDivider,
+  typographicDemo,
 } from '../../../_story'
 import { Font, HeadingLevel } from '../../../config'
 
@@ -52,7 +53,12 @@ export const TVariants: Story = () => (
   </>
 )
 
-export const TTraits: Story = () => chromaticTextDemo(TypographyAtom, {})
+export const TTraits: Story = () => (
+  <>
+    {chromaticTextDemo(TypographyAtom, {})}
+    {typographicDemo(TypographyAtom, {})}
+  </>
+)
 
 export const Heading: Story = () => <HeadingAtom>Heading</HeadingAtom>
 export const SubHeading: Story = () => (

@@ -1,0 +1,2398 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading should render as default 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 3.21em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h1
+    class="emotion-0"
+  >
+    example
+  </h1>
+</div>
+`;
+
+exports[`Heading should render colorway background 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 3.21em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h1
+    class="emotion-0"
+    color="background"
+  >
+    background
+  </h1>
+</div>
+`;
+
+exports[`Heading should render colorway backgroundAlt 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 3.21em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h1
+    class="emotion-0"
+    color="backgroundAlt"
+  >
+    backgroundAlt
+  </h1>
+</div>
+`;
+
+exports[`Heading should render colorway danger 1`] = `
+.emotion-0 {
+  color: rgb(220, 53, 69);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 3.21em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h1
+    class="emotion-0"
+    color="danger"
+  >
+    danger
+  </h1>
+</div>
+`;
+
+exports[`Heading should render colorway dark 1`] = `
+.emotion-0 {
+  color: rgb(26, 26, 26);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 3.21em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h1
+    class="emotion-0"
+    color="dark"
+  >
+    dark
+  </h1>
+</div>
+`;
+
+exports[`Heading should render colorway info 1`] = `
+.emotion-0 {
+  color: rgb(23, 162, 184);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 3.21em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h1
+    class="emotion-0"
+    color="info"
+  >
+    info
+  </h1>
+</div>
+`;
+
+exports[`Heading should render colorway light 1`] = `
+.emotion-0 {
+  color: rgb(240, 240, 240);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 3.21em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h1
+    class="emotion-0"
+    color="light"
+  >
+    light
+  </h1>
+</div>
+`;
+
+exports[`Heading should render colorway neutral 1`] = `
+.emotion-0 {
+  color: rgb(127, 127, 127);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 3.21em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h1
+    class="emotion-0"
+    color="neutral"
+  >
+    neutral
+  </h1>
+</div>
+`;
+
+exports[`Heading should render colorway primary 1`] = `
+.emotion-0 {
+  color: rgb(255, 170, 0);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 3.21em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h1
+    class="emotion-0"
+    color="primary"
+  >
+    primary
+  </h1>
+</div>
+`;
+
+exports[`Heading should render colorway prominent 1`] = `
+.emotion-0 {
+  color: rgb(255, 170, 0);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 3.21em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h1
+    class="emotion-0"
+    color="prominent"
+  >
+    prominent
+  </h1>
+</div>
+`;
+
+exports[`Heading should render colorway secondary 1`] = `
+.emotion-0 {
+  color: rgb(26, 153, 255);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 3.21em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h1
+    class="emotion-0"
+    color="secondary"
+  >
+    secondary
+  </h1>
+</div>
+`;
+
+exports[`Heading should render colorway success 1`] = `
+.emotion-0 {
+  color: rgb(40, 167, 69);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 3.21em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h1
+    class="emotion-0"
+    color="success"
+  >
+    success
+  </h1>
+</div>
+`;
+
+exports[`Heading should render colorway tertiary 1`] = `
+.emotion-0 {
+  color: rgb(0, 153, 153);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 3.21em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h1
+    class="emotion-0"
+    color="tertiary"
+  >
+    tertiary
+  </h1>
+</div>
+`;
+
+exports[`Heading should render colorway typography 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 3.21em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h1
+    class="emotion-0"
+    color="typography"
+  >
+    typography
+  </h1>
+</div>
+`;
+
+exports[`Heading should render colorway warning 1`] = `
+.emotion-0 {
+  color: rgb(255, 193, 7);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 3.21em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h1
+    class="emotion-0"
+    color="warning"
+  >
+    warning
+  </h1>
+</div>
+`;
+
+exports[`Label should render as default 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <label
+    class="emotion-0"
+  >
+    example
+  </label>
+</div>
+`;
+
+exports[`Label should render colorway background 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <label
+    class="emotion-0"
+    color="background"
+  >
+    background
+  </label>
+</div>
+`;
+
+exports[`Label should render colorway backgroundAlt 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <label
+    class="emotion-0"
+    color="backgroundAlt"
+  >
+    backgroundAlt
+  </label>
+</div>
+`;
+
+exports[`Label should render colorway danger 1`] = `
+.emotion-0 {
+  color: rgb(220, 53, 69);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <label
+    class="emotion-0"
+    color="danger"
+  >
+    danger
+  </label>
+</div>
+`;
+
+exports[`Label should render colorway dark 1`] = `
+.emotion-0 {
+  color: rgb(26, 26, 26);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <label
+    class="emotion-0"
+    color="dark"
+  >
+    dark
+  </label>
+</div>
+`;
+
+exports[`Label should render colorway info 1`] = `
+.emotion-0 {
+  color: rgb(23, 162, 184);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <label
+    class="emotion-0"
+    color="info"
+  >
+    info
+  </label>
+</div>
+`;
+
+exports[`Label should render colorway light 1`] = `
+.emotion-0 {
+  color: rgb(240, 240, 240);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <label
+    class="emotion-0"
+    color="light"
+  >
+    light
+  </label>
+</div>
+`;
+
+exports[`Label should render colorway neutral 1`] = `
+.emotion-0 {
+  color: rgb(127, 127, 127);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <label
+    class="emotion-0"
+    color="neutral"
+  >
+    neutral
+  </label>
+</div>
+`;
+
+exports[`Label should render colorway primary 1`] = `
+.emotion-0 {
+  color: rgb(255, 170, 0);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <label
+    class="emotion-0"
+    color="primary"
+  >
+    primary
+  </label>
+</div>
+`;
+
+exports[`Label should render colorway prominent 1`] = `
+.emotion-0 {
+  color: rgb(255, 170, 0);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <label
+    class="emotion-0"
+    color="prominent"
+  >
+    prominent
+  </label>
+</div>
+`;
+
+exports[`Label should render colorway secondary 1`] = `
+.emotion-0 {
+  color: rgb(26, 153, 255);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <label
+    class="emotion-0"
+    color="secondary"
+  >
+    secondary
+  </label>
+</div>
+`;
+
+exports[`Label should render colorway success 1`] = `
+.emotion-0 {
+  color: rgb(40, 167, 69);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <label
+    class="emotion-0"
+    color="success"
+  >
+    success
+  </label>
+</div>
+`;
+
+exports[`Label should render colorway tertiary 1`] = `
+.emotion-0 {
+  color: rgb(0, 153, 153);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <label
+    class="emotion-0"
+    color="tertiary"
+  >
+    tertiary
+  </label>
+</div>
+`;
+
+exports[`Label should render colorway typography 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <label
+    class="emotion-0"
+    color="typography"
+  >
+    typography
+  </label>
+</div>
+`;
+
+exports[`Label should render colorway warning 1`] = `
+.emotion-0 {
+  color: rgb(255, 193, 7);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <label
+    class="emotion-0"
+    color="warning"
+  >
+    warning
+  </label>
+</div>
+`;
+
+exports[`SubHeading should render as default 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1.64em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h3
+    class="emotion-0"
+  >
+    example
+  </h3>
+</div>
+`;
+
+exports[`SubHeading should render colorway background 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1.64em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h3
+    class="emotion-0"
+    color="background"
+  >
+    background
+  </h3>
+</div>
+`;
+
+exports[`SubHeading should render colorway backgroundAlt 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1.64em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h3
+    class="emotion-0"
+    color="backgroundAlt"
+  >
+    backgroundAlt
+  </h3>
+</div>
+`;
+
+exports[`SubHeading should render colorway danger 1`] = `
+.emotion-0 {
+  color: rgb(220, 53, 69);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1.64em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h3
+    class="emotion-0"
+    color="danger"
+  >
+    danger
+  </h3>
+</div>
+`;
+
+exports[`SubHeading should render colorway dark 1`] = `
+.emotion-0 {
+  color: rgb(26, 26, 26);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1.64em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h3
+    class="emotion-0"
+    color="dark"
+  >
+    dark
+  </h3>
+</div>
+`;
+
+exports[`SubHeading should render colorway info 1`] = `
+.emotion-0 {
+  color: rgb(23, 162, 184);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1.64em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h3
+    class="emotion-0"
+    color="info"
+  >
+    info
+  </h3>
+</div>
+`;
+
+exports[`SubHeading should render colorway light 1`] = `
+.emotion-0 {
+  color: rgb(240, 240, 240);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1.64em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h3
+    class="emotion-0"
+    color="light"
+  >
+    light
+  </h3>
+</div>
+`;
+
+exports[`SubHeading should render colorway neutral 1`] = `
+.emotion-0 {
+  color: rgb(127, 127, 127);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1.64em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h3
+    class="emotion-0"
+    color="neutral"
+  >
+    neutral
+  </h3>
+</div>
+`;
+
+exports[`SubHeading should render colorway primary 1`] = `
+.emotion-0 {
+  color: rgb(255, 170, 0);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1.64em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h3
+    class="emotion-0"
+    color="primary"
+  >
+    primary
+  </h3>
+</div>
+`;
+
+exports[`SubHeading should render colorway prominent 1`] = `
+.emotion-0 {
+  color: rgb(255, 170, 0);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1.64em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h3
+    class="emotion-0"
+    color="prominent"
+  >
+    prominent
+  </h3>
+</div>
+`;
+
+exports[`SubHeading should render colorway secondary 1`] = `
+.emotion-0 {
+  color: rgb(26, 153, 255);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1.64em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h3
+    class="emotion-0"
+    color="secondary"
+  >
+    secondary
+  </h3>
+</div>
+`;
+
+exports[`SubHeading should render colorway success 1`] = `
+.emotion-0 {
+  color: rgb(40, 167, 69);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1.64em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h3
+    class="emotion-0"
+    color="success"
+  >
+    success
+  </h3>
+</div>
+`;
+
+exports[`SubHeading should render colorway tertiary 1`] = `
+.emotion-0 {
+  color: rgb(0, 153, 153);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1.64em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h3
+    class="emotion-0"
+    color="tertiary"
+  >
+    tertiary
+  </h3>
+</div>
+`;
+
+exports[`SubHeading should render colorway typography 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1.64em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h3
+    class="emotion-0"
+    color="typography"
+  >
+    typography
+  </h3>
+</div>
+`;
+
+exports[`SubHeading should render colorway warning 1`] = `
+.emotion-0 {
+  color: rgb(255, 193, 7);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1.64em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h3
+    class="emotion-0"
+    color="warning"
+  >
+    warning
+  </h3>
+</div>
+`;
+
+exports[`T should render as default 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+  >
+    example
+  </span>
+</div>
+`;
+
+exports[`T should render colorway background 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+    color="background"
+  >
+    background
+  </span>
+</div>
+`;
+
+exports[`T should render colorway backgroundAlt 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+    color="backgroundAlt"
+  >
+    backgroundAlt
+  </span>
+</div>
+`;
+
+exports[`T should render colorway danger 1`] = `
+.emotion-0 {
+  color: rgb(220, 53, 69);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+    color="danger"
+  >
+    danger
+  </span>
+</div>
+`;
+
+exports[`T should render colorway dark 1`] = `
+.emotion-0 {
+  color: rgb(26, 26, 26);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+    color="dark"
+  >
+    dark
+  </span>
+</div>
+`;
+
+exports[`T should render colorway info 1`] = `
+.emotion-0 {
+  color: rgb(23, 162, 184);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+    color="info"
+  >
+    info
+  </span>
+</div>
+`;
+
+exports[`T should render colorway light 1`] = `
+.emotion-0 {
+  color: rgb(240, 240, 240);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+    color="light"
+  >
+    light
+  </span>
+</div>
+`;
+
+exports[`T should render colorway neutral 1`] = `
+.emotion-0 {
+  color: rgb(127, 127, 127);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+    color="neutral"
+  >
+    neutral
+  </span>
+</div>
+`;
+
+exports[`T should render colorway primary 1`] = `
+.emotion-0 {
+  color: rgb(255, 170, 0);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+    color="primary"
+  >
+    primary
+  </span>
+</div>
+`;
+
+exports[`T should render colorway prominent 1`] = `
+.emotion-0 {
+  color: rgb(255, 170, 0);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+    color="prominent"
+  >
+    prominent
+  </span>
+</div>
+`;
+
+exports[`T should render colorway secondary 1`] = `
+.emotion-0 {
+  color: rgb(26, 153, 255);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+    color="secondary"
+  >
+    secondary
+  </span>
+</div>
+`;
+
+exports[`T should render colorway success 1`] = `
+.emotion-0 {
+  color: rgb(40, 167, 69);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+    color="success"
+  >
+    success
+  </span>
+</div>
+`;
+
+exports[`T should render colorway tertiary 1`] = `
+.emotion-0 {
+  color: rgb(0, 153, 153);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+    color="tertiary"
+  >
+    tertiary
+  </span>
+</div>
+`;
+
+exports[`T should render colorway typography 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+    color="typography"
+  >
+    typography
+  </span>
+</div>
+`;
+
+exports[`T should render colorway warning 1`] = `
+.emotion-0 {
+  color: rgb(255, 193, 7);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+    color="warning"
+  >
+    warning
+  </span>
+</div>
+`;
+
+exports[`T should render variant blockquote 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  border-left: 0.25em solid;
+  margin: 1em;
+  padding-left: 1em;
+}
+
+<div>
+  <blockquote
+    class="emotion-0"
+  >
+    blockquote
+  </blockquote>
+</div>
+`;
+
+exports[`T should render variant button 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+  >
+    button
+  </span>
+</div>
+`;
+
+exports[`T should render variant caption 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+  >
+    caption
+  </span>
+</div>
+`;
+
+exports[`T should render variant code 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Monaco,monospace;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <code
+    class="emotion-0"
+  >
+    code
+  </code>
+</div>
+`;
+
+exports[`T should render variant control 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+  >
+    control
+  </span>
+</div>
+`;
+
+exports[`T should render variant del 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <del
+    class="emotion-0"
+  >
+    del
+  </del>
+</div>
+`;
+
+exports[`T should render variant emphasized 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <em
+    class="emotion-0"
+  >
+    emphasized
+  </em>
+</div>
+`;
+
+exports[`T should render variant h1 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 3.21em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h1
+    class="emotion-0"
+  >
+    h1
+  </h1>
+</div>
+`;
+
+exports[`T should render variant h2 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 2.36em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h2
+    class="emotion-0"
+  >
+    h2
+  </h2>
+</div>
+`;
+
+exports[`T should render variant h3 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1.64em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h3
+    class="emotion-0"
+  >
+    h3
+  </h3>
+</div>
+`;
+
+exports[`T should render variant h4 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1.29em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h4
+    class="emotion-0"
+  >
+    h4
+  </h4>
+</div>
+`;
+
+exports[`T should render variant h5 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1.15em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h5
+    class="emotion-0"
+  >
+    h5
+  </h5>
+</div>
+`;
+
+exports[`T should render variant h6 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <h6
+    class="emotion-0"
+  >
+    h6
+  </h6>
+</div>
+`;
+
+exports[`T should render variant heading 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <span
+    class="emotion-0"
+  >
+    heading
+  </span>
+</div>
+`;
+
+exports[`T should render variant kbd 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Monaco,monospace;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <kbd
+    class="emotion-0"
+  >
+    kbd
+  </kbd>
+</div>
+`;
+
+exports[`T should render variant label 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <label
+    class="emotion-0"
+  >
+    label
+  </label>
+</div>
+`;
+
+exports[`T should render variant legal 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Times New Roman,serif;
+  font-kerning: normal;
+  font-size: 0.75em;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <small
+    class="emotion-0"
+  >
+    legal
+  </small>
+</div>
+`;
+
+exports[`T should render variant link 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  cursor: pointer;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+.emotion-0:not(:disabled):not(.inactive):visited,
+.emotion-0:not(:disabled):not(.inactive).visited {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <a
+    class="emotion-0"
+  >
+    link
+  </a>
+</div>
+`;
+
+exports[`T should render variant message 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+  >
+    message
+  </span>
+</div>
+`;
+
+exports[`T should render variant mistake 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: rgb(220, 53, 69);
+  text-transform: none;
+}
+
+<div>
+  <u
+    class="emotion-0"
+  >
+    mistake
+  </u>
+</div>
+`;
+
+exports[`T should render variant nav 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+  >
+    nav
+  </span>
+</div>
+`;
+
+exports[`T should render variant paragraph 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: justify;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+
+<div>
+  <p
+    class="emotion-0"
+  >
+    paragraph
+  </p>
+</div>
+`;
+
+exports[`T should render variant pre 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Monaco,monospace;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <pre
+    class="emotion-0"
+  >
+    pre
+  </pre>
+</div>
+`;
+
+exports[`T should render variant quote 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <q
+    class="emotion-0"
+  >
+    quote
+  </q>
+</div>
+`;
+
+exports[`T should render variant s 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <s
+    class="emotion-0"
+  >
+    s
+  </s>
+</div>
+`;
+
+exports[`T should render variant samp 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <samp
+    class="emotion-0"
+  >
+    samp
+  </samp>
+</div>
+`;
+
+exports[`T should render variant strong 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <strong
+    class="emotion-0"
+  >
+    strong
+  </strong>
+</div>
+`;
+
+exports[`T should render variant sub 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <sub
+    class="emotion-0"
+  >
+    sub
+  </sub>
+</div>
+`;
+
+exports[`T should render variant sup 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <sup
+    class="emotion-0"
+  >
+    sup
+  </sup>
+</div>
+`;
+
+exports[`T should render variant table 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+  >
+    table
+  </span>
+</div>
+`;
+
+exports[`T should render variant text 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <span
+    class="emotion-0"
+  >
+    text
+  </span>
+</div>
+`;
+
+exports[`T should render variant u 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: rgb(220, 53, 69);
+  text-transform: none;
+}
+
+<div>
+  <u
+    class="emotion-0"
+  >
+    u
+  </u>
+</div>
+`;
+
+exports[`T should render variant variable 1`] = `
+.emotion-0 {
+  color: rgb(1, 1, 1);
+  font-family: Monaco,monospace;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-decoration-color: rgb(1, 1, 1);
+  text-transform: none;
+}
+
+<div>
+  <var
+    class="emotion-0"
+  >
+    variable
+  </var>
+</div>
+`;
