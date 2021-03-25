@@ -3,6 +3,7 @@ import { css } from '@emotion/react'
 
 import { ControlProps, selectStyles } from '../../quarks'
 import { Input } from '../../atoms'
+import { Font } from '../../../config'
 
 export interface BaseSelectProps extends ControlProps {
   multiple?: boolean
@@ -19,6 +20,10 @@ export const Select = styled.div<BaseSelectProps>(
       border-bottom-left-radius: 0;
     `,
 )
+
+Select.defaultProps = {
+  font: Font.Control,
+}
 
 export const Filter = styled(Input)(
   () => css`

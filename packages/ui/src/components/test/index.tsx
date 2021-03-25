@@ -30,49 +30,15 @@ declare global {
 
 // Assertion helpers
 
-enum LinkStatePropKey {
-  Color = 'color',
-  TextDecorationColor = 'text-decoration-color',
-  TextDecorationLine = 'text-decoration-line',
-  TextDecorationStyle = 'text-decoration-style',
-  FontStyle = 'font-style',
-}
-
-type LinkStateProps = {
-  [key in LinkStatePropKey]: string
-}
-
-export const assertLinkStateStyles = (
+export const assertStateStyles = (
   result: HTMLElement,
   target: string,
-  props: LinkStateProps,
+  props: Record<string, string>,
 ) => {
   Object.keys(props).forEach((propName) => {
     expect(result).toHaveStyleRule(
       propName,
-      props[propName as LinkStatePropKey],
-      target !== '' ? { target } : {},
-    )
-  })
-}
-
-enum ButtonStatePropKey {
-  BackgroundColor = 'background-color',
-}
-
-type ButtonStateProps = {
-  [key in ButtonStatePropKey]: string
-}
-
-export const assertButtonStateStyles = (
-  result: HTMLElement,
-  target: string,
-  props: ButtonStateProps,
-) => {
-  Object.keys(props).forEach((propName) => {
-    expect(result).toHaveStyleRule(
-      propName,
-      props[propName as ButtonStatePropKey],
+      props[propName],
       target !== '' ? { target } : {},
     )
   })

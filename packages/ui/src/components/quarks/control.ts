@@ -35,6 +35,7 @@ export interface ControlProps
   name?: string
   value?: string | number
   onKeyUp?: EventHandler<any>
+  required?: boolean
 }
 
 export const controlStyles = ({
@@ -73,6 +74,11 @@ export const controlStyles = ({
 }
 
 export const StyledInput = styled.input(controlStyles)
+
+StyledInput.defaultProps = {
+  font: Font.Control,
+}
+
 export const StyledInputHidden = styled.input()
 
 // Instead of exporting a styled.select and using withComponent to change the tag e.g. a div in the

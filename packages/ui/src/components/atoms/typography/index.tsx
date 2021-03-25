@@ -88,9 +88,16 @@ export const T: FC<TypographyProps> = ({
 export const Heading = (props: TypographyProps) => (
   <T variant={HeadingLevel.H1} {...props} />
 )
+
 export const SubHeading = (props: TypographyProps) => (
   <T variant={HeadingLevel.H3} {...props} />
 )
-export const Label = (props: TypographyProps) => (
+
+export interface LabelProps extends TypographyProps {
+  htmlFor?: string
+  required?: boolean
+}
+
+export const Label = (props: LabelProps) => (
   <T variant={Font.Label} {...props} />
 )

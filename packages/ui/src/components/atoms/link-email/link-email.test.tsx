@@ -1,11 +1,6 @@
 import React from 'react'
 
-import {
-  assertButtonStateStyles,
-  assertLinkStateStyles,
-  render,
-  screen,
-} from '../../test'
+import { assertStateStyles, render, screen } from '../../test'
 import {
   BorderStyle,
   Colorway,
@@ -74,7 +69,7 @@ describe('LinkEmail', () => {
             {text}
           </LinkEmail>,
         )
-        assertLinkStateStyles(screen.getByText(text), '', {
+        assertStateStyles(screen.getByText(text), '', {
           color: 'rgb(1, 1, 1)',
           'text-decoration-color': 'rgb(1, 1, 1)',
           'text-decoration-line': 'underline',
@@ -89,7 +84,7 @@ describe('LinkEmail', () => {
             {text}
           </LinkEmail>,
         )
-        assertLinkStateStyles(screen.getByText(text), ':hover', {
+        assertStateStyles(screen.getByText(text), ':hover', {
           color: 'rgb(1, 1, 1)',
           'text-decoration-color': 'rgb(1, 1, 1)',
           'text-decoration-line': 'underline',
@@ -104,7 +99,7 @@ describe('LinkEmail', () => {
             {text}
           </LinkEmail>,
         )
-        assertLinkStateStyles(screen.getByText(text), ':active', {
+        assertStateStyles(screen.getByText(text), ':active', {
           color: 'rgb(1, 1, 1)',
           'text-decoration-color': 'rgb(1, 1, 1)',
           'text-decoration-line': 'underline',
@@ -119,7 +114,7 @@ describe('LinkEmail', () => {
             {text}
           </LinkEmail>,
         )
-        assertLinkStateStyles(screen.getByText(text), ':visited', {
+        assertStateStyles(screen.getByText(text), ':visited', {
           color: 'rgb(1, 1, 1)',
           'text-decoration-color': 'rgb(1, 1, 1)',
           'text-decoration-line': 'underline',
@@ -209,7 +204,7 @@ describe('LinkEmail', () => {
             {text}
           </LinkEmail>,
         )
-        assertButtonStateStyles(screen.getByText(text), '', {
+        assertStateStyles(screen.getByText(text), '', {
           'background-color': 'rgb(255, 255, 255)',
         })
       })
@@ -220,7 +215,7 @@ describe('LinkEmail', () => {
             {text}
           </LinkEmail>,
         )
-        assertButtonStateStyles(screen.getByText(text), ':hover', {
+        assertStateStyles(screen.getByText(text), ':hover', {
           'background-color': 'rgb(247, 247, 247)',
         })
       })
@@ -231,7 +226,7 @@ describe('LinkEmail', () => {
             {text}
           </LinkEmail>,
         )
-        assertButtonStateStyles(screen.getByText(text), ':active', {
+        assertStateStyles(screen.getByText(text), ':active', {
           'background-color': 'rgb(240, 240, 240)',
         })
       })

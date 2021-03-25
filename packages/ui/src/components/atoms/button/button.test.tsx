@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { assertButtonStateStyles, render, screen } from '../../test'
+import { assertStateStyles, render, screen } from '../../test'
 import {
   BorderStyle,
   Colorway,
@@ -56,21 +56,21 @@ describe('Button', () => {
     it('should render default state', () => {
       const text = 'button-default'
       render(<Button>{text}</Button>)
-      assertButtonStateStyles(screen.getByText(text), '', {
+      assertStateStyles(screen.getByText(text), '', {
         'background-color': 'rgb(255, 255, 255)',
       })
     })
     it('should render hover state', () => {
       const text = 'button-hover'
       render(<Button>{text}</Button>)
-      assertButtonStateStyles(screen.getByText(text), ':hover', {
+      assertStateStyles(screen.getByText(text), ':hover', {
         'background-color': 'rgb(247, 247, 247)',
       })
     })
     it('should render active state', () => {
       const text = 'button-active'
       render(<Button>{text}</Button>)
-      assertButtonStateStyles(screen.getByText(text), ':active', {
+      assertStateStyles(screen.getByText(text), ':active', {
         'background-color': 'rgb(240, 240, 240)',
       })
     })

@@ -1,12 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 
-import {
-  render,
-  screen,
-  assertLinkStateStyles,
-  assertButtonStateStyles,
-} from '../../test'
+import { render, screen, assertStateStyles } from '../../test'
 import {
   BorderStyle,
   Colorway,
@@ -60,7 +55,7 @@ describe('Link', () => {
             {text}
           </Link>,
         )
-        assertLinkStateStyles(screen.getByText(text), '', {
+        assertStateStyles(screen.getByText(text), '', {
           color: 'rgb(1, 1, 1)',
           'text-decoration-color': 'rgb(1, 1, 1)',
           'text-decoration-line': 'underline',
@@ -75,7 +70,7 @@ describe('Link', () => {
             {text}
           </Link>,
         )
-        assertLinkStateStyles(screen.getByText(text), ':hover', {
+        assertStateStyles(screen.getByText(text), ':hover', {
           color: 'rgb(1, 1, 1)',
           'text-decoration-color': 'rgb(1, 1, 1)',
           'text-decoration-line': 'underline',
@@ -90,7 +85,7 @@ describe('Link', () => {
             {text}
           </Link>,
         )
-        assertLinkStateStyles(screen.getByText(text), ':active', {
+        assertStateStyles(screen.getByText(text), ':active', {
           color: 'rgb(1, 1, 1)',
           'text-decoration-color': 'rgb(1, 1, 1)',
           'text-decoration-line': 'underline',
@@ -105,7 +100,7 @@ describe('Link', () => {
             {text}
           </Link>,
         )
-        assertLinkStateStyles(screen.getByText(text), ':visited', {
+        assertStateStyles(screen.getByText(text), ':visited', {
           color: 'rgb(1, 1, 1)',
           'text-decoration-color': 'rgb(1, 1, 1)',
           'text-decoration-line': 'underline',
@@ -195,7 +190,7 @@ describe('Link', () => {
             {text}
           </Link>,
         )
-        assertButtonStateStyles(screen.getByText(text), '', {
+        assertStateStyles(screen.getByText(text), '', {
           'background-color': 'rgb(255, 255, 255)',
         })
       })
@@ -206,7 +201,7 @@ describe('Link', () => {
             {text}
           </Link>,
         )
-        assertButtonStateStyles(screen.getByText(text), ':hover', {
+        assertStateStyles(screen.getByText(text), ':hover', {
           'background-color': 'rgb(247, 247, 247)',
         })
       })
@@ -217,7 +212,7 @@ describe('Link', () => {
             {text}
           </Link>,
         )
-        assertButtonStateStyles(screen.getByText(text), ':active', {
+        assertStateStyles(screen.getByText(text), ':active', {
           'background-color': 'rgb(240, 240, 240)',
         })
       })
