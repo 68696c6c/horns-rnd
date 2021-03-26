@@ -9,7 +9,7 @@ import {
   Chromatic,
   chromatic,
   chromaticText,
-  Component,
+  Parent,
   interactive,
   Interactive,
   Padded,
@@ -27,7 +27,7 @@ export enum LinkVariant {
 }
 
 export interface ButtonProps
-  extends Component,
+  extends Parent,
     Bordered,
     Chromatic,
     Interactive,
@@ -102,11 +102,13 @@ export const linkStyles = ({
         chromaticText({ ...chromaticArgs, state: StatusState.Inactive }),
         typographic({ ...typographicArgs, state: StatusState.Inactive }),
       ],
-      visitedStyles: [
-        chromaticText({ ...chromaticArgs, state: HoverState.Hover }),
-        typographic({ ...typographicArgs, state: StatusState.Visited }),
-      ],
     }),
+    () => css`
+      &:visited {
+        ${chromaticText({ ...chromaticArgs, state: HoverState.Hover })}
+        ${typographic({ ...typographicArgs, state: HoverState.Hover })}
+      }
+    `,
   ]
 }
 

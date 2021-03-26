@@ -3,20 +3,27 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
 import { Toggle, Checkbox, Radio } from '.'
+import { controlDemo } from '../../../_story'
 
 export default {
   title: 'Atoms/Toggle',
   component: Toggle,
 } as Meta
 
-export const Default: Story = () => (
+export const Default: Story = (args) => (
+  <>
+    <Toggle {...args} />
+  </>
+)
+
+export const Demo: Story = () => (
   <>
     <h1>Toggle</h1>
     <p>
       The <em>Toggle</em> component provides checkbox and radio input
-      functionality with a themed presentation. other than{' '}
-      <code>type=&quot;checkbox&quot;</code> It provides no additional behavior
-      beyond what native HTML checkboxes and radios provide, i.e. toggle logic.
+      functionality with a themed presentation. It provides no additional
+      behavior beyond what native HTML checkboxes and radios provide, i.e.
+      toggle logic.
     </p>
     <div>
       <div>
@@ -48,3 +55,5 @@ export const Default: Story = () => (
     </div>
   </>
 )
+
+export const Traits: Story = () => controlDemo(Toggle, {})

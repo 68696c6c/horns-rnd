@@ -28,6 +28,7 @@ export const makeColorways = (pallet: Pallet, config: Config): Colorways => {
     warning: makeColorway(pallet.warning, isDark),
     danger: makeColorway(pallet.danger, isDark),
     prominent: makeColorway(pallet.prominent, isDark),
+    selected: makeColorway(pallet.selected, isDark),
     background: makeBackground(pallet, isDark),
     backgroundAlt: makeBackgroundAlt(pallet, isDark),
     typography: makeTypography(pallet, isDark),

@@ -54,7 +54,6 @@ const makeColorwayStates = (baseStates: BaseColorStates): ColorStates => {
     hover: makeSwatches(hover.base, hover.border),
     active: makeSwatches(active.base, active.border),
     inactive: makeSwatches(inactive.base, inactive.border),
-    visited: makeSwatches(base.base, base.border),
   }
 }
 
@@ -82,18 +81,18 @@ export const makeBackground = (
   isDark: boolean,
 ): ColorStates => {
   if (isDark) {
-    const { base, dark, darker, light } = pallet.dark
+    const { base, dark, darker, lighter } = pallet.dark
     return makeColorwayStates({
-      base: { base: darker, border: dark },
-      hover: { base: dark, border: base },
-      active: { base, border: light },
+      base: { base: darker, border: lighter },
+      hover: { base: dark, border: lighter },
+      active: { base, border: lighter },
     })
   }
-  const { base, dark, light, lighter } = pallet.light
+  const { base, darker, light, lighter } = pallet.light
   return makeColorwayStates({
-    base: { base: lighter, border: light },
-    hover: { base: light, border: base },
-    active: { base, border: dark },
+    base: { base: lighter, border: darker },
+    hover: { base: light, border: darker },
+    active: { base, border: darker },
   })
 }
 
@@ -211,6 +210,18 @@ export const makePallet = (config: Config): Pallet => {
       prominent = tertiary
       break
   }
+  let selected
+  switch (config.selected as Colorway) {
+    default:
+      selected = primary
+      break
+    case Colorway.Secondary:
+      selected = secondary
+      break
+    case Colorway.Tertiary:
+      selected = tertiary
+      break
+  }
   return {
     primary,
     secondary,
@@ -223,6 +234,7 @@ export const makePallet = (config: Config): Pallet => {
     warning: makeShades(pallet.warning, shaders),
     danger: makeShades(pallet.danger, shaders),
     prominent,
+    selected,
   }
 }
 

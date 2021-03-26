@@ -119,10 +119,6 @@ export const defaultConfig: Config = {
         style: FontStyle.Italic,
         decoration: Decoration.UnderlineDouble,
       },
-      visited: {
-        style: FontStyle.Italic,
-        decoration: Decoration.Underline,
-      },
       inactive: {
         decoration: Decoration.Underline,
       },

@@ -8,8 +8,8 @@ import { Cursor, Font, HoverState, StatusState } from '../../config'
 import {
   Bordered,
   bordered,
-  Chromatic,
-  chromatic,
+  chromaticControl,
+  ChromaticNotification,
   Inline,
   inline,
   interactive,
@@ -25,7 +25,7 @@ import {
 
 export interface ControlProps
   extends Bordered,
-    Chromatic,
+    ChromaticNotification,
     Inline,
     Interactive,
     Padded,
@@ -49,17 +49,21 @@ export const controlStyles = ({
 }: Styled & ControlProps) => {
   const { controls } = theme
   return [
-    chromatic,
+    chromaticControl,
     bordered({ theme, border, borderDefault: controls.border }),
     inline,
     interactive({
       theme,
       cursor,
       cursorDefault: Cursor.Text,
-      hoverStyles: [chromatic({ theme, color, state: HoverState.Hover })],
-      activeStyles: [chromatic({ theme, color, state: HoverState.Active })],
+      hoverStyles: [
+        chromaticControl({ theme, color, state: HoverState.Hover }),
+      ],
+      activeStyles: [
+        chromaticControl({ theme, color, state: HoverState.Active }),
+      ],
       inactiveStyles: [
-        chromatic({ theme, color, state: StatusState.Inactive }),
+        chromaticControl({ theme, color, state: StatusState.Inactive }),
       ],
     }),
     padded({ theme, padding, paddingDefault: controls.padding }),

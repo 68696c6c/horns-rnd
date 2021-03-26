@@ -14,9 +14,10 @@ export type PalletConfig = {
 export interface Config {
   mode: Mode
   prominent: Colorway
+  selected: Colorway
   pallet: Omit<
     PalletConfig,
-    'prominent' | 'background' | 'backgroundAlt' | 'typography'
+    'prominent' | 'selected' | 'background' | 'backgroundAlt' | 'typography'
   >
   shaders: Shaders
 }
@@ -73,6 +74,7 @@ export const colorPallet = {
 export const defaultConfig: Config = {
   mode: Mode.Light,
   prominent: Colorway.Primary,
+  selected: Colorway.Primary,
   pallet: {
     primary: hexPallet.tangerine,
     secondary: hexPallet.blue,

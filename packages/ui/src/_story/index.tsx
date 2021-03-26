@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import {
   BorderStyle,
   Colorway,
+  ColorwayNotification,
   Size,
   Font,
   HoverState,
@@ -50,10 +51,12 @@ const renderDemoComponent = <T extends {}>(
 ) =>
   args.selfClosing ? (
     <div key={args.key}>
+      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+      <label style={{ display: 'block' }}>{args.label}</label>
       <C {...props} defaultValue={args.label} />
     </div>
   ) : (
-    <C {...props} />
+    <C {...props}>{args.label}</C>
   )
 
 export const borderedDemo = <T extends {}>(
@@ -156,6 +159,66 @@ export const chromaticTextDemo = <T extends {}>(
           <C {...props} color={color} key={`colorway-${color}`}>
             {color}
           </C>
+        ),
+      )}
+    </StyledDemo>
+  </Demo>
+)
+
+export const chromaticControlDemo = <T extends {}>(
+  C: ElementType,
+  props: PropsWithoutRef<T>,
+  selfClosing?: boolean,
+) => (
+  <Demo>
+    <h1>chromaticControl</h1>
+    <StyledDemo>
+      {renderDemoComponent<T>(
+        C,
+        {
+          ...props,
+          color: Colorway.Primary,
+        },
+        { label: 'default', selfClosing },
+      )}
+      {Object.values(ColorwayNotification).map((color) =>
+        renderDemoComponent<T>(
+          C,
+          {
+            ...props,
+            color,
+          },
+          { key: `colorway-${color}`, label: color, selfClosing },
+        ),
+      )}
+    </StyledDemo>
+  </Demo>
+)
+
+export const chromaticNotificationDemo = <T extends {}>(
+  C: ElementType,
+  props: PropsWithoutRef<T>,
+  selfClosing?: boolean,
+) => (
+  <Demo>
+    <h1>chromaticNotification</h1>
+    <StyledDemo>
+      {renderDemoComponent<T>(
+        C,
+        {
+          ...props,
+          color: Colorway.Primary,
+        },
+        { label: 'default', selfClosing },
+      )}
+      {Object.values(ColorwayNotification).map((color) =>
+        renderDemoComponent<T>(
+          C,
+          {
+            ...props,
+            color,
+          },
+          { key: `colorway-${color}`, label: color, selfClosing },
         ),
       )}
     </StyledDemo>
@@ -266,26 +329,37 @@ export const typographicDemo = <T extends {}>(
   </Demo>
 )
 
-export const uiStateDemo = <T extends {}>(
+export const interactiveDemo = <T extends {}>(
   C: ElementType,
   props: PropsWithoutRef<T>,
+  selfClosing?: boolean,
 ) => (
   <Demo>
-    <h1>UI States</h1>
+    <h1>interactive</h1>
     <StyledDemo>
-      <C {...props} padding={undefined}>
-        default
-      </C>
-      {Object.values(HoverState).map((state) => (
-        <C {...props} className={state} key={`ui-state-${state}`}>
-          {state}
-        </C>
-      ))}
-      {Object.values(StatusState).map((state) => (
-        <C {...props} className={state} key={`ui-state-${state}`}>
-          {state}
-        </C>
-      ))}
+      {renderDemoComponent<T>(C, props, { label: 'default', selfClosing })}
+      {Object.values(HoverState).map((state) =>
+        renderDemoComponent<T>(
+          C,
+          {
+            ...props,
+            className: state,
+          },
+          { key: `ui-state-${state}`, label: state, selfClosing },
+        ),
+      )}
+      {renderDemoComponent<T>(
+        C,
+        {
+          ...props,
+          className: StatusState.Inactive,
+        },
+        {
+          key: `ui-state-${StatusState.Inactive}`,
+          label: StatusState.Inactive,
+          selfClosing,
+        },
+      )}
     </StyledDemo>
   </Demo>
 )
@@ -297,6 +371,7 @@ export const clickableButtonDemo = <T extends {}>(
   <>
     {borderedDemo(C, props)}
     {chromaticDemo(C, props)}
+    {interactiveDemo(C, props)}
     {paddedDemo(C, props)}
     {roundedDemo(C, props)}
     {typographicDemo(C, props)}
@@ -309,6 +384,7 @@ export const clickableLinkDemo = <T extends {}>(
 ) => (
   <>
     {chromaticTextDemo(C, props)}
+    {interactiveDemo(C, props)}
     {typographicDemo(C, props)}
   </>
 )
@@ -330,9 +406,20 @@ export const controlDemo = <T extends {}>(
 ) => (
   <>
     {borderedDemo(C, props, true)}
-    {chromaticDemo(C, props, true)}
+    {chromaticControlDemo(C, props, true)}
+    {interactiveDemo(C, props, true)}
     {paddedDemo(C, props, true)}
     {roundedDemo(C, props, true)}
     {typographicDemo(C, props, true)}
+  </>
+)
+
+export const messageDemo = <T extends {}>(
+  C: ElementType,
+  props: PropsWithoutRef<T>,
+) => (
+  <>
+    {chromaticNotificationDemo(C, props)}
+    {typographicDemo(C, props)}
   </>
 )

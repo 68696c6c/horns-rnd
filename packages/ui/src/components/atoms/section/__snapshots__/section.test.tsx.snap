@@ -2,7 +2,7 @@
 
 exports[`Section should render as default 1`] = `
 .emotion-0 {
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
 }
@@ -36,7 +36,7 @@ exports[`Section should render as default 1`] = `
 
 exports[`Section should render colorway background 1`] = `
 .emotion-0 {
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
 }
@@ -344,6 +344,37 @@ exports[`Section should render colorway secondary 1`] = `
 </div>
 `;
 
+exports[`Section should render colorway selected 1`] = `
+.emotion-0 {
+  border-color: rgb(204, 136, 0);
+  background-color: rgb(255, 170, 0);
+  color: rgb(1, 1, 1);
+}
+
+@media (min-width: 1200px) {
+  .emotion-0 {
+    padding-left: calc(((100vw - 1200px) / 2));
+    padding-right: calc(((100vw - 1200px) / 2));
+  }
+}
+
+<div>
+  <section
+    class="emotion-0"
+    color="selected"
+  >
+    <h1>
+      selected
+       section
+    </h1>
+    <p>
+      selected
+       content
+    </p>
+  </section>
+</div>
+`;
+
 exports[`Section should render colorway success 1`] = `
 .emotion-0 {
   border-color: rgb(32, 134, 55);
@@ -470,7 +501,7 @@ exports[`Section should render colorway warning 1`] = `
 
 exports[`Section should render padding giant 1`] = `
 .emotion-0 {
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   padding: 64px;
@@ -494,7 +525,7 @@ exports[`Section should render padding giant 1`] = `
 
 exports[`Section should render padding large 1`] = `
 .emotion-0 {
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   padding: 24px;
@@ -518,7 +549,7 @@ exports[`Section should render padding large 1`] = `
 
 exports[`Section should render padding max 1`] = `
 .emotion-0 {
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   padding: 88px;
@@ -542,7 +573,7 @@ exports[`Section should render padding max 1`] = `
 
 exports[`Section should render padding medium 1`] = `
 .emotion-0 {
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   padding: 16px;
@@ -566,7 +597,7 @@ exports[`Section should render padding medium 1`] = `
 
 exports[`Section should render padding min 1`] = `
 .emotion-0 {
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   padding: 0px;
@@ -590,7 +621,7 @@ exports[`Section should render padding min 1`] = `
 
 exports[`Section should render padding small 1`] = `
 .emotion-0 {
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   padding: 12px;
@@ -614,7 +645,7 @@ exports[`Section should render padding small 1`] = `
 
 exports[`Section should render padding tiny 1`] = `
 .emotion-0 {
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   padding: 2px;
@@ -638,7 +669,7 @@ exports[`Section should render padding tiny 1`] = `
 
 exports[`Section should render padding xLarge 1`] = `
 .emotion-0 {
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   padding: 32px;
@@ -662,7 +693,7 @@ exports[`Section should render padding xLarge 1`] = `
 
 exports[`Section should render padding xSmall 1`] = `
 .emotion-0 {
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   padding: 8px;
@@ -686,7 +717,7 @@ exports[`Section should render padding xSmall 1`] = `
 
 exports[`Section should render padding xxLarge 1`] = `
 .emotion-0 {
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   padding: 48px;
@@ -710,7 +741,7 @@ exports[`Section should render padding xxLarge 1`] = `
 
 exports[`Section should render padding xxSmall 1`] = `
 .emotion-0 {
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   padding: 4px;

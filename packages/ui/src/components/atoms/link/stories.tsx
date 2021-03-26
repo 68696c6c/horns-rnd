@@ -1,11 +1,7 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
-import {
-  clickableButtonDemo,
-  clickableLinkDemo,
-  uiStateDemo,
-} from '../../../_story'
+import { clickableButtonDemo, clickableLinkDemo } from '../../../_story'
 import { LinkVariant as Variant } from '../../quarks'
 
 import { Link, LinkProps } from '.'
@@ -32,9 +28,6 @@ LinkVariant.args = {
   children: 'Link Variant',
 }
 
-export const LinkVariantStates = () =>
-  uiStateDemo(LinkVariant, { ...LinkVariant.args })
-
 export const LinkVariantTraits = () =>
   clickableLinkDemo(LinkVariant, { ...LinkVariant.args })
 
@@ -44,9 +37,6 @@ ButtonVariant.args = {
   variant: Variant.Button,
   children: 'Button Variant',
 }
-
-export const ButtonVariantStates = () =>
-  uiStateDemo(ButtonVariant, { ...ButtonVariant.args })
 
 export const ButtonVariantTraits = () =>
   clickableButtonDemo(ButtonVariant, { ...ButtonVariant.args })

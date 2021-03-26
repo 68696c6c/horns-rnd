@@ -31,7 +31,6 @@ export const typographic = ({
     text-align: ${f.align};
     text-decoration-line: ${f.decoration.line};
     text-decoration-style: ${f.decoration.style};
-    text-decoration-color: ${theme.colors[f.decoration.color].base.base};
     text-indent: ${f.indent};
     text-transform: ${f.transform};
     word-spacing: ${f.tracking};

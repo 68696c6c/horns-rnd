@@ -1,43 +1,50 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-import { Colorway, Cursor, ToggleType } from '../../../config'
+import { Colorway, Cursor, StatusState, ToggleType } from '../../../config'
+import { chromatic, chromaticControl } from '../../../traits'
 import { ControlProps, controlStyles } from '../../quarks'
 
 export interface ToggleProps extends ControlProps {
-  selected?: boolean
-  type: ToggleType
+  checked?: boolean
+  type?: ToggleType
 }
 
 export const ToggleControl = styled.label<ToggleProps>(
   controlStyles,
-  ({ type }) =>
+  () =>
     css`
       content: ' ';
-      ${type === ToggleType.Radio &&
-      css`
-        border-radius: 50%;
-      `}
+    `,
+  ({ type }) =>
+    type === ToggleType.Radio &&
+    css`
+      border-radius: 50%;
     `,
 )
 
 ToggleControl.defaultProps = {
+  type: ToggleType.Checkbox,
   cursor: Cursor.Pointer,
+  multiline: true,
 }
 
 export const Toggle = styled.input<ToggleProps>(({ theme, color }) => {
-  const c = theme.colors[color || Colorway.Background]
   return css`
     display: none;
     &:checked + ${ToggleControl} {
-      background: ${c.active.base};
+      ${chromatic({ theme, color: Colorway.Selected })};
     }
     &:disabled + ${ToggleControl} {
-      background: ${c.inactive.base};
       cursor: not-allowed;
+      ${chromaticControl({ theme, color, state: StatusState.Inactive })};
     }
     &:disabled + ${ToggleControl} + label.toggle-label {
       cursor: not-allowed;
     }
   `
 })
+
+Toggle.defaultProps = {
+  type: ToggleType.Checkbox,
+}

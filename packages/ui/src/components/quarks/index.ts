@@ -23,3 +23,4 @@ export {
   controlStyles,
 } from './control'
 export { MenuProps, menuStyles } from './menu'
+export { MessageProps, messageStyles } from './message'

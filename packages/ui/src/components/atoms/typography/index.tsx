@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 
 import { Font, HeadingLevel } from '../../../config'
-import { Component, Chromatic, Typographic } from '../../../traits'
+import { Parent, Chromatic, Typographic } from '../../../traits'
 import { StyledLink } from '../../quarks'
 
 import * as Styled from './styles'
@@ -18,7 +18,7 @@ export enum FontTag {
   U = 'u',
 }
 
-export interface TypographyProps extends Component, Chromatic, Typographic {
+export interface TypographyProps extends Parent, Chromatic, Typographic {
   variant?: Font | HeadingLevel | FontTag
 }
 

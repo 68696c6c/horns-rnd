@@ -3,7 +3,7 @@
 exports[`Button should render as default 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -31,7 +31,6 @@ exports[`Button should render as default 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -44,16 +43,24 @@ exports[`Button should render as default 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -68,7 +75,7 @@ exports[`Button should render as default 1`] = `
 exports[`Button should render border style dashed 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 12px;
@@ -96,7 +103,6 @@ exports[`Button should render border style dashed 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -109,16 +115,24 @@ exports[`Button should render border style dashed 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -133,7 +147,7 @@ exports[`Button should render border style dashed 1`] = `
 exports[`Button should render border style dotted 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 12px;
@@ -161,7 +175,6 @@ exports[`Button should render border style dotted 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -174,16 +187,24 @@ exports[`Button should render border style dotted 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -198,7 +219,7 @@ exports[`Button should render border style dotted 1`] = `
 exports[`Button should render border style double 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 12px;
@@ -226,7 +247,6 @@ exports[`Button should render border style double 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -239,16 +259,24 @@ exports[`Button should render border style double 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -263,7 +291,7 @@ exports[`Button should render border style double 1`] = `
 exports[`Button should render border style groove 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 12px;
@@ -291,7 +319,6 @@ exports[`Button should render border style groove 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -304,16 +331,24 @@ exports[`Button should render border style groove 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -328,7 +363,7 @@ exports[`Button should render border style groove 1`] = `
 exports[`Button should render border style hidden 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 12px;
@@ -356,7 +391,6 @@ exports[`Button should render border style hidden 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -369,16 +403,24 @@ exports[`Button should render border style hidden 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -393,7 +435,7 @@ exports[`Button should render border style hidden 1`] = `
 exports[`Button should render border style inherit 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 12px;
@@ -421,7 +463,6 @@ exports[`Button should render border style inherit 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -434,16 +475,24 @@ exports[`Button should render border style inherit 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -458,7 +507,7 @@ exports[`Button should render border style inherit 1`] = `
 exports[`Button should render border style initial 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 12px;
@@ -486,7 +535,6 @@ exports[`Button should render border style initial 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -499,16 +547,24 @@ exports[`Button should render border style initial 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -523,7 +579,7 @@ exports[`Button should render border style initial 1`] = `
 exports[`Button should render border style inset 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 12px;
@@ -551,7 +607,6 @@ exports[`Button should render border style inset 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -564,16 +619,24 @@ exports[`Button should render border style inset 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -588,7 +651,7 @@ exports[`Button should render border style inset 1`] = `
 exports[`Button should render border style none 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 12px;
@@ -616,7 +679,6 @@ exports[`Button should render border style none 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -629,16 +691,24 @@ exports[`Button should render border style none 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -653,7 +723,7 @@ exports[`Button should render border style none 1`] = `
 exports[`Button should render border style outset 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 12px;
@@ -681,7 +751,6 @@ exports[`Button should render border style outset 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -694,16 +763,24 @@ exports[`Button should render border style outset 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -718,7 +795,7 @@ exports[`Button should render border style outset 1`] = `
 exports[`Button should render border style ridge 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 12px;
@@ -746,7 +823,6 @@ exports[`Button should render border style ridge 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -759,16 +835,24 @@ exports[`Button should render border style ridge 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -783,7 +867,7 @@ exports[`Button should render border style ridge 1`] = `
 exports[`Button should render border style solid 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 12px;
@@ -811,7 +895,6 @@ exports[`Button should render border style solid 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -824,16 +907,24 @@ exports[`Button should render border style solid 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -848,7 +939,7 @@ exports[`Button should render border style solid 1`] = `
 exports[`Button should render border width giant 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 64px;
@@ -876,7 +967,6 @@ exports[`Button should render border width giant 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -889,16 +979,24 @@ exports[`Button should render border width giant 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -913,7 +1011,7 @@ exports[`Button should render border width giant 1`] = `
 exports[`Button should render border width large 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 24px;
@@ -941,7 +1039,6 @@ exports[`Button should render border width large 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -954,16 +1051,24 @@ exports[`Button should render border width large 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -978,7 +1083,7 @@ exports[`Button should render border width large 1`] = `
 exports[`Button should render border width max 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 88px;
@@ -1006,7 +1111,6 @@ exports[`Button should render border width max 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -1019,16 +1123,24 @@ exports[`Button should render border width max 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -1043,7 +1155,7 @@ exports[`Button should render border width max 1`] = `
 exports[`Button should render border width medium 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 16px;
@@ -1071,7 +1183,6 @@ exports[`Button should render border width medium 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -1084,16 +1195,24 @@ exports[`Button should render border width medium 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -1108,7 +1227,7 @@ exports[`Button should render border width medium 1`] = `
 exports[`Button should render border width min 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 0px;
@@ -1136,7 +1255,6 @@ exports[`Button should render border width min 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -1149,16 +1267,24 @@ exports[`Button should render border width min 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -1173,7 +1299,7 @@ exports[`Button should render border width min 1`] = `
 exports[`Button should render border width small 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 12px;
@@ -1201,7 +1327,6 @@ exports[`Button should render border width small 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -1214,16 +1339,24 @@ exports[`Button should render border width small 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -1238,7 +1371,7 @@ exports[`Button should render border width small 1`] = `
 exports[`Button should render border width tiny 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -1266,7 +1399,6 @@ exports[`Button should render border width tiny 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -1279,16 +1411,24 @@ exports[`Button should render border width tiny 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -1303,7 +1443,7 @@ exports[`Button should render border width tiny 1`] = `
 exports[`Button should render border width xLarge 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 32px;
@@ -1331,7 +1471,6 @@ exports[`Button should render border width xLarge 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -1344,16 +1483,24 @@ exports[`Button should render border width xLarge 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -1368,7 +1515,7 @@ exports[`Button should render border width xLarge 1`] = `
 exports[`Button should render border width xSmall 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 8px;
@@ -1396,7 +1543,6 @@ exports[`Button should render border width xSmall 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -1409,16 +1555,24 @@ exports[`Button should render border width xSmall 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -1433,7 +1587,7 @@ exports[`Button should render border width xSmall 1`] = `
 exports[`Button should render border width xxLarge 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 48px;
@@ -1461,7 +1615,6 @@ exports[`Button should render border width xxLarge 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -1474,16 +1627,24 @@ exports[`Button should render border width xxLarge 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -1498,7 +1659,7 @@ exports[`Button should render border width xxLarge 1`] = `
 exports[`Button should render border width xxSmall 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 4px;
@@ -1526,7 +1687,6 @@ exports[`Button should render border width xxSmall 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -1539,16 +1699,24 @@ exports[`Button should render border width xxSmall 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -1563,7 +1731,7 @@ exports[`Button should render border width xxSmall 1`] = `
 exports[`Button should render colorway background 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -1591,7 +1759,6 @@ exports[`Button should render colorway background 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -1604,16 +1771,24 @@ exports[`Button should render colorway background 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -1657,7 +1832,6 @@ exports[`Button should render colorway backgroundAlt 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -1680,6 +1854,14 @@ exports[`Button should render colorway backgroundAlt 1`] = `
   border-color: rgb(224, 224, 224);
   background-color: rgb(232, 232, 232);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -1723,7 +1905,6 @@ exports[`Button should render colorway danger 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -1746,6 +1927,14 @@ exports[`Button should render colorway danger 1`] = `
   border-color: rgb(186, 32, 47);
   background-color: rgb(123, 21, 31);
   color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -1789,7 +1978,6 @@ exports[`Button should render colorway dark 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -1812,6 +2000,14 @@ exports[`Button should render colorway dark 1`] = `
   border-color: rgb(38, 38, 38);
   background-color: rgb(51, 51, 51);
   color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -1855,7 +2051,6 @@ exports[`Button should render colorway info 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -1878,6 +2073,14 @@ exports[`Button should render colorway info 1`] = `
   border-color: rgb(18, 130, 147);
   background-color: rgb(12, 86, 98);
   color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -1921,7 +2124,6 @@ exports[`Button should render colorway light 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -1944,6 +2146,14 @@ exports[`Button should render colorway light 1`] = `
   border-color: rgb(232, 232, 232);
   background-color: rgb(224, 224, 224);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -1987,7 +2197,6 @@ exports[`Button should render colorway neutral 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -2010,6 +2219,14 @@ exports[`Button should render colorway neutral 1`] = `
   border-color: rgb(102, 102, 102);
   background-color: rgb(67, 67, 67);
   color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -2053,7 +2270,6 @@ exports[`Button should render colorway primary 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -2076,6 +2292,14 @@ exports[`Button should render colorway primary 1`] = `
   border-color: rgb(204, 136, 0);
   background-color: rgb(135, 90, 0);
   color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -2119,7 +2343,6 @@ exports[`Button should render colorway prominent 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -2142,6 +2365,14 @@ exports[`Button should render colorway prominent 1`] = `
   border-color: rgb(204, 136, 0);
   background-color: rgb(135, 90, 0);
   color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -2185,7 +2416,6 @@ exports[`Button should render colorway secondary 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -2210,12 +2440,93 @@ exports[`Button should render colorway secondary 1`] = `
   color: rgb(255, 255, 255);
 }
 
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
+}
+
 <div>
   <button
     class="emotion-0"
     color="secondary"
   >
     secondary
+  </button>
+</div>
+`;
+
+exports[`Button should render colorway selected 1`] = `
+.emotion-0 {
+  display: inline-block;
+  border-color: rgb(204, 136, 0);
+  background-color: rgb(255, 170, 0);
+  color: rgb(1, 1, 1);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  font-family: Helvetica,sans-serif;
+  font-kerning: normal;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  text-align: left;
+  text-decoration-line: none;
+  text-transform: none;
+}
+
+.emotion-0:disabled,
+.emotion-0.inactive {
+  border-color: rgb(165, 140, 89);
+  background-color: rgb(191, 149, 64);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):hover,
+.emotion-0:not(:disabled):not(.inactive).hover {
+  border-color: rgb(255, 170, 0);
+  background-color: rgb(204, 136, 0);
+  color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):active,
+.emotion-0:not(:disabled):not(.inactive).active {
+  border-color: rgb(204, 136, 0);
+  background-color: rgb(135, 90, 0);
+  color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
+}
+
+<div>
+  <button
+    class="emotion-0"
+    color="selected"
+  >
+    selected
   </button>
 </div>
 `;
@@ -2251,7 +2562,6 @@ exports[`Button should render colorway success 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -2274,6 +2584,14 @@ exports[`Button should render colorway success 1`] = `
   border-color: rgb(32, 134, 55);
   background-color: rgb(21, 89, 37);
   color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -2317,7 +2635,6 @@ exports[`Button should render colorway tertiary 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -2340,6 +2657,14 @@ exports[`Button should render colorway tertiary 1`] = `
   border-color: rgb(0, 122, 122);
   background-color: rgb(0, 81, 81);
   color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -2383,7 +2708,6 @@ exports[`Button should render colorway typography 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -2406,6 +2730,14 @@ exports[`Button should render colorway typography 1`] = `
   border-color: rgb(1, 1, 1);
   background-color: rgb(1, 1, 1);
   color: rgb(255, 255, 255);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -2449,7 +2781,6 @@ exports[`Button should render colorway warning 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -2474,6 +2805,14 @@ exports[`Button should render colorway warning 1`] = `
   color: rgb(255, 255, 255);
 }
 
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
+}
+
 <div>
   <button
     class="emotion-0"
@@ -2487,7 +2826,7 @@ exports[`Button should render colorway warning 1`] = `
 exports[`Button should render font button 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -2515,7 +2854,6 @@ exports[`Button should render font button 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -2528,16 +2866,24 @@ exports[`Button should render font button 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -2552,7 +2898,7 @@ exports[`Button should render font button 1`] = `
 exports[`Button should render font caption 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -2580,7 +2926,6 @@ exports[`Button should render font caption 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -2593,16 +2938,24 @@ exports[`Button should render font caption 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -2617,7 +2970,7 @@ exports[`Button should render font caption 1`] = `
 exports[`Button should render font code 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -2645,7 +2998,6 @@ exports[`Button should render font code 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -2658,16 +3010,24 @@ exports[`Button should render font code 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -2682,7 +3042,7 @@ exports[`Button should render font code 1`] = `
 exports[`Button should render font control 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -2710,7 +3070,6 @@ exports[`Button should render font control 1`] = `
   line-height: 1em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -2723,16 +3082,24 @@ exports[`Button should render font control 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -2747,7 +3114,7 @@ exports[`Button should render font control 1`] = `
 exports[`Button should render font emphasized 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -2775,7 +3142,6 @@ exports[`Button should render font emphasized 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -2788,16 +3154,24 @@ exports[`Button should render font emphasized 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -2812,7 +3186,7 @@ exports[`Button should render font emphasized 1`] = `
 exports[`Button should render font h1 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -2840,7 +3214,6 @@ exports[`Button should render font h1 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
   margin: 0 0 1em 0;
 }
@@ -2854,16 +3227,24 @@ exports[`Button should render font h1 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -2878,7 +3259,7 @@ exports[`Button should render font h1 1`] = `
 exports[`Button should render font h2 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -2906,7 +3287,6 @@ exports[`Button should render font h2 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
   margin: 0 0 1em 0;
 }
@@ -2920,16 +3300,24 @@ exports[`Button should render font h2 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -2944,7 +3332,7 @@ exports[`Button should render font h2 1`] = `
 exports[`Button should render font h3 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -2972,7 +3360,6 @@ exports[`Button should render font h3 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
   margin: 0 0 1em 0;
 }
@@ -2986,16 +3373,24 @@ exports[`Button should render font h3 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -3010,7 +3405,7 @@ exports[`Button should render font h3 1`] = `
 exports[`Button should render font h4 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -3038,7 +3433,6 @@ exports[`Button should render font h4 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
   margin: 0 0 1em 0;
 }
@@ -3052,16 +3446,24 @@ exports[`Button should render font h4 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -3076,7 +3478,7 @@ exports[`Button should render font h4 1`] = `
 exports[`Button should render font h5 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -3104,7 +3506,6 @@ exports[`Button should render font h5 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
   margin: 0 0 1em 0;
 }
@@ -3118,16 +3519,24 @@ exports[`Button should render font h5 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -3142,7 +3551,7 @@ exports[`Button should render font h5 1`] = `
 exports[`Button should render font h6 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -3170,7 +3579,6 @@ exports[`Button should render font h6 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
   margin: 0 0 1em 0;
 }
@@ -3184,16 +3592,24 @@ exports[`Button should render font h6 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -3208,7 +3624,7 @@ exports[`Button should render font h6 1`] = `
 exports[`Button should render font heading 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -3236,7 +3652,6 @@ exports[`Button should render font heading 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
   margin: 0 0 1em 0;
 }
@@ -3250,16 +3665,24 @@ exports[`Button should render font heading 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -3274,7 +3697,7 @@ exports[`Button should render font heading 1`] = `
 exports[`Button should render font label 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -3302,7 +3725,6 @@ exports[`Button should render font label 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -3315,16 +3737,24 @@ exports[`Button should render font label 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -3339,7 +3769,7 @@ exports[`Button should render font label 1`] = `
 exports[`Button should render font legal 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -3367,7 +3797,6 @@ exports[`Button should render font legal 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -3380,16 +3809,24 @@ exports[`Button should render font legal 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -3404,7 +3841,7 @@ exports[`Button should render font legal 1`] = `
 exports[`Button should render font link 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -3433,7 +3870,6 @@ exports[`Button should render font link 1`] = `
   text-align: left;
   text-decoration-line: underline;
   text-decoration-style: solid;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -3446,16 +3882,24 @@ exports[`Button should render font link 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -3470,7 +3914,7 @@ exports[`Button should render font link 1`] = `
 exports[`Button should render font message 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -3498,7 +3942,6 @@ exports[`Button should render font message 1`] = `
   line-height: 1em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -3511,16 +3954,24 @@ exports[`Button should render font message 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -3535,7 +3986,7 @@ exports[`Button should render font message 1`] = `
 exports[`Button should render font mistake 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -3564,7 +4015,6 @@ exports[`Button should render font mistake 1`] = `
   text-align: left;
   text-decoration-line: underline;
   text-decoration-style: dotted;
-  text-decoration-color: rgb(220, 53, 69);
   text-transform: none;
 }
 
@@ -3577,16 +4027,24 @@ exports[`Button should render font mistake 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -3601,7 +4059,7 @@ exports[`Button should render font mistake 1`] = `
 exports[`Button should render font nav 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -3629,7 +4087,6 @@ exports[`Button should render font nav 1`] = `
   line-height: 1em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -3642,16 +4099,24 @@ exports[`Button should render font nav 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -3666,7 +4131,7 @@ exports[`Button should render font nav 1`] = `
 exports[`Button should render font paragraph 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -3694,7 +4159,6 @@ exports[`Button should render font paragraph 1`] = `
   line-height: 1.6em;
   text-align: justify;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
   margin: 0 0 1em 0;
 }
@@ -3708,16 +4172,24 @@ exports[`Button should render font paragraph 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -3732,7 +4204,7 @@ exports[`Button should render font paragraph 1`] = `
 exports[`Button should render font quote 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -3760,7 +4232,6 @@ exports[`Button should render font quote 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -3773,16 +4244,24 @@ exports[`Button should render font quote 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -3797,7 +4276,7 @@ exports[`Button should render font quote 1`] = `
 exports[`Button should render font strong 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -3825,7 +4304,6 @@ exports[`Button should render font strong 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -3838,16 +4316,24 @@ exports[`Button should render font strong 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -3862,7 +4348,7 @@ exports[`Button should render font strong 1`] = `
 exports[`Button should render font table 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -3890,7 +4376,6 @@ exports[`Button should render font table 1`] = `
   line-height: 1em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -3903,16 +4388,24 @@ exports[`Button should render font table 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -3927,7 +4420,7 @@ exports[`Button should render font table 1`] = `
 exports[`Button should render font text 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -3955,7 +4448,6 @@ exports[`Button should render font text 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -3968,16 +4460,24 @@ exports[`Button should render font text 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -3992,7 +4492,7 @@ exports[`Button should render font text 1`] = `
 exports[`Button should render font variable 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -4020,7 +4520,6 @@ exports[`Button should render font variable 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -4033,16 +4532,24 @@ exports[`Button should render font variable 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -4057,7 +4564,7 @@ exports[`Button should render font variable 1`] = `
 exports[`Button should render padding giant 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -4082,7 +4589,6 @@ exports[`Button should render padding giant 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -4095,16 +4601,24 @@ exports[`Button should render padding giant 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -4119,7 +4633,7 @@ exports[`Button should render padding giant 1`] = `
 exports[`Button should render padding large 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -4144,7 +4658,6 @@ exports[`Button should render padding large 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -4157,16 +4670,24 @@ exports[`Button should render padding large 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -4181,7 +4702,7 @@ exports[`Button should render padding large 1`] = `
 exports[`Button should render padding max 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -4206,7 +4727,6 @@ exports[`Button should render padding max 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -4219,16 +4739,24 @@ exports[`Button should render padding max 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -4243,7 +4771,7 @@ exports[`Button should render padding max 1`] = `
 exports[`Button should render padding medium 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -4268,7 +4796,6 @@ exports[`Button should render padding medium 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -4281,16 +4808,24 @@ exports[`Button should render padding medium 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -4305,7 +4840,7 @@ exports[`Button should render padding medium 1`] = `
 exports[`Button should render padding min 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -4330,7 +4865,6 @@ exports[`Button should render padding min 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -4343,16 +4877,24 @@ exports[`Button should render padding min 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -4367,7 +4909,7 @@ exports[`Button should render padding min 1`] = `
 exports[`Button should render padding small 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -4392,7 +4934,6 @@ exports[`Button should render padding small 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -4405,16 +4946,24 @@ exports[`Button should render padding small 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -4429,7 +4978,7 @@ exports[`Button should render padding small 1`] = `
 exports[`Button should render padding tiny 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -4454,7 +5003,6 @@ exports[`Button should render padding tiny 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -4467,16 +5015,24 @@ exports[`Button should render padding tiny 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -4491,7 +5047,7 @@ exports[`Button should render padding tiny 1`] = `
 exports[`Button should render padding xLarge 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -4516,7 +5072,6 @@ exports[`Button should render padding xLarge 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -4529,16 +5084,24 @@ exports[`Button should render padding xLarge 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -4553,7 +5116,7 @@ exports[`Button should render padding xLarge 1`] = `
 exports[`Button should render padding xSmall 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -4578,7 +5141,6 @@ exports[`Button should render padding xSmall 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -4591,16 +5153,24 @@ exports[`Button should render padding xSmall 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -4615,7 +5185,7 @@ exports[`Button should render padding xSmall 1`] = `
 exports[`Button should render padding xxLarge 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -4640,7 +5210,6 @@ exports[`Button should render padding xxLarge 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -4653,16 +5222,24 @@ exports[`Button should render padding xxLarge 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -4677,7 +5254,7 @@ exports[`Button should render padding xxLarge 1`] = `
 exports[`Button should render padding xxSmall 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -4702,7 +5279,6 @@ exports[`Button should render padding xxSmall 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -4715,16 +5291,24 @@ exports[`Button should render padding xxSmall 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -4739,7 +5323,7 @@ exports[`Button should render padding xxSmall 1`] = `
 exports[`Button should render radius giant 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -4764,7 +5348,6 @@ exports[`Button should render radius giant 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -4777,16 +5360,24 @@ exports[`Button should render radius giant 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -4802,7 +5393,7 @@ exports[`Button should render radius giant 1`] = `
 exports[`Button should render radius large 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -4827,7 +5418,6 @@ exports[`Button should render radius large 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -4840,16 +5430,24 @@ exports[`Button should render radius large 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -4865,7 +5463,7 @@ exports[`Button should render radius large 1`] = `
 exports[`Button should render radius max 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -4890,7 +5488,6 @@ exports[`Button should render radius max 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -4903,16 +5500,24 @@ exports[`Button should render radius max 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -4928,7 +5533,7 @@ exports[`Button should render radius max 1`] = `
 exports[`Button should render radius medium 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -4953,7 +5558,6 @@ exports[`Button should render radius medium 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -4966,16 +5570,24 @@ exports[`Button should render radius medium 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -4991,7 +5603,7 @@ exports[`Button should render radius medium 1`] = `
 exports[`Button should render radius min 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -5016,7 +5628,6 @@ exports[`Button should render radius min 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -5029,16 +5640,24 @@ exports[`Button should render radius min 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -5054,7 +5673,7 @@ exports[`Button should render radius min 1`] = `
 exports[`Button should render radius small 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -5079,7 +5698,6 @@ exports[`Button should render radius small 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -5092,16 +5710,24 @@ exports[`Button should render radius small 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -5117,7 +5743,7 @@ exports[`Button should render radius small 1`] = `
 exports[`Button should render radius tiny 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -5142,7 +5768,6 @@ exports[`Button should render radius tiny 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -5155,16 +5780,24 @@ exports[`Button should render radius tiny 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -5180,7 +5813,7 @@ exports[`Button should render radius tiny 1`] = `
 exports[`Button should render radius xLarge 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -5205,7 +5838,6 @@ exports[`Button should render radius xLarge 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -5218,16 +5850,24 @@ exports[`Button should render radius xLarge 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -5243,7 +5883,7 @@ exports[`Button should render radius xLarge 1`] = `
 exports[`Button should render radius xSmall 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -5268,7 +5908,6 @@ exports[`Button should render radius xSmall 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -5281,16 +5920,24 @@ exports[`Button should render radius xSmall 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -5306,7 +5953,7 @@ exports[`Button should render radius xSmall 1`] = `
 exports[`Button should render radius xxLarge 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -5331,7 +5978,6 @@ exports[`Button should render radius xxLarge 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -5344,16 +5990,24 @@ exports[`Button should render radius xxLarge 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>
@@ -5369,7 +6023,7 @@ exports[`Button should render radius xxLarge 1`] = `
 exports[`Button should render radius xxSmall 1`] = `
 .emotion-0 {
   display: inline-block;
-  border-color: rgb(247, 247, 247);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   color: rgb(1, 1, 1);
   border-top-width: 2px;
@@ -5394,7 +6048,6 @@ exports[`Button should render radius xxSmall 1`] = `
   line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
-  text-decoration-color: rgb(1, 1, 1);
   text-transform: none;
 }
 
@@ -5407,16 +6060,24 @@ exports[`Button should render radius xxSmall 1`] = `
 
 .emotion-0:not(:disabled):not(.inactive):hover,
 .emotion-0:not(:disabled):not(.inactive).hover {
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(247, 247, 247);
   color: rgb(1, 1, 1);
 }
 
 .emotion-0:not(:disabled):not(.inactive):active,
 .emotion-0:not(:disabled):not(.inactive).active {
-  border-color: rgb(232, 232, 232);
+  border-color: rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
   color: rgb(1, 1, 1);
+}
+
+.emotion-0:not(:disabled):not(.inactive):focus,
+.emotion-0:not(:disabled):not(.inactive).focus {
+  outline-style: dotted;
+  outline-color: inherit;
+  outline-width: 1px;
+  outline-offset: 1px;
 }
 
 <div>

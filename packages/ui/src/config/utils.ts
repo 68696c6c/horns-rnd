@@ -29,9 +29,10 @@ export enum HoverState {
 export enum StatusState {
   Inactive = 'inactive',
   Visited = 'visited',
+  Selected = 'selected',
 }
 
-export type UiState = HoverState | StatusState
+export type UiState = HoverState | StatusState.Inactive
 
 export enum InputType {
   Color = 'color',

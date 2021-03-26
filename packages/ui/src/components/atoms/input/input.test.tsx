@@ -3,7 +3,7 @@ import React from 'react'
 import { render } from '../../test'
 import {
   BorderStyle,
-  Colorway,
+  ColorwayNotification,
   Font,
   HeadingLevel,
   Size,
@@ -16,10 +16,13 @@ describe('Input', () => {
     const { container } = render(<Input />)
     expect(container).toMatchSnapshot()
   })
-  it.each(Object.values(Colorway))('should render colorway %s', (color) => {
-    const { container } = render(<Input color={color} />)
-    expect(container).toMatchSnapshot()
-  })
+  it.each(Object.values(ColorwayNotification))(
+    'should render colorway %s',
+    (color) => {
+      const { container } = render(<Input color={color} />)
+      expect(container).toMatchSnapshot()
+    },
+  )
   it.each(Object.values(BorderStyle))(
     'should render border style %s',
     (style) => {

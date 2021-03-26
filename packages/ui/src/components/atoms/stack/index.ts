@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 
 import {
   Styled,
-  Component,
+  Parent,
   gridded,
   padded,
   responsive,
@@ -12,7 +12,7 @@ import {
   Responsive,
 } from '../../../traits'
 
-export interface StackProps extends Component, Gridded, Padded, Responsive {}
+export interface StackProps extends Parent, Gridded, Padded, Responsive {}
 
 export const Stack = styled.div(
   ({ theme, breakpoint, gapped, gap }: Styled & StackProps) => [

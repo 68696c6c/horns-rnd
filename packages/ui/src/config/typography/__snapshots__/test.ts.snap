@@ -1376,7 +1376,7 @@ Object {
       "letting": "1.6em",
       "size": "medium",
       "spacing": "",
-      "style": "italic",
+      "style": "normal",
       "tracking": "",
       "transform": "none",
       "weight": 400,

@@ -6,6 +6,6 @@ export interface Styled {
   theme: Theme
 }
 
-export interface Component {
+export interface Parent {
   children: ReactNode
 }

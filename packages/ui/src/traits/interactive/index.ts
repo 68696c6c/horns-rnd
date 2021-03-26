@@ -12,7 +12,6 @@ interface InteractiveArgs extends Styled, Interactive {
   hoverStyles?: Array<SerializedStyles | string>
   activeStyles?: Array<SerializedStyles | string>
   inactiveStyles?: Array<SerializedStyles | string>
-  visitedStyles?: Array<SerializedStyles | string>
 }
 
 export const interactive = ({
@@ -21,25 +20,25 @@ export const interactive = ({
   hoverStyles,
   activeStyles,
   inactiveStyles,
-  visitedStyles,
 }: InteractiveArgs): SerializedStyles => {
+  const filterInactive = ':not(:disabled):not(.inactive)'
   return css`
     cursor: ${cursor || cursorDefault || Cursor.Pointer};
     &:disabled,
     &.inactive {
       ${inactiveStyles}
     }
-    &:not(:disabled):not(.inactive):hover,
-    &:not(:disabled):not(.inactive).hover {
+    &${filterInactive}:hover, &${filterInactive}.hover {
       ${hoverStyles}
     }
-    &:not(:disabled):not(.inactive):active,
-    &:not(:disabled):not(.inactive).active {
+    &${filterInactive}:active, &${filterInactive}.active {
       ${activeStyles}
     }
-    &:not(:disabled):not(.inactive):visited,
-    &:not(:disabled):not(.inactive).visited {
-      ${visitedStyles}
+    &${filterInactive}:focus, &${filterInactive}.focus {
+      outline-style: dotted;
+      outline-color: inherit;
+      outline-width: 1px;
+      outline-offset: 1px;
     }
   `
 }
