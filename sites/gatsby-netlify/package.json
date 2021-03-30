@@ -1,6 +1,6 @@
 {
   "name": "gatsby-netlify",
-  "version": "0.0.0",
+  "version": "0.0.1-dev.0",
   "description": "Example Gatsby and Netlify CMS project.",
   "private": true,
   "scripts": {
