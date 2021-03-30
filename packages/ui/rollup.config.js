@@ -3,10 +3,7 @@ import pkg from './package.json'
 
 const input = 'src/index.ts'
 
-const external = [
-  ...Object.keys(pkg.dependencies || {}),
-  ...Object.keys(pkg.peerDependencies || {}),
-]
+const external = ['react', 'react-dom']
 
 const plugins = [
   typescript({
@@ -20,8 +17,8 @@ export default [
     input,
     output: {
       file: pkg.module,
-      format: 'esm',
-      sourcemap: true,
+      format: 'es',
+      preserveModules: true,
     },
     plugins,
     external,
