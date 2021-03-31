@@ -75,24 +75,6 @@ Object {
       "transform": "none",
       "weight": 700,
     },
-    "visited": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "medium",
-      "spacing": "",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 700,
-    },
   },
   "caption": Object {
     "active": Object {
@@ -150,24 +132,6 @@ Object {
       "weight": 200,
     },
     "inactive": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "medium",
-      "spacing": "",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 200,
-    },
-    "visited": Object {
       "align": "left",
       "decoration": Object {
         "color": "typography",
@@ -259,24 +223,6 @@ Object {
       "transform": "none",
       "weight": 400,
     },
-    "visited": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Monaco, monospace",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "medium",
-      "spacing": "",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 400,
-    },
   },
   "control": Object {
     "active": Object {
@@ -334,24 +280,6 @@ Object {
       "weight": 400,
     },
     "inactive": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1em",
-      "size": "medium",
-      "spacing": "",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 400,
-    },
-    "visited": Object {
       "align": "left",
       "decoration": Object {
         "color": "typography",
@@ -443,24 +371,6 @@ Object {
       "transform": "none",
       "weight": 400,
     },
-    "visited": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "medium",
-      "spacing": "",
-      "style": "italic",
-      "tracking": "",
-      "transform": "none",
-      "weight": 400,
-    },
   },
   "h1": Object {
     "active": Object {
@@ -518,24 +428,6 @@ Object {
       "weight": 700,
     },
     "inactive": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "3.21em",
-      "spacing": "0 0 1em 0",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 700,
-    },
-    "visited": Object {
       "align": "left",
       "decoration": Object {
         "color": "typography",
@@ -627,24 +519,6 @@ Object {
       "transform": "none",
       "weight": 700,
     },
-    "visited": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "2.36em",
-      "spacing": "0 0 1em 0",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 700,
-    },
   },
   "h3": Object {
     "active": Object {
@@ -702,24 +576,6 @@ Object {
       "weight": 700,
     },
     "inactive": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "1.64em",
-      "spacing": "0 0 1em 0",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 700,
-    },
-    "visited": Object {
       "align": "left",
       "decoration": Object {
         "color": "typography",
@@ -811,24 +667,6 @@ Object {
       "transform": "none",
       "weight": 700,
     },
-    "visited": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "1.29em",
-      "spacing": "0 0 1em 0",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 700,
-    },
   },
   "h5": Object {
     "active": Object {
@@ -886,24 +724,6 @@ Object {
       "weight": 700,
     },
     "inactive": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "1.15em",
-      "spacing": "0 0 1em 0",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 700,
-    },
-    "visited": Object {
       "align": "left",
       "decoration": Object {
         "color": "typography",
@@ -995,24 +815,6 @@ Object {
       "transform": "none",
       "weight": 700,
     },
-    "visited": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "1em",
-      "spacing": "0 0 1em 0",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 700,
-    },
   },
   "heading": Object {
     "active": Object {
@@ -1070,24 +872,6 @@ Object {
       "weight": 700,
     },
     "inactive": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "medium",
-      "spacing": "0 0 1em 0",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 700,
-    },
-    "visited": Object {
       "align": "left",
       "decoration": Object {
         "color": "typography",
@@ -1179,24 +963,6 @@ Object {
       "transform": "none",
       "weight": 700,
     },
-    "visited": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "medium",
-      "spacing": "",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 700,
-    },
   },
   "legal": Object {
     "active": Object {
@@ -1254,24 +1020,6 @@ Object {
       "weight": 400,
     },
     "inactive": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Times New Roman, serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "0.75em",
-      "spacing": "",
-      "style": "italic",
-      "tracking": "",
-      "transform": "none",
-      "weight": 400,
-    },
-    "visited": Object {
       "align": "left",
       "decoration": Object {
         "color": "typography",
@@ -1363,24 +1111,6 @@ Object {
       "transform": "none",
       "weight": 400,
     },
-    "visited": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "underline",
-        "style": "solid",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "medium",
-      "spacing": "",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 400,
-    },
   },
   "message": Object {
     "active": Object {
@@ -1438,24 +1168,6 @@ Object {
       "weight": 400,
     },
     "inactive": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1em",
-      "size": "medium",
-      "spacing": "",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 400,
-    },
-    "visited": Object {
       "align": "left",
       "decoration": Object {
         "color": "typography",
@@ -1547,24 +1259,6 @@ Object {
       "transform": "none",
       "weight": 400,
     },
-    "visited": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "danger",
-        "line": "underline",
-        "style": "dotted",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "medium",
-      "spacing": "",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 400,
-    },
   },
   "nav": Object {
     "active": Object {
@@ -1622,24 +1316,6 @@ Object {
       "weight": 400,
     },
     "inactive": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1em",
-      "size": "medium",
-      "spacing": "",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 400,
-    },
-    "visited": Object {
       "align": "left",
       "decoration": Object {
         "color": "typography",
@@ -1731,24 +1407,6 @@ Object {
       "transform": "none",
       "weight": 400,
     },
-    "visited": Object {
-      "align": "justify",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "medium",
-      "spacing": "0 0 1em 0",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 400,
-    },
   },
   "quote": Object {
     "active": Object {
@@ -1806,24 +1464,6 @@ Object {
       "weight": 400,
     },
     "inactive": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "medium",
-      "spacing": "",
-      "style": "italic",
-      "tracking": "",
-      "transform": "none",
-      "weight": 400,
-    },
-    "visited": Object {
       "align": "left",
       "decoration": Object {
         "color": "typography",
@@ -1915,24 +1555,6 @@ Object {
       "transform": "none",
       "weight": 200,
     },
-    "visited": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "medium",
-      "spacing": "",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 200,
-    },
   },
   "table": Object {
     "active": Object {
@@ -1990,24 +1612,6 @@ Object {
       "weight": 400,
     },
     "inactive": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1em",
-      "size": "medium",
-      "spacing": "",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 400,
-    },
-    "visited": Object {
       "align": "left",
       "decoration": Object {
         "color": "typography",
@@ -2099,24 +1703,6 @@ Object {
       "transform": "none",
       "weight": 400,
     },
-    "visited": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Helvetica, sans-serif",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "medium",
-      "spacing": "",
-      "style": "normal",
-      "tracking": "",
-      "transform": "none",
-      "weight": 400,
-    },
   },
   "variable": Object {
     "active": Object {
@@ -2174,24 +1760,6 @@ Object {
       "weight": 400,
     },
     "inactive": Object {
-      "align": "left",
-      "decoration": Object {
-        "color": "typography",
-        "line": "none",
-        "style": "",
-      },
-      "family": "Monaco, monospace",
-      "indent": "",
-      "kerning": "normal",
-      "letting": "1.6em",
-      "size": "medium",
-      "spacing": "",
-      "style": "italic",
-      "tracking": "",
-      "transform": "none",
-      "weight": 400,
-    },
-    "visited": Object {
       "align": "left",
       "decoration": Object {
         "color": "typography",
