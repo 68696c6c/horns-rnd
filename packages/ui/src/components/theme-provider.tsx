@@ -5,7 +5,8 @@ import { makeTheme, Config } from '../config'
 
 interface ThemeProviderProps {
   children: ReactNode
-  theme: Partial<Config>
+  // eslint-disable-next-line react/require-default-props
+  theme?: Partial<Config>
 }
 
 const ThemeProvider: FC<ThemeProviderProps> = ({
