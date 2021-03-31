@@ -22,7 +22,8 @@
     "ex:serve": "yarn workspace gatsby-example serve",
     "ex:analyze": "yarn workspace gatsby-example analyze",
     "net:dev": "yarn workspace gatsby-netlify develop",
-    "net:serve": "yarn workspace gatsby-netlify serve"
+    "net:serve": "yarn workspace gatsby-netlify serve",
+    "publish": "lerna publish"
   },
   "husky": {
     "hooks": {
