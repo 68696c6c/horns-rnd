@@ -16,9 +16,10 @@ export default [
   {
     input,
     output: {
-      dir: pkg.module,
+      dir: 'dist/esm',
       format: 'es',
       preserveModules: true,
+      sourcemap: true,
     },
     plugins,
     external,
@@ -27,7 +28,8 @@ export default [
     input,
     output: {
       file: pkg.main,
-      format: 'cjs',
+      format: 'umd',
+      name: 'horns-ui',
       sourcemap: true,
     },
     plugins,
