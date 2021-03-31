@@ -3,7 +3,7 @@
   "version": "0.0.1-dev.5",
   "description": "Devilishly themable React UI kit in Typescript.",
   "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "module": "dist",
   "author": "68696c6c@gmail.com",
   "license": "GPL",
   "private": false,

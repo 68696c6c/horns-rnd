@@ -16,7 +16,7 @@ export default [
   {
     input,
     output: {
-      file: pkg.module,
+      dir: pkg.module,
       format: 'es',
       preserveModules: true,
     },
