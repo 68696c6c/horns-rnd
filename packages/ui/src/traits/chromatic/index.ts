@@ -91,3 +91,22 @@ export const chromaticNotification = ({
     color: ${c.readable};
   `
 }
+
+export const chromaticNotificationText = ({
+  theme,
+  color: inputColor,
+  state,
+}: ChromaticNotification & ChromaticArgs): SerializedStyles => {
+  const color =
+    inputColor && Object.values(ColorwayNotification).includes(inputColor)
+      ? inputColor
+      : ColorwayNotification.Background
+  const colorway = theme.colors[color]
+  const c = colorway[typeof state === 'undefined' ? HoverState.Base : state]
+  const isBackground = color === ColorwayNotification.Background
+  const result = isBackground ? c.readable : c.base
+  return css`
+    color: ${result};
+    text-decoration-color: ${result};
+  `
+}

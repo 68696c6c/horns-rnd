@@ -22,5 +22,6 @@ export {
   selectStyles,
   controlStyles,
 } from './control'
+export { GridProps, gridStyles } from './grid'
 export { MenuProps, menuStyles } from './menu'
 export { MessageProps, messageStyles } from './message'

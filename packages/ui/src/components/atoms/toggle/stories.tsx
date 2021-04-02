@@ -2,19 +2,16 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
-import { Toggle, Checkbox, Radio } from '.'
 import { controlDemo } from '../../../_story'
+
+import { Toggle, Checkbox, Radio } from '.'
 
 export default {
   title: 'Atoms/Toggle',
   component: Toggle,
 } as Meta
 
-export const Default: Story = (args) => (
-  <>
-    <Toggle {...args} />
-  </>
-)
+export const Default: Story = (args) => <Toggle {...args} />
 
 export const Demo: Story = () => (
   <>

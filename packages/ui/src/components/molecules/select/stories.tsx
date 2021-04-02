@@ -38,7 +38,7 @@ export const Default: Story = () => (
       <code>select</code> tag.
     </p>
     <div>
-      <label htmlFor="select-example-1">Select: </label>
+      <label htmlFor="example-select">Select: </label>
       <Select
         id="example-select"
         name="example_select"
@@ -47,7 +47,7 @@ export const Default: Story = () => (
       />
     </div>
     <div>
-      <label htmlFor="select-example-2">Filterable Select: </label>
+      <label htmlFor="example-select-filterable">Filterable Select: </label>
       <Select
         id="example-select-filterable"
         name="example_select_filterable"
@@ -57,11 +57,22 @@ export const Default: Story = () => (
       />
     </div>
     <div>
-      <label htmlFor="multiselect-example-2">Filterable Multiselect: </label>
+      <label htmlFor="example-multiselect">Multiselect: </label>
+      <Select
+        id="example-multiselect"
+        name="example_multiselect"
+        placeholder="Select one or more..."
+        options={options}
+      />
+    </div>
+    <div>
+      <label htmlFor="example-multiselect-filterable">
+        Filterable Multiselect:{' '}
+      </label>
       <Multiselect
         id="example-multiselect-filterable"
         name="example_multiselect_filterable"
-        placeholder="Filter as many as you'd like..."
+        placeholder="Filter one or more..."
         options={options}
         filterOptions={exampleFilterOptions}
       />

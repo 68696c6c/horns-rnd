@@ -3,24 +3,26 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
 import { Breakpoint } from '../../../config'
-
-import { Stack, StackProps } from '.'
+import { AutoGrid, AutoGridProps } from '.'
 
 export default {
-  title: 'Atoms/Stack',
-  component: Stack,
+  title: 'Atoms/AutoGrid',
+  component: AutoGrid,
 } as Meta
 
-const Template: Story<StackProps> = ({
+const Template: Story<AutoGridProps> = ({
   breakpoint,
   children,
   ...others
-}: StackProps) => (
+}: AutoGridProps) => (
   <>
-    <p>Above the {breakpoint} breakpoint, these items will stack.</p>
-    <Stack breakpoint={breakpoint} {...others}>
+    <p>
+      Above the {breakpoint} breakpoint, these items will rendered in an
+      auto-sized, wrapping grid.
+    </p>
+    <AutoGrid breakpoint={breakpoint} {...others}>
       {children}
-    </Stack>
+    </AutoGrid>
   </>
 )
 
@@ -32,6 +34,9 @@ Default.args = {
       <div>one</div>
       <div>two</div>
       <div>three</div>
+      <div>four</div>
+      <div>five</div>
+      <div>six</div>
     </>
   ),
 }
@@ -45,6 +50,9 @@ Gapped.args = {
       <div>one</div>
       <div>two</div>
       <div>three</div>
+      <div>four</div>
+      <div>five</div>
+      <div>six</div>
     </>
   ),
 }

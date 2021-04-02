@@ -1,5 +1,6 @@
 import React, { FC, ReactNode, ElementType, PropsWithoutRef } from 'react'
 import styled from '@emotion/styled'
+import { css } from '@emotion/react'
 
 import {
   BorderStyle,
@@ -11,14 +12,27 @@ import {
   StatusState,
 } from '../config'
 
-export const StyledCode = styled.code`
-  display: block;
-  padding: 1em;
+const codeStyles = () => css`
   border-radius: 0.33em;
   border: 2px solid #e8bf6a;
   background: #202020;
   color: #eeffff;
 `
+
+export const StyledCode = styled.code(
+  codeStyles,
+  () => css`
+    padding: 0.2em;
+  `,
+)
+
+export const StyledPre = styled.pre(
+  codeStyles,
+  () => css`
+    display: block;
+    padding: 1em;
+  `,
+)
 
 export const StyledDemo = styled.div`
   display: flex;

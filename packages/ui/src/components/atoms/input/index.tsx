@@ -19,6 +19,7 @@ export interface InputProps extends ControlProps {
   currency?: string
   type?: InputType
   forwardedRef?: ForwardedRef<InputRef>
+  placeholder?: string
 }
 
 const BaseInput: FC<InputProps> = ({

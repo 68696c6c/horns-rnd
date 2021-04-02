@@ -6,6 +6,8 @@ import { StyledLink } from '../../quarks'
 
 import * as Styled from './styles'
 
+export { Label as StyledLabel } from './styles'
+
 export enum FontTag {
   Blockquote = 'blockquote',
   Del = 'del',

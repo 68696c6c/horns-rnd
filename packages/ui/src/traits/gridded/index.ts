@@ -11,14 +11,7 @@ export const gridded = (
   theme: Theme,
   gapped?: boolean,
   gap?: Size,
-): SerializedStyles => {
-  if (typeof gapped === 'undefined') {
-    return css`
-      display: grid;
-    `
-  }
-  return css`
-    display: grid;
-    grid-gap: ${gapped && gap ? theme.sizes[gap] : theme.grid.gap};
-  `
-}
+): SerializedStyles => css`
+  display: grid;
+  grid-gap: ${gapped && theme.sizes[gap || theme.grid.gap]};
+`

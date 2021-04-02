@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
+import { Font } from '../../../config'
 import { Label as LabelAtom } from '../../atoms'
 
 interface ToggleGroupProps {
@@ -34,3 +35,7 @@ export const Label = styled(LabelAtom)(
     margin-inline-end: 0.6666em;
   `,
 )
+
+Label.defaultProps = {
+  font: Font.Control,
+}

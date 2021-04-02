@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 
 import {
   chromaticTextDemo,
-  StyledCode,
+  StyledPre,
   StyledDemo,
   StyledDivider,
   typographicDemo,
@@ -27,7 +27,7 @@ export const T: Story = () => <TypographyAtom>Default</TypographyAtom>
 export const TVariants: Story = () => (
   <>
     <h1>T Variants</h1>
-    <StyledCode>{`<T variant="h1">example</T>`}</StyledCode>
+    <StyledPre>{`<T variant="h1">example</T>`}</StyledPre>
     <StyledDivider />
     <StyledDemo>
       {Object.values(HeadingLevel).map((variant) => (

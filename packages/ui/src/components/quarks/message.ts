@@ -1,5 +1,5 @@
 import {
-  chromaticNotification,
+  chromaticNotificationText,
   typographic,
   ChromaticNotification,
   Typographic,
@@ -7,4 +7,4 @@ import {
 
 export interface MessageProps extends ChromaticNotification, Typographic {}
 
-export const messageStyles = () => [chromaticNotification, typographic]
+export const messageStyles = () => [chromaticNotificationText, typographic]

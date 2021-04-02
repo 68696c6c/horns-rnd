@@ -4,6 +4,7 @@ export {
   chromaticText,
   chromaticControl,
   chromaticNotification,
+  chromaticNotificationText,
   Chromatic,
   ChromaticNotification,
 } from './chromatic'

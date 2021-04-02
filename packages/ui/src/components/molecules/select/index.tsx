@@ -2,7 +2,7 @@ import React, { MouseEventHandler, useRef, useState } from 'react'
 import _debounce from 'lodash.debounce'
 
 import { InputType } from '../../../config'
-import { Dropdown, DropdownOption, Input } from '../../atoms'
+import { DropdownOption, Input } from '../../atoms'
 
 import { Menu } from '../menu'
 
@@ -42,12 +42,12 @@ export const Select = ({
   multiple,
   options: propsOptions,
   filterOptions,
-  placeholder,
+  placeholder: placeholderProp,
+  color,
   ...others
 }: SelectProps) => {
-  const [displayValues, setDisplayValues] = useState<string[]>([
-    placeholder || '',
-  ])
+  const placeholder = placeholderProp || ''
+  const [displayValues, setDisplayValues] = useState<string[]>([placeholder])
   const [values, setValues] = useState<string[]>([])
   const [options, setOptions] = useState<SelectOption[]>(
     propsOptions || ([] as SelectOption[]),
@@ -77,11 +77,24 @@ export const Select = ({
         const finalValues = values.filter((v) => v !== value)
         setValues(finalValues)
 
-        const finalDisplayValues = displayValues.filter(
+        const filteredDisplayValues = displayValues.filter(
           (dv) => dv !== displayValue,
         )
+        // Show the placeholder again if all the items have been removed.
+        const finalDisplayValues =
+          filteredDisplayValues.length === 0
+            ? [placeholder]
+            : filteredDisplayValues
         setDisplayValues(finalDisplayValues)
+      } else if (
+        displayValues.length === 1 &&
+        displayValues[0] === placeholder
+      ) {
+        // Hide the placeholder if this is the first new item.
+        setValues([...values, value])
+        setDisplayValues([displayValue])
       } else {
+        // Append the new item.
         setValues([...values, value])
         setDisplayValues([...displayValues, displayValue])
       }
@@ -109,12 +122,13 @@ export const Select = ({
             onClick={toggleOpen}
             ref={ref}
             open={open}
+            color={color}
           >
             {displayValues.join(', ')}
           </Styled.Select>
         )}
         renderMenu={(open, ref) => (
-          <Dropdown open={open} ref={ref}>
+          <Styled.SelectDropdown open={open} ref={ref} color={color}>
             <DropdownOption key={`select-option-${id}-filter`}>
               <Styled.Filter
                 type={InputType.Search}
@@ -134,7 +148,7 @@ export const Select = ({
                 {key}
               </DropdownOption>
             ))}
-          </Dropdown>
+          </Styled.SelectDropdown>
         )}
       />
     </>
