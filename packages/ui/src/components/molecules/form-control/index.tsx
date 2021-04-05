@@ -3,7 +3,6 @@ import { StyledComponent } from '@emotion/styled'
 import { v4 as uuid } from 'uuid'
 
 import { ColorwayNotification, InputType, ToggleType } from '../../../config'
-import { Parent } from '../../../traits'
 import {
   ColumnsProps,
   Input,
@@ -62,23 +61,14 @@ const FormControlInput: FC<FormControlInputProps> = ({
         />
       )
     case BaseControlType.SelectNative:
-      return (
-        <SelectNativeAtom name={name} id={id} required={required} color={color}>
-          {(options || []).map(({ key, value }) => (
-            <option value={value} key={key}>
-              {key}
-            </option>
-          ))}
-        </SelectNativeAtom>
-      )
     case BaseControlType.MultiselectNative:
       return (
         <SelectNativeAtom
           name={name}
           id={id}
           required={required}
-          multiple
           color={color}
+          multiple={type === BaseControlType.MultiselectNative}
         >
           {(options || []).map(({ key, value }) => (
             <option value={value} key={key}>
@@ -151,12 +141,10 @@ export const FormControl: FC<FormControlProps> = ({
   name,
   id: idProp,
   label,
-  // placeholder,
   required,
   hasError,
   errorMessage,
   horizontal,
-  // options,
   ...others
 }: FormControlProps) => {
   const id = idProp || uuid()
@@ -170,19 +158,13 @@ export const FormControl: FC<FormControlProps> = ({
     wrapperProps = { columns: 2, gapped: true }
   }
   const color = hasError ? ColorwayNotification.Danger : undefined
-  const inputProps: FormControlInputProps & Parent = {
+  const inputProps: FormControlInputProps = {
     id,
     name,
     required,
     color,
-    children: undefined,
+    type,
     ...others,
-  }
-  if (
-    type === BaseControlType.MultiselectNative ||
-    type === BaseControlType.Multiselect
-  ) {
-    inputProps.multiple = true
   }
   return (
     <WrapperTag {...wrapperProps} {...others}>
@@ -191,7 +173,7 @@ export const FormControl: FC<FormControlProps> = ({
           {label}
         </Label>
       )}
-      <FormControlInput {...inputProps} type={type} />
+      <FormControlInput {...inputProps} />
       {errorMessage && (
         <Styled.Message htmlFor={id} color={color}>
           {errorMessage}
