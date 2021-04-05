@@ -2,19 +2,18 @@ import { ReactNode } from 'react'
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-import { Cursor, Font } from '../../../config'
+import { Cursor } from '../../../config'
 import { ControlProps, selectStyles } from '../../quarks'
 
 export interface SelectNativeProps extends ControlProps {
-  multiple?: boolean
   children: ReactNode
 }
 
 export const SelectNative = styled.select<SelectNativeProps>(
   selectStyles,
-  ({ theme, multiple, font }) => {
+  ({ theme, multiple }) => {
     if (multiple) {
-      const f = theme.typography[font || Font.Control]
+      const f = theme.typography.control
       return css`
         min-height: ${f.base.letting};
       `

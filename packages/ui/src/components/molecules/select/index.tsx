@@ -129,7 +129,7 @@ export const Select = ({
         )}
         renderMenu={(open, ref) => (
           <Styled.SelectDropdown open={open} ref={ref} color={color}>
-            <DropdownOption key={`select-option-${id}-filter`}>
+            <Styled.FilterOption key={`select-option-${id}-filter`}>
               <Styled.Filter
                 type={InputType.Search}
                 id={`select-filter-${id}`}
@@ -137,7 +137,7 @@ export const Select = ({
                 onKeyUp={handleFilter}
                 ref={filterRef}
               />
-            </DropdownOption>
+            </Styled.FilterOption>
             {options.map(({ key, value }) => (
               <DropdownOption
                 value={value}

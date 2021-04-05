@@ -10,7 +10,6 @@ export {
 } from './chromatic'
 export { contained, Contained } from './contained'
 export { gridded, Gridded } from './gridded'
-export { inline, Inline } from './inline'
 export { interactive, Interactive } from './interactive'
 export { padded, Padded } from './padded'
 export { responsive, Responsive } from './responsive'

@@ -12,7 +12,6 @@ export type TypographyProps = Chromatic & Typographic
 
 export const P = styled.p<TypographyProps>(chromaticText, typographic)
 export const Span = styled.span<TypographyProps>(chromaticText, typographic)
-export const Label = styled.label<TypographyProps>(chromaticText, typographic)
 export const Pre = styled.pre<TypographyProps>(chromaticText, typographic)
 
 // Phrase elements.

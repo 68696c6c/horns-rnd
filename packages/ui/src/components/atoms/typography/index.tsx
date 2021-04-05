@@ -6,8 +6,6 @@ import { StyledLink } from '../../quarks'
 
 import * as Styled from './styles'
 
-export { Label as StyledLabel } from './styles'
-
 export enum FontTag {
   Blockquote = 'blockquote',
   Del = 'del',
@@ -64,8 +62,6 @@ export const T: FC<TypographyProps> = ({
       return <Styled.P font={Font.Paragraph} {...others} />
     case Font.Quote:
       return <Styled.Q font={Font.Quote} {...others} />
-    case Font.Label:
-      return <Styled.Label font={Font.Label} {...others} />
     case Font.Link:
       return <StyledLink font={Font.Link} {...others} />
     case Font.Message:
@@ -87,19 +83,14 @@ export const T: FC<TypographyProps> = ({
   }
 }
 
-export const Heading = (props: TypographyProps) => (
-  <T variant={HeadingLevel.H1} {...props} />
+export const Heading = ({ children, ...others }: TypographyProps) => (
+  <T variant={HeadingLevel.H1} {...others}>
+    {children}
+  </T>
 )
 
-export const SubHeading = (props: TypographyProps) => (
-  <T variant={HeadingLevel.H3} {...props} />
-)
-
-export interface LabelProps extends TypographyProps {
-  htmlFor?: string
-  required?: boolean
-}
-
-export const Label = (props: LabelProps) => (
-  <T variant={Font.Label} {...props} />
+export const SubHeading = ({ children, ...others }: TypographyProps) => (
+  <T variant={HeadingLevel.H3} {...others}>
+    {children}
+  </T>
 )

@@ -14,10 +14,9 @@ import {
   Padded,
 } from '../../../traits'
 import { ControlProps, selectStyles } from '../../quarks'
-import { Dropdown, Input } from '../../atoms'
+import { Dropdown, DropdownOption, Input } from '../../atoms'
 
 export interface BaseSelectProps extends ControlProps {
-  multiple?: boolean
   open?: boolean
   placeholder?: string
 }
@@ -44,6 +43,11 @@ export const Filter = styled(Input)(
     width: 100%;
   `,
 )
+
+export const FilterOption = styled(DropdownOption)`
+  padding-top: 0;
+  padding-bottom: 0;
+`
 
 export interface SelectDropdownProps
   extends Bordered,

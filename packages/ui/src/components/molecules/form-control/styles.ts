@@ -1,24 +1,24 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-import { Styled } from '../../../traits'
-import { Stack, MessageLabel, Columns, StyledLabel } from '../../atoms'
+import { Font } from '../../../config'
 
-const baseStyles = ({ theme }: Styled) => {
-  const c = theme.colors.danger
-  return css`
-    padding: 0;
-    margin-bottom: 1em;
-    grid-row-gap: 0.5em;
-    .error {
-      color: ${c.base.base};
-      border-color: ${c.base.base};
-      &::placeholder {
-        color: ${c.base.base};
-      }
-    }
-  `
+import { Stack, Columns, Label } from '../../atoms'
+
+export const Message = styled(Label)`
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+`
+
+Message.defaultProps = {
+  font: Font.Control,
 }
+
+const baseStyles = () => css`
+  padding: 0;
+  margin-bottom: 1em;
+  grid-row-gap: 0.5em;
+`
 
 export const FormControl = styled(Stack)(baseStyles)
 
@@ -27,10 +27,10 @@ export const FormControlHorizontal = styled(Columns)(
   () =>
     css`
       align-items: center;
-      ${StyledLabel} {
+      ${Label} {
         justify-self: end;
       }
-      ${MessageLabel} {
+      ${Message} {
         justify-self: center;
         grid-column-end: span 2;
       }

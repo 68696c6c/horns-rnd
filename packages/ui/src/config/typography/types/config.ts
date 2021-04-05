@@ -95,6 +95,7 @@ export const defaultConfig: Config = {
     label: {
       base: {
         weight: FontWeight.Bold,
+        letting: Letting.Min,
       },
     },
     message: {

@@ -10,8 +10,6 @@ import {
   bordered,
   chromaticControl,
   ChromaticNotification,
-  Inline,
-  inline,
   interactive,
   Interactive,
   Padded,
@@ -26,7 +24,6 @@ import {
 export interface ControlProps
   extends Bordered,
     ChromaticNotification,
-    Inline,
     Interactive,
     Padded,
     Rounded,
@@ -36,6 +33,8 @@ export interface ControlProps
   value?: string | number
   onKeyUp?: EventHandler<any>
   required?: boolean
+  multiline?: boolean
+  multiple?: boolean
 }
 
 export const controlStyles = ({
@@ -43,7 +42,6 @@ export const controlStyles = ({
   border,
   color,
   cursor,
-  font,
   padding,
   radius,
 }: Styled & ControlProps) => {
@@ -51,7 +49,6 @@ export const controlStyles = ({
   return [
     chromaticControl,
     bordered({ theme, border, borderDefault: controls.border }),
-    inline,
     interactive({
       theme,
       cursor,
@@ -68,7 +65,23 @@ export const controlStyles = ({
     }),
     padded({ theme, padding, paddingDefault: controls.padding }),
     rounded({ theme, radius, radiusDefault: controls.radius }),
-    typographic({ theme, font, fontDefault: Font.Control }),
+    typographic({ theme, font: Font.Control }),
+    ({ multiple, multiline }: ControlProps) => {
+      // Force the element height to match the line-height to ensure that inputs that have controls
+      // inside them (e.g. input type="datetime-local") don't end up a different size than standard inputs.
+      const f = theme.typography.control.base
+      if (multiple) {
+        return css`
+          min-height: ${f.letting};
+        `
+      }
+      return multiline
+        ? css``
+        : css`
+            height: ${f.letting};
+            min-width: ${f.letting};
+          `
+    },
     () => css`
       display: inline-flex;
       box-sizing: content-box;
@@ -78,10 +91,6 @@ export const controlStyles = ({
 }
 
 export const StyledInput = styled.input(controlStyles)
-
-StyledInput.defaultProps = {
-  font: Font.Control,
-}
 
 export const StyledInputHidden = styled.input()
 

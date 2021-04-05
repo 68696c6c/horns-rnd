@@ -3,7 +3,7 @@ import React from 'react'
 import { render } from '../../test'
 import { Colorway, Font, HeadingLevel } from '../../../config'
 
-import { T, Heading, SubHeading, Label, FontTag } from '.'
+import { T, Heading, SubHeading, FontTag } from '.'
 
 describe('T', () => {
   it('should render as default', () => {
@@ -42,17 +42,6 @@ describe('SubHeading', () => {
   })
   it.each(Object.values(Colorway))('should render colorway %s', (color) => {
     const { container } = render(<SubHeading color={color}>{color}</SubHeading>)
-    expect(container).toMatchSnapshot()
-  })
-})
-
-describe('Label', () => {
-  it('should render as default', () => {
-    const { container } = render(<Label>example</Label>)
-    expect(container).toMatchSnapshot()
-  })
-  it.each(Object.values(Colorway))('should render colorway %s', (color) => {
-    const { container } = render(<Label color={color}>{color}</Label>)
     expect(container).toMatchSnapshot()
   })
 })

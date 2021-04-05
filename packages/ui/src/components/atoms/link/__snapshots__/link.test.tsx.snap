@@ -3773,7 +3773,7 @@ exports[`Link button variant should render font label 1`] = `
   font-size: medium;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.6em;
+  line-height: 1em;
   text-align: left;
   text-decoration-line: none;
   text-transform: none;
@@ -8918,7 +8918,7 @@ exports[`Link link variant should render font label 1`] = `
   font-size: medium;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.6em;
+  line-height: 1em;
   text-align: left;
   text-decoration-line: none;
   text-transform: none;
@@ -8934,7 +8934,7 @@ exports[`Link link variant should render font label 1`] = `
   font-size: medium;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.6em;
+  line-height: 1em;
   text-align: left;
   text-decoration-line: none;
   text-transform: none;
@@ -8949,7 +8949,7 @@ exports[`Link link variant should render font label 1`] = `
   font-size: medium;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.6em;
+  line-height: 1em;
   text-align: left;
   text-decoration-line: none;
   text-transform: none;
@@ -8964,7 +8964,7 @@ exports[`Link link variant should render font label 1`] = `
   font-size: medium;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.6em;
+  line-height: 1em;
   text-align: left;
   text-decoration-line: none;
   text-transform: none;
@@ -8986,7 +8986,7 @@ exports[`Link link variant should render font label 1`] = `
   font-size: medium;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.6em;
+  line-height: 1em;
   text-align: left;
   text-decoration-line: none;
   text-transform: none;

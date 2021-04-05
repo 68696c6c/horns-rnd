@@ -95,7 +95,7 @@ export const ErrorsHorizontal: Story = () => (
         label={`horizontal ${type}`}
         placeholder={`horizontal ${type}`}
         options={options}
-        errorMessage="error message"
+        errorMessage="error message very very very very very very very very very very very very long"
         hasError
         horizontal
       />

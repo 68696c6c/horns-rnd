@@ -1,19 +1,14 @@
 import React, { FC } from 'react'
 import { StyledComponent } from '@emotion/styled'
+import { v4 as uuid } from 'uuid'
 
-import {
-  Colorway,
-  ColorwayNotification,
-  InputType,
-  ToggleType,
-} from '../../../config'
-import { Inline } from '../../../traits'
+import { ColorwayNotification, InputType, ToggleType } from '../../../config'
+import { Parent } from '../../../traits'
 import {
   ColumnsProps,
   Input,
   InputProps,
   Label,
-  MessageLabel,
   SelectNative as SelectNativeAtom,
   Textarea as TextareaAtom,
 } from '../../atoms'
@@ -31,40 +26,30 @@ export enum BaseControlType {
   Textarea = 'textarea',
 }
 
-export interface BaseFormControlProps
-  extends Inline,
-    Omit<ColumnsProps, 'children'> {
+export interface FormControlInputProps
+  extends SelectProps,
+    Omit<InputProps, 'type'> {
+  type?: InputType | ToggleType | BaseControlType
+}
+
+export interface FormControlProps
+  extends Omit<ColumnsProps, 'children'>,
+    FormControlInputProps {
   horizontal?: boolean
   label?: string
   hasError?: boolean
   errorMessage?: string
-  type?: InputType | ToggleType | BaseControlType
 }
 
-export type FormControlProps = BaseFormControlProps &
-  SelectProps &
-  Omit<InputProps, 'type'>
-
-export const FormControl: FC<FormControlProps> = ({
+const FormControlInput: FC<FormControlInputProps> = ({
   type,
   name,
   id,
-  label,
   placeholder,
   required,
-  hasError,
-  errorMessage,
-  horizontal,
+  color,
   options,
-  ...others
-}: FormControlProps) => {
-  let WrapperTag: StyledComponent<any> = Styled.FormControl
-  let wrapperProps: BaseFormControlProps = {}
-  if (horizontal) {
-    WrapperTag = Styled.FormControlHorizontal
-    wrapperProps = { columns: 2, gapped: true }
-  }
-  let content
+}: FormControlInputProps) => {
   switch (type) {
     case InputType.Hidden:
       return (
@@ -77,13 +62,8 @@ export const FormControl: FC<FormControlProps> = ({
         />
       )
     case BaseControlType.SelectNative:
-      content = (
-        <SelectNativeAtom
-          name={name}
-          id={id}
-          required={required}
-          color={hasError ? ColorwayNotification.Danger : undefined}
-        >
+      return (
+        <SelectNativeAtom name={name} id={id} required={required} color={color}>
           {(options || []).map(({ key, value }) => (
             <option value={value} key={key}>
               {key}
@@ -91,16 +71,14 @@ export const FormControl: FC<FormControlProps> = ({
           ))}
         </SelectNativeAtom>
       )
-      break
     case BaseControlType.MultiselectNative:
-      wrapperProps.multiline = true
-      content = (
+      return (
         <SelectNativeAtom
           name={name}
           id={id}
           required={required}
           multiple
-          color={hasError ? ColorwayNotification.Danger : undefined}
+          color={color}
         >
           {(options || []).map(({ key, value }) => (
             <option value={value} key={key}>
@@ -109,22 +87,19 @@ export const FormControl: FC<FormControlProps> = ({
           ))}
         </SelectNativeAtom>
       )
-      break
     case BaseControlType.Select:
-      content = (
+      return (
         <SelectAtom
           name={name}
           id={id}
           placeholder={placeholder}
           required={required}
           options={options}
-          color={hasError ? ColorwayNotification.Danger : undefined}
+          color={color}
         />
       )
-      break
     case BaseControlType.Multiselect:
-      wrapperProps.multiline = true
-      content = (
+      return (
         <SelectAtom
           name={name}
           id={id}
@@ -132,66 +107,95 @@ export const FormControl: FC<FormControlProps> = ({
           required={required}
           multiple
           options={options}
-          color={hasError ? ColorwayNotification.Danger : undefined}
+          color={color}
         />
       )
-      break
     case BaseControlType.Textarea:
-      wrapperProps.multiline = true
-      content = (
+      return (
         <TextareaAtom
           name={name}
           id={id}
           placeholder={placeholder}
           required={required}
-          color={hasError ? ColorwayNotification.Danger : undefined}
+          color={color}
         />
       )
-      break
     case ToggleType.Checkbox:
     case ToggleType.Radio:
-      if (horizontal) {
-        wrapperProps.multiline = true
-      }
-      content = (
+      return (
         <ToggleGroup
           type={type as ToggleType}
           name={name}
           id={id}
           required={required}
           options={options}
-          color={hasError ? ColorwayNotification.Danger : undefined}
+          color={color}
         />
       )
-      break
     default:
-      content = (
+      return (
         <Input
           type={type as InputType}
           name={name}
           id={id}
           placeholder={placeholder}
           required={required}
-          color={hasError ? ColorwayNotification.Danger : undefined}
+          color={color}
         />
       )
+  }
+}
+
+export const FormControl: FC<FormControlProps> = ({
+  type,
+  name,
+  id: idProp,
+  label,
+  // placeholder,
+  required,
+  hasError,
+  errorMessage,
+  horizontal,
+  // options,
+  ...others
+}: FormControlProps) => {
+  const id = idProp || uuid()
+  if (type === InputType.Hidden) {
+    return <Input type={type} name={name} id={id} required={required} />
+  }
+  let WrapperTag: StyledComponent<any> = Styled.FormControl
+  let wrapperProps: FormControlProps = {}
+  if (horizontal) {
+    WrapperTag = Styled.FormControlHorizontal
+    wrapperProps = { columns: 2, gapped: true }
+  }
+  const color = hasError ? ColorwayNotification.Danger : undefined
+  const inputProps: FormControlInputProps & Parent = {
+    id,
+    name,
+    required,
+    color,
+    children: undefined,
+    ...others,
+  }
+  if (
+    type === BaseControlType.MultiselectNative ||
+    type === BaseControlType.Multiselect
+  ) {
+    inputProps.multiple = true
   }
   return (
     <WrapperTag {...wrapperProps} {...others}>
       {label && (
-        <Label
-          htmlFor={id}
-          required={required}
-          color={hasError ? Colorway.Danger : undefined}
-        >
+        <Label htmlFor={id} required={required} color={color}>
           {label}
         </Label>
       )}
-      {content}
+      <FormControlInput {...inputProps} type={type} />
       {errorMessage && (
-        <MessageLabel htmlFor={id} color={ColorwayNotification.Danger}>
+        <Styled.Message htmlFor={id} color={color}>
           {errorMessage}
-        </MessageLabel>
+        </Styled.Message>
       )}
     </WrapperTag>
   )
