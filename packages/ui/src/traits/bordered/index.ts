@@ -87,6 +87,8 @@ export const bordered = ({
   border,
   borderDefault,
 }: Styled & BorderedArgs): SerializedStyles => {
+  console.log(border)
+
   if (typeof border === 'undefined' && typeof borderDefault === 'undefined') {
     return css``
   }

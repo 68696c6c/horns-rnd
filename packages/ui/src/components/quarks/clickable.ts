@@ -2,7 +2,15 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-import { Cursor, Font, HoverState, StatusState } from '../../config'
+import {
+  BorderStyle,
+  Colorway as ColorwayOption,
+  Cursor,
+  Font,
+  HoverState,
+  Size,
+  StatusState,
+} from '../../config'
 import {
   Bordered,
   bordered,
@@ -119,3 +127,58 @@ export const styleLink = (CustomComponent: any) =>
 
 export const styleButton = (CustomComponent: any) =>
   styled(CustomComponent)(buttonStyles)
+
+export enum NavItemVariant {
+  Background = 'background',
+  Border = 'border',
+  Colorway = 'colorway',
+  Underline = 'underline',
+}
+
+export enum NavItemLayout {
+  Horizontal = 'horizontal',
+  Vertical = 'vertical',
+}
+
+export interface NavItemProps extends ButtonProps {
+  variant?: NavItemVariant
+  layout?: NavItemLayout
+  currentColor?: ColorwayOption
+  currentBorderWidth?: Size
+  currentBorderStyle?: BorderStyle
+  href?: string
+  current?: boolean
+}
+
+export const navItemStyles = ({
+  theme,
+  cursor,
+  color,
+  padding,
+  radius,
+  font,
+  layout,
+}: Styled & NavItemProps) => {
+  const { buttons } = theme
+  return [
+    chromatic,
+    interactive({
+      theme,
+      cursor,
+      cursorDefault: Cursor.Pointer,
+      hoverStyles: [chromatic({ theme, color, state: HoverState.Hover })],
+      activeStyles: [chromatic({ theme, color, state: HoverState.Active })],
+      inactiveStyles: [
+        chromatic({ theme, color, state: StatusState.Inactive }),
+      ],
+    }),
+    padded({ theme, padding, paddingDefault: buttons.padding }),
+    rounded({ theme, radius, radiusDefault: buttons.radius }),
+    typographic({ theme, font, fontDefault: Font.Button }),
+    css`
+      display: ${layout === NavItemLayout.Horizontal
+        ? 'inline-block'
+        : 'block'};
+    `,
+  ]
+}

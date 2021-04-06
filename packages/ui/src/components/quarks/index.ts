@@ -13,6 +13,9 @@ export {
   StyledLink,
   styleLink,
   styleButton,
+  NavItemProps,
+  navItemStyles,
+  NavItemLayout,
 } from './clickable'
 export {
   ControlProps,
