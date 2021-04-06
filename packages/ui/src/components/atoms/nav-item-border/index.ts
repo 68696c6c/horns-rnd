@@ -46,11 +46,11 @@ export const NavItemBorder = styled.a(
 
       let side = 'left'
       let borderKey = Side.Left
-      let padding = paddingProps.left
+      let padding = paddingProps.left || paddingProps.x || paddingProps.all
       if (layout === NavItemLayout.Horizontal) {
         side = 'bottom'
         borderKey = Side.Bottom
-        padding = paddingProps.bottom
+        padding = paddingProps.bottom || paddingProps.y || paddingProps.all
       }
 
       const pv = valueToNumber(theme.sizes[padding || Size.Min])

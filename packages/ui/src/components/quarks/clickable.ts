@@ -160,8 +160,9 @@ export const navItemStyles = ({
   color,
   padding,
   font,
-  layout,
+  layout: layoutProp,
 }: Styled & NavItemProps) => {
+  const layout = layoutProp || NavItemLayout.Horizontal
   const { buttons } = theme
   return [
     chromatic,
@@ -176,7 +177,7 @@ export const navItemStyles = ({
       ],
     }),
     padded({ theme, padding, paddingDefault: buttons.padding }),
-    typographic({ theme, font, fontDefault: Font.Button }),
+    typographic({ theme, font, fontDefault: Font.Nav }),
     css`
       display: ${layout === NavItemLayout.Horizontal
         ? 'inline-block'

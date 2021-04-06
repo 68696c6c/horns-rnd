@@ -3,9 +3,9 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
 import { BorderStyle, Colorway, Size } from '../../../config'
+import { NavItemLayout } from '../../quarks'
 
 import { NavItemBorder } from '.'
-import { NavItemLayout } from '../../quarks'
 
 export default {
   title: 'Atoms/NavItemBorder',

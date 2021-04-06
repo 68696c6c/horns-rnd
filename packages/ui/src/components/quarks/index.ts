@@ -16,6 +16,7 @@ export {
   NavItemProps,
   navItemStyles,
   NavItemLayout,
+  NavItemVariant,
 } from './clickable'
 export {
   ControlProps,
