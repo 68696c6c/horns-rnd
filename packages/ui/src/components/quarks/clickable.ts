@@ -140,7 +140,11 @@ export enum NavItemLayout {
   Vertical = 'vertical',
 }
 
-export interface NavItemProps extends ButtonProps {
+export interface NavItemProps
+  extends Chromatic,
+    Interactive,
+    Padded,
+    Typographic {
   variant?: NavItemVariant
   layout?: NavItemLayout
   currentColor?: ColorwayOption
@@ -155,7 +159,6 @@ export const navItemStyles = ({
   cursor,
   color,
   padding,
-  radius,
   font,
   layout,
 }: Styled & NavItemProps) => {
@@ -173,7 +176,6 @@ export const navItemStyles = ({
       ],
     }),
     padded({ theme, padding, paddingDefault: buttons.padding }),
-    rounded({ theme, radius, radiusDefault: buttons.radius }),
     typographic({ theme, font, fontDefault: Font.Button }),
     css`
       display: ${layout === NavItemLayout.Horizontal
