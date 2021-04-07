@@ -5,6 +5,7 @@ import { makeBreakpoints, Breakpoints, BreakpointsConfig } from './breakpoints'
 import { makeColors, ColorsConfig, Colorways } from './colors'
 import { defaultGrid, GridConfig } from './grid'
 import { defaultSizes, SizesConfig } from './sizes'
+import { defaultTables, TablesConfig } from './tables'
 import { makeTypography, TypographyConfig, Typography } from './typography'
 
 export interface Config {
@@ -15,6 +16,7 @@ export interface Config {
   controls?: ControlsConfig
   grid?: Partial<GridConfig>
   sizes?: SizesConfig
+  tables?: TablesConfig
   typography?: TypographyConfig
 }
 
@@ -26,6 +28,7 @@ export interface Theme {
   controls: ControlsConfig
   grid: GridConfig
   sizes: SizesConfig
+  tables: TablesConfig
   typography: Typography
 }
 
@@ -39,6 +42,7 @@ export const makeTheme = (themeConfig?: Partial<Config>): Theme => {
     controls: _merge(defaultControls, config.controls),
     sizes: _merge(defaultSizes, config.sizes),
     grid: _merge(defaultGrid, config.grid),
+    tables: _merge(defaultTables, config.tables),
     typography: makeTypography(config.typography),
   }
 }

@@ -3,11 +3,9 @@ import React, { FC, useState } from 'react'
 import { StyledComponent } from '@emotion/styled'
 import { NavItemVariant } from '../../quarks'
 import { NavItemBackground, NavItemBorder, NavItemUnderline } from '../../atoms'
+import { makeIntArray } from '../../../utils'
 
 import * as Styled from './styles'
-
-const makeIntArray = (itemCount: number) =>
-  [...Array(itemCount + 1).keys()].slice(1, itemCount + 1)
 
 const getNavItemTag = (variant?: NavItemVariant): StyledComponent<any> => {
   switch (variant) {

@@ -58,3 +58,10 @@ export enum ToggleType {
   Checkbox = 'checkbox',
   Radio = 'radio',
 }
+
+export enum OverflowOption {
+  Visible = 'visible',
+  Hidden = 'hidden',
+  Scroll = 'scroll',
+  Auto = 'auto',
+}

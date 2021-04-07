@@ -2,10 +2,12 @@ export { bordered, Bordered } from './bordered'
 export {
   chromatic,
   chromaticText,
+  chromaticSurface,
   chromaticControl,
   chromaticNotification,
   chromaticNotificationText,
   Chromatic,
+  ChromaticSurface,
   ChromaticNotification,
 } from './chromatic'
 export { contained, Contained } from './contained'

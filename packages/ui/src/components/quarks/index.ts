@@ -29,3 +29,4 @@ export {
 export { GridProps, gridStyles } from './grid'
 export { MenuProps, menuStyles } from './menu'
 export { MessageProps, messageStyles } from './message'
+export { TableProps, TableRowData, tableStyles } from './table'

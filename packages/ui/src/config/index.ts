@@ -13,4 +13,5 @@ export {
   Corner,
   InputType,
   ToggleType,
+  OverflowOption,
 } from './utils'

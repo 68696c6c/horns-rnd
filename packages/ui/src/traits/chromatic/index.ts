@@ -48,6 +48,24 @@ export const chromaticText = ({
   `
 }
 
+export interface ChromaticSurface {
+  color?: Colorway.Background | Colorway.BackgroundAlt
+}
+
+export const chromaticSurface = ({
+  theme,
+  color,
+  state,
+}: ChromaticSurface & ChromaticArgs): SerializedStyles => {
+  const colorway = theme.colors[color || Colorway.Background]
+  const c = colorway[typeof state === 'undefined' ? HoverState.Base : state]
+  return css`
+    border-color: ${c.border};
+    background-color: ${c.base};
+    color: ${c.readable};
+  `
+}
+
 export interface ChromaticNotification {
   color?: ColorwayNotification
 }

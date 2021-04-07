@@ -437,3 +437,16 @@ export const messageDemo = <T extends {}>(
     {typographicDemo(C, props)}
   </>
 )
+
+export const makeTableRow = (i: string): Record<string, string> => ({
+  id: `${i.repeat(8)}-${i.repeat(4)}-${i.repeat(4)}-${i.repeat(4)}-${i.repeat(
+    12,
+  )}`,
+  first_name: 'Example',
+  last_name: 'User',
+  email: `user-${i}@example.com`,
+  phone: `${i.repeat(3)}-${i.repeat(3)}-${i.repeat(4)}`,
+  created_at: `2020-${i.padStart(2, '0')}-01`,
+  updated_at: '',
+  deleted_at: '',
+})
