@@ -31,7 +31,9 @@ export interface ControlProps
   id?: string
   name?: string
   value?: string | number
+  defaultValue?: string | number
   onKeyUp?: EventHandler<any>
+  onChange?: EventHandler<any>
   required?: boolean
   multiline?: boolean
   multiple?: boolean

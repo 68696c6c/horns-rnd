@@ -26,11 +26,12 @@ export const PaginationNav: FC<Styled.PaginationNavProps> = ({
   currentColor,
   currentBorderWidth,
   currentBorderStyle,
+  onChange,
   ...others
 }: Styled.PaginationNavProps) => {
   const pages = pagesProp || 1
   const currentPage = currentPageProp || 1
-  const [current, setCurrent] = useState(currentPage)
+  const [current, setCurrent] = useState<number>(currentPage)
   const Tag = getNavItemTag(variant)
   return (
     <Styled.PaginationNav currentPage={currentPage} {...others}>
@@ -46,6 +47,9 @@ export const PaginationNav: FC<Styled.PaginationNavProps> = ({
           onClick={(event: Event) => {
             event.preventDefault()
             setCurrent(page)
+            if (typeof onChange !== 'undefined') {
+              onChange(page)
+            }
           }}
         >
           {page}

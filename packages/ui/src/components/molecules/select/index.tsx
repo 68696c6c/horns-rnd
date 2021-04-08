@@ -1,4 +1,11 @@
-import React, { MouseEventHandler, useRef, useState } from 'react'
+import React, {
+  ForwardedRef,
+  forwardRef,
+  MouseEventHandler,
+  Ref,
+  useRef,
+  useState,
+} from 'react'
 import _debounce from 'lodash.debounce'
 
 import { InputType } from '../../../config'
@@ -35,15 +42,18 @@ export interface SelectOption {
 export interface SelectProps extends Styled.BaseSelectProps {
   options?: SelectOption[]
   filterOptions?: FilterOptionsFunc
+  forwardedRef?: ForwardedRef<HTMLInputElement | undefined>
 }
 
-export const Select = ({
+const BaseSelect = ({
   id,
   multiple,
   options: propsOptions,
   filterOptions,
   placeholder: placeholderProp,
   color,
+  forwardedRef,
+  onChange,
   ...others
 }: SelectProps) => {
   const placeholder = placeholderProp || ''
@@ -102,11 +112,15 @@ export const Select = ({
       setValues([value])
       setDisplayValues([displayValue])
     }
+    if (typeof onChange !== 'undefined') {
+      onChange(event)
+    }
   }
 
   return (
     <>
       <Input
+        ref={forwardedRef}
         type={InputType.Hidden}
         id={`select-value-${id}`}
         name={`select_value_${id}`}
@@ -155,8 +169,14 @@ export const Select = ({
   )
 }
 
-export default Select
+export const Select = forwardRef(
+  (props: SelectProps, ref: Ref<HTMLInputElement | undefined>) => (
+    <BaseSelect {...props} forwardedRef={ref} />
+  ),
+)
 
-export const Multiselect = (props: SelectProps) => (
-  <Select {...props} multiple />
+export const Multiselect = forwardRef(
+  (props: SelectProps, ref: Ref<HTMLInputElement | undefined>) => (
+    <BaseSelect {...props} forwardedRef={ref} multiple />
+  ),
 )

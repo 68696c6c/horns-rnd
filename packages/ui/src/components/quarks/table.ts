@@ -3,10 +3,10 @@ import { Font } from '../../config'
 
 import { Styled, padded, typographic, Parent } from '../../traits'
 
-export type TableRowData = Record<string, string>
+export type TableRowData = Record<string, any>[]
 
 export interface TableProps extends Partial<Parent> {
-  rowData?: TableRowData[]
+  rowData?: TableRowData
   height?: string
   minWidth?: string
 }

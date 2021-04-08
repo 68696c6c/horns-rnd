@@ -4,9 +4,10 @@ import { v4 as uuid } from 'uuid'
 import { DispatcherResult } from './utils'
 
 export const useId = (): DispatcherResult<string> => {
-  const [id, setID] = useState<string>('')
+  const [id, setId] = useState<string>('')
   useEffect(() => {
-    setID(uuid())
+    console.log('useId')
+    setId(uuid())
   }, [])
-  return [id, setID]
+  return [id, setId]
 }
