@@ -8,7 +8,7 @@ import React, {
   useState,
   MouseEvent,
 } from 'react'
-import _debounce from 'lodash.debounce'
+import { useDebouncedCallback } from 'use-debounce'
 
 import { InputType } from '../../../config'
 import { DropdownOption, Input } from '../../atoms'
@@ -74,13 +74,13 @@ const BaseSelect: FC<SelectProps> = ({
   const [options, setOptions] = useState(optionsProp || ([] as SelectOption[]))
   const [changeEvent, setChangeEvent] = useState<MouseEvent<HTMLLIElement>>()
 
-  // TODO: replace with use-debounce
-  const filterOptionsD = _debounce(filterOptions || defaultFilterOptions, 100, {
-    leading: true,
-  })
+  const debouncedFilterOptions = useDebouncedCallback(
+    filterOptions || defaultFilterOptions,
+    100,
+  )
 
   const handleFilter = () =>
-    filterOptionsD(
+    debouncedFilterOptions(
       filterRef.current?.value || '',
       options,
       (result: SelectOption[]) => setOptions(result),

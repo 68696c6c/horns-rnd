@@ -1,10 +1,10 @@
-import React, { FC, useRef, useState, MouseEvent, useEffect } from 'react'
+import React, { FC, MouseEvent, useEffect, useRef, useState } from 'react'
 import { useDebouncedCallback } from 'use-debounce'
 
-import { Font } from '../../../config'
+import { Font, InputType } from '../../../config'
 import { TableProps, TableRows } from '../../quarks'
-import { usePagination, PaginationProps } from '../../../hooks'
-import { TableResponsive, Input, T } from '../../atoms'
+import { PaginationProps, usePagination } from '../../../hooks'
+import { Input, T, TableResponsive } from '../../atoms'
 
 import { Select, SelectOption } from '../select'
 import { PaginationNav } from '../pagination-nav'
@@ -188,7 +188,12 @@ export const DataTable: FC<DataTableProps> = ({
           defaultValue={perPage}
           options={perPageOptions}
         />
-        <Input ref={filterRef} name="term" onKeyUp={handleFilter} />
+        <Input
+          ref={filterRef}
+          type={InputType.Search}
+          name="term"
+          onKeyUp={handleFilter}
+        />
       </header>
       <TableResponsive rowData={rowData} handleSort={handleSort} />
       <footer>
