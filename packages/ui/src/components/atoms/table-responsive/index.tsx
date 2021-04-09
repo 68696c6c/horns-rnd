@@ -15,7 +15,12 @@ const snakeToTitle = (input: string): string =>
     .join(' ')
 
 export const TableResponsive: FC<Styled.TableResponsiveProps> = memo(
-  ({ height: heightProp, minWidth, rowData }: Styled.TableResponsiveProps) => {
+  ({
+    height: heightProp,
+    minWidth,
+    rowData,
+    handleSort,
+  }: Styled.TableResponsiveProps) => {
     const height = heightProp || 'auto'
 
     const [tableId] = useId()
@@ -38,7 +43,11 @@ export const TableResponsive: FC<Styled.TableResponsiveProps> = memo(
             <thead>
               <tr>
                 {Object.keys(rows[0]).map((colName) => (
-                  <th key={`table-${tableId}-${colName}`}>
+                  <th
+                    key={`${tableId}-table-col-${colName}`}
+                    data-column-name={colName}
+                    onClick={handleSort}
+                  >
                     {snakeToTitle(colName)}
                   </th>
                 ))}
@@ -53,17 +62,19 @@ export const TableResponsive: FC<Styled.TableResponsiveProps> = memo(
                 })
               }
               const rowBodyKey = rowIds.length
-                ? `table-${tableId}-row-${rowIds[index]}`
-                : `table-${tableId}-row-${index}`
+                ? `${tableId}-table-row-${rowIds[index]}`
+                : `${tableId}-table-row-${index}`
               return (
                 <tbody key={rowBodyKey} {...dataset}>
                   {Object.keys(row).map((colName) => {
                     const rowKey = rowIds.length
-                      ? `table-${tableId}-row-${rowIds[index]}-${colName}`
-                      : `table-${tableId}-row-${index}-${colName}`
+                      ? `${tableId}-table-row-${rowIds[index]}-${colName}`
+                      : `${tableId}-table-row-${index}-${colName}`
                     return (
                       <tr key={rowKey}>
-                        <th>{colName}</th>
+                        <th data-column-name={colName} onClick={handleSort}>
+                          {snakeToTitle(colName)}
+                        </th>
                         <td>{row[colName]}</td>
                       </tr>
                     )

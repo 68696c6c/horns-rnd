@@ -1,3 +1,4 @@
+import { MouseEventHandler } from 'react'
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
@@ -12,7 +13,9 @@ import { TableProps, tableStyles } from '../../quarks'
 
 export interface TableResponsiveProps
   extends Responsive,
-    Omit<TableProps, 'children'> {}
+    Omit<TableProps, 'children'> {
+  handleSort?: MouseEventHandler<HTMLTableHeaderCellElement>
+}
 
 export const TableResponsive = styled.table<TableResponsiveProps>(
   tableStyles,

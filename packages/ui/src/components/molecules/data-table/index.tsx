@@ -1,4 +1,4 @@
-import React, { FC, useRef, useState } from 'react'
+import React, { FC, useRef, useState, MouseEvent, useEffect } from 'react'
 import { useDebouncedCallback } from 'use-debounce'
 
 import { Font } from '../../../config'
@@ -91,6 +91,8 @@ export const DataTable: FC<DataTableProps> = ({
   const perPageRef = useRef<HTMLInputElement>()
 
   const [filteredRows, setFilteredRows] = useState<TableRows>(rowDataProp || [])
+  const [sortDir, setSortDir] = useState<SortDirection>(SortDirection.Ascending)
+  const [sortColumnName, setSortColumnName] = useState('')
 
   const paginationProps = usePagination(filteredRows, perPageProp)
   const {
@@ -128,6 +130,46 @@ export const DataTable: FC<DataTableProps> = ({
     )
   }
 
+  const handleSort = (event: MouseEvent<HTMLTableHeaderCellElement>) => {
+    const t = event.target as HTMLTableHeaderCellElement
+    const newSortColumnName = t?.getAttribute('data-column-name') as string
+    let newSortDir = SortDirection.Ascending
+    if (newSortColumnName === sortColumnName) {
+      newSortDir =
+        sortDir === SortDirection.Ascending
+          ? SortDirection.Descending
+          : SortDirection.Ascending
+    }
+    setSortColumnName(newSortColumnName)
+    setSortDir(newSortDir)
+  }
+
+  useEffect(() => {
+    const term = filterRef.current?.value as string
+    const sortedRowData = rowDataProp as TableRows
+
+    let i1 = -1
+    let i2 = 1
+    if (sortDir === SortDirection.Descending) {
+      i1 = 1
+      i2 = -1
+    }
+
+    sortedRowData.sort((a, b) => {
+      const aValue = a[sortColumnName]
+      const bValue = b[sortColumnName]
+      if (aValue < bValue) {
+        return i1
+      }
+      return aValue > bValue ? i2 : 0
+    })
+
+    debouncedFilterRows(
+      { ...paginationProps, rowData: sortedRowData, term },
+      setFilteredRows,
+    )
+  }, [sortDir, sortColumnName])
+
   return (
     <div>
       <header>
@@ -140,7 +182,7 @@ export const DataTable: FC<DataTableProps> = ({
         />
         <Input ref={filterRef} name="term" onKeyUp={handleFilter} />
       </header>
-      <TableResponsive rowData={rowData} />
+      <TableResponsive rowData={rowData} handleSort={handleSort} />
       <footer>
         <T font={Font.Control}>
           {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
