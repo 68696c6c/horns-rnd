@@ -2,9 +2,6 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 
-import { makeTableRow } from '../../../_story'
-import { makeIntArray } from '../../../utils'
-
 import { TableResponsive } from '.'
 
 export default {
