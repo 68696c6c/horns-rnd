@@ -15,8 +15,8 @@ export enum SortDirection {
 }
 
 export interface FilterRowsArgs extends PaginationProps {
-  // sortColumnIndex: number
-  // sortDir: SortDirection
+  sortColumnName: string
+  sortDir: SortDirection
   term: string
 }
 
@@ -35,9 +35,25 @@ export interface DataTableProps extends TableProps {
 }
 
 export const filterRowsDefault: FilterRowsFunc = (
-  { rowData, term },
+  { rowData, term, sortDir, sortColumnName },
   callback,
 ) => {
+  let i1 = -1
+  let i2 = 1
+  if (sortDir === SortDirection.Descending) {
+    i1 = 1
+    i2 = -1
+  }
+
+  rowData.sort((a, b) => {
+    const aValue = a[sortColumnName]
+    const bValue = b[sortColumnName]
+    if (aValue < bValue) {
+      return i1
+    }
+    return aValue > bValue ? i2 : 0
+  })
+
   const filteredRows = rowData.filter((row) => {
     if (term === '') {
       return true
@@ -123,9 +139,14 @@ export const DataTable: FC<DataTableProps> = ({
   )
 
   const handleFilter = () => {
-    const term = filterRef.current?.value as string
     debouncedFilterRows(
-      { ...paginationProps, rowData: rowDataProp || [], term },
+      {
+        ...paginationProps,
+        rowData: rowDataProp as TableRows,
+        term: filterRef.current?.value as string,
+        sortColumnName,
+        sortDir,
+      },
       setFilteredRows,
     )
   }
@@ -145,27 +166,14 @@ export const DataTable: FC<DataTableProps> = ({
   }
 
   useEffect(() => {
-    const term = filterRef.current?.value as string
-    const sortedRowData = rowDataProp as TableRows
-
-    let i1 = -1
-    let i2 = 1
-    if (sortDir === SortDirection.Descending) {
-      i1 = 1
-      i2 = -1
-    }
-
-    sortedRowData.sort((a, b) => {
-      const aValue = a[sortColumnName]
-      const bValue = b[sortColumnName]
-      if (aValue < bValue) {
-        return i1
-      }
-      return aValue > bValue ? i2 : 0
-    })
-
     debouncedFilterRows(
-      { ...paginationProps, rowData: sortedRowData, term },
+      {
+        ...paginationProps,
+        rowData: rowDataProp as TableRows,
+        term: filterRef.current?.value as string,
+        sortColumnName,
+        sortDir,
+      },
       setFilteredRows,
     )
   }, [sortDir, sortColumnName])

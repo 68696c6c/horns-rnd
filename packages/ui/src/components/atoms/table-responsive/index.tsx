@@ -88,13 +88,13 @@ export const TableResponsive: FC<Styled.TableResponsiveProps> = memo(
     }
     return (
       <Overflow height={height} x={OverflowOption.Scroll}>
-        <table>
+        <Styled.TableResponsive>
           <thead>
             <tr>
               <td>No data.</td>
             </tr>
           </thead>
-        </table>
+        </Styled.TableResponsive>
       </Overflow>
     )
   },
