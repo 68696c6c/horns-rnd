@@ -1,10 +1,12 @@
-import React, { FC, useRef, useState, useEffect } from 'react'
+import React, { FC, useRef, useState } from 'react'
 import { useDebouncedCallback } from 'use-debounce'
 
-import { TableProps, TableRowData } from '../../quarks'
+import { Font } from '../../../config'
+import { TableProps, TableRows } from '../../quarks'
+import { usePagination, PaginationProps } from '../../../hooks'
 import { TableResponsive, Input, T } from '../../atoms'
 
-import { Select } from '../select'
+import { Select, SelectOption } from '../select'
 import { PaginationNav } from '../pagination-nav'
 
 export enum SortDirection {
@@ -12,25 +14,13 @@ export enum SortDirection {
   Descending = 'desc',
 }
 
-export interface PaginationProps {
-  currentPage: number
-  totalPages: number
-  totalRows: number
-  perPage: number
-}
-
 export interface FilterRowsArgs extends PaginationProps {
-  sortColumnIndex: number
-  sortDir: SortDirection
+  // sortColumnIndex: number
+  // sortDir: SortDirection
   term: string
 }
 
-interface FilterRowsCallbackArgs {
-  data: TableRowData
-  pagination: PaginationProps
-}
-
-type FilterRowsCallback = (args: FilterRowsCallbackArgs) => void
+type FilterRowsCallback = (args: TableRows) => void
 
 type FilterRowsFunc = (
   args: FilterRowsArgs,
@@ -38,84 +28,106 @@ type FilterRowsFunc = (
 ) => void
 
 export interface DataTableProps extends TableProps {
-  rowData?: TableRowData
+  rowData?: TableRows
   filterRows?: FilterRowsFunc
   perPage?: number
+  perPageOptions?: SelectOption[]
 }
 
-export const filterRowsDefault = () => {}
+export const filterRowsDefault: FilterRowsFunc = (
+  { rowData, term },
+  callback,
+) => {
+  const filteredRows = rowData.filter((row) => {
+    if (term === '') {
+      return true
+    }
+    let match = false
+    const fields = Object.keys(row)
+    for (let i = 0; i < fields.length; i += 1) {
+      const fieldName = fields[i]
+      if (fieldName !== '_dataset') {
+        const fieldVal = row[fieldName]
+        if (fieldVal.toLowerCase().includes(term)) {
+          match = true
+          break
+        }
+      }
+    }
+    return match
+  })
+  callback(filteredRows)
+}
+
+const perPageOptionsDefault = [
+  {
+    label: '10',
+    value: 10,
+  },
+  {
+    label: '25',
+    value: 25,
+  },
+  {
+    label: '50',
+    value: 50,
+  },
+  {
+    label: '100',
+    value: 100,
+  },
+]
 
 export const DataTable: FC<DataTableProps> = ({
   filterRows: filterRowsProp,
   rowData: rowDataProp,
   perPage: perPageProp,
+  perPageOptions: perPageOptionsProp,
 }: DataTableProps) => {
   const filterRows = filterRowsProp || filterRowsDefault
+  const perPageOptions = perPageOptionsProp || perPageOptionsDefault
 
   const filterRef = useRef<HTMLInputElement>()
   const perPageRef = useRef<HTMLInputElement>()
 
-  // TODO: move these into a usePagination hook or something
-  const [currentPage, setCurrentPage] = useState(1)
-  const [perPage, setPerPage] = useState(perPageProp || 10)
-  const [totalPages, setTotalPages] = useState(1)
-  const [totalRows, setTotalRows] = useState(1)
-  const [sortColumnIndex, setSortColumnIndex] = useState(-1)
-  const [sortDir, setSortDir] = useState<SortDirection>(
-    SortDirection.Descending,
-  )
+  const [filteredRows, setFilteredRows] = useState<TableRows>(rowDataProp || [])
 
-  const [rowData, setRowData] = useState<TableRowData>(rowDataProp || [])
-  const [term, setTerm] = useState('')
+  const paginationProps = usePagination(filteredRows, perPageProp)
+  const {
+    currentPage,
+    perPage,
+    start,
+    end,
+    totalPages,
+    totalRows,
+    rowData,
+    setCurrentPage,
+    setPerPage,
+  } = paginationProps
 
-  const getRows: FilterRowsCallback = ({
-    data,
-    pagination,
-  }: FilterRowsCallbackArgs) => {
-    // TODO: paginate or something
-    setRowData(data)
+  const handlePageSize = () => {
+    if (perPageRef.current) {
+      // Using +number instead of parseInt avoids needing to deal with NaN
+      // https://stackoverflow.com/questions/14667713/how-to-convert-a-string-to-number-in-typescript
+      setPerPage(+perPageRef.current.value)
+    }
   }
 
   const debouncedFilterRows = useDebouncedCallback<FilterRowsFunc>(
-    (args: FilterRowsArgs, callback: FilterRowsCallback) =>
-      filterRows(args, callback),
+    (args: FilterRowsArgs, callback: FilterRowsCallback) => {
+      filterRows(args, callback)
+    },
     500,
   )
 
   const handleFilter = () => {
+    const term = filterRef.current?.value as string
     debouncedFilterRows(
-      {
-        term: filterRef.current?.value || '',
-        currentPage,
-        perPage,
-        totalPages,
-        totalRows,
-        sortColumnIndex,
-        sortDir,
-      },
-      getRows,
+      { ...paginationProps, rowData: rowDataProp || [], term },
+      setFilteredRows,
     )
   }
-  const handlePageSize = () => {}
-  const handlePaginate = (newPage: number) => setCurrentPage(newPage)
 
-  useEffect(() => {
-    filterRows(
-      {
-        term,
-        currentPage,
-        perPage,
-        totalPages,
-        totalRows,
-        sortColumnIndex,
-        sortDir,
-      },
-      getRows,
-    )
-  }, [currentPage])
-
-  const start = (currentPage - 1) * perPage + 1
-  const end = start + perPage - 1
   return (
     <div>
       <header>
@@ -123,43 +135,22 @@ export const DataTable: FC<DataTableProps> = ({
           ref={perPageRef}
           name="per_page"
           onChange={handlePageSize}
-          value={perPage}
-          options={[
-            {
-              key: '10',
-              value: 10,
-            },
-            {
-              key: '25',
-              value: 25,
-            },
-            {
-              key: '50',
-              value: 50,
-            },
-            {
-              key: '100',
-              value: 100,
-            },
-          ]}
+          defaultValue={perPage}
+          options={perPageOptions}
         />
-        <Input
-          ref={filterRef}
-          name="term"
-          defaultValue={term}
-          onKeyUp={handleFilter}
-        />
+        <Input ref={filterRef} name="term" onKeyUp={handleFilter} />
       </header>
       <TableResponsive rowData={rowData} />
       <footer>
-        <T>
+        <T font={Font.Control}>
           {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-          Showing {start} through {end} of {totalRows} entries
+          Showing {start + 1} through {end} of {totalRows} entries
         </T>
         <PaginationNav
-          pages={totalPages}
+          font={Font.Control}
+          totalPages={totalPages}
           currentPage={currentPage}
-          onChange={handlePaginate}
+          onChange={setCurrentPage}
         />
       </footer>
     </div>

@@ -6,7 +6,6 @@ import { DispatcherResult } from './utils'
 export const useId = (): DispatcherResult<string> => {
   const [id, setId] = useState<string>('')
   useEffect(() => {
-    console.log('useId')
     setId(uuid())
   }, [])
   return [id, setId]

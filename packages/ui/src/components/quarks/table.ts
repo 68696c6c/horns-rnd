@@ -3,10 +3,14 @@ import { Font } from '../../config'
 
 import { Styled, padded, typographic, Parent } from '../../traits'
 
-export type TableRowData = Record<string, any>[]
+export type HTMLDataset = Record<string, any>
+
+export type TableRow = Record<string, string | HTMLDataset>
+
+export type TableRows = TableRow[]
 
 export interface TableProps extends Partial<Parent> {
-  rowData?: TableRowData
+  rowData?: TableRows
   height?: string
   minWidth?: string
 }
@@ -27,3 +31,28 @@ export const tableStyles = ({ theme }: Styled) => [
     }
   `,
 ]
+
+export interface TableData {
+  rows: TableRows
+  data: TableRows
+}
+
+export const getTableData = (tableRows: TableRows = []): TableData => {
+  const rows = [] as TableRows
+  const data = [] as TableRows
+  tableRows.forEach((child, i) => {
+    rows[i] = {} as TableRow
+    data[i] = {} as TableRow
+    Object.keys(child).forEach((field) => {
+      if (field === '_dataset') {
+        const rowData = child[field] as HTMLDataset
+        Object.keys(rowData).forEach((dataField) => {
+          data[i][dataField] = rowData[dataField]
+        })
+      } else {
+        rows[i][field] = child[field]
+      }
+    })
+  })
+  return { rows, data }
+}

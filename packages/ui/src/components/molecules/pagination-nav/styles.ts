@@ -4,7 +4,7 @@ import { NavItemProps } from '../../quarks'
 import { Nav } from '../../atoms'
 
 export interface PaginationNavProps extends NavItemProps {
-  pages?: number
+  totalPages?: number
   currentPage?: number
   onChange?: (currentPage: number) => void
 }

@@ -10,10 +10,10 @@ export default {
 } as Meta
 
 const options = [
-  { key: 'One', value: 1 },
-  { key: 'Two', value: 2 },
-  { key: 'Three', value: 3 },
-  { key: 'Four', value: 4 },
+  { label: 'One', value: 1 },
+  { label: 'Two', value: 2 },
+  { label: 'Three', value: 3 },
+  { label: 'Four', value: 4 },
 ]
 
 const exampleFilterOptions: FilterOptionsFunc = (value, opts, callback) => {
@@ -23,7 +23,7 @@ const exampleFilterOptions: FilterOptionsFunc = (value, opts, callback) => {
         value === ''
           ? opts
           : opts.filter((option) =>
-              option.key.toLowerCase().includes(value.toLowerCase()),
+              option.label.toLowerCase().includes(value.toLowerCase()),
             ),
       ),
     1000,

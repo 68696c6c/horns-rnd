@@ -16,6 +16,6 @@ export const Default: Story = () => (
       The <em>PaginationNav</em> component provides a fully themed and
       functional pagination menu.
     </p>
-    <PaginationNav pages={10} currentPage={3} />
+    <PaginationNav totalPages={10} currentPage={3} />
   </>
 )

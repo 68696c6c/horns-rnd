@@ -1,10 +1,12 @@
 import React, {
+  FC,
   ForwardedRef,
   forwardRef,
-  MouseEventHandler,
   Ref,
+  useEffect,
   useRef,
   useState,
+  MouseEvent,
 } from 'react'
 import _debounce from 'lodash.debounce'
 
@@ -24,7 +26,7 @@ export const defaultFilterOptions: FilterOptionsFunc = (
     value === ''
       ? options
       : options.filter((option) =>
-          option.key.toLowerCase().includes(value.toLowerCase()),
+          option.label.toLowerCase().includes(value.toLowerCase()),
         ),
   )
 
@@ -35,36 +37,44 @@ export type FilterOptionsFunc = (
 ) => void
 
 export interface SelectOption {
-  key: string
+  label: string
   value: string | number
 }
 
 export interface SelectProps extends Styled.BaseSelectProps {
   options?: SelectOption[]
   filterOptions?: FilterOptionsFunc
+  showFilter?: boolean
   forwardedRef?: ForwardedRef<HTMLInputElement | undefined>
 }
 
-const BaseSelect = ({
+const BaseSelect: FC<SelectProps> = ({
   id,
   multiple,
-  options: propsOptions,
   filterOptions,
-  placeholder: placeholderProp,
   color,
   forwardedRef,
   onChange,
+  name,
+  showFilter: showFilterProp,
+  placeholder: placeholderProp,
+  options: optionsProp,
+  defaultValue: defaultValueProp,
   ...others
 }: SelectProps) => {
+  const showFilter = showFilterProp || typeof filterOptions !== 'undefined'
   const placeholder = placeholderProp || ''
-  const [displayValues, setDisplayValues] = useState<string[]>([placeholder])
-  const [values, setValues] = useState<string[]>([])
-  const [options, setOptions] = useState<SelectOption[]>(
-    propsOptions || ([] as SelectOption[]),
-  )
+  const defaultValue =
+    typeof defaultValueProp === 'undefined' ? [] : [defaultValueProp as string]
 
-  const filterRef = useRef<HTMLInputElement>(null)
+  const filterRef = useRef<HTMLInputElement>()
 
+  const [displayValues, setDisplayValues] = useState([placeholder])
+  const [values, setValues] = useState(defaultValue)
+  const [options, setOptions] = useState(optionsProp || ([] as SelectOption[]))
+  const [changeEvent, setChangeEvent] = useState<MouseEvent<HTMLLIElement>>()
+
+  // TODO: replace with use-debounce
   const filterOptionsD = _debounce(filterOptions || defaultFilterOptions, 100, {
     leading: true,
   })
@@ -76,11 +86,7 @@ const BaseSelect = ({
       (result: SelectOption[]) => setOptions(result),
     )
 
-  const handleChange: MouseEventHandler<any> = (event) => {
-    const t = event.target as HTMLElement
-    const value = t?.getAttribute('value') || ''
-    const displayValue = t?.getAttribute('label') || ''
-
+  const handleValue = (value: string, displayValue: string) => {
     if (multiple) {
       // If the value is already selected, unselect it.
       if (values.includes(value)) {
@@ -112,54 +118,86 @@ const BaseSelect = ({
       setValues([value])
       setDisplayValues([displayValue])
     }
-    if (typeof onChange !== 'undefined') {
-      onChange(event)
-    }
   }
+
+  const handleOptionClick = (event: MouseEvent<HTMLLIElement>) => {
+    const t = event.target as HTMLLIElement
+    const value = t?.getAttribute('value') || ''
+    const displayValue = t?.getAttribute('label') || ''
+    handleValue(value, displayValue)
+    setChangeEvent(event)
+  }
+
+  useEffect(() => {
+    if (
+      typeof optionsProp !== 'undefined' &&
+      typeof defaultValueProp !== 'undefined'
+    ) {
+      const defaultOption = optionsProp.find(
+        ({ value }) => value === defaultValueProp,
+      )
+      handleValue(
+        defaultOption?.value as string,
+        defaultOption?.label as string,
+      )
+    }
+  }, [defaultValueProp, optionsProp])
+
+  // Since we want to simulate native behavior we need to pass the event to onChange but if we call
+  // onChange from the event handler it will fire before the new value is set in the state.  So we
+  // need to track the event in state, update it in the event handler, and then call the onChange
+  // callback when the event state updates.
+  useEffect(() => {
+    if (typeof onChange !== 'undefined') {
+      onChange(changeEvent)
+    }
+  }, [changeEvent])
 
   return (
     <>
       <Input
         ref={forwardedRef}
         type={InputType.Hidden}
-        id={`select-value-${id}`}
-        name={`select_value_${id}`}
+        id={id}
+        name={name}
         value={values.join(',')}
       />
       <Menu
         forceWidth
-        onOpen={() => filterRef.current && filterRef.current.focus()}
+        onOpen={() => filterRef.current?.focus()}
         renderControl={(open, ref, toggleOpen) => (
           <Styled.Select
             {...others}
-            multiple={multiple}
-            onClick={toggleOpen}
             ref={ref}
+            multiple={multiple}
             open={open}
             color={color}
+            onClick={toggleOpen}
           >
             {displayValues.join(', ')}
           </Styled.Select>
         )}
         renderMenu={(open, ref) => (
-          <Styled.SelectDropdown open={open} ref={ref} color={color}>
-            <Styled.FilterOption key={`select-option-${id}-filter`}>
-              <Styled.Filter
-                type={InputType.Search}
-                id={`select-filter-${id}`}
-                name={`select_filter_${id}`}
-                onKeyUp={handleFilter}
-                ref={filterRef}
-              />
-            </Styled.FilterOption>
-            {options.map(({ key, value }) => (
+          <Styled.SelectDropdown ref={ref} open={open} color={color}>
+            {showFilter && (
+              <Styled.FilterOption>
+                <Styled.Filter
+                  ref={filterRef}
+                  type={InputType.Search}
+                  id={`${id}-select-filter`}
+                  name={`${name}_select_filter`}
+                  onKeyUp={handleFilter}
+                />
+              </Styled.FilterOption>
+            )}
+            {options.map(({ label, value }) => (
               <DropdownOption
+                key={`${id}-select-option-${label}`}
                 value={value}
-                key={`select-option-${id}-${key}`}
-                onClick={handleChange}
-                label={key}
+                label={label}
+                onClick={handleOptionClick}
               >
-                {key}
+                {label}
               </DropdownOption>
             ))}
           </Styled.SelectDropdown>

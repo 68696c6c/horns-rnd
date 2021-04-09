@@ -70,9 +70,9 @@ const FormControlInput: FC<FormControlInputProps> = ({
           color={color}
           multiple={type === BaseControlType.MultiselectNative}
         >
-          {(options || []).map(({ key, value }) => (
-            <option value={value} key={key}>
-              {key}
+          {(options || []).map(({ label, value }) => (
+            <option value={value} key={label}>
+              {label}
             </option>
           ))}
         </SelectNativeAtom>
