@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, ForwardedRef, forwardRef, Ref } from 'react'
 import { StyledComponent } from '@emotion/styled'
 import { v4 as uuid } from 'uuid'
 
@@ -16,6 +16,7 @@ import { Select as SelectAtom, SelectProps } from '../select'
 import { ToggleGroup } from '../toggle-group'
 
 import * as Styled from './styles'
+import { InputRef } from '../../atoms/input'
 
 export enum BaseControlType {
   Select = 'select',
@@ -26,7 +27,7 @@ export enum BaseControlType {
 }
 
 export interface FormControlInputProps
-  extends SelectProps,
+  extends Omit<SelectProps, 'forwardedRef'>,
     Omit<InputProps, 'type'> {
   type?: InputType | ToggleType | BaseControlType
 }
@@ -48,6 +49,7 @@ const FormControlInput: FC<FormControlInputProps> = ({
   required,
   color,
   options,
+  forwardedRef,
 }: FormControlInputProps) => {
   switch (type) {
     case InputType.Hidden:
@@ -58,6 +60,7 @@ const FormControlInput: FC<FormControlInputProps> = ({
           id={id}
           placeholder={placeholder}
           required={required}
+          forwardedRef={forwardedRef}
         />
       )
     case BaseControlType.SelectNative:
@@ -69,6 +72,7 @@ const FormControlInput: FC<FormControlInputProps> = ({
           required={required}
           color={color}
           multiple={type === BaseControlType.MultiselectNative}
+          ref={forwardedRef as Ref<HTMLSelectElement>}
         >
           {(options || []).map(({ label, value }) => (
             <option value={value} key={label}>
@@ -86,6 +90,7 @@ const FormControlInput: FC<FormControlInputProps> = ({
           required={required}
           options={options}
           color={color}
+          ref={forwardedRef as ForwardedRef<HTMLInputElement | undefined>}
         />
       )
     case BaseControlType.Multiselect:
@@ -98,6 +103,7 @@ const FormControlInput: FC<FormControlInputProps> = ({
           multiple
           options={options}
           color={color}
+          ref={forwardedRef as ForwardedRef<HTMLInputElement | undefined>}
         />
       )
     case BaseControlType.Textarea:
@@ -108,6 +114,7 @@ const FormControlInput: FC<FormControlInputProps> = ({
           placeholder={placeholder}
           required={required}
           color={color}
+          ref={forwardedRef as Ref<HTMLTextAreaElement>}
         />
       )
     case ToggleType.Checkbox:
@@ -120,6 +127,8 @@ const FormControlInput: FC<FormControlInputProps> = ({
           required={required}
           options={options}
           color={color}
+          // TODO: figure out how toggle group refs should work.
+          // ref={forwardedRef}
         />
       )
     default:
@@ -131,12 +140,13 @@ const FormControlInput: FC<FormControlInputProps> = ({
           placeholder={placeholder}
           required={required}
           color={color}
+          ref={forwardedRef}
         />
       )
   }
 }
 
-export const FormControl: FC<FormControlProps> = ({
+const BaseFormControl: FC<FormControlProps> = ({
   type,
   name,
   id: idProp,
@@ -145,6 +155,8 @@ export const FormControl: FC<FormControlProps> = ({
   hasError,
   errorMessage,
   horizontal,
+  forwardedRef,
+  font,
   ...others
 }: FormControlProps) => {
   const id = idProp || uuid()
@@ -169,11 +181,11 @@ export const FormControl: FC<FormControlProps> = ({
   return (
     <WrapperTag {...wrapperProps} {...others}>
       {label && (
-        <Label htmlFor={id} required={required} color={color}>
+        <Label htmlFor={id} required={required} color={color} font={font}>
           {label}
         </Label>
       )}
-      <FormControlInput {...inputProps} />
+      <FormControlInput {...inputProps} forwardedRef={forwardedRef} />
       {errorMessage && (
         <Styled.Message htmlFor={id} color={color}>
           {errorMessage}
@@ -182,3 +194,9 @@ export const FormControl: FC<FormControlProps> = ({
     </WrapperTag>
   )
 }
+
+export const FormControl = forwardRef(
+  (props: FormControlProps, ref: Ref<InputRef>) => (
+    <BaseFormControl {...props} forwardedRef={ref} />
+  ),
+)

@@ -14,4 +14,5 @@ export {
   InputType,
   ToggleType,
   OverflowOption,
+  ControlOption,
 } from './utils'

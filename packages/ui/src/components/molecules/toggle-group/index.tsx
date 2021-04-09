@@ -1,19 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { v4 as uuid } from 'uuid'
 
-import { ToggleType } from '../../../config'
+import { ControlOption, ToggleType } from '../../../config'
 import { ControlProps } from '../../quarks'
 import { Toggle } from '../../atoms'
 
 import * as Styled from './styles'
 
-export interface ToggleOption {
-  key: string
-  value: string | number
-}
-
 export interface ToggleGroupProps extends ControlProps {
-  options?: ToggleOption[]
+  options?: ControlOption[]
   type: ToggleType
 }
 
@@ -28,20 +23,20 @@ export const ToggleGroup = ({
   ...others
 }: ToggleGroupProps) => {
   const [toggleIDs, setToggleIDs] = useState<IdMap>({})
-  const options = propsOptions || ({} as ToggleOption[])
+  const options = propsOptions || ({} as ControlOption[])
 
   useEffect(() => {
     const idMap: IdMap = {}
     options.forEach((option) => {
-      idMap[option.key] = `${id}-option-${option.key}`
+      idMap[option.label] = `${id}-option-${option.label}`
     })
     setToggleIDs(idMap)
   }, [id, options])
 
   return (
     <Styled.ToggleGroup {...others} length={options.length}>
-      {options.map(({ key, value }) => {
-        const toggleID = toggleIDs[key] || uuid()
+      {options.map(({ label, value }) => {
+        const toggleID = toggleIDs[label] || uuid()
         return (
           <Styled.ToggleGroupOption key={toggleID}>
             <Toggle
@@ -53,7 +48,7 @@ export const ToggleGroup = ({
               {...others}
             />
             <Styled.Label htmlFor={toggleID} required={required}>
-              {key}
+              {label}
             </Styled.Label>
           </Styled.ToggleGroupOption>
         )
@@ -61,5 +56,3 @@ export const ToggleGroup = ({
     </Styled.ToggleGroup>
   )
 }
-
-export default ToggleGroup

@@ -1,13 +1,15 @@
 import React, { FC, MouseEvent, useEffect, useRef, useState } from 'react'
 import { useDebouncedCallback } from 'use-debounce'
 
-import { Font, InputType } from '../../../config'
+import { Font, InputType, ControlOption } from '../../../config'
 import { TableProps, TableRows } from '../../quarks'
-import { PaginationProps, usePagination } from '../../../hooks'
-import { Input, T, TableResponsive } from '../../atoms'
+import { PaginationProps, useId, usePagination } from '../../../hooks'
+import { Input, Label, T, TableResponsive } from '../../atoms'
 
-import { Select, SelectOption } from '../select'
+import { Select } from '../select'
 import { PaginationNav } from '../pagination-nav'
+
+import * as Styled from './styles'
 
 export enum SortDirection {
   Ascending = 'asc',
@@ -31,7 +33,7 @@ export interface DataTableProps extends TableProps {
   rowData?: TableRows
   filterRows?: FilterRowsFunc
   perPage?: number
-  perPageOptions?: SelectOption[]
+  perPageOptions?: ControlOption[]
 }
 
 export const filterRowsDefault: FilterRowsFunc = (
@@ -106,6 +108,8 @@ export const DataTable: FC<DataTableProps> = ({
   const filterRef = useRef<HTMLInputElement>()
   const perPageRef = useRef<HTMLInputElement>()
 
+  const [tableID] = useId()
+
   const [filteredRows, setFilteredRows] = useState<TableRows>(rowDataProp || [])
   const [sortDir, setSortDir] = useState<SortDirection>(SortDirection.Ascending)
   const [sortColumnName, setSortColumnName] = useState('')
@@ -132,9 +136,8 @@ export const DataTable: FC<DataTableProps> = ({
   }
 
   const debouncedFilterRows = useDebouncedCallback<FilterRowsFunc>(
-    (args: FilterRowsArgs, callback: FilterRowsCallback) => {
-      filterRows(args, callback)
-    },
+    (args: FilterRowsArgs, callback: FilterRowsCallback) =>
+      filterRows(args, callback),
     500,
   )
 
@@ -179,27 +182,39 @@ export const DataTable: FC<DataTableProps> = ({
   }, [sortDir, sortColumnName])
 
   return (
-    <div>
-      <header>
-        <Select
-          ref={perPageRef}
-          name="per_page"
-          onChange={handlePageSize}
-          defaultValue={perPage}
-          options={perPageOptions}
-        />
-        <Input
-          ref={filterRef}
-          type={InputType.Search}
-          name="term"
-          onKeyUp={handleFilter}
-        />
-      </header>
+    <Styled.Layout>
+      <Styled.Section as="header">
+        <div>
+          <Label htmlFor={`${tableID}-per-page`} font={Font.Control}>
+            Rows per page
+          </Label>
+          <Select
+            ref={perPageRef}
+            id={`${tableID}-per-page`}
+            name="per_page"
+            onChange={handlePageSize}
+            defaultValue={perPage}
+            options={perPageOptions}
+          />
+        </div>
+        <div>
+          <Label htmlFor={`${tableID}-filter`} font={Font.Control}>
+            Search
+          </Label>
+          <Input
+            ref={filterRef}
+            type={InputType.Search}
+            id={`${tableID}-filter`}
+            name="term"
+            onKeyUp={handleFilter}
+          />
+        </div>
+      </Styled.Section>
       <TableResponsive rowData={rowData} handleSort={handleSort} />
-      <footer>
+      <Styled.Section as="footer">
         <T font={Font.Control}>
           {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-          Showing {start + 1} through {end} of {totalRows} entries
+          Showing {start + 1} through {end} of {totalRows} rows
         </T>
         <PaginationNav
           font={Font.Control}
@@ -207,7 +222,7 @@ export const DataTable: FC<DataTableProps> = ({
           currentPage={currentPage}
           onChange={setCurrentPage}
         />
-      </footer>
-    </div>
+      </Styled.Section>
+    </Styled.Layout>
   )
 }

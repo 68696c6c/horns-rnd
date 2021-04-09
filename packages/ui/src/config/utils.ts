@@ -65,3 +65,8 @@ export enum OverflowOption {
   Scroll = 'scroll',
   Auto = 'auto',
 }
+
+export interface ControlOption {
+  label: string
+  value: string | number
+}

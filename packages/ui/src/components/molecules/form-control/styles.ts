@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
 import { Font } from '../../../config'
+import { Styled } from '../../../traits'
 
 import { Stack, Columns, Label } from '../../atoms'
 
@@ -14,9 +15,9 @@ Message.defaultProps = {
   font: Font.Control,
 }
 
-const baseStyles = () => css`
+const baseStyles = ({ theme }: Styled) => css`
   padding: 0;
-  margin-bottom: 1em;
+  margin-bottom: ${theme.sizes[theme.grid.gap]};
   grid-row-gap: 0.5em;
 `
 

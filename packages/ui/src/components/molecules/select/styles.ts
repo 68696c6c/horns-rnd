@@ -65,14 +65,13 @@ export const SelectDropdown = styled(Dropdown)(
       radius,
       radiusDefault: theme.controls.radius,
     }),
-    // Padding is included and then set to zero on all sides but the bottom so that if the border
-    // radius is increased hopefully the bottom padding will prevent the last item from overlapping
-    // the bottom corners of the dropdown.
+    // Padding is included and then set to zero on the sides so that if the border radius is
+    // increased hopefully the bottom padding will prevent the last item from overlapping the bottom
+    // corners of the dropdown.
     () => css`
       border-top: none;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
-      padding-top: 0;
       padding-left: 0;
       padding-right: 0;
     `,

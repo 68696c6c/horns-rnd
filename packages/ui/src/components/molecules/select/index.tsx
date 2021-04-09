@@ -10,7 +10,7 @@ import React, {
 } from 'react'
 import { useDebouncedCallback } from 'use-debounce'
 
-import { InputType } from '../../../config'
+import { ControlOption, InputType } from '../../../config'
 import { DropdownOption, Input } from '../../atoms'
 
 import { Menu } from '../menu'
@@ -32,17 +32,12 @@ export const defaultFilterOptions: FilterOptionsFunc = (
 
 export type FilterOptionsFunc = (
   value: string,
-  options: SelectOption[],
-  callback: (result: SelectOption[]) => void,
+  options: ControlOption[],
+  callback: (result: ControlOption[]) => void,
 ) => void
 
-export interface SelectOption {
-  label: string
-  value: string | number
-}
-
 export interface SelectProps extends Styled.BaseSelectProps {
-  options?: SelectOption[]
+  options?: ControlOption[]
   filterOptions?: FilterOptionsFunc
   showFilter?: boolean
   forwardedRef?: ForwardedRef<HTMLInputElement | undefined>
@@ -71,7 +66,7 @@ const BaseSelect: FC<SelectProps> = ({
 
   const [displayValues, setDisplayValues] = useState([placeholder])
   const [values, setValues] = useState(defaultValue)
-  const [options, setOptions] = useState(optionsProp || ([] as SelectOption[]))
+  const [options, setOptions] = useState(optionsProp || ([] as ControlOption[]))
   const [changeEvent, setChangeEvent] = useState<MouseEvent<HTMLLIElement>>()
 
   const debouncedFilterOptions = useDebouncedCallback(
@@ -83,7 +78,7 @@ const BaseSelect: FC<SelectProps> = ({
     debouncedFilterOptions(
       filterRef.current?.value || '',
       options,
-      (result: SelectOption[]) => setOptions(result),
+      (result: ControlOption[]) => setOptions(result),
     )
 
   const handleValue = (value: string, displayValue: string) => {

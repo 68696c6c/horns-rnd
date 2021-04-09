@@ -1,3 +1,4 @@
+export { AutoGrid } from './auto-grid'
 export { Button } from './button'
 export { Columns, ColumnsProps } from './columns'
 export { Dropdown } from './dropdown'
