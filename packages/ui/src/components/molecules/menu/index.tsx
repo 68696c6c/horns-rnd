@@ -1,6 +1,6 @@
-import React, { ReactNode, RefObject, useEffect, useRef, useState } from 'react'
+import React, { ReactNode, RefObject } from 'react'
 
-import { useOpen } from '../../../hooks'
+import { useMenu } from '../../../hooks'
 
 import * as Styled from './styles'
 
@@ -25,42 +25,12 @@ export const Menu = ({
   onClose,
   forceWidth,
 }: MenuProps) => {
-  const controlRef = useRef<any>(null)
-  const menuRef = useRef<any>(null)
-
-  const [minWidth, setMinWidth] = useState<number>(0)
-  const [open, setOpen] = useOpen(
-    initialOpen || forceWidth || false,
-    (target) => target !== controlRef.current,
-  )
-
-  const toggleOpen = () => {
-    setOpen(!open)
-  }
-
-  useEffect(() => {
-    if (open) {
-      if (typeof onOpen !== 'undefined') {
-        onOpen()
-      }
-    } else if (typeof onClose !== 'undefined') {
-      onClose()
-    }
-  }, [open])
-
-  useEffect(() => {
-    if (forceWidth) {
-      const controlWidth = controlRef?.current?.offsetWidth || 0
-      const menuWidth = menuRef?.current?.offsetWidth || 0
-      if (controlWidth < menuWidth) {
-        setMinWidth(menuWidth)
-      } else if (controlWidth > menuWidth) {
-        setMinWidth(controlWidth)
-      }
-      setOpen(false)
-    }
-  }, [])
-
+  const [open, minWidth, toggleOpen, controlRef, menuRef] = useMenu({
+    initialOpen,
+    onOpen,
+    onClose,
+    forceWidth,
+  })
   return (
     <Styled.Container open={open} minWidth={minWidth}>
       {renderControl(open, controlRef, toggleOpen)}
