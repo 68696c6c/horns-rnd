@@ -2,7 +2,7 @@ import React, { memo, FC, useEffect, useState } from 'react'
 
 import { OverflowOption } from '../../../config'
 import { HTMLDataset, TableRows, TableData, getTableData } from '../../quarks'
-import { useId, useRowIds } from '../../../hooks'
+import { useID, useRowIDs } from '../../../hooks'
 
 import { Overflow } from '../overflow'
 
@@ -23,8 +23,8 @@ export const TableResponsive: FC<Styled.TableResponsiveProps> = memo(
   }: Styled.TableResponsiveProps) => {
     const height = heightProp || 'auto'
 
-    const [tableId] = useId()
-    const [rowIds] = useRowIds<TableRows>(rowData)
+    const [tableId] = useID()
+    const [rowIds] = useRowIDs<TableRows>(rowData)
 
     const [rowsResult, setRowsResult] = useState<TableData>({
       rows: [],

@@ -3,7 +3,7 @@ import { v4 as uuid } from 'uuid'
 
 import { DispatcherResult } from './utils'
 
-export const useRowIds = <T extends any[]>(
+export const useRowIDs = <T extends any[]>(
   rowData?: T,
 ): DispatcherResult<string[]> => {
   const [rowIds, setRowIds] = useState<string[]>([])

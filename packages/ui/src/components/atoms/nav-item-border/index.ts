@@ -4,26 +4,7 @@ import { css } from '@emotion/react'
 import { BorderStyle, Colorway, Side, Size } from '../../../config'
 import { bordered, Styled } from '../../../traits'
 import { NavItemLayout, NavItemProps, navItemStyles } from '../../quarks'
-
-export const valueToNumber = (cssVal: string) =>
-  Number(
-    cssVal
-      .replace('px', '')
-      .replace('rem', '')
-      .replace('em', '')
-      .replace('vw', '')
-      .replace('vh', '')
-      .replace('cm', '')
-      .replace('mm', '')
-      .replace('in', '')
-      .replace('pt', '')
-      .replace('pc', '')
-      .replace('ex', '')
-      .replace('ch', '')
-      .replace('vmin', '')
-      .replace('vmax', '')
-      .replace('%', ''),
-  )
+import { valueToNumber } from '../../../utils'
 
 export const NavItemBorder = styled.a(
   navItemStyles,

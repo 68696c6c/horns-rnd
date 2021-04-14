@@ -1,3 +1,4 @@
+/* global window */
 import {
   MutableRefObject,
   useCallback,
@@ -35,10 +36,8 @@ export const useMenu = ({
   }, [])
 
   useEffect(() => {
-    // eslint-disable-next-line no-undef
     window.addEventListener('click', handleClick)
     return () => {
-      // eslint-disable-next-line no-undef
       window.removeEventListener('click', handleClick)
     }
   })

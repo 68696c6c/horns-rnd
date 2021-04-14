@@ -3,7 +3,7 @@ import { useDebouncedCallback } from 'use-debounce'
 
 import { Font, InputType, ControlOption } from '../../../config'
 import { TableProps, TableRows } from '../../quarks'
-import { PaginationProps, useId, usePagination } from '../../../hooks'
+import { PaginationProps, useID, usePagination } from '../../../hooks'
 import { Input, Label, T, TableResponsive } from '../../atoms'
 
 import { Select } from '../select'
@@ -108,7 +108,7 @@ export const DataTable: FC<DataTableProps> = ({
   const filterRef = useRef<HTMLInputElement>()
   const perPageRef = useRef<HTMLInputElement>()
 
-  const [tableID] = useId()
+  const [tableID] = useID()
 
   const [filteredRows, setFilteredRows] = useState<TableRows>(rowDataProp || [])
   const [sortDir, setSortDir] = useState<SortDirection>(SortDirection.Ascending)

@@ -1,7 +1,7 @@
 import React, { memo, FC } from 'react'
 
 import { OverflowOption } from '../../../config'
-import { useId, useRowIds } from '../../../hooks'
+import { useID, useRowIDs } from '../../../hooks'
 import { TableProps, TableRows } from '../../quarks'
 
 import { Overflow } from '../overflow'
@@ -11,8 +11,8 @@ import * as Styled from './styles'
 export const Table: FC<TableProps> = memo(
   ({ children, height: heightProp, minWidth, rowData }: TableProps) => {
     const height = heightProp || 'auto'
-    const [tableID] = useId()
-    const [rowIDs] = useRowIds<TableRows>(rowData || [])
+    const [tableID] = useID()
+    const [rowIDs] = useRowIDs<TableRows>(rowData || [])
 
     if (rowData && rowData.length > 0) {
       return (
