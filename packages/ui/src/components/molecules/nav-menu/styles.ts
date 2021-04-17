@@ -2,8 +2,9 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
 import { shadowed } from '../../../traits'
-import { MenuProps } from '../../quarks'
-import { NavMenu } from '../../atoms'
+import { MenuProps, NavMenuProps, navMenuStyles } from '../../quarks'
+
+export const NavMenu = styled.nav<NavMenuProps>(navMenuStyles)
 
 export const NavItemMenuContainer = styled.span<MenuProps>(
   ({ theme, open, shadow }) =>
@@ -12,33 +13,9 @@ export const NavItemMenuContainer = styled.span<MenuProps>(
     > * {
       ${shadowed({ theme, shadow })}
     `,
-)
-
-export const MenuContainer = styled.span<MenuProps>(
-  () =>
-    css`
-      position: relative;
-    `,
-  ({ theme, open, shadow }) =>
-    open &&
-    css`
-    > * {
-      ${shadowed({ theme, shadow })}
-    `,
-)
-
-export const MobileMenu = styled(NavMenu)(
   () => css`
-    min-width: 20em;
-    ${MenuContainer} {
-      display: block;
-      text-indent: 1em;
-      ${MenuContainer} {
-        text-indent: 2em;
-        ${MenuContainer} {
-          text-indent: 3em;
-        }
-      }
+    ${NavMenu} {
+      min-width: 20em;
     }
   `,
 )

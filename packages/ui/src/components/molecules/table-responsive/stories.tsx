@@ -5,7 +5,7 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 import { TableResponsive } from '.'
 
 export default {
-  title: 'Atoms/TableResponsive',
+  title: 'Molecules/TableResponsive',
   component: TableResponsive,
 } as Meta
 

@@ -11,9 +11,7 @@ import {
   SelectNative as SelectNativeAtom,
   Textarea as TextareaAtom,
 } from '../../atoms'
-
-import { Select as SelectAtom, SelectProps } from '../select'
-import { ToggleGroup } from '../toggle-group'
+import { Select as SelectAtom, SelectProps, ToggleGroup } from '../../molecules'
 
 import * as Styled from './styles'
 import { InputRef } from '../../atoms/input'

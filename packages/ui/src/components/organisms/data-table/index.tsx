@@ -4,10 +4,8 @@ import { useDebouncedCallback } from 'use-debounce'
 import { Font, InputType, ControlOption } from '../../../config'
 import { TableProps, TableRows } from '../../quarks'
 import { PaginationProps, useID, usePagination } from '../../../hooks'
-import { Input, Label, T, TableResponsive } from '../../atoms'
-
-import { Select } from '../select'
-import { PaginationNav } from '../pagination-nav'
+import { Input, Label, T } from '../../atoms'
+import { TableResponsive, Select, PaginationNav } from '../../molecules'
 
 import * as Styled from './styles'
 

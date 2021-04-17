@@ -27,7 +27,13 @@ export {
   controlStyles,
 } from './control'
 export { GridProps, gridStyles } from './grid'
-export { MenuProps, menuStyles } from './menu'
+export {
+  MenuProps,
+  NavMenuProps,
+  menuStyles,
+  navMenuStyles,
+  MenuContainer,
+} from './menu'
 export { MessageProps, messageStyles } from './message'
 export {
   HTMLDataset,

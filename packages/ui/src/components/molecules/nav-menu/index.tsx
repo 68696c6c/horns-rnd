@@ -1,9 +1,8 @@
 import React, { FC, ReactNode } from 'react'
 
 import { Colorway } from '../../../config'
-import { NavItemLayout, NavItemProps } from '../../quarks'
+import { NavItemLayout, NavItemProps, MenuContainer } from '../../quarks'
 import { NavLinkWithID } from '../../../hooks'
-import { NavMenu } from '../../atoms'
 
 import * as Styled from './styles'
 
@@ -39,8 +38,8 @@ export const SiteNavMenu: FC<NavMenuProps> = ({
               open={openLinkIDs.includes(link.id)}
             >
               {renderItem(link, color, layout)}
-              <Styled.MenuContainer open={openLinkIDs.includes(link.id)}>
-                <NavMenu open={openLinkIDs.includes(link.id)}>
+              <MenuContainer open={openLinkIDs.includes(link.id)}>
+                <Styled.NavMenu open={openLinkIDs.includes(link.id)}>
                   <SiteNavMenu
                     links={link.links}
                     color={color}
@@ -49,8 +48,8 @@ export const SiteNavMenu: FC<NavMenuProps> = ({
                     renderItem={renderItem}
                     openLinkIDs={openLinkIDs}
                   />
-                </NavMenu>
-              </Styled.MenuContainer>
+                </Styled.NavMenu>
+              </MenuContainer>
             </Styled.NavItemMenuContainer>
           )
         }

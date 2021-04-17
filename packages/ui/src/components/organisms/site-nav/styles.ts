@@ -1,8 +1,9 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-import { Nav, NavMenu } from '../../atoms'
-import { MenuContainer, NavItemMenuContainer } from '../nav-menu/styles'
+import { MenuContainer } from '../../quarks'
+import { Nav } from '../../atoms'
+import { NavItemMenuContainer } from '../../molecules'
 
 export const SiteNav = styled(Nav)(
   () => css`
@@ -12,9 +13,6 @@ export const SiteNav = styled(Nav)(
       ${MenuContainer} {
         display: block;
       }
-    }
-    ${NavMenu} {
-      min-width: 20em;
     }
     ${MenuContainer} {
       ${MenuContainer} {
