@@ -7,7 +7,7 @@ import { TableRows } from '../../quarks'
 import { DataTable, SortDirection } from '.'
 
 export default {
-  title: 'Molecules/DataTable',
+  title: 'Organisms/DataTable',
   component: DataTable,
 } as Meta
 

@@ -7,7 +7,7 @@ import { NavItemVariant } from '../../quarks'
 import { Colorway } from '../../../config'
 
 export default {
-  title: 'Molecules/SiteNav',
+  title: 'Organisms/SiteNav',
   component: SiteNav,
 } as Meta
 

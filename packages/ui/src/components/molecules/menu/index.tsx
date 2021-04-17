@@ -17,6 +17,7 @@ export interface MenuProps {
   forceWidth?: boolean
 }
 
+// TODO: this is only used by the select molecule and is the only molecule imported by another molecule; combine with select.
 export const Menu = ({
   renderControl,
   renderMenu,

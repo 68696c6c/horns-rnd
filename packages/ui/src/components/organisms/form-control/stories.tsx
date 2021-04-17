@@ -7,7 +7,7 @@ import { InputType, ToggleType } from '../../../config'
 import { BaseControlType, FormControl } from '.'
 
 export default {
-  title: 'Molecules/FormControl',
+  title: 'Organisms/FormControl',
   component: FormControl,
 } as Meta
 
