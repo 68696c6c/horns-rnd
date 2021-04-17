@@ -12,8 +12,11 @@ module.exports = {
     'plugin:testing-library/react',
     'plugin:testing-library/recommended',
     'plugin:jest-dom/recommended',
+    'plugin:react-hooks/recommended',
   ],
   rules: {
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
     '@typescript-eslint/no-inferrable-types': 0,
     'prettier/prettier': [
       'warn',

@@ -1,30 +1,21 @@
-import React, {
-  MouseEvent,
-  Dispatch,
-  FC,
-  useEffect,
-  useState,
-  ReactNode,
-  useCallback,
-} from 'react'
-import { v4 as uuid } from 'uuid'
+import React, { MouseEvent, Dispatch, FC, useEffect } from 'react'
 import _union from 'lodash.union'
 import _without from 'lodash.without'
 
 import { Colorway } from '../../../config'
 import { Responsive } from '../../../traits'
 import { NavItemLayout, NavItemProps } from '../../quarks'
-import { useBreakpoint, useID, useNavItem } from '../../../hooks'
-import { NavMenu } from '../../atoms'
-
 import {
-  renderLinks,
-  cloneWithIDs,
-  makeLinkMap,
+  useBreakpoint,
+  useNavItem,
+  useNavMenu,
   NavLink,
-  LinkMap,
-  NavLinkWithID,
-} from './utils'
+  NavMenuLinkIDMap,
+  navLinkIDDataAttribute,
+} from '../../../hooks'
+
+import { SiteNavMenu } from '../nav-menu'
+
 import * as Styled from './styles'
 
 export interface SiteNavProps extends Responsive, NavItemProps {
@@ -35,13 +26,13 @@ export interface SiteNavProps extends Responsive, NavItemProps {
 
 const handleClick = (
   event: MouseEvent<HTMLLinkElement>,
-  linkMap: LinkMap,
+  linkMap: NavMenuLinkIDMap,
   openItems: string[],
   setOpenItems: Dispatch<string[]>,
 ) => {
   event.preventDefault()
   const t = event.target as HTMLLinkElement
-  const id = t?.getAttribute('data-id') as string
+  const id = t?.getAttribute(navLinkIDDataAttribute) as string
   const linkPath = linkMap[id]
   if (!linkPath) {
     setOpenItems([])
@@ -68,115 +59,62 @@ export const SiteNav: FC<SiteNavProps> = ({
   breakpoint,
   ...others
 }: SiteNavProps) => {
-  const [navID] = useID()
-  const isMobile = useBreakpoint(breakpoint)
   const NavItemTag = useNavItem(variant)
+  const isMobile = useBreakpoint(breakpoint)
 
-  const [openItems, setOpenItems] = useState<string[]>([])
-  const [currentID, setCurrentID] = useState('')
-  const [mobileLinks, setMobileLinks] = useState<NavLinkWithID[]>([])
-
-  useEffect(() => {
-    const [clones, cID] = cloneWithIDs(links, currentPath, uuid)
-    const topLinks = [{ href: '#', text: 'H', links: clones, id: navID }]
-    setCurrentID(cID)
-    setMobileLinks(topLinks)
-  }, [navID, links])
-
-  const [linkMap, setLinkMap] = useState<LinkMap>({})
-  useEffect(() => {
-    setLinkMap(makeLinkMap(mobileLinks))
-  }, [mobileLinks])
+  const {
+    openLinkIDs,
+    currentLinkIDs,
+    navLinks,
+    navLinkIDMap,
+    setOpenLinkIDs,
+  } = useNavMenu(links || [], currentPath || '')
 
   useEffect(() => {
-    setOpenItems([])
-  }, [isMobile])
-
-  const [currentItems, setCurrentItems] = useState<string[]>([])
-  useEffect(() => {
-    if (linkMap[currentID]) {
-      const ids = linkMap[currentID]
-      setCurrentItems(ids)
-    }
-  }, [linkMap, currentID])
+    // Close the menu when we cross the responsive breakpoint.
+    setOpenLinkIDs([])
+  }, [isMobile, setOpenLinkIDs])
 
   const navItemProps = {
     currentColor,
     currentBorderWidth,
     currentBorderStyle,
   }
-  const [linkItems, setLinkItems] = useState<ReactNode>([])
-  useEffect(() => {
-    let linksToRender = mobileLinks
-    if (!isMobile) {
-      linksToRender =
-        mobileLinks[0] && mobileLinks[0].links ? mobileLinks[0].links : []
-    }
-    const items = renderLinks(
-      linksToRender,
-      color,
-      NavItemLayout.Horizontal,
-      (link, index, itemColor, itemLayout) => (
-        <NavItemTag
-          {...navItemProps}
-          color={itemColor}
-          layout={itemLayout}
-          key={link.id}
-          data-id={link.id}
-          href={link.href}
-          onClick={(event) => {
-            return handleClick(event, linkMap, openItems, setOpenItems)
-          }}
-          current={currentItems.includes(link.id)}
-        >
-          {link.text}
-        </NavItemTag>
-      ),
-      (link, index, itemColor, itemLayout, itemCallback, menuCallback) => (
-        <Styled.NavItemMenuContainer
-          key={link.id}
-          open={openItems.includes(link.id)}
-        >
-          {itemCallback(link, index, itemColor, itemLayout)}
-          <Styled.MenuContainer open={openItems.includes(link.id)}>
-            <NavMenu open={openItems.includes(link.id)}>
-              {renderLinks(
-                link.links,
-                menuColor,
-                NavItemLayout.Vertical,
-                itemCallback,
-                menuCallback,
-              )}
-            </NavMenu>
-          </Styled.MenuContainer>
-        </Styled.NavItemMenuContainer>
-      ),
-    )
-    setLinkItems(items)
-  }, [isMobile, linkMap, currentItems, openItems])
-
-  const handleItemClick = useCallback(
-    (event) => {
-      const t = event.target as HTMLElement
-      const id = t?.getAttribute('data-id') as string
-      const linkPath = linkMap[id]
-      if (!linkPath) {
-        setOpenItems([])
-      }
-    },
-    [linkMap],
-  )
-
-  useEffect(() => {
-    window.addEventListener('click', handleItemClick)
-    return () => {
-      window.removeEventListener('click', handleItemClick)
-    }
-  })
+  let linksToRender = navLinks
+  if (!isMobile) {
+    linksToRender = navLinks[0] && navLinks[0].links ? navLinks[0].links : []
+  }
 
   return (
     <Styled.SiteNav {...others} color={color}>
-      {linkItems}
+      <SiteNavMenu
+        links={linksToRender}
+        color={color}
+        layout={NavItemLayout.Horizontal}
+        menuColor={menuColor}
+        openLinkIDs={openLinkIDs}
+        renderItem={(link, itemColor, itemLayout) => (
+          <NavItemTag
+            {...navItemProps}
+            {...{ [navLinkIDDataAttribute]: link.id }}
+            color={itemColor}
+            layout={itemLayout}
+            key={link.id}
+            href={link.href}
+            onClick={(event) => {
+              return handleClick(
+                event,
+                navLinkIDMap,
+                openLinkIDs,
+                setOpenLinkIDs,
+              )
+            }}
+            current={currentLinkIDs.includes(link.id)}
+          >
+            {link.text}
+          </NavItemTag>
+        )}
+      />
     </Styled.SiteNav>
   )
 }

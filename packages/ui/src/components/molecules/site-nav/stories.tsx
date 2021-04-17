@@ -42,46 +42,51 @@ export const Default: Story = () => (
       The <em>SiteNav</em> component provides a fully themed and functional
       site-wide navigation bar.
     </p>
-    <SiteNav currentPath="/four/four/three" links={links} />
-
-    <h2>Item Props</h2>
     <p>
-      The <em>SiteNav</em> component accepts <em>variant</em>, <em>layout</em>,{' '}
-      <em>currentColor</em>, <em>currentWidth</em>, and <em>currentStyle</em>{' '}
-      props for styling its items.
+      The <em>SiteNav</em> component accepts the same <em>variant</em>,{' '}
+      <em>layout</em>, <em>currentColor</em>, <em>currentBorderWidth</em>, and{' '}
+      <em>currentBorderStyle</em> props used by the NavItem atoms and uses these
+      props to styling its items.
     </p>
-
-    <h3>Background Variant</h3>
-    <div>
-      <SiteNav
-        variant={NavItemVariant.Background}
-        color={Colorway.Secondary}
-        currentColor={Colorway.Dark}
-        currentPath="/one"
-        links={links}
-        menuColor={Colorway.Neutral}
-      />
-    </div>
-
-    <h3>Border Variant</h3>
-    <div>
-      <SiteNav
-        variant={NavItemVariant.Border}
-        color={Colorway.Tertiary}
-        currentColor={Colorway.Neutral}
-        currentPath="/one"
-        links={links}
-      />
-    </div>
-
-    <h3>Underline Variant</h3>
-    <div>
-      <SiteNav
-        variant={NavItemVariant.Underline}
-        color={Colorway.Warning}
-        currentPath="/three"
-        links={links}
-      />
-    </div>
+    <SiteNav currentPath="/four/four/three" links={links} />
   </>
+)
+
+export const BackgroundVariant: Story = () => (
+  <div>
+    <h1>Background Variant</h1>
+    <SiteNav
+      variant={NavItemVariant.Background}
+      color={Colorway.Secondary}
+      currentColor={Colorway.Dark}
+      currentPath="/one"
+      links={links}
+      menuColor={Colorway.Neutral}
+    />
+  </div>
+)
+
+export const BorderVariant: Story = () => (
+  <div>
+    <h1>Border Variant</h1>
+    <SiteNav
+      variant={NavItemVariant.Border}
+      color={Colorway.Tertiary}
+      currentColor={Colorway.Neutral}
+      currentPath="/one"
+      links={links}
+    />
+  </div>
+)
+
+export const UnderlineVariant: Story = () => (
+  <div>
+    <h1>Underline Variant</h1>
+    <SiteNav
+      variant={NavItemVariant.Underline}
+      color={Colorway.Warning}
+      currentPath="/three"
+      links={links}
+    />
+  </div>
 )
