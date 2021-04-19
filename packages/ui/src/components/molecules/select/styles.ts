@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-import { Font } from '../../../config'
+import { Cursor, Font, HoverState, Size, StatusState } from '../../../config'
 import {
   Bordered,
   bordered,
@@ -13,19 +13,25 @@ import {
   padded,
   Padded,
   shadowed,
+  Chromatic,
+  Interactive,
+  Typographic,
+  chromatic,
+  typographic,
+  interactive,
 } from '../../../traits'
-import { ControlProps, MenuProps, selectStyles } from '../../quarks'
-import { Dropdown, DropdownOption, Input } from '../../atoms'
-
-export interface MenuContainerProps extends MenuProps {
-  minWidth?: number
-}
+import { ControlProps, MenuProps, menuStyles, selectStyles } from '../../quarks'
+import { Input } from '../../atoms'
 
 export const MenuContainer = styled.div`
   position: relative;
 `
 
-export const Container = styled.div<MenuContainerProps>(
+export interface ContainerProps extends MenuProps {
+  minWidth?: number
+}
+
+export const Container = styled.div<ContainerProps>(
   ({ theme, open, shadow }) => open && shadowed({ theme, shadow }),
   ({ minWidth }) =>
     css`
@@ -63,7 +69,38 @@ export const Filter = styled(Input)(
   `,
 )
 
-export const FilterOption = styled(DropdownOption)`
+export interface SelectOptionProps
+  extends Chromatic,
+    Padded,
+    Interactive,
+    Typographic {
+  value?: string | number
+  label?: string
+}
+
+export const SelectOption = styled.li<SelectOptionProps>(
+  ({ theme, color, cursor, font, padding }) => [
+    chromatic,
+    padded({ theme, padding, paddingDefault: theme.controls.padding }),
+    typographic({ theme, font, fontDefault: Font.Control }),
+    interactive({
+      theme,
+      cursor,
+      cursorDefault: Cursor.Pointer,
+      hoverStyles: [chromatic({ theme, color, state: HoverState.Hover })],
+      activeStyles: [chromatic({ theme, color, state: HoverState.Active })],
+      inactiveStyles: [
+        chromatic({ theme, color, state: StatusState.Inactive }),
+      ],
+    }),
+    () =>
+      css`
+        list-style-type: none;
+      `,
+  ],
+)
+
+export const FilterOption = styled(SelectOption)`
   padding-top: 0;
   padding-bottom: 0;
 `
@@ -72,10 +109,12 @@ export interface SelectDropdownProps
   extends Bordered,
     ChromaticNotification,
     Padded,
-    Rounded {}
+    Rounded,
+    MenuProps {}
 
-export const SelectDropdown = styled(Dropdown)(
+export const SelectDropdown = styled.ul<SelectDropdownProps>(
   ({ theme, border, padding, radius }: Styled & SelectDropdownProps) => [
+    menuStyles,
     chromaticControl,
     bordered({ theme, border, borderDefault: theme.controls.border }),
     padded({ theme, padding, paddingDefault: theme.controls.padding }),
@@ -91,8 +130,11 @@ export const SelectDropdown = styled(Dropdown)(
       border-top: none;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
+      top: -${theme.sizes[theme.controls.border.all?.width as Size]};
       padding-left: 0;
       padding-right: 0;
+      margin: 0;
+      list-style-type: none;
     `,
   ],
 )

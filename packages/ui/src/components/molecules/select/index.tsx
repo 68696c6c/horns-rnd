@@ -11,7 +11,7 @@ import React, {
 import { useDebouncedCallback } from 'use-debounce'
 
 import { ControlOption, InputType } from '../../../config'
-import { DropdownOption, Input } from '../../atoms'
+import { Input } from '../../atoms'
 import { useMenu } from '../../../hooks'
 
 import * as Styled from './styles'
@@ -190,14 +190,14 @@ const BaseSelect: FC<SelectProps> = ({
               </Styled.FilterOption>
             )}
             {options.map(({ label, value }) => (
-              <DropdownOption
+              <Styled.SelectOption
                 key={`${id}-select-option-${label}`}
                 value={value}
                 label={label}
                 onClick={handleOptionClick}
               >
                 {label}
-              </DropdownOption>
+              </Styled.SelectOption>
             ))}
           </Styled.SelectDropdown>
         </Styled.MenuContainer>
