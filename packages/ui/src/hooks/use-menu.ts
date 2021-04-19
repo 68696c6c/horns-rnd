@@ -14,16 +14,20 @@ export interface MenuProps {
   forceWidth?: boolean
 }
 
-type MenuRef = MutableRefObject<HTMLElement | undefined>
-
-export const useMenu = ({
+export const useMenu = <C extends HTMLElement, M extends HTMLElement>({
   initialOpen,
   onOpen,
   onClose,
   forceWidth,
-}: MenuProps): [boolean, number, () => void, MenuRef, MenuRef] => {
-  const controlRef = useRef<HTMLElement>()
-  const menuRef = useRef<HTMLElement>()
+}: MenuProps): [
+  boolean,
+  number,
+  () => void,
+  MutableRefObject<C | null>,
+  MutableRefObject<M | null>,
+] => {
+  const controlRef = useRef<C>(null)
+  const menuRef = useRef<M>(null)
 
   const [minWidth, setMinWidth] = useState(0)
 
@@ -54,7 +58,7 @@ export const useMenu = ({
     } else if (typeof onClose !== 'undefined') {
       onClose()
     }
-  }, [open])
+  }, [open, onClose, onOpen])
 
   useEffect(() => {
     if (forceWidth) {
@@ -67,7 +71,7 @@ export const useMenu = ({
       }
       setOpen(false)
     }
-  }, [])
+  }, [forceWidth])
 
   return [open, minWidth, toggleOpen, controlRef, menuRef]
 }

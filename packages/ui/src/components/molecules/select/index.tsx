@@ -12,8 +12,7 @@ import { useDebouncedCallback } from 'use-debounce'
 
 import { ControlOption, InputType } from '../../../config'
 import { DropdownOption, Input } from '../../atoms'
-
-import { Menu } from '../menu'
+import { useMenu } from '../../../hooks'
 
 import * as Styled from './styles'
 
@@ -148,6 +147,15 @@ const BaseSelect: FC<SelectProps> = ({
     }
   }, [changeEvent])
 
+  const [open, minWidth, toggleOpen, controlRef, menuRef] = useMenu<
+    HTMLDivElement,
+    HTMLUListElement
+  >({
+    initialOpen: false,
+    onOpen: () => filterRef.current?.focus(),
+    forceWidth: true,
+  })
+
   return (
     <>
       <Input
@@ -157,23 +165,19 @@ const BaseSelect: FC<SelectProps> = ({
         name={name}
         value={values.join(',')}
       />
-      <Menu
-        forceWidth
-        onOpen={() => filterRef.current?.focus()}
-        renderControl={(open, ref, toggleOpen) => (
-          <Styled.Select
-            {...others}
-            ref={ref}
-            multiple={multiple}
-            open={open}
-            color={color}
-            onClick={toggleOpen}
-          >
-            {displayValues.join(', ')}
-          </Styled.Select>
-        )}
-        renderMenu={(open, ref) => (
-          <Styled.SelectDropdown ref={ref} open={open} color={color}>
+      <Styled.Container open={open} minWidth={minWidth}>
+        <Styled.Select
+          {...others}
+          ref={controlRef}
+          multiple={multiple}
+          open={open}
+          color={color}
+          onClick={toggleOpen}
+        >
+          {displayValues.join(', ')}
+        </Styled.Select>
+        <Styled.MenuContainer>
+          <Styled.SelectDropdown ref={menuRef} open={open} color={color}>
             {showFilter && (
               <Styled.FilterOption>
                 <Styled.Filter
@@ -196,8 +200,8 @@ const BaseSelect: FC<SelectProps> = ({
               </DropdownOption>
             ))}
           </Styled.SelectDropdown>
-        )}
-      />
+        </Styled.MenuContainer>
+      </Styled.Container>
     </>
   )
 }

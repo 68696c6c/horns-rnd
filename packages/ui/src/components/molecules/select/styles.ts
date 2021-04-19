@@ -12,9 +12,28 @@ import {
   Styled,
   padded,
   Padded,
+  shadowed,
 } from '../../../traits'
-import { ControlProps, selectStyles } from '../../quarks'
+import { ControlProps, MenuProps, selectStyles } from '../../quarks'
 import { Dropdown, DropdownOption, Input } from '../../atoms'
+
+export interface MenuContainerProps extends MenuProps {
+  minWidth?: number
+}
+
+export const MenuContainer = styled.div`
+  position: relative;
+`
+
+export const Container = styled.div<MenuContainerProps>(
+  ({ theme, open, shadow }) => open && shadowed({ theme, shadow }),
+  ({ minWidth }) =>
+    css`
+      display: inline-flex;
+      flex-direction: column;
+      min-width: ${minWidth && `${minWidth}px`};
+    `,
+)
 
 export interface BaseSelectProps extends ControlProps {
   open?: boolean
