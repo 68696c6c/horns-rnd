@@ -28,7 +28,7 @@ export const PaginationNav: FC<Styled.PaginationNavProps> = ({
     if (typeof onChange !== 'undefined') {
       onChange(current)
     }
-  }, [current])
+  }, [current, onChange])
 
   useEffect(() => {
     setCurrent(currentPage)

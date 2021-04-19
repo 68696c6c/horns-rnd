@@ -2,7 +2,7 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
-import { Select, Multiselect, FilterOptionsFunc, SelectProps } from '.'
+import { Select, FilterOptionsFunc, SelectProps } from '.'
 
 export default {
   title: 'Molecules/Select',
@@ -42,16 +42,17 @@ Default.args = {
   options,
 }
 
-export const Multiple = Template.bind({})
-Multiple.args = {
+export const Multiselect = Template.bind({})
+Multiselect.args = {
   id: 'example-multiselect',
   name: 'example_multiselect',
   placeholder: 'Select one or more...',
   options,
+  multiple: true,
 }
 
 export const SelectFilter = Template.bind({})
-Multiple.args = {
+SelectFilter.args = {
   id: 'example-select-filterable',
   name: 'example_select_filterable',
   placeholder: 'Filter one...',
@@ -59,65 +60,12 @@ Multiple.args = {
   filterOptions: exampleFilterOptions,
 }
 
-export const MultipleFilter = Template.bind({})
-Multiple.args = {
+export const MultiselectFilter = Template.bind({})
+MultiselectFilter.args = {
   id: 'example-multiselect-filterable',
   name: 'example_multiselect_filterable',
   placeholder: 'Filter one or more...',
   options,
   filterOptions: exampleFilterOptions,
+  multiple: true,
 }
-
-// export const Default: Story = () => (
-//   <>
-//     <h1>Select</h1>
-//     <p>
-//       The <em>Select</em> component is a fully themed replacement for the HTML{' '}
-//       <code>select</code> tag.
-//     </p>
-//     <div>
-//       <label htmlFor="example-select">Select: </label>
-//       <Select
-//         id="example-select"
-//         name="example_select"
-//         placeholder="Select one..."
-//         options={options}
-//       />
-//     </div>
-//     <div>
-//       <label htmlFor="example-select-filterable">Filterable Select: </label>
-//       <Select
-//         id="example-select-filterable"
-//         name="example_select_filterable"
-//         placeholder="Filter one..."
-//         options={options}
-//         filterOptions={exampleFilterOptions}
-//       />
-//     </div>
-//     <div>
-//       <label htmlFor="example-multiselect">Multiselect: </label>
-//       <Select
-//         id="example-multiselect"
-//         name="example_multiselect"
-//         placeholder="Select one or more..."
-//         options={options}
-//       />
-//     </div>
-//     <div>
-//       <label htmlFor="example-multiselect-filterable">
-//         Filterable Multiselect:{' '}
-//       </label>
-//       <Multiselect
-//         id="example-multiselect-filterable"
-//         name="example_multiselect_filterable"
-//         placeholder="Filter one or more..."
-//         options={options}
-//         filterOptions={exampleFilterOptions}
-//       />
-//     </div>
-//   </>
-// )
-
-// export const Multi: Story = () => {
-//
-// }

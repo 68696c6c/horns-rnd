@@ -48,7 +48,7 @@ export const useBreakpoint = (initialBreakpoint?: Breakpoint): boolean => {
     } else if (windowSize.width > breakInt && isMobile) {
       setIsMobile(false)
     }
-  }, [windowSize, breakpoint])
+  }, [windowSize, breakpoint, theme.breakpoints, isMobile])
 
   return isMobile
 }

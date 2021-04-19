@@ -1,4 +1,11 @@
-import React, { FC, MouseEvent, useEffect, useRef, useState } from 'react'
+import React, {
+  FC,
+  MouseEvent,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react'
 import { useDebouncedCallback } from 'use-debounce'
 
 import { Font, InputType, ControlOption } from '../../../config'
@@ -101,7 +108,10 @@ export const DataTable: FC<DataTableProps> = ({
   perPageOptions: perPageOptionsProp,
 }: DataTableProps) => {
   const filterRows = filterRowsProp || filterRowsDefault
-  const perPageOptions = perPageOptionsProp || perPageOptionsDefault
+  const perPageOptions = useMemo(
+    () => perPageOptionsProp || perPageOptionsDefault,
+    [perPageOptionsProp],
+  )
 
   const filterRef = useRef<HTMLInputElement>()
   const perPageRef = useRef<HTMLInputElement>()
@@ -125,6 +135,7 @@ export const DataTable: FC<DataTableProps> = ({
     setPerPage,
   } = paginationProps
 
+  // const handlePageSize = useCallback(() => {
   const handlePageSize = () => {
     if (perPageRef.current) {
       // Using +number instead of parseInt avoids needing to deal with NaN
@@ -132,6 +143,7 @@ export const DataTable: FC<DataTableProps> = ({
       setPerPage(+perPageRef.current.value)
     }
   }
+  // }, [setPerPage])
 
   const debouncedFilterRows = useDebouncedCallback<FilterRowsFunc>(
     (args: FilterRowsArgs, callback: FilterRowsCallback) =>
@@ -169,7 +181,14 @@ export const DataTable: FC<DataTableProps> = ({
   useEffect(() => {
     debouncedFilterRows(
       {
-        ...paginationProps,
+        currentPage,
+        perPage,
+        start,
+        end,
+        totalPages,
+        totalRows,
+        setCurrentPage,
+        setPerPage,
         rowData: rowDataProp as TableRows,
         term: filterRef.current?.value as string,
         sortColumnName,
@@ -177,7 +196,20 @@ export const DataTable: FC<DataTableProps> = ({
       },
       setFilteredRows,
     )
-  }, [sortDir, sortColumnName])
+  }, [
+    sortDir,
+    sortColumnName,
+    debouncedFilterRows,
+    currentPage,
+    perPage,
+    start,
+    end,
+    totalPages,
+    totalRows,
+    setCurrentPage,
+    setPerPage,
+    rowDataProp,
+  ])
 
   return (
     <Styled.Layout>

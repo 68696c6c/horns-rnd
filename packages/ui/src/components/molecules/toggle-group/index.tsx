@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { v4 as uuid } from 'uuid'
 
 import { ControlOption, ToggleType } from '../../../config'
@@ -23,7 +23,9 @@ export const ToggleGroup = ({
   ...others
 }: ToggleGroupProps) => {
   const [toggleIDs, setToggleIDs] = useState<IdMap>({})
-  const options = propsOptions || ({} as ControlOption[])
+  const options = useMemo(() => propsOptions || ({} as ControlOption[]), [
+    propsOptions,
+  ])
 
   useEffect(() => {
     const idMap: IdMap = {}

@@ -42,6 +42,49 @@ export interface SelectProps extends Styled.BaseSelectProps {
   forwardedRef?: ForwardedRef<HTMLInputElement | undefined>
 }
 
+const handleValue = (
+  value: string,
+  displayValue: string,
+  currentValues: string[],
+  currentDisplayValues: string[],
+  setValues: (a: string[]) => void,
+  setDisplayValues: (a: string[]) => void,
+  placeholder?: string,
+  isMultiple?: boolean,
+) => {
+  if (isMultiple) {
+    // If the value is already selected, unselect it.
+    if (currentValues.includes(value)) {
+      const finalValues = currentValues.filter((v) => v !== value)
+      setValues(finalValues)
+
+      const filteredDisplayValues = currentDisplayValues.filter(
+        (dv) => dv !== displayValue,
+      )
+      // Show the placeholder again if all the items have been removed.
+      const finalDisplayValues =
+        filteredDisplayValues.length === 0
+          ? [placeholder]
+          : filteredDisplayValues
+      setDisplayValues(finalDisplayValues as string[])
+    } else if (
+      currentDisplayValues.length === 1 &&
+      currentDisplayValues[0] === placeholder
+    ) {
+      // Hide the placeholder if this is the first new item.
+      setValues([...currentValues, value])
+      setDisplayValues([displayValue])
+    } else {
+      // Append the new item.
+      setValues([...currentValues, value])
+      setDisplayValues([...currentDisplayValues, displayValue])
+    }
+  } else {
+    setValues([value])
+    setDisplayValues([displayValue])
+  }
+}
+
 const BaseSelect: FC<SelectProps> = ({
   id,
   multiple,
@@ -80,45 +123,20 @@ const BaseSelect: FC<SelectProps> = ({
       (result: ControlOption[]) => setOptions(result),
     )
 
-  const handleValue = (value: string, displayValue: string) => {
-    if (multiple) {
-      // If the value is already selected, unselect it.
-      if (values.includes(value)) {
-        const finalValues = values.filter((v) => v !== value)
-        setValues(finalValues)
-
-        const filteredDisplayValues = displayValues.filter(
-          (dv) => dv !== displayValue,
-        )
-        // Show the placeholder again if all the items have been removed.
-        const finalDisplayValues =
-          filteredDisplayValues.length === 0
-            ? [placeholder]
-            : filteredDisplayValues
-        setDisplayValues(finalDisplayValues)
-      } else if (
-        displayValues.length === 1 &&
-        displayValues[0] === placeholder
-      ) {
-        // Hide the placeholder if this is the first new item.
-        setValues([...values, value])
-        setDisplayValues([displayValue])
-      } else {
-        // Append the new item.
-        setValues([...values, value])
-        setDisplayValues([...displayValues, displayValue])
-      }
-    } else {
-      setValues([value])
-      setDisplayValues([displayValue])
-    }
-  }
-
   const handleOptionClick = (event: MouseEvent<HTMLLIElement>) => {
     const t = event.target as HTMLLIElement
     const value = t?.getAttribute('value') || ''
     const displayValue = t?.getAttribute('label') || ''
-    handleValue(value, displayValue)
+    handleValue(
+      value,
+      displayValue,
+      values,
+      displayValues,
+      setValues,
+      setDisplayValues,
+      placeholder,
+      multiple,
+    )
     setChangeEvent(event)
   }
 
@@ -133,9 +151,15 @@ const BaseSelect: FC<SelectProps> = ({
       handleValue(
         defaultOption?.value as string,
         defaultOption?.label as string,
+        [],
+        [],
+        setValues,
+        setDisplayValues,
+        placeholder,
+        multiple,
       )
     }
-  }, [defaultValueProp, optionsProp])
+  }, [defaultValueProp, multiple, optionsProp, placeholder])
 
   // Since we want to simulate native behavior we need to pass the event to onChange but if we call
   // onChange from the event handler it will fire before the new value is set in the state.  So we
@@ -145,7 +169,7 @@ const BaseSelect: FC<SelectProps> = ({
     if (typeof onChange !== 'undefined') {
       onChange(changeEvent)
     }
-  }, [changeEvent])
+  }, [changeEvent, onChange])
 
   const [open, minWidth, toggleOpen, controlRef, menuRef] = useMenu<
     HTMLDivElement,

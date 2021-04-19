@@ -26,6 +26,8 @@ export const usePagination = (
   const [totalRows, setTotalRows] = useState(0)
   const [rowData, setRowData] = useState<TableRows>(rowDataProp || [])
 
+  useEffect(() => {}, [perPageProp])
+
   useEffect(() => {
     const rowCount = rowDataProp?.length || 0
     const rowsPerPage = perPage > rowCount ? rowCount : perPage
