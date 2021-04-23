@@ -11,4 +11,5 @@ export {
   navLinkIDDataAttribute,
 } from './use-nav-menu'
 export { useRowIDs } from './use-row-ids'
+export { useValues, Values } from './use-values'
 export { usePagination, PaginationProps } from './use-pagination'

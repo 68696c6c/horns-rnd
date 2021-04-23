@@ -1,6 +1,8 @@
 /* global window */
 import {
+  Dispatch,
   MutableRefObject,
+  SetStateAction,
   useCallback,
   useEffect,
   useRef,
@@ -12,6 +14,20 @@ export interface MenuProps {
   onClose?(): void
   initialOpen?: boolean
   forceWidth?: boolean
+}
+
+const setWidth = <C extends HTMLElement, M extends HTMLElement>(
+  controlRef: MutableRefObject<C | null>,
+  menuRef: MutableRefObject<M | null>,
+  setMinWidth: Dispatch<SetStateAction<number>>,
+): void => {
+  const controlWidth = controlRef?.current?.offsetWidth || 0
+  const menuWidth = menuRef?.current?.offsetWidth || 0
+  if (controlWidth < menuWidth) {
+    setMinWidth(menuWidth)
+  } else if (controlWidth > menuWidth) {
+    setMinWidth(controlWidth)
+  }
 }
 
 export const useMenu = <C extends HTMLElement, M extends HTMLElement>({
@@ -51,6 +67,7 @@ export const useMenu = <C extends HTMLElement, M extends HTMLElement>({
   }
 
   useEffect(() => {
+    setWidth(controlRef, menuRef, setMinWidth)
     if (open) {
       if (typeof onOpen !== 'undefined') {
         onOpen()
@@ -62,13 +79,7 @@ export const useMenu = <C extends HTMLElement, M extends HTMLElement>({
 
   useEffect(() => {
     if (forceWidth) {
-      const controlWidth = controlRef?.current?.offsetWidth || 0
-      const menuWidth = menuRef?.current?.offsetWidth || 0
-      if (controlWidth < menuWidth) {
-        setMinWidth(menuWidth)
-      } else if (controlWidth > menuWidth) {
-        setMinWidth(controlWidth)
-      }
+      setWidth(controlRef, menuRef, setMinWidth)
       setOpen(false)
     }
   }, [forceWidth])

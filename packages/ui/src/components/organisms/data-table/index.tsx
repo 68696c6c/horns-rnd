@@ -135,7 +135,6 @@ export const DataTable: FC<DataTableProps> = ({
     setPerPage,
   } = paginationProps
 
-  // const handlePageSize = useCallback(() => {
   const handlePageSize = () => {
     if (perPageRef.current) {
       // Using +number instead of parseInt avoids needing to deal with NaN
@@ -143,7 +142,6 @@ export const DataTable: FC<DataTableProps> = ({
       setPerPage(+perPageRef.current.value)
     }
   }
-  // }, [setPerPage])
 
   const debouncedFilterRows = useDebouncedCallback<FilterRowsFunc>(
     (args: FilterRowsArgs, callback: FilterRowsCallback) =>
@@ -223,7 +221,7 @@ export const DataTable: FC<DataTableProps> = ({
             id={`${tableID}-per-page`}
             name="per_page"
             onChange={handlePageSize}
-            defaultValue={perPage}
+            defaultValue={[perPage]}
             options={perPageOptions}
           />
         </div>

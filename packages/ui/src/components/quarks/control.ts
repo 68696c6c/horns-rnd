@@ -37,6 +37,7 @@ export interface ControlProps
   required?: boolean
   multiline?: boolean
   multiple?: boolean
+  autoComplete?: string
 }
 
 export const controlStyles = ({

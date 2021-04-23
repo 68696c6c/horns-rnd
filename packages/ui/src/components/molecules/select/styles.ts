@@ -102,7 +102,6 @@ export const SelectOption = styled.li<SelectOptionProps>(
 
 export const FilterOption = styled(SelectOption)`
   padding-top: 0;
-  padding-bottom: 0;
 `
 
 export interface SelectDropdownProps
