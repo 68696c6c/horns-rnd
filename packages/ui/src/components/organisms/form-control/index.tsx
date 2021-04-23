@@ -10,8 +10,10 @@ import {
   Label,
   SelectNative as SelectNativeAtom,
   Textarea as TextareaAtom,
+  Select as SelectAtom,
+  SelectProps,
 } from '../../atoms'
-import { Select as SelectAtom, SelectProps, ToggleGroup } from '../../molecules'
+import { ToggleGroup } from '../../molecules'
 
 import * as Styled from './styles'
 import { InputRef } from '../../atoms/input'
@@ -25,7 +27,7 @@ export enum BaseControlType {
 }
 
 export interface FormControlInputProps
-  extends Omit<SelectProps, 'forwardedRef'>,
+  extends Omit<SelectProps, 'forwardedRef' | 'defaultValue'>,
     Omit<InputProps, 'type'> {
   type?: InputType | ToggleType | BaseControlType
 }

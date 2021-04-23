@@ -3,12 +3,9 @@ import { createNumberMask } from 'text-mask-addons'
 import MaskedInput from 'react-text-mask'
 
 import { InputType } from '../../../config'
-import {
-  ControlProps,
-  StyledInputHidden,
-  StyledInputMasked,
-  StyledInput,
-} from '../../quarks'
+import { ControlProps } from '../../quarks'
+
+import * as Styled from './styles'
 
 // eslint-disable-next-line
 const phoneMask = [ /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, /\d/ ]
@@ -31,7 +28,7 @@ const BaseInput: FC<InputProps> = ({
   switch (type) {
     case 'hidden':
       return (
-        <StyledInputHidden
+        <Styled.InputHidden
           {...others}
           type={type}
           ref={forwardedRef as LegacyRef<HTMLInputElement>}
@@ -39,7 +36,7 @@ const BaseInput: FC<InputProps> = ({
       )
     case 'tel':
       return (
-        <StyledInputMasked
+        <Styled.InputMasked
           mask={phoneMask}
           placeholderChar="_"
           {...others}
@@ -49,7 +46,7 @@ const BaseInput: FC<InputProps> = ({
       )
     case 'currency':
       return (
-        <StyledInputMasked
+        <Styled.InputMasked
           mask={createNumberMask({
             prefix: currency,
             allowDecimal: true,
@@ -62,7 +59,7 @@ const BaseInput: FC<InputProps> = ({
       )
     case 'percentage':
       return (
-        <StyledInputMasked
+        <Styled.InputMasked
           mask={createNumberMask({
             prefix: '',
             suffix: '%',
@@ -75,7 +72,7 @@ const BaseInput: FC<InputProps> = ({
       )
     default:
       return (
-        <StyledInput
+        <Styled.Input
           {...others}
           type={type}
           ref={forwardedRef as LegacyRef<HTMLInputElement>}

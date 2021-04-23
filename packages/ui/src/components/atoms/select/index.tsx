@@ -1,7 +1,13 @@
-import React, { FC, ForwardedRef, forwardRef, Ref, MouseEvent } from 'react'
+import React, {
+  FC,
+  forwardRef,
+  MouseEvent,
+  LegacyRef,
+  ForwardedRef,
+  Ref,
+} from 'react'
 
 import { Colorway, ControlOption, InputType } from '../../../config'
-import { Input } from '../../atoms'
 import { useMenu, useValues, Values } from '../../../hooks'
 
 import * as Styled from './styles'
@@ -77,9 +83,9 @@ const BaseSelect: FC<SelectProps> = ({
 
   return (
     <>
-      <Input
-        ref={forwardedRef}
-        type={InputType.Hidden}
+      <input
+        ref={forwardedRef as LegacyRef<HTMLInputElement>}
+        type="hidden"
         id={id}
         name={name}
         value={values.join(',')}
@@ -104,7 +110,8 @@ const BaseSelect: FC<SelectProps> = ({
                   type={InputType.Text}
                   id={`${id}-select-filter`}
                   name={`${name}_select_filter`}
-                  onClick={(event) => event.stopPropagation()}
+                  onClick={(event: MouseEvent<HTMLInputElement>) =>
+                    event.stopPropagation()}
                   onKeyUp={handleFilter}
                   autoComplete="off"
                 />

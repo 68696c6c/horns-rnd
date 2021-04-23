@@ -1,6 +1,6 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, useEffect, useMemo, useState, MouseEvent } from 'react'
 
-import { useNavItem } from '../../../hooks'
+import { navItemFactory } from '../../atoms'
 import { makeIntArray } from '../../../utils'
 
 import * as Styled from './styles'
@@ -19,7 +19,7 @@ export const PaginationNav: FC<Styled.PaginationNavProps> = ({
 }: Styled.PaginationNavProps) => {
   const totalPages = totalPagesProp || 1
   const currentPage = currentPageProp || 1
-  const Tag = useNavItem(variant)
+  const Tag = useMemo(() => navItemFactory(variant), [variant])
 
   const [current, setCurrent] = useState(currentPage)
   const [pages, setPages] = useState(() => makeIntArray(totalPages))
@@ -50,7 +50,7 @@ export const PaginationNav: FC<Styled.PaginationNavProps> = ({
           currentBorderWidth={currentBorderWidth}
           currentBorderStyle={currentBorderStyle}
           current={page === current}
-          onClick={(event: Event) => {
+          onClick={(event: MouseEvent<HTMLAnchorElement>) => {
             event.preventDefault()
             setCurrent(page)
           }}

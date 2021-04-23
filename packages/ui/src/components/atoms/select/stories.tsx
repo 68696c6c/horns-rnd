@@ -5,7 +5,7 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 import { Select, FilterOptionsFunc, SelectProps } from '.'
 
 export default {
-  title: 'Molecules/Select',
+  title: 'Atoms/Select',
   component: Select,
 } as Meta
 

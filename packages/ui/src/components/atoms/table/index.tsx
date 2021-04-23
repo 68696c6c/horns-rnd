@@ -2,9 +2,7 @@ import React, { memo, FC } from 'react'
 
 import { OverflowOption } from '../../../config'
 import { useID, useRowIDs } from '../../../hooks'
-import { TableProps, TableRows } from '../../quarks'
-
-import { Overflow } from '../overflow'
+import { TableProps, TableRows, Overflow } from '../../quarks'
 
 import * as Styled from './styles'
 

@@ -1,4 +1,4 @@
-import React, { MouseEvent, Dispatch, FC, useEffect } from 'react'
+import React, { Dispatch, FC, MouseEvent, useEffect, useMemo } from 'react'
 import _union from 'lodash.union'
 import _without from 'lodash.without'
 
@@ -6,16 +6,16 @@ import { Colorway } from '../../../config'
 import { Responsive } from '../../../traits'
 import { NavItemLayout, NavItemProps } from '../../quarks'
 import {
-  useBreakpoint,
-  useNavItem,
-  useNavMenu,
   NavLink,
-  NavMenuLinkIDMap,
   navLinkIDDataAttribute,
+  NavMenuLinkIDMap,
+  useBreakpoint,
+  useNavMenu,
 } from '../../../hooks'
 import { SiteNavMenu } from '../../molecules'
 
 import * as Styled from './styles'
+import { navItemFactory } from '../../atoms'
 
 export interface SiteNavProps extends Responsive, NavItemProps {
   currentPath?: string
@@ -24,13 +24,13 @@ export interface SiteNavProps extends Responsive, NavItemProps {
 }
 
 const handleClick = (
-  event: MouseEvent<HTMLLinkElement>,
+  event: MouseEvent<HTMLAnchorElement>,
   linkMap: NavMenuLinkIDMap,
   openItems: string[],
   setOpenItems: Dispatch<string[]>,
 ) => {
   event.preventDefault()
-  const t = event.target as HTMLLinkElement
+  const t = event.target as HTMLAnchorElement
   const id = t?.getAttribute(navLinkIDDataAttribute) as string
   const linkPath = linkMap[id]
   if (!linkPath) {
@@ -58,7 +58,7 @@ export const SiteNav: FC<SiteNavProps> = ({
   breakpoint,
   ...others
 }: SiteNavProps) => {
-  const NavItemTag = useNavItem(variant)
+  const NavItemTag = useMemo(() => navItemFactory(variant), [variant])
   const isMobile = useBreakpoint(breakpoint)
 
   const {
@@ -78,6 +78,7 @@ export const SiteNav: FC<SiteNavProps> = ({
     currentColor,
     currentBorderWidth,
     currentBorderStyle,
+    menuColor,
   }
   let linksToRender = navLinks
   if (!isMobile) {
@@ -87,6 +88,7 @@ export const SiteNav: FC<SiteNavProps> = ({
   return (
     <Styled.SiteNav {...others} color={color}>
       <SiteNavMenu
+        top
         links={linksToRender}
         color={color}
         layout={NavItemLayout.Horizontal}
@@ -100,7 +102,7 @@ export const SiteNav: FC<SiteNavProps> = ({
             layout={itemLayout}
             key={link.id}
             href={link.href}
-            onClick={(event) => {
+            onClick={(event: MouseEvent<HTMLAnchorElement>) => {
               return handleClick(
                 event,
                 navLinkIDMap,

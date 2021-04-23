@@ -18,14 +18,7 @@ export {
   NavItemLayout,
   NavItemVariant,
 } from './clickable'
-export {
-  ControlProps,
-  StyledInput,
-  StyledInputHidden,
-  StyledInputMasked,
-  selectStyles,
-  controlStyles,
-} from './control'
+export { ControlProps, controlStyles } from './control'
 export { GridProps, gridStyles } from './grid'
 export {
   MenuProps,
@@ -43,4 +36,6 @@ export {
   TableData,
   tableStyles,
   getTableData,
+  OverflowProps,
+  Overflow,
 } from './table'

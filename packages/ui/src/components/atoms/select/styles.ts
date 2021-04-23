@@ -20,8 +20,12 @@ import {
   typographic,
   interactive,
 } from '../../../traits'
-import { ControlProps, MenuProps, menuStyles, selectStyles } from '../../quarks'
-import { Input } from '../../atoms'
+import {
+  ControlProps,
+  controlStyles,
+  MenuProps,
+  menuStyles,
+} from '../../quarks'
 
 export const MenuContainer = styled.div`
   position: relative;
@@ -47,7 +51,7 @@ export interface BaseSelectProps extends ControlProps {
 }
 
 export const Select = styled.div<BaseSelectProps>(
-  selectStyles,
+  controlStyles,
   ({ open }) =>
     open &&
     css`
@@ -60,7 +64,8 @@ Select.defaultProps = {
   font: Font.Control,
 }
 
-export const Filter = styled(Input)(
+export const Filter = styled.input(
+  controlStyles,
   () => css`
     box-sizing: border-box;
     height: auto;

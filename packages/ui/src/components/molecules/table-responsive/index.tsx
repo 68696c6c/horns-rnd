@@ -1,9 +1,14 @@
 import React, { memo, FC, useEffect, useState } from 'react'
 
 import { OverflowOption } from '../../../config'
-import { HTMLDataset, TableRows, TableData, getTableData } from '../../quarks'
+import {
+  HTMLDataset,
+  TableRows,
+  TableData,
+  getTableData,
+  Overflow,
+} from '../../quarks'
 import { useID, useRowIDs } from '../../../hooks'
-import { Overflow } from '../../atoms'
 
 import * as Styled from './styles'
 

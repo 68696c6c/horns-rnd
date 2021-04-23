@@ -1,8 +1,6 @@
 // Controls are form elements.
 import { EventHandler } from 'react'
-import styled from '@emotion/styled'
 import { css } from '@emotion/react'
-import MaskedInput from 'react-text-mask'
 
 import { Cursor, Font, HoverState, StatusState } from '../../config'
 import {
@@ -92,28 +90,3 @@ export const controlStyles = ({
     `,
   ]
 }
-
-export const StyledInput = styled.input(controlStyles)
-
-export const StyledInputHidden = styled.input()
-
-// Instead of exporting a styled.select and using withComponent to change the tag e.g. a div in the
-// Select molecule, it is preferable to just export the styles according to this thread:
-// https://github.com/emotion-js/emotion/issues/2012
-export const selectStyles = () => [
-  controlStyles,
-  () => css`
-    appearance: none;
-    &::-ms-expand {
-      display: none;
-    }
-  `,
-]
-
-export interface InputMaskedProps extends ControlProps {
-  currency?: string
-}
-
-export const StyledInputMasked = styled(MaskedInput)<InputMaskedProps>(
-  controlStyles,
-)

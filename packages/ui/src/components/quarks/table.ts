@@ -1,5 +1,6 @@
 import { css } from '@emotion/react'
-import { Font } from '../../config'
+import styled from '@emotion/styled'
+import { Font, OverflowOption } from '../../config'
 
 import { Styled, padded, typographic, Parent } from '../../traits'
 
@@ -56,3 +57,18 @@ export const getTableData = (tableRows: TableRows = []): TableData => {
   })
   return { rows, data }
 }
+
+export interface OverflowProps {
+  height: string
+  x?: OverflowOption
+  y?: OverflowOption
+}
+
+export const Overflow = styled.div<OverflowProps>(
+  ({ height, x, y }) => css`
+    width: 100%;
+    height: ${height};
+    overflow-x: ${x};
+    overflow-y: ${y};
+  `,
+)

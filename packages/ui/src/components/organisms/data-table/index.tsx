@@ -11,8 +11,8 @@ import { useDebouncedCallback } from 'use-debounce'
 import { Font, InputType, ControlOption } from '../../../config'
 import { TableProps, TableRows } from '../../quarks'
 import { PaginationProps, useID, usePagination } from '../../../hooks'
-import { Input, Label, T } from '../../atoms'
-import { TableResponsive, Select, PaginationNav } from '../../molecules'
+import { Input, Select, Label, T } from '../../atoms'
+import { TableResponsive, PaginationNav } from '../../molecules'
 
 import * as Styled from './styles'
 
@@ -113,8 +113,8 @@ export const DataTable: FC<DataTableProps> = ({
     [perPageOptionsProp],
   )
 
-  const filterRef = useRef<HTMLInputElement>()
-  const perPageRef = useRef<HTMLInputElement>()
+  const filterRef = useRef<HTMLInputElement>(null)
+  const perPageRef = useRef<HTMLInputElement>(null)
 
   const [tableID] = useID()
 

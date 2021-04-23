@@ -1,7 +1,6 @@
 export { useBreakpoint } from './use-breakpoint'
 export { useID } from './use-id'
 export { useMenu } from './use-menu'
-export { useNavItem } from './use-nav-item'
 export {
   useNavMenu,
   NavMenuProps,
