@@ -10,10 +10,10 @@ export default {
 } as Meta
 
 const options = [
-  { label: 'One', value: 1 },
-  { label: 'Two', value: 2 },
-  { label: 'Three', value: 3 },
-  { label: 'Four', value: 4 },
+  { label: 'One', value: '1' },
+  { label: 'Two', value: '2' },
+  { label: 'Three', value: '3' },
+  { label: 'Four', value: '4' },
 ]
 
 const exampleFilterOptions: FilterOptionsFunc = (value, opts, callback) => {
