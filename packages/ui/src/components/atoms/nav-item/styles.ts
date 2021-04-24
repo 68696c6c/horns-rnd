@@ -2,9 +2,22 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
 import { BorderStyle, Colorway, Side, Size } from '../../../config'
-import { bordered, Styled } from '../../../traits'
-import { NavItemLayout, NavItemProps, navItemStyles } from '../../quarks'
+import { Styled, chromatic, bordered } from '../../../traits'
+import { NavItemProps, navItemStyles, NavItemLayout } from '../../quarks'
 import { valueToNumber } from '../../../utils'
+
+export const NavItemBackground = styled.a(
+  navItemStyles,
+  ({
+    theme,
+    color: colorProp,
+    current,
+    currentColor,
+  }: Styled & NavItemProps) => {
+    const color = current ? currentColor : colorProp
+    return chromatic({ theme, color })
+  },
+)
 
 export const NavItemBorder = styled.a(
   navItemStyles,
@@ -60,4 +73,13 @@ export const NavItemBorder = styled.a(
     }
     return null
   },
+)
+
+export const NavItemUnderline = styled.a(
+  navItemStyles,
+  ({ current }: NavItemProps) =>
+    current &&
+    css`
+      text-decoration: underline !important;
+    `,
 )

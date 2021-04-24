@@ -2,19 +2,19 @@ import React, { FC, useMemo } from 'react'
 
 import { LinkProps as BaseLinkProps, getLinkVariantTag } from '../../quarks'
 
-export interface LinkProps extends BaseLinkProps {
-  href: string
+export interface LinkPhoneProps extends BaseLinkProps {
+  number: string
 }
 
-export const Link: FC<LinkProps> = ({
+export const LinkPhone: FC<LinkPhoneProps> = ({
   children,
   variant,
-  href,
+  number,
   ...others
-}: LinkProps) => {
+}: LinkPhoneProps) => {
   const Tag = useMemo(() => getLinkVariantTag(variant), [variant])
   return (
-    <Tag {...others} href={href}>
+    <Tag {...others} href={`tel:${number}`}>
       {children}
     </Tag>
   )

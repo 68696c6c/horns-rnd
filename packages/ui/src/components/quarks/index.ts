@@ -17,6 +17,7 @@ export {
   navItemStyles,
   NavItemLayout,
   NavItemVariant,
+  getLinkVariantTag,
 } from './clickable'
 export { ControlProps, controlStyles } from './control'
 export { GridProps, gridStyles } from './grid'

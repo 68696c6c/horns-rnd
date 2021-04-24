@@ -1,4 +1,4 @@
-import React, { Dispatch, FC, MouseEvent, useEffect, useMemo } from 'react'
+import React, { Dispatch, FC, MouseEvent, useEffect } from 'react'
 import _union from 'lodash.union'
 import _without from 'lodash.without'
 
@@ -13,9 +13,9 @@ import {
   useNavMenu,
 } from '../../../hooks'
 import { SiteNavMenu } from '../../molecules'
+import { NavItem } from '../../atoms'
 
 import * as Styled from './styles'
-import { navItemFactory } from '../../atoms'
 
 export interface SiteNavProps extends Responsive, NavItemProps {
   currentPath?: string
@@ -58,7 +58,7 @@ export const SiteNav: FC<SiteNavProps> = ({
   breakpoint,
   ...others
 }: SiteNavProps) => {
-  const NavItemTag = useMemo(() => navItemFactory(variant), [variant])
+  // const NavItemTag = useMemo(() => navItemFactory(variant), [variant])
   const isMobile = useBreakpoint(breakpoint)
 
   const {
@@ -95,9 +95,10 @@ export const SiteNav: FC<SiteNavProps> = ({
         menuColor={menuColor}
         openLinkIDs={openLinkIDs}
         renderItem={(link, itemColor, itemLayout) => (
-          <NavItemTag
+          <NavItem
             {...navItemProps}
             {...{ [navLinkIDDataAttribute]: link.id }}
+            variant={variant}
             color={itemColor}
             layout={itemLayout}
             key={link.id}
@@ -113,7 +114,7 @@ export const SiteNav: FC<SiteNavProps> = ({
             current={currentLinkIDs.includes(link.id)}
           >
             {link.text}
-          </NavItemTag>
+          </NavItem>
         )}
       />
     </Styled.SiteNav>

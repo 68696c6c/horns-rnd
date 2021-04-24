@@ -1,6 +1,6 @@
-import React, { FC, useEffect, useMemo, useState, MouseEvent } from 'react'
+import React, { FC, useEffect, useState, MouseEvent } from 'react'
 
-import { navItemFactory } from '../../atoms'
+import { NavItem } from '../../atoms'
 import { makeIntArray } from '../../../utils'
 
 import * as Styled from './styles'
@@ -19,7 +19,6 @@ export const PaginationNav: FC<Styled.PaginationNavProps> = ({
 }: Styled.PaginationNavProps) => {
   const totalPages = totalPagesProp || 1
   const currentPage = currentPageProp || 1
-  const Tag = useMemo(() => navItemFactory(variant), [variant])
 
   const [current, setCurrent] = useState(currentPage)
   const [pages, setPages] = useState(() => makeIntArray(totalPages))
@@ -41,9 +40,10 @@ export const PaginationNav: FC<Styled.PaginationNavProps> = ({
   return (
     <Styled.PaginationNav currentPage={current} {...others}>
       {pages.map((page) => (
-        <Tag
+        <NavItem
           key={page}
           href="#"
+          variant={variant}
           font={font}
           layout={layout}
           currentColor={currentColor}
@@ -56,7 +56,7 @@ export const PaginationNav: FC<Styled.PaginationNavProps> = ({
           }}
         >
           {page}
-        </Tag>
+        </NavItem>
       ))}
     </Styled.PaginationNav>
   )

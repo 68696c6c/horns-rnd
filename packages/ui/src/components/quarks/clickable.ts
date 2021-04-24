@@ -122,6 +122,9 @@ export const linkStyles = ({
 
 export const StyledLink = styled.a(linkStyles)
 
+export const getLinkVariantTag = (variant?: LinkVariant) =>
+  variant === LinkVariant.Button ? StyledLinkButton : StyledLink
+
 export const styleLink = (CustomComponent: any) =>
   styled(CustomComponent)(linkStyles)
 
