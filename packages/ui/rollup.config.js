@@ -3,10 +3,7 @@ import pkg from './package.json'
 
 const input = 'src/index.ts'
 
-const external = [
-  ...Object.keys(pkg.peerDependencies),
-  ...Object.keys(pkg.dependencies),
-]
+const external = [...Object.keys(pkg.peerDependencies)]
 
 const plugins = [
   typescript({
