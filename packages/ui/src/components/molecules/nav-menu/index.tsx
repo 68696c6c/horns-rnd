@@ -21,7 +21,7 @@ export interface NavMenuProps extends NavItemProps {
   top?: boolean
 }
 
-export const SiteNavMenu: FC<NavMenuProps> = ({
+export const NavMenu: FC<NavMenuProps> = ({
   color,
   links,
   renderItem,
@@ -42,7 +42,7 @@ export const SiteNavMenu: FC<NavMenuProps> = ({
               {renderItem(link, top ? color : menuColor, layout)}
               <MenuContainer open={openLinkIDs.includes(link.id)}>
                 <Styled.NavMenu open={openLinkIDs.includes(link.id)}>
-                  <SiteNavMenu
+                  <NavMenu
                     links={link.links}
                     color={menuColor}
                     menuColor={menuColor}

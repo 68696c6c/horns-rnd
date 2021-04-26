@@ -81,6 +81,9 @@ const BaseSelect: FC<SelectProps> = ({
     forceWidth: true,
   })
 
+  const handleFilterClick = (e: MouseEvent<HTMLInputElement>) =>
+    e.stopPropagation()
+
   return (
     <>
       <input
@@ -110,8 +113,7 @@ const BaseSelect: FC<SelectProps> = ({
                   type={InputType.Text}
                   id={`${id}-select-filter`}
                   name={`${name}_select_filter`}
-                  onClick={(event: MouseEvent<HTMLInputElement>) =>
-                    event.stopPropagation()}
+                  onClick={handleFilterClick}
                   onKeyUp={handleFilter}
                   autoComplete="off"
                 />

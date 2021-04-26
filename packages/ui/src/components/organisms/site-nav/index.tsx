@@ -12,7 +12,7 @@ import {
   useBreakpoint,
   useNavMenu,
 } from '../../../hooks'
-import { SiteNavMenu } from '../../molecules'
+import { NavMenu } from '../../molecules'
 import { NavItem } from '../../atoms'
 
 import * as Styled from './styles'
@@ -87,7 +87,7 @@ export const SiteNav: FC<SiteNavProps> = ({
 
   return (
     <Styled.SiteNav {...others} color={color}>
-      <SiteNavMenu
+      <NavMenu
         top
         links={linksToRender}
         color={color}
