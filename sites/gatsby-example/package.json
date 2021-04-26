@@ -1,6 +1,6 @@
 {
   "name": "gatsby-example",
-  "version": "0.0.1-dev.0",
+  "version": "0.0.1-dev.8",
   "description": "Example Gatsby project.",
   "private": true,
   "scripts": {
@@ -11,6 +11,7 @@
     "serve": "yarn build && gatsby serve"
   },
   "dependencies": {
+    "@horns/ui": "^0.0.1-dev.8",
     "gatsby": "^2.32.3",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-gatsby-cloud": "^1.0.1",
@@ -20,7 +21,6 @@
     "gatsby-plugin-sharp": "^2.14.1",
     "gatsby-source-filesystem": "^2.1.43",
     "gatsby-transformer-sharp": "^2.12.0",
-    "@horns/ui": "0.0.1-dev.7",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
