@@ -1,12 +1,11 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link as GatsbyLink } from 'gatsby'
 
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { Header, Link, Main, Footer } from '@horns/ui'
+import { LinkWithContext, LinkProvider, Header, Main, Footer } from '@horns/ui'
 
-import { GatsbyLink } from './link'
+import { CustomLink } from './link'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -21,19 +20,23 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header>
-        <nav>
-          <GatsbyLink to="/">
-            {data.site.siteMetadata?.title || 'Title'}
-          </GatsbyLink>
-          <Link href="/page-2">Not a gatsby link</Link>
-        </nav>
-      </Header>
-      <Main>{children}</Main>
-      <Footer>
-        © {new Date().getFullYear()}, Built with{' '}
-        <Link href="https://www.gatsbyjs.com">Gatsby</Link>
-      </Footer>
+      <LinkProvider Component={CustomLink}>
+        <Header>
+          <nav>
+            <GatsbyLink to="/page-2">gatsby link</GatsbyLink>
+            <LinkWithContext to="/">
+              {data.site.siteMetadata?.title || 'Title'}
+            </LinkWithContext>
+            <LinkWithContext to="/page-2" variant="button">Page 2</LinkWithContext>
+            <LinkWithContext to="https://google.com" target="_blank">Not a gatsby link</LinkWithContext>
+          </nav>
+        </Header>
+        <Main>{children}</Main>
+        <Footer>
+          © {new Date().getFullYear()}, Built with{' '}
+          <LinkWithContext to="https://www.gatsbyjs.com">Gatsby</LinkWithContext>
+        </Footer>
+      </LinkProvider>
     </>
   )
 }

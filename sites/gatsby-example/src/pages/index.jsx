@@ -1,10 +1,9 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { T, Heading } from '@horns/ui'
 
-import { Layout, GatsbyLinkButton, Image, Seo } from '../components'
+import { Layout, Link, Image, Seo } from '../components'
 
 // eslint-disable-next-line react/prop-types
 const IndexPage = ({ data }) => (
@@ -15,9 +14,9 @@ const IndexPage = ({ data }) => (
     <T>Now go build something great.</T>
     {/* eslint-disable-next-line react/prop-types */}
     <Image maxWidth="300px" image={data.placeholderImage} />
-    <GatsbyLinkButton to="/page-2/" color="primary">
+    <Link to="/page-2/" color="primary">
       Go to page 2
-    </GatsbyLinkButton>
+    </Link>
   </Layout>
 )
 

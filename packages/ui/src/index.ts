@@ -7,6 +7,7 @@ export {
   Header,
   Input,
   Link,
+  LinkWithContext,
   LinkEmail,
   LinkPhone,
   Main,
@@ -43,5 +44,7 @@ export {
   // ThemeProvider
   ThemeProvider,
 } from './components'
+
+export { LinkProvider } from './context'
 
 export { Theme, Config } from './config'

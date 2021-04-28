@@ -18,9 +18,9 @@
     "docs:watch": "yarn boot && yarn workspace @horns/ui docs:watch",
     "build": "yarn boot && yarn workspace @horns/ui build",
     "build:watch": "yarn boot && yarn workspace @horns/ui build:watch",
-    "ex:dev": "yarn workspace gatsby-example develop",
-    "ex:serve": "yarn workspace gatsby-example serve",
-    "ex:analyze": "yarn workspace gatsby-example analyze",
+    "ex:dev": "yarn build && yarn workspace gatsby-example develop",
+    "ex:serve": "yarn build && yarn workspace gatsby-example serve",
+    "ex:analyze": "yarn build && yarn workspace gatsby-example analyze",
     "net:dev": "yarn workspace gatsby-netlify develop",
     "net:serve": "yarn workspace gatsby-netlify serve",
     "release": "yarn build && lerna publish"

@@ -1,9 +1,25 @@
-import { Link } from 'gatsby'
+import React from 'react'
+import { Link as GatsbyLink } from 'gatsby'
 
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { styleLink, styleButton } from '@horns/ui'
+const relativeLinkRegex = /^\/(?!\/)/
 
-export const GatsbyLink = styleLink(Link)
-export const GatsbyLinkButton = styleButton(Link)
+export const CustomLink = ({ children, to, ...props }) => {
+  console.log('custom link: ', to)
+  const isRelativeLink = relativeLinkRegex.test(to)
 
-export default GatsbyLink
+  if (!isRelativeLink) {
+    console.log('external link')
+    return (
+      <a href={to} {...props}>
+        {children}
+      </a>
+    )
+  }
+
+  console.log('gatsby link')
+  return (
+    <GatsbyLink to={to} {...props}>
+      {children}
+    </GatsbyLink>
+  )
+}

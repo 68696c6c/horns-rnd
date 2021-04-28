@@ -1,6 +1,5 @@
 import React from 'react'
 
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { T, Heading } from '@horns/ui'
 
 import { Layout, Seo } from '../components'
