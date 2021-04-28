@@ -1,6 +1,7 @@
 import babel from '@rollup/plugin-babel'
 import del from 'rollup-plugin-delete'
 import typescript from 'rollup-plugin-typescript2'
+import { DEFAULT_EXTENSIONS } from '@babel/core'
 
 import pkg from './package.json'
 
@@ -14,7 +15,10 @@ const plugins = [
     // eslint-disable-next-line global-require
     typescript: require('typescript'),
   }),
-  babel({ babelHelpers: 'bundled' }),
+  babel({
+    babelHelpers: 'bundled',
+    extensions: [...DEFAULT_EXTENSIONS, '.ts', '.tsx'],
+  }),
 ]
 
 export default [
