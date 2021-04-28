@@ -33,15 +33,15 @@ export default [
     plugins,
     external,
   },
-  {
-    input,
-    output: {
-      file: pkg.main,
-      format: 'umd',
-      name: 'horns-ui',
-      sourcemap: true,
-    },
-    plugins,
-    external,
-  },
+  // {
+  //   input,
+  //   output: {
+  //     file: pkg.main,
+  //     format: 'umd',
+  //     name: 'horns-ui',
+  //     sourcemap: true,
+  //   },
+  //   plugins,
+  //   external,
+  // },
 ]
