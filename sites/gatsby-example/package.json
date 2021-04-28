@@ -1,6 +1,6 @@
 {
   "name": "gatsby-example",
-  "version": "0.0.1-dev.10",
+  "version": "0.0.1-dev.11",
   "description": "Example Gatsby project.",
   "private": true,
   "scripts": {
@@ -11,7 +11,7 @@
     "serve": "yarn build && gatsby serve"
   },
   "dependencies": {
-    "@horns/ui": "^0.0.1-dev.10",
+    "@horns/ui": "^0.0.1-dev.11",
     "gatsby": "^2.32.3",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-gatsby-cloud": "^1.0.1",
