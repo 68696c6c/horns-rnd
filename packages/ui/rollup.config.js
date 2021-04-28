@@ -1,3 +1,4 @@
+import babel from '@rollup/plugin-babel'
 import del from 'rollup-plugin-delete'
 import typescript from 'rollup-plugin-typescript2'
 
@@ -13,6 +14,7 @@ const plugins = [
     // eslint-disable-next-line global-require
     typescript: require('typescript'),
   }),
+  babel({ babelHelpers: 'bundled' }),
 ]
 
 export default [
