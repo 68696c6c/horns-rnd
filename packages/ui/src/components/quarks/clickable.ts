@@ -144,7 +144,8 @@ export enum NavItemLayout {
 }
 
 export interface NavItemProps
-  extends Chromatic,
+  extends Parent,
+    Chromatic,
     Interactive,
     Padded,
     Typographic {
@@ -153,8 +154,8 @@ export interface NavItemProps
   currentColor?: ColorwayOption
   currentBorderWidth?: Size
   currentBorderStyle?: BorderStyle
-  href?: string
   current?: boolean
+  href: string
 }
 
 export const navItemStyles = ({

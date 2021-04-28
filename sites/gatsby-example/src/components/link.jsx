@@ -3,22 +3,19 @@ import { Link as GatsbyLink } from 'gatsby'
 
 const relativeLinkRegex = /^\/(?!\/)/
 
-export const CustomLink = ({ children, to, ...props }) => {
-  console.log('custom link: ', to)
-  const isRelativeLink = relativeLinkRegex.test(to)
+export const CustomLink = ({ children, href, ...props }) => {
+  const isRelativeLink = relativeLinkRegex.test(href)
 
   if (!isRelativeLink) {
-    console.log('external link')
     return (
-      <a href={to} {...props}>
+      <a href={href} {...props}>
         {children}
       </a>
     )
   }
 
-  console.log('gatsby link')
   return (
-    <GatsbyLink to={to} {...props}>
+    <GatsbyLink to={href} {...props}>
       {children}
     </GatsbyLink>
   )

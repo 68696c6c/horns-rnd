@@ -3,7 +3,7 @@ import React from 'react'
 
 import { T, Heading } from '@horns/ui'
 
-import { Layout, Link, Image, Seo } from '../components'
+import { Layout, CustomLink, Image, Seo } from '../components'
 
 // eslint-disable-next-line react/prop-types
 const IndexPage = ({ data }) => (
@@ -14,9 +14,9 @@ const IndexPage = ({ data }) => (
     <T>Now go build something great.</T>
     {/* eslint-disable-next-line react/prop-types */}
     <Image maxWidth="300px" image={data.placeholderImage} />
-    <Link to="/page-2/" color="primary">
+    <CustomLink href="/page-2/" color="primary">
       Go to page 2
-    </Link>
+    </CustomLink>
   </Layout>
 )
 

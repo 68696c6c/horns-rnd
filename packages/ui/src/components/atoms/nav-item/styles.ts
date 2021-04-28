@@ -6,7 +6,10 @@ import { Styled, chromatic, bordered } from '../../../traits'
 import { NavItemProps, navItemStyles, NavItemLayout } from '../../quarks'
 import { valueToNumber } from '../../../utils'
 
-export const NavItemBackground = styled.a(
+// TODO: find a more atomic way of doing this.
+import { LinkWithContext } from '../link'
+
+export const NavItemBackground = styled(LinkWithContext)(
   navItemStyles,
   ({
     theme,
@@ -19,7 +22,7 @@ export const NavItemBackground = styled.a(
   },
 )
 
-export const NavItemBorder = styled.a(
+export const NavItemBorder = styled(LinkWithContext)(
   navItemStyles,
   ({
     theme,
@@ -75,7 +78,7 @@ export const NavItemBorder = styled.a(
   },
 )
 
-export const NavItemUnderline = styled.a(
+export const NavItemUnderline = styled(LinkWithContext)(
   navItemStyles,
   ({ current }: NavItemProps) =>
     current &&

@@ -24,17 +24,17 @@ const Layout = ({ children }) => {
         <Header>
           <nav>
             <GatsbyLink to="/page-2">gatsby link</GatsbyLink>
-            <LinkWithContext to="/">
+            <LinkWithContext href="/">
               {data.site.siteMetadata?.title || 'Title'}
             </LinkWithContext>
-            <LinkWithContext to="/page-2" variant="button">Page 2</LinkWithContext>
-            <LinkWithContext to="https://google.com" target="_blank">Not a gatsby link</LinkWithContext>
+            <LinkWithContext href="/page-2" variant="button">Page 2</LinkWithContext>
+            <LinkWithContext href="https://google.com" target="_blank">Not a gatsby link</LinkWithContext>
           </nav>
         </Header>
         <Main>{children}</Main>
         <Footer>
           © {new Date().getFullYear()}, Built with{' '}
-          <LinkWithContext to="https://www.gatsbyjs.com">Gatsby</LinkWithContext>
+          <LinkWithContext href="https://www.gatsbyjs.com">Gatsby</LinkWithContext>
         </Footer>
       </LinkProvider>
     </>
