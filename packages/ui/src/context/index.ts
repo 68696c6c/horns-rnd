@@ -1,1 +1,1 @@
-export { LinkProvider } from './link-provider'
+export { LinkProvider, useLink } from './link-provider'

@@ -1,4 +1,5 @@
 // Clickables are interactive elements that can be clicked on, like buttons, links, and nav items.
+import { ElementType } from 'react'
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
@@ -79,16 +80,23 @@ export const StyledLinkButton = styled.a(buttonStyles)
 
 export const StyledButton = styled.button(buttonStyles)
 
-export interface LinkProps extends ButtonProps {
+export interface BaseLinkProps extends ButtonProps {
   variant?: LinkVariant
 }
+
+// This interface exists so that we can enforce that both NavItem and Link have the same href prop without adding all of the other Link props to the NavItem.
+export interface Anchor {
+  href: string
+}
+
+export interface LinkProps extends BaseLinkProps, Anchor {}
 
 export const linkStyles = ({
   theme,
   color,
   cursor,
   font,
-}: Styled & LinkProps) => {
+}: Styled & BaseLinkProps) => {
   const chromaticArgs = { theme, color }
   const typographicArgs = { theme, font, fontDefault: Font.Link }
   return [
@@ -131,6 +139,9 @@ export const styleLink = (CustomComponent: any) =>
 export const styleButton = (CustomComponent: any) =>
   styled(CustomComponent)(buttonStyles)
 
+export const styleCustomLinkTag = (Tag: ElementType, variant?: LinkVariant) =>
+  variant === LinkVariant.Button ? styleButton(Tag) : styleLink(Tag)
+
 export enum NavItemVariant {
   Background = 'background',
   Border = 'border',
@@ -143,49 +154,10 @@ export enum NavItemLayout {
   Vertical = 'vertical',
 }
 
-export interface NavItemProps
-  extends Parent,
-    Chromatic,
-    Interactive,
-    Padded,
-    Typographic {
+export interface BaseNavItemProps extends Chromatic, Typographic {
   variant?: NavItemVariant
   layout?: NavItemLayout
   currentColor?: ColorwayOption
   currentBorderWidth?: Size
   currentBorderStyle?: BorderStyle
-  current?: boolean
-  href: string
-}
-
-export const navItemStyles = ({
-  theme,
-  cursor,
-  color,
-  padding,
-  font,
-  layout: layoutProp,
-}: Styled & NavItemProps) => {
-  const layout = layoutProp || NavItemLayout.Horizontal
-  const { buttons } = theme
-  return [
-    chromatic,
-    interactive({
-      theme,
-      cursor,
-      cursorDefault: Cursor.Pointer,
-      hoverStyles: [chromatic({ theme, color, state: HoverState.Hover })],
-      activeStyles: [chromatic({ theme, color, state: HoverState.Active })],
-      inactiveStyles: [
-        chromatic({ theme, color, state: StatusState.Inactive }),
-      ],
-    }),
-    padded({ theme, padding, paddingDefault: buttons.padding }),
-    typographic({ theme, font, fontDefault: Font.Nav }),
-    css`
-      display: ${layout === NavItemLayout.Horizontal
-        ? 'inline-block'
-        : 'block'};
-    `,
-  ]
 }

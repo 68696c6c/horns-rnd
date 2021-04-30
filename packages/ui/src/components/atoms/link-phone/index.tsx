@@ -1,6 +1,6 @@
 import React, { FC, useMemo } from 'react'
 
-import { LinkProps as BaseLinkProps, getLinkVariantTag } from '../../quarks'
+import { BaseLinkProps, getLinkVariantTag } from '../../quarks'
 
 export interface LinkPhoneProps extends BaseLinkProps {
   number: string

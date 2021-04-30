@@ -7,7 +7,7 @@ export {
   Header,
   Input,
   Link,
-  LinkWithContext,
+  LinkFromContext,
   LinkEmail,
   LinkPhone,
   Main,

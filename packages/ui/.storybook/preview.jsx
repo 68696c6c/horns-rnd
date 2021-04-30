@@ -1,14 +1,30 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import { ThemeProvider } from '@storybook/theming'
 
 import { makeTheme } from '../src/config'
 import { LinkProvider } from '../src'
 
-// eslint-disable-next-line react/prop-types
-export const StorybookLink = ({ href, children, ...others }) => (
-  <a href={href} {...others}>
+export const StorybookLink = ({
+  href,
+  children,
+  onClick,
+  current,
+  ...others
+}) => (
+  // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/interactive-supports-focus
+  <span
+    {...others}
+    role="link"
+    onClick={() => {
+      console.log('link clicked: ', href)
+      if (typeof onClick !== 'undefined') {
+        onClick()
+      }
+    }}
+  >
     {children}
-  </a>
+  </span>
 )
 
 export const decorators = [

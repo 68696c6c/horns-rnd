@@ -4,7 +4,7 @@ import _without from 'lodash.without'
 
 import { Colorway } from '../../../config'
 import { Responsive } from '../../../traits'
-import { NavItemLayout, NavItemProps } from '../../quarks'
+import { NavItemLayout, BaseNavItemProps } from '../../quarks'
 import {
   NavLink,
   navLinkIDDataAttribute,
@@ -17,7 +17,7 @@ import { NavItem } from '../../atoms'
 
 import * as Styled from './styles'
 
-export interface SiteNavProps extends Responsive, NavItemProps {
+export interface SiteNavProps extends Responsive, BaseNavItemProps {
   currentPath?: string
   links?: NavLink[]
   menuColor?: Colorway

@@ -1,27 +1,17 @@
 import React, { FC, useMemo } from 'react'
 
+import { useLink } from '../../../context'
 import { Font } from '../../../config'
-import { NavItemProps, NavItemVariant } from '../../quarks'
 
-import * as Styled from './styles'
-
-const getVariantTag = (variant?: NavItemVariant) => {
-  switch (variant) {
-    case NavItemVariant.Background:
-      return Styled.NavItemBackground
-    case NavItemVariant.Underline:
-      return Styled.NavItemUnderline
-    default:
-      return Styled.NavItemBorder
-  }
-}
+import { NavItemProps, getVariantTag } from './styles'
 
 export const NavItem: FC<NavItemProps> = ({
   children,
   variant,
   ...others
 }: NavItemProps) => {
-  const Tag = useMemo(() => getVariantTag(variant), [variant])
+  const Base = useLink()
+  const Tag = useMemo(() => getVariantTag(Base, variant), [variant, Base])
   return <Tag {...others}>{children}</Tag>
 }
 

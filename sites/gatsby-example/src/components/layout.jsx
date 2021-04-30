@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql, Link as GatsbyLink } from 'gatsby'
 
-import { LinkWithContext, LinkProvider, Header, Main, Footer } from '@horns/ui'
+import { LinkFromContext, LinkProvider, Header, Main, Footer } from '@horns/ui'
 
 import { CustomLink } from './link'
 
@@ -23,18 +23,16 @@ const Layout = ({ children }) => {
       <LinkProvider Component={CustomLink}>
         <Header>
           <nav>
-            <GatsbyLink to="/page-2">gatsby link</GatsbyLink>
-            <LinkWithContext href="/">
-              {data.site.siteMetadata?.title || 'Title'}
-            </LinkWithContext>
-            <LinkWithContext href="/page-2" variant="button">Page 2</LinkWithContext>
-            <LinkWithContext href="https://google.com" target="_blank">Not a gatsby link</LinkWithContext>
+            <LinkFromContext href="/">Home - LinkFromContext</LinkFromContext>
+            <GatsbyLink to="/page-2">Page 2 - GatsbyLink</GatsbyLink>
+            <LinkFromContext href="/page-2" variant="button">Page 2 - LinkFromContext</LinkFromContext>
+            <LinkFromContext href="https://google.com" target="_blank">External - LinkFromContext</LinkFromContext>
           </nav>
         </Header>
         <Main>{children}</Main>
         <Footer>
           © {new Date().getFullYear()}, Built with{' '}
-          <LinkWithContext href="https://www.gatsbyjs.com">Gatsby</LinkWithContext>
+          <LinkFromContext href="https://www.gatsbyjs.com">Gatsby</LinkFromContext>
         </Footer>
       </LinkProvider>
     </>

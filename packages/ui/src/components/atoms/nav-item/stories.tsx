@@ -35,8 +35,8 @@ export const Background: Story = () => (
     <div>
       <div>
         <NavItem
+          href="#"
           variant={NavItemVariant.Background}
-          onClick={(e) => e.preventDefault()}
           color={Colorway.Dark}
         >
           horizontal nav item
@@ -44,8 +44,8 @@ export const Background: Story = () => (
       </div>
       <div>
         <NavItem
+          href="#"
           variant={NavItemVariant.Background}
-          onClick={(e) => e.preventDefault()}
           layout={NavItemLayout.Vertical}
           color={Colorway.Neutral}
         >
@@ -56,8 +56,8 @@ export const Background: Story = () => (
     <div>
       <div>
         <NavItem
+          href="#"
           variant={NavItemVariant.Background}
-          onClick={(e) => e.preventDefault()}
           color={Colorway.Dark}
           currentColor={Colorway.Primary}
           current
@@ -67,8 +67,8 @@ export const Background: Story = () => (
       </div>
       <div>
         <NavItem
+          href="#"
           variant={NavItemVariant.Background}
-          onClick={(e) => e.preventDefault()}
           layout={NavItemLayout.Vertical}
           color={Colorway.Neutral}
           currentColor={Colorway.Primary}
@@ -82,18 +82,14 @@ export const Background: Story = () => (
     <h2>Layout Prop</h2>
     <div>
       <div>
-        <NavItem
-          variant={NavItemVariant.Background}
-          onClick={(e) => e.preventDefault()}
-          current
-        >
+        <NavItem href="#" variant={NavItemVariant.Background} current>
           current horizontal nav item
         </NavItem>
       </div>
       <div>
         <NavItem
+          href="#"
           variant={NavItemVariant.Background}
-          onClick={(e) => e.preventDefault()}
           layout={NavItemLayout.Vertical}
           current
         >
@@ -119,8 +115,8 @@ export const Border: Story = () => (
     <div>
       <div>
         <NavItem
+          href="#"
           variant={NavItemVariant.Border}
-          onClick={(e) => e.preventDefault()}
           color={Colorway.Secondary}
           current
         >
@@ -129,8 +125,8 @@ export const Border: Story = () => (
       </div>
       <div>
         <NavItem
+          href="#"
           variant={NavItemVariant.Border}
-          onClick={(e) => e.preventDefault()}
           color={Colorway.Tertiary}
           layout={NavItemLayout.Vertical}
           current
@@ -142,8 +138,8 @@ export const Border: Story = () => (
     <div>
       <div>
         <NavItem
+          href="#"
           variant={NavItemVariant.Border}
-          onClick={(e) => e.preventDefault()}
           color={Colorway.Neutral}
           currentColor={Colorway.Success}
           currentBorderStyle={BorderStyle.Dotted}
@@ -154,8 +150,8 @@ export const Border: Story = () => (
       </div>
       <div>
         <NavItem
+          href="#"
           variant={NavItemVariant.Border}
-          onClick={(e) => e.preventDefault()}
           color={Colorway.Neutral}
           layout={NavItemLayout.Vertical}
           currentColor={Colorway.Info}
@@ -170,18 +166,14 @@ export const Border: Story = () => (
     <h2>Layout Prop</h2>
     <div>
       <div>
-        <NavItem
-          variant={NavItemVariant.Border}
-          onClick={(e) => e.preventDefault()}
-          current
-        >
+        <NavItem href="#" variant={NavItemVariant.Border} current>
           current horizontal nav item
         </NavItem>
       </div>
       <div>
         <NavItem
+          href="#"
           variant={NavItemVariant.Border}
-          onClick={(e) => e.preventDefault()}
           layout={NavItemLayout.Vertical}
           current
         >
@@ -202,8 +194,8 @@ export const Underline: Story = () => (
     <div>
       <div>
         <NavItem
+          href="#"
           variant={NavItemVariant.Underline}
-          onClick={(e) => e.preventDefault()}
           color={Colorway.Dark}
         >
           horizontal nav item
@@ -211,8 +203,8 @@ export const Underline: Story = () => (
       </div>
       <div>
         <NavItem
+          href="#"
           variant={NavItemVariant.Underline}
-          onClick={(e) => e.preventDefault()}
           layout={NavItemLayout.Vertical}
           color={Colorway.Neutral}
         >
@@ -223,8 +215,8 @@ export const Underline: Story = () => (
     <div>
       <div>
         <NavItem
+          href="#"
           variant={NavItemVariant.Underline}
-          onClick={(e) => e.preventDefault()}
           color={Colorway.Secondary}
           current
         >
@@ -233,8 +225,8 @@ export const Underline: Story = () => (
       </div>
       <div>
         <NavItem
+          href="#"
           variant={NavItemVariant.Underline}
-          onClick={(e) => e.preventDefault()}
           color={Colorway.Tertiary}
           layout={NavItemLayout.Vertical}
           current
@@ -247,18 +239,14 @@ export const Underline: Story = () => (
     <h2>Layout Prop</h2>
     <div>
       <div>
-        <NavItem
-          variant={NavItemVariant.Underline}
-          onClick={(e) => e.preventDefault()}
-          current
-        >
+        <NavItem href="#" variant={NavItemVariant.Underline} current>
           current horizontal nav item
         </NavItem>
       </div>
       <div>
         <NavItem
+          href="#"
           variant={NavItemVariant.Underline}
-          onClick={(e) => e.preventDefault()}
           layout={NavItemLayout.Vertical}
           current
         >

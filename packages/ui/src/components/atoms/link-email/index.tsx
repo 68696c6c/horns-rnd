@@ -1,6 +1,6 @@
 import React, { FC, useMemo } from 'react'
 
-import { LinkProps as BaseLinkProps, getLinkVariantTag } from '../../quarks'
+import { BaseLinkProps, getLinkVariantTag } from '../../quarks'
 
 const getEmailHref = (email: string, subject: string, body: string): string => {
   let href = `mailto:${email}?`

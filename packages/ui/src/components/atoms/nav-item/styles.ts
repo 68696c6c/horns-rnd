@@ -1,15 +1,101 @@
+/**
+ * This file is using ComponentType instead of the recommended ElementType because ElementType
+ * doesn't work with the Emotion styled function and the objective is to provide a custom component
+ * that can be passed to that function.
+ */
+import { ComponentType } from 'react'
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-import { BorderStyle, Colorway, Side, Size } from '../../../config'
-import { Styled, chromatic, bordered } from '../../../traits'
-import { NavItemProps, navItemStyles, NavItemLayout } from '../../quarks'
+import {
+  BorderStyle,
+  Colorway,
+  Cursor,
+  Font,
+  HoverState,
+  Side,
+  Size,
+  StatusState,
+} from '../../../config'
+import {
+  Styled,
+  chromatic,
+  bordered,
+  Parent,
+  Interactive,
+  Padded,
+  interactive,
+  padded,
+  typographic,
+} from '../../../traits'
+import {
+  Anchor,
+  BaseNavItemProps,
+  NavItemLayout,
+  NavItemVariant,
+} from '../../quarks'
 import { valueToNumber } from '../../../utils'
 
-// TODO: find a more atomic way of doing this.
-import { LinkWithContext } from '../link'
+// TODO: the commented out getCustomVariantTag function below seems like it would be less efficient but avoids needing to import the LinkFromContext atom; investigate further
+import { LinkFromContext } from '../link-from-context'
 
-export const NavItemBackground = styled(LinkWithContext)(
+export interface NavItemProps
+  extends Parent,
+    Interactive,
+    Padded,
+    BaseNavItemProps,
+    Anchor {
+  current?: boolean
+}
+
+export const navItemStyles = ({
+  theme,
+  cursor,
+  color,
+  padding,
+  font,
+  layout: layoutProp,
+}: Styled & NavItemProps) => {
+  const layout = layoutProp || NavItemLayout.Horizontal
+  const { buttons } = theme
+  return [
+    chromatic,
+    interactive({
+      theme,
+      cursor,
+      cursorDefault: Cursor.Pointer,
+      hoverStyles: [chromatic({ theme, color, state: HoverState.Hover })],
+      activeStyles: [chromatic({ theme, color, state: HoverState.Active })],
+      inactiveStyles: [
+        chromatic({ theme, color, state: StatusState.Inactive }),
+      ],
+    }),
+    padded({ theme, padding, paddingDefault: buttons.padding }),
+    typographic({ theme, font, fontDefault: Font.Nav }),
+    css`
+      display: ${layout === NavItemLayout.Horizontal
+        ? 'inline-block'
+        : 'block'};
+    `,
+  ]
+}
+
+// export const getCustomVariantTag = (
+//   Base: ComponentType<any>,
+//   variant?: NavItemVariant,
+// ): StyledComponent<NavItemProps> => {
+//   console.log('create component')
+//   switch (variant) {
+//     case NavItemVariant.Background:
+//       return styled(Base)(navItemBackgroundStyles)
+//     case NavItemVariant.Underline:
+//       return styled(Base)(navItemUnderlineStyles)
+//     default:
+//       return styled(Base)(navItemBorderStyles)
+//   }
+// }
+
+const navItemBackgroundStyles = [
   navItemStyles,
   ({
     theme,
@@ -20,9 +106,9 @@ export const NavItemBackground = styled(LinkWithContext)(
     const color = current ? currentColor : colorProp
     return chromatic({ theme, color })
   },
-)
+]
 
-export const NavItemBorder = styled(LinkWithContext)(
+const navItemBorderStyles = [
   navItemStyles,
   ({
     theme,
@@ -76,13 +162,33 @@ export const NavItemBorder = styled(LinkWithContext)(
     }
     return null
   },
-)
+]
 
-export const NavItemUnderline = styled(LinkWithContext)(
+const navItemUnderlineStyles = [
   navItemStyles,
   ({ current }: NavItemProps) =>
     current &&
     css`
       text-decoration: underline !important;
     `,
+]
+
+export const NavItemBackground = styled(LinkFromContext)(
+  navItemBackgroundStyles,
 )
+export const NavItemUnderline = styled(LinkFromContext)(navItemUnderlineStyles)
+export const NavItemBorder = styled(LinkFromContext)(navItemBorderStyles)
+
+export const getVariantTag = (
+  Base: ComponentType<any>,
+  variant?: NavItemVariant,
+) => {
+  switch (variant) {
+    case NavItemVariant.Background:
+      return NavItemBackground
+    case NavItemVariant.Underline:
+      return NavItemUnderline
+    default:
+      return NavItemBorder
+  }
+}

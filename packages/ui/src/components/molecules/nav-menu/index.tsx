@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react'
 
 import { Colorway } from '../../../config'
-import { NavItemLayout, NavItemProps, MenuContainer } from '../../quarks'
+import { NavItemLayout, MenuContainer, BaseNavItemProps } from '../../quarks'
 import { NavLinkWithID } from '../../../hooks'
 
 import * as Styled from './styles'
@@ -12,7 +12,7 @@ export type NavItemRenderer = (
   itemLayout: NavItemLayout,
 ) => ReactNode
 
-export interface NavMenuProps extends NavItemProps {
+export interface NavMenuProps extends BaseNavItemProps {
   layout: NavItemLayout
   links?: NavLinkWithID[]
   renderItem: NavItemRenderer

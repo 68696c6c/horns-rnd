@@ -6,7 +6,7 @@ export {
   Header,
   Input,
   Link,
-  LinkWithContext,
+  LinkFromContext,
   LinkEmail,
   LinkPhone,
   Main,
@@ -37,6 +37,12 @@ export {
 
 export { DataTable, FormControl, SiteNav } from './organisms'
 
-export { StyledLink, StyledLinkButton, styleLink, styleButton } from './quarks'
+export {
+  StyledLink,
+  StyledLinkButton,
+  styleLink,
+  styleButton,
+  LinkProps,
+} from './quarks'
 
 export { default as ThemeProvider } from './theme-provider'

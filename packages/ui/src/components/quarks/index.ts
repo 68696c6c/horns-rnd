@@ -8,16 +8,18 @@ export {
   StyledButton,
   LinkVariant,
   ButtonProps,
+  Anchor,
+  BaseLinkProps,
   LinkProps,
   StyledLinkButton,
   StyledLink,
   styleLink,
   styleButton,
-  NavItemProps,
-  navItemStyles,
+  BaseNavItemProps,
   NavItemLayout,
   NavItemVariant,
   getLinkVariantTag,
+  styleCustomLinkTag,
 } from './clickable'
 export { ControlProps, controlStyles } from './control'
 export { GridProps, gridStyles } from './grid'
