@@ -2,6 +2,8 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
 import { blockDemo } from '../../../_story'
+import { Colorway, Size } from '../../../config'
+import { BlockProps } from '../../quarks'
 
 import { Footer } from '.'
 
@@ -10,10 +12,21 @@ export default {
   component: Footer,
 } as Meta
 
-export const Default: Story = () => (
-  <Footer>
-    <h1>footer</h1>
-  </Footer>
+const Template: Story<BlockProps> = ({ children, ...others }: BlockProps) => (
+  <Footer {...others}>{children}</Footer>
 )
+
+export const Default = Template.bind({})
+Default.args = {
+  children: 'Footer',
+}
+
+export const Props = Template.bind({})
+Props.args = {
+  ...Default.args,
+  color: Colorway.Primary,
+  padding: { all: Size.Small },
+  fluid: false,
+}
 
 export const Traits = () => blockDemo(Footer, {})

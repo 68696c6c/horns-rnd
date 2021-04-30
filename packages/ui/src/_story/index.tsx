@@ -250,6 +250,10 @@ export const containedDemo = <T extends {}>(
       right padding for centering the content within the content area of the
       page.
     </p>
+    <p>
+      If the &quot;fluid&quot; prop is set to &quot;true&quot;, this behavior is
+      disabled.
+    </p>
   </C>
 )
 

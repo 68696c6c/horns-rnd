@@ -9,7 +9,7 @@ import {
 
 import { Default, Props } from './stories'
 
-describe('Main', () => {
+describe('Nav', () => {
   it('should render as default', () => {
     const { container } = render(<Default>example</Default>)
     expect(container).toMatchSnapshot()

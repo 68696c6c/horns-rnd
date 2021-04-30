@@ -2,10 +2,10 @@ import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 
 import { clickableButtonDemo } from '../../../_story'
+import { Colorway, Font, Size } from '../../../config'
 import { ButtonProps } from '../../quarks'
 
 import { Button } from '.'
-import { Colorway, Font, Size } from '../../../config'
 
 export default {
   title: 'Atoms/Button',
@@ -18,12 +18,12 @@ const Template: Story<ButtonProps> = ({ children, ...others }: ButtonProps) => (
 
 export const Default = Template.bind({})
 Default.args = {
-  children: 'Default',
+  children: 'Button',
 }
 
 export const Props = Template.bind({})
 Props.args = {
-  children: 'Button',
+  ...Default.args,
   border: { all: { width: Size.Small } },
   color: Colorway.Primary,
   padding: { all: Size.Small },

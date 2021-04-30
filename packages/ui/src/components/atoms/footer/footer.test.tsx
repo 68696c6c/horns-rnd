@@ -1,29 +1,37 @@
 import React from 'react'
 
-import { render } from '../../test'
-import { Colorway, Size } from '../../../config'
+import {
+  render,
+  screen,
+  assertResponsiveStyles,
+  assertNoResponsiveStyles,
+} from '../../test'
 
-import { Footer } from '.'
+import { Default, Props } from './stories'
 
 describe('Footer', () => {
   it('should render as default', () => {
-    const { container } = render(
-      <Footer>
-        <h1>footer</h1>
-      </Footer>,
-    )
+    const { container } = render(<Default>example</Default>)
     expect(container).toMatchSnapshot()
   })
-  it.each(Object.values(Colorway))('should render colorway %s', (color) => {
-    const { container } = render(
-      <Footer color={color}>
-        <h1>{color}</h1>
-      </Footer>,
-    )
+  it('should support trait props', () => {
+    const { container } = render(<Props {...Props.args}>example</Props>)
     expect(container).toMatchSnapshot()
   })
-  it.each(Object.values(Size))('should render padding %s', (size) => {
-    const { container } = render(<Footer padding={size}>{size}</Footer>)
-    expect(container).toMatchSnapshot()
+  describe('container padding', () => {
+    it('should have container padding below the max breakpoint', () => {
+      render(<Default>example</Default>)
+      assertResponsiveStyles(screen.getByText('example'), '1200px', {
+        'padding-left': 'calc(((100vw - 1200px) / 2))',
+        'padding-right': 'calc(((100vw - 1200px) / 2))',
+      })
+    })
+    it('should not have container padding below the max breakpoint when fluid', () => {
+      render(<Default fluid>example</Default>)
+      assertNoResponsiveStyles(screen.getByText('example'), '1200px', {
+        'padding-left': 'calc(((100vw - 1200px) / 2))',
+        'padding-right': 'calc(((100vw - 1200px) / 2))',
+      })
+    })
   })
 })

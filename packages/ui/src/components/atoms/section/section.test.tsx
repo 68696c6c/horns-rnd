@@ -1,34 +1,37 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react'
 
-import { render } from '../../test'
-import { Colorway, Size } from '../../../config'
+import {
+  render,
+  screen,
+  assertResponsiveStyles,
+  assertNoResponsiveStyles,
+} from '../../test'
 
-import { Section } from '.'
+import { Default, Props } from './stories'
 
 describe('Section', () => {
   it('should render as default', () => {
-    const { container } = render(
-      <Section>
-        <h1>section</h1>
-        <p>content can go anywhere</p>
-        <div>a div</div>
-        <div>another div</div>
-      </Section>,
-    )
+    const { container } = render(<Default>example</Default>)
     expect(container).toMatchSnapshot()
   })
-  it.each(Object.values(Colorway))('should render colorway %s', (color) => {
-    const { container } = render(
-      <Section color={color}>
-        <h1>{color} section</h1>
-        <p>{color} content</p>
-      </Section>,
-    )
+  it('should support trait props', () => {
+    const { container } = render(<Props {...Props.args}>example</Props>)
     expect(container).toMatchSnapshot()
   })
-  it.each(Object.values(Size))('should render padding %s', (size) => {
-    const { container } = render(<Section padding={size}>{size}</Section>)
-    expect(container).toMatchSnapshot()
+  describe('container padding', () => {
+    it('should have container padding below the max breakpoint', () => {
+      render(<Default>example</Default>)
+      assertResponsiveStyles(screen.getByText('example'), '1200px', {
+        'padding-left': 'calc(((100vw - 1200px) / 2))',
+        'padding-right': 'calc(((100vw - 1200px) / 2))',
+      })
+    })
+    it('should not have container padding below the max breakpoint when fluid', () => {
+      render(<Default fluid>example</Default>)
+      assertNoResponsiveStyles(screen.getByText('example'), '1200px', {
+        'padding-left': 'calc(((100vw - 1200px) / 2))',
+        'padding-right': 'calc(((100vw - 1200px) / 2))',
+      })
+    })
   })
 })

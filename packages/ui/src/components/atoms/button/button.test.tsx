@@ -6,7 +6,7 @@ import { Default, Props } from './stories'
 
 describe('Button', () => {
   it('should render as default', () => {
-    const { container } = render(<Default {...Default.args}>example</Default>)
+    const { container } = render(<Default>example</Default>)
     expect(container).toMatchSnapshot()
   })
   it('should support trait props', () => {

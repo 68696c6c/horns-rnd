@@ -29,3 +29,39 @@ export const assertStateStyles = (
     )
   })
 }
+
+// Asserts that the provided styles only appear on the provided element below the specified width.
+export const assertResponsiveStyles = (
+  result: HTMLElement,
+  minWidth: string,
+  props: Record<string, string>,
+) => {
+  // Assert that the styles are applied when within the breakpoint.
+  Object.keys(props).forEach((propName) => {
+    expect(result).toHaveStyleRule(propName, props[propName], {
+      media: `(min-width: ${minWidth})`,
+    })
+  })
+  // Assert that the styles are NOT applied when above the breakpoint.
+  Object.keys(props).forEach((propName) => {
+    expect(result).not.toHaveStyleRule(propName, props[propName])
+  })
+}
+
+// Asserts that the provided styles never appear on the provided element, even when within the specified width.
+export const assertNoResponsiveStyles = (
+  result: HTMLElement,
+  minWidth: string,
+  props: Record<string, string>,
+) => {
+  // Assert that the styles are NOT applied when within the breakpoint.
+  Object.keys(props).forEach((propName) => {
+    expect(result).not.toHaveStyleRule(propName, props[propName], {
+      media: `(min-width: ${minWidth})`,
+    })
+  })
+  // Assert that the styles are NOT applied when above the breakpoint.
+  Object.keys(props).forEach((propName) => {
+    expect(result).not.toHaveStyleRule(propName, props[propName])
+  })
+}

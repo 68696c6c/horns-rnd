@@ -5,25 +5,23 @@ import { blockDemo } from '../../../_story'
 import { Colorway, Size } from '../../../config'
 import { BlockProps } from '../../quarks'
 
-import { Main } from '.'
+import { Nav } from '.'
 
 export default {
-  title: 'Atoms/Main',
-  component: Main,
+  title: 'Atoms/Nav',
+  component: Nav,
 } as Meta
 
 const Template: Story<BlockProps> = ({ children, ...others }: BlockProps) => (
-  <Main {...others}>{children}</Main>
+  <Nav {...others}>{children}</Nav>
 )
 
 export const Default = Template.bind({})
 Default.args = {
   children: (
     <>
-      <h1>main</h1>
-      <p>content can go anywhere</p>
-      <div>a div</div>
-      <div>another div</div>
+      <span>item 1</span>
+      <span>item 2</span>
     </>
   ),
 }
@@ -36,4 +34,4 @@ Props.args = {
   fluid: false,
 }
 
-export const Traits = () => blockDemo(Main, {})
+export const Traits = () => blockDemo(Nav, {})

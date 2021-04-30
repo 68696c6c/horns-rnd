@@ -5,8 +5,9 @@ import {
   Contained,
   padded,
   Padded,
+  Parent,
 } from '../../traits'
 
-export interface BlockProps extends Chromatic, Contained, Padded {}
+export interface BlockProps extends Parent, Chromatic, Contained, Padded {}
 
 export const blockStyles = [chromatic, contained, padded]

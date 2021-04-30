@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Styled } from '../styled'
+import { Styled } from './styled'
 
 export interface Contained {
   fluid?: boolean
@@ -9,9 +9,9 @@ export interface Contained {
 export const contained = ({
   theme,
   fluid,
-}: Styled & Contained): SerializedStyles => {
+}: Styled & Contained): SerializedStyles | null => {
   if (fluid) {
-    return css``
+    return null
   }
   const container = theme.breakpoints.max
   const gutter = `calc(((100vw - ${container}) / 2))`
