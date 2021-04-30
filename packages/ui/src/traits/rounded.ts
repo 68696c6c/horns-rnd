@@ -1,24 +1,17 @@
-import _merge from 'lodash.merge'
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Size, CornerSizeOptions, Corner } from '../../config'
-import { Styled } from '../styled'
-
-export type Corners = {
-  [key in Corner]: Size | undefined
-}
+import { Size, CornerSizeOptions, isSize } from '../config'
+import { Styled } from './styled'
 
 export const evalCorners = (
-  options: CornerSizeOptions,
-): Omit<Corners, 'all'> => {
-  const { all, topLeft, topRight, bottomLeft, bottomRight } = options
-  return {
-    topLeft: topLeft || all,
-    topRight: topRight || all,
-    bottomLeft: bottomLeft || all,
-    bottomRight: bottomRight || all,
-  }
-}
+  c: CornerSizeOptions,
+  defaults: CornerSizeOptions,
+): Omit<CornerSizeOptions, 'all'> => ({
+  topLeft: c.topLeft || c.all || defaults.topLeft || defaults.all,
+  topRight: c.topRight || c.all || defaults.topRight || defaults.all,
+  bottomLeft: c.bottomLeft || c.all || defaults.bottomLeft || defaults.all,
+  bottomRight: c.bottomRight || c.all || defaults.bottomRight || defaults.all,
+})
 
 export interface Rounded {
   radius?: CornerSizeOptions | Size
@@ -32,17 +25,16 @@ export const rounded = ({
   theme,
   radius,
   radiusDefault,
-}: RoundedArgs): SerializedStyles => {
+}: RoundedArgs): SerializedStyles | null => {
   if (typeof radius === 'undefined' && typeof radiusDefault === 'undefined') {
-    return css``
+    return null
   }
-  const radiusSize = theme.sizes[radius as Size]
-  if (radiusSize) {
+  if (isSize(radius)) {
     return css`
-      border-radius: ${radiusSize};
+      border-radius: ${theme.sizes[radius]};
     `
   }
-  const c = evalCorners(_merge(radius || {}, radiusDefault || {}))
+  const c = evalCorners(radius || {}, radiusDefault || {})
   return css`
     border-top-left-radius: ${c.topLeft && theme.sizes[c.topLeft]};
     border-top-right-radius: ${c.topRight && theme.sizes[c.topRight]};

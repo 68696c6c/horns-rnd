@@ -14,16 +14,16 @@ export enum Size {
   Max = 'max',
 }
 
-export type SizesConfig = {
-  [key in Size]: string
-}
-
 export type SideSizeOptions = {
   [key in Side]?: Size
 }
 
 export type CornerSizeOptions = {
   [key in Corner]?: Size
+}
+
+export type SizesConfig = {
+  [key in Size]: string
 }
 
 export const defaultSizes: SizesConfig = {
@@ -39,3 +39,8 @@ export const defaultSizes: SizesConfig = {
   giant: '64px',
   max: '88px',
 }
+
+export const isSize = (
+  tbd?: CornerSizeOptions | SideSizeOptions | Size,
+): tbd is Size =>
+  typeof tbd !== 'undefined' && typeof (tbd as Size) === 'string'
