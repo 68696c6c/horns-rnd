@@ -24,7 +24,8 @@
     "ex:analyze": "yarn build && yarn workspace gatsby-example analyze",
     "net:dev": "yarn workspace gatsby-netlify develop",
     "net:serve": "yarn workspace gatsby-netlify serve",
-    "release": "yarn build && lerna publish"
+    "release": "yarn build && lerna publish",
+    "precommit": "lint-staged"
   },
   "husky": {
     "hooks": {
@@ -33,7 +34,7 @@
   },
   "lint-staged": {
     "**/*.+(js|jsx|ts|tsx|css|html)": [
-      "eslint --fix --ext .ts,.tsx,.js,.jsx,.html",
+      "eslint . --fix --ext .ts,.tsx,.js,.jsx,.html",
       "jest --findRelatedTests"
     ]
   },
