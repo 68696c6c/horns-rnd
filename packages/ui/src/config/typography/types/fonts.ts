@@ -30,6 +30,15 @@ export enum Font {
   Strong = 'strong',
   Variable = 'variable',
   Mistake = 'mistake',
+  Blockquote = 'blockquote',
+  Del = 'del',
+  Kbd = 'kbd',
+  Pre = 'pre',
+  S = 's',
+  Samp = 'samp',
+  Sub = 'sub',
+  Sup = 'sup',
+  U = 'u',
 }
 
 // the comment indicates the specific css property the field controls

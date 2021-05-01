@@ -59,10 +59,25 @@ export const defaultConfig: Config = {
   spacing: defaultTextSpacings,
   letting: defaultLettings,
   styles: {
+    del: {
+      base: {
+        decoration: Decoration.StrikeThrough,
+      },
+    },
     heading: {
       base: {
         weight: FontWeight.Bold,
         spacing: TextSpacing.Max,
+      },
+    },
+    kbd: {
+      base: {
+        family: FontFamily.Tertiary,
+      },
+    },
+    pre: {
+      base: {
+        family: FontFamily.Tertiary,
       },
     },
     paragraph: {
@@ -76,7 +91,16 @@ export const defaultConfig: Config = {
         style: FontStyle.Italic,
       },
     },
+    blockquote: {
+      base: {
+        style: FontStyle.Italic,
+      },
+    },
     text: {},
+    s: {},
+    samp: {},
+    sub: {},
+    sup: {},
     table: {
       base: {
         letting: Letting.Min,
@@ -158,6 +182,11 @@ export const defaultConfig: Config = {
       },
     },
     mistake: {
+      base: {
+        decoration: Decoration.Mistake,
+      },
+    },
+    u: {
       base: {
         decoration: Decoration.Mistake,
       },

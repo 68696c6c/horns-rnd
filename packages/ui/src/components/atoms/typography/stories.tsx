@@ -3,18 +3,18 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 
 import {
   chromaticTextDemo,
-  StyledPre,
   StyledDemo,
   StyledDivider,
+  StyledPre,
   typographicDemo,
 } from '../../../_story'
-import { Font, HeadingLevel } from '../../../config'
+import { Colorway, Font, HeadingLevel } from '../../../config'
 
 import {
-  FontTag,
-  T as TypographyAtom,
   Heading as HeadingAtom,
   SubHeading as SubHeadingAtom,
+  T as TypographyAtom,
+  TypographyProps,
 } from '.'
 
 export default {
@@ -22,16 +22,38 @@ export default {
   component: TypographyAtom,
 } as Meta
 
-export const T: Story = () => <TypographyAtom>Default</TypographyAtom>
+const Template: Story<TypographyProps> = ({
+  children,
+  ...others
+}: TypographyProps) => <TypographyAtom {...others}>{children}</TypographyAtom>
 
-export const TVariants: Story = () => (
+export const T = Template.bind({})
+T.args = {
+  children: 'Typography',
+}
+
+export const Props = Template.bind({})
+Props.args = {
+  ...T.args,
+  color: Colorway.Primary,
+  font: Font.Emphasized,
+}
+
+export const Traits: Story = () => (
   <>
-    <h1>T Variants</h1>
-    <StyledPre>{`<T variant="h1">example</T>`}</StyledPre>
+    {chromaticTextDemo(TypographyAtom, {})}
+    {typographicDemo(TypographyAtom, {})}
+  </>
+)
+
+export const Fonts: Story = () => (
+  <>
+    <h1>Fonts</h1>
+    <StyledPre>{`<T font="h1">example</T>`}</StyledPre>
     <StyledDivider />
     <StyledDemo>
       {Object.values(HeadingLevel).map((variant) => (
-        <TypographyAtom variant={variant} key={`typography-${variant}`}>
+        <TypographyAtom font={variant} key={`typography-${variant}`}>
           {variant}
         </TypographyAtom>
       ))}
@@ -39,28 +61,27 @@ export const TVariants: Story = () => (
         variant === Font.Heading ? (
           <></>
         ) : (
-          <TypographyAtom variant={variant} key={`typography-${variant}`}>
+          <TypographyAtom font={variant} key={`typography-${variant}`}>
             {variant}
           </TypographyAtom>
         ),
       )}
-      {Object.values(FontTag).map((variant) => (
-        <TypographyAtom variant={variant} key={`typography-${variant}`}>
-          {variant}
-        </TypographyAtom>
-      ))}
     </StyledDemo>
   </>
 )
 
-export const TTraits: Story = () => (
-  <>
-    {chromaticTextDemo(TypographyAtom, {})}
-    {typographicDemo(TypographyAtom, {})}
-  </>
-)
+export const Heading: Story<TypographyProps> = ({
+  children,
+  ...others
+}: TypographyProps) => <HeadingAtom {...others}>{children}</HeadingAtom>
+Heading.args = {
+  children: 'Heading',
+}
 
-export const Heading: Story = () => <HeadingAtom>Heading</HeadingAtom>
-export const SubHeading: Story = () => (
-  <SubHeadingAtom>SubHeading</SubHeadingAtom>
-)
+export const SubHeading: Story<TypographyProps> = ({
+  children,
+  ...others
+}: TypographyProps) => <SubHeadingAtom {...others}>{children}</SubHeadingAtom>
+SubHeading.args = {
+  children: 'SubHeading',
+}

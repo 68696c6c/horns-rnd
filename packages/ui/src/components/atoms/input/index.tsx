@@ -8,20 +8,24 @@ import { ControlProps } from '../../quarks'
 import * as Styled from './styles'
 
 // eslint-disable-next-line
-const phoneMask = [ /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, /\d/ ]
+const createPhoneMask = (s: string) => [ /\d/, /\d/, /\d/, s, /\d/, /\d/, /\d/, s, /\d/, /\d/, /\d/, /\d/ ]
 
 export type InputRef = HTMLInputElement | MaskedInput | null | undefined
 
 export interface InputProps extends ControlProps {
-  currency?: string
   type?: InputType
+  separatorChar?: string
+  placeholderChar?: string
+  currency?: string
   forwardedRef?: ForwardedRef<InputRef>
   placeholder?: string
 }
 
 const BaseInput: FC<InputProps> = ({
-  currency,
   type,
+  separatorChar,
+  placeholderChar,
+  currency,
   forwardedRef,
   ...others
 }: InputProps) => {
@@ -37,8 +41,8 @@ const BaseInput: FC<InputProps> = ({
     case 'tel':
       return (
         <Styled.InputMasked
-          mask={phoneMask}
-          placeholderChar="_"
+          mask={createPhoneMask(separatorChar || '-')}
+          placeholderChar={placeholderChar || '_'}
           {...others}
           type={type}
           ref={forwardedRef as Ref<MaskedInput>}

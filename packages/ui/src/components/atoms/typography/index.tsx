@@ -6,27 +6,13 @@ import { StyledLink } from '../../quarks'
 
 import * as Styled from './styles'
 
-export enum FontTag {
-  Blockquote = 'blockquote',
-  Del = 'del',
-  Kbd = 'kbd',
-  Pre = 'pre',
-  S = 's',
-  Samp = 'samp',
-  Sub = 'sub',
-  Sup = 'sup',
-  U = 'u',
-}
-
-export interface TypographyProps extends Parent, Chromatic, Typographic {
-  variant?: Font | HeadingLevel | FontTag
-}
+export interface TypographyProps extends Parent, Chromatic, Typographic {}
 
 export const T: FC<TypographyProps> = ({
-  variant,
+  font,
   ...others
 }: TypographyProps) => {
-  switch (variant) {
+  switch (font) {
     case HeadingLevel.H1:
       return <Styled.H1 font={HeadingLevel.H1} {...others} />
     case HeadingLevel.H2:
@@ -39,23 +25,24 @@ export const T: FC<TypographyProps> = ({
       return <Styled.H5 font={HeadingLevel.H5} {...others} />
     case HeadingLevel.H6:
       return <Styled.H6 font={HeadingLevel.H6} {...others} />
-    case FontTag.Blockquote:
+    case Font.Blockquote:
       return <Styled.Blockquote font={Font.Quote} {...others} />
-    case FontTag.Del:
-      return <Styled.Del font={Font.Text} {...others} />
-    case FontTag.Kbd:
-      return <Styled.Kbd font={Font.Code} {...others} />
-    case FontTag.Pre:
-      return <Styled.Pre font={Font.Code} {...others} />
-    case FontTag.S:
-      return <Styled.S font={Font.Text} {...others} />
-    case FontTag.Samp:
-      return <Styled.Samp font={Font.Text} {...others} />
-    case FontTag.Sub:
-      return <Styled.Sub font={Font.Text} {...others} />
-    case FontTag.Sup:
-      return <Styled.Sup font={Font.Text} {...others} />
-    case FontTag.U:
+    case Font.Del:
+      return <Styled.Del font={Font.Del} {...others} />
+    case Font.Kbd:
+      return <Styled.Kbd font={Font.Kbd} {...others} />
+    case Font.Pre:
+      return <Styled.Pre font={Font.Pre} {...others} />
+    case Font.S:
+      return <Styled.S font={Font.S} {...others} />
+    case Font.Samp:
+      return <Styled.Samp font={Font.Samp} {...others} />
+    case Font.Sub:
+      return <Styled.Sub font={Font.Sub} {...others} />
+    case Font.Sup:
+      return <Styled.Sup font={Font.Sup} {...others} />
+    case Font.U:
+      return <Styled.U font={Font.U} {...others} />
     case Font.Mistake:
       return <Styled.U font={Font.Mistake} {...others} />
     case Font.Paragraph:
@@ -79,18 +66,18 @@ export const T: FC<TypographyProps> = ({
     case Font.Variable:
       return <Styled.Var font={Font.Variable} {...others} />
     default:
-      return <Styled.Span font={variant || Font.Text} {...others} />
+      return <Styled.Span font={font || Font.Text} {...others} />
   }
 }
 
 export const Heading = ({ children, ...others }: TypographyProps) => (
-  <T variant={HeadingLevel.H1} {...others}>
+  <T {...others} font={HeadingLevel.H1}>
     {children}
   </T>
 )
 
 export const SubHeading = ({ children, ...others }: TypographyProps) => (
-  <T variant={HeadingLevel.H3} {...others}>
+  <T {...others} font={HeadingLevel.H3}>
     {children}
   </T>
 )

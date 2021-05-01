@@ -1,57 +1,21 @@
 import React from 'react'
 
 import { render } from '../../test'
-import {
-  BorderStyle,
-  ColorwayNotification,
-  Font,
-  HeadingLevel,
-  Size,
-} from '../../../config'
+import { InputType } from '../../../config'
 
-import { Input } from '.'
+import { Default, Props } from './stories'
 
 describe('Input', () => {
   it('should render as default', () => {
-    const { container } = render(<Input />)
+    const { container } = render(<Default />)
     expect(container).toMatchSnapshot()
   })
-  it.each(Object.values(ColorwayNotification))(
-    'should render colorway %s',
-    (color) => {
-      const { container } = render(<Input color={color} />)
-      expect(container).toMatchSnapshot()
-    },
-  )
-  it.each(Object.values(BorderStyle))(
-    'should render border style %s',
-    (style) => {
-      const { container } = render(
-        <Input border={{ all: { style, width: Size.Small } }} />,
-      )
-      expect(container).toMatchSnapshot()
-    },
-  )
-  it.each(Object.values(Size))('should render border width %s', (size) => {
-    const { container } = render(
-      <Input border={{ all: { style: BorderStyle.Solid, width: size } }} />,
-    )
+  it('should support trait props', () => {
+    const { container } = render(<Props {...Props.args} />)
     expect(container).toMatchSnapshot()
   })
-  it.each(Object.values(Size))('should render padding %s', (size) => {
-    const { container } = render(<Input padding={size} />)
+  it.each(Object.values(InputType))('should render type %s', (t) => {
+    const { container } = render(<Default type={t} />)
     expect(container).toMatchSnapshot()
   })
-  it.each(Object.values(Size))('should render radius %s', (size) => {
-    const { container } = render(<Input radius={size} />)
-    expect(container).toMatchSnapshot()
-  })
-  it.each([...Object.values(Font), ...Object.values(HeadingLevel)])(
-    'should render font %s',
-    (font) => {
-      const { container } = render(<Input font={font} />)
-      expect(container).toMatchSnapshot()
-    },
-  )
-  // TODO: test ui states.
 })
