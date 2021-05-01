@@ -24,9 +24,13 @@ export const LinkEmail: FC<LinkEmailProps> = ({
   ...others
 }: LinkEmailProps) => {
   const Tag = useMemo(() => getLinkVariantTag(variant), [variant])
-  const href = getEmailHref(email, subject, body)
+  const href = useMemo(() => getEmailHref(email, subject, body), [
+    email,
+    subject,
+    body,
+  ])
   return (
-    <Tag {...others} href={href}>
+    <Tag {...others} href={href} role="link">
       {children}
     </Tag>
   )

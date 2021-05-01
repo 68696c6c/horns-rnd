@@ -1,7 +1,8 @@
 import React from 'react'
-import { Story, Meta } from '@storybook/react/types-6-0'
+import { Meta, Story } from '@storybook/react/types-6-0'
 
 import { clickableButtonDemo, clickableLinkDemo } from '../../../_story'
+import { Colorway, Cursor, Font } from '../../../config'
 import { LinkVariant as Variant } from '../../quarks'
 
 import { LinkEmail, LinkEmailProps } from '.'
@@ -21,25 +22,31 @@ Default.args = {
   email: 'test@example.com',
   subject: 'Example subject',
   body: 'Example body.',
-  children: 'Default',
+  children: 'LinkEmail',
 }
 
 export const LinkVariant = Template.bind({})
 LinkVariant.args = {
   ...Default.args,
   variant: Variant.Link,
+  color: Colorway.Primary,
+  font: Font.Emphasized,
+  cursor: Cursor.Alias,
   children: 'Link Variant',
 }
 
 export const LinkVariantTraits = () =>
-  clickableLinkDemo(LinkVariant, { ...LinkVariant.args })
+  clickableLinkDemo(LinkVariant, { variant: Variant.Link })
 
 export const ButtonVariant = Template.bind({})
 ButtonVariant.args = {
   ...Default.args,
   variant: Variant.Button,
+  color: Colorway.Primary,
+  font: Font.Emphasized,
+  cursor: Cursor.Alias,
   children: 'Button Variant',
 }
 
 export const ButtonVariantTraits = () =>
-  clickableButtonDemo(ButtonVariant, { ...ButtonVariant.args })
+  clickableButtonDemo(ButtonVariant, { variant: Variant.Button })

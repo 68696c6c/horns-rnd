@@ -86,7 +86,7 @@ exports[`Button should support trait props 1`] = `
   border-bottom-style: solid;
   border-left-width: 12px;
   border-left-style: solid;
-  cursor: pointer;
+  cursor: alias;
   padding-top: 12px;
   padding-right: 16px;
   padding-bottom: 12px;
@@ -139,6 +139,7 @@ exports[`Button should support trait props 1`] = `
   <button
     class="emotion-0"
     color="primary"
+    cursor="alias"
     radius="[object Object]"
   >
     example

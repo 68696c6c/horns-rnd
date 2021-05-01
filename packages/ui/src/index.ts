@@ -36,11 +36,6 @@ export {
   DataTable,
   FormControl,
   SiteNav,
-  // Quarks
-  StyledLink,
-  StyledLinkButton,
-  styleLink,
-  styleButton,
   // ThemeProvider
   ThemeProvider,
 } from './components'

@@ -1,111 +1,70 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 
 import { render, screen, assertStateStyles } from '../../test'
-import {
-  BorderStyle,
-  Colorway,
-  Font,
-  HeadingLevel,
-  Size,
-} from '../../../config'
-import { LinkVariant } from '../../quarks'
+import { LinkVariant as Variant, LinkProps } from '../../quarks'
 
-import { Link } from '.'
+import { Default, LinkVariant, ButtonVariant } from './stories'
 
 describe('Link', () => {
+  let defaultArgs: LinkProps
+  beforeEach(() => {
+    defaultArgs = { ...(Default.args as LinkProps) }
+  })
+
   it('should render as default', () => {
-    const { container } = render(<Link href="#">example</Link>)
+    const { container } = render(<Default {...defaultArgs}>example</Default>)
     expect(container).toMatchSnapshot()
   })
 
   describe('link variant', () => {
     it('should render as default', () => {
       const { container } = render(
-        <Link href="#" variant={LinkVariant.Link}>
+        <Default {...defaultArgs} variant={Variant.Link}>
           example
-        </Link>,
+        </Default>,
       )
       expect(container).toMatchSnapshot()
     })
-    it.each(Object.values(Colorway))('should render colorway %s', (color) => {
+    it('should support trait props', () => {
       const { container } = render(
-        <Link href="#" variant={LinkVariant.Link} color={color}>
-          {color}
-        </Link>,
+        <LinkVariant {...(LinkVariant.args as LinkProps)}>example</LinkVariant>,
       )
       expect(container).toMatchSnapshot()
     })
-    it.each([...Object.values(Font), ...Object.values(HeadingLevel)])(
-      'should render font %s',
-      (font) => {
-        const { container } = render(
-          <Link href="#" variant={LinkVariant.Link} font={font}>
-            {font}
-          </Link>,
-        )
-        expect(container).toMatchSnapshot()
-      },
-    )
     describe('ui states', () => {
       it('should render default state', () => {
-        const text = 'link-default'
         render(
-          <Link href="#" variant={LinkVariant.Link}>
-            {text}
-          </Link>,
+          <Default {...defaultArgs} variant={Variant.Link}>
+            example
+          </Default>,
         )
-        assertStateStyles(screen.getByText(text), '', {
-          color: 'rgb(1, 1, 1)',
-          'text-decoration-color': 'rgb(1, 1, 1)',
+        assertStateStyles(screen.getByRole('link'), '', {
           'text-decoration-line': 'underline',
           'text-decoration-style': 'solid',
-          'font-style': 'normal',
         })
       })
       it('should render hover state', () => {
-        const text = 'link-hover'
         render(
-          <Link href="#" variant={LinkVariant.Link}>
-            {text}
-          </Link>,
+          <Default {...defaultArgs} variant={Variant.Link}>
+            example
+          </Default>,
         )
-        assertStateStyles(screen.getByText(text), ':hover', {
-          color: 'rgb(1, 1, 1)',
-          'text-decoration-color': 'rgb(1, 1, 1)',
+        assertStateStyles(screen.getByRole('link'), ':hover', {
+          'font-style': 'italic',
           'text-decoration-line': 'underline',
           'text-decoration-style': 'solid',
-          'font-style': 'italic',
         })
       })
       it('should render active state', () => {
-        const text = 'link-active'
         render(
-          <Link href="#" variant={LinkVariant.Link}>
-            {text}
-          </Link>,
+          <Default {...defaultArgs} variant={Variant.Link}>
+            example
+          </Default>,
         )
-        assertStateStyles(screen.getByText(text), ':active', {
-          color: 'rgb(1, 1, 1)',
-          'text-decoration-color': 'rgb(1, 1, 1)',
+        assertStateStyles(screen.getByRole('link'), ':active', {
+          'font-style': 'italic',
           'text-decoration-line': 'underline',
           'text-decoration-style': 'double',
-          'font-style': 'italic',
-        })
-      })
-      it('should render visited state', () => {
-        const text = 'link-visited'
-        render(
-          <Link href="#" variant={LinkVariant.Link}>
-            {text}
-          </Link>,
-        )
-        assertStateStyles(screen.getByText(text), ':visited', {
-          color: 'rgb(1, 1, 1)',
-          'text-decoration-color': 'rgb(1, 1, 1)',
-          'text-decoration-line': 'underline',
-          'text-decoration-style': 'solid',
-          'font-style': 'italic',
         })
       })
     })
@@ -114,105 +73,48 @@ describe('Link', () => {
   describe('button variant', () => {
     it('should render as default', () => {
       const { container } = render(
-        <Link href="#" variant={LinkVariant.Button}>
+        <Default {...defaultArgs} variant={Variant.Button}>
           example
-        </Link>,
+        </Default>,
       )
       expect(container).toMatchSnapshot()
     })
-    it.each(Object.values(Colorway))('should render colorway %s', (color) => {
+    it('should support trait props', () => {
       const { container } = render(
-        <Link href="#" variant={LinkVariant.Button} color={color}>
-          {color}
-        </Link>,
+        <ButtonVariant {...(ButtonVariant.args as LinkProps)}>
+          example
+        </ButtonVariant>,
       )
       expect(container).toMatchSnapshot()
     })
-    it.each(Object.values(BorderStyle))(
-      'should render border style %s',
-      (style) => {
-        const { container } = render(
-          <Link
-            href="#"
-            variant={LinkVariant.Button}
-            border={{ all: { style, width: Size.Small } }}
-          >
-            {style}
-          </Link>,
-        )
-        expect(container).toMatchSnapshot()
-      },
-    )
-    it.each(Object.values(Size))('should render border width %s', (size) => {
-      const { container } = render(
-        <Link
-          href="#"
-          variant={LinkVariant.Button}
-          border={{ all: { style: BorderStyle.Solid, width: size } }}
-        >
-          {size}
-        </Link>,
-      )
-      expect(container).toMatchSnapshot()
-    })
-    it.each(Object.values(Size))('should render padding %s', (size) => {
-      const { container } = render(
-        <Link href="#" variant={LinkVariant.Button} padding={size}>
-          {size}
-        </Link>,
-      )
-      expect(container).toMatchSnapshot()
-    })
-    it.each(Object.values(Size))('should render radius %s', (size) => {
-      const { container } = render(
-        <Link href="#" variant={LinkVariant.Button} radius={size}>
-          {size}
-        </Link>,
-      )
-      expect(container).toMatchSnapshot()
-    })
-    it.each([...Object.values(Font), ...Object.values(HeadingLevel)])(
-      'should render font %s',
-      (font) => {
-        const { container } = render(
-          <Link href="#" variant={LinkVariant.Button} font={font}>
-            {font}
-          </Link>,
-        )
-        expect(container).toMatchSnapshot()
-      },
-    )
     describe('ui states', () => {
       it('should render default state', () => {
-        const text = 'link-button-default'
         render(
-          <Link href="#" variant={LinkVariant.Button}>
-            {text}
-          </Link>,
+          <Default {...defaultArgs} variant={Variant.Button}>
+            example
+          </Default>,
         )
-        assertStateStyles(screen.getByText(text), '', {
+        assertStateStyles(screen.getByRole('link'), '', {
           'background-color': 'rgb(255, 255, 255)',
         })
       })
       it('should render hover state', () => {
-        const text = 'link-button-hover'
         render(
-          <Link href="#" variant={LinkVariant.Button}>
-            {text}
-          </Link>,
+          <Default {...defaultArgs} variant={Variant.Button}>
+            example
+          </Default>,
         )
-        assertStateStyles(screen.getByText(text), ':hover', {
+        assertStateStyles(screen.getByRole('link'), ':hover', {
           'background-color': 'rgb(247, 247, 247)',
         })
       })
       it('should render active state', () => {
-        const text = 'link-button-active'
         render(
-          <Link href="#" variant={LinkVariant.Button}>
-            {text}
-          </Link>,
+          <Default {...defaultArgs} variant={Variant.Button}>
+            example
+          </Default>,
         )
-        assertStateStyles(screen.getByText(text), ':active', {
+        assertStateStyles(screen.getByRole('link'), ':active', {
           'background-color': 'rgb(240, 240, 240)',
         })
       })

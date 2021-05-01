@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LinkEmail button variant should render as default 1`] = `
+exports[`LinkPhone button variant should render as default 1`] = `
 .emotion-0 {
   display: inline-block;
   border-color: rgb(224, 224, 224);
@@ -66,7 +66,7 @@ exports[`LinkEmail button variant should render as default 1`] = `
 <div>
   <a
     class="emotion-0"
-    href="mailto:test@example.com?subject=Example subject&body=Example body."
+    href="tel:1234567890"
     role="link"
   >
     example
@@ -74,7 +74,7 @@ exports[`LinkEmail button variant should render as default 1`] = `
 </div>
 `;
 
-exports[`LinkEmail button variant should support trait props 1`] = `
+exports[`LinkPhone button variant should support trait props 1`] = `
 .emotion-0 {
   display: inline-block;
   border-color: rgb(204, 136, 0);
@@ -142,7 +142,7 @@ exports[`LinkEmail button variant should support trait props 1`] = `
     class="emotion-0"
     color="primary"
     cursor="alias"
-    href="mailto:test@example.com?subject=Example subject&body=Example body."
+    href="tel:1234567890"
     role="link"
   >
     example
@@ -150,7 +150,7 @@ exports[`LinkEmail button variant should support trait props 1`] = `
 </div>
 `;
 
-exports[`LinkEmail link variant should render as default 1`] = `
+exports[`LinkPhone link variant should render as default 1`] = `
 .emotion-0 {
   color: rgb(1, 1, 1);
   text-decoration-color: rgb(1, 1, 1);
@@ -241,7 +241,7 @@ exports[`LinkEmail link variant should render as default 1`] = `
 <div>
   <a
     class="emotion-0"
-    href="mailto:test@example.com?subject=Example subject&body=Example body."
+    href="tel:1234567890"
     role="link"
   >
     example
@@ -249,7 +249,7 @@ exports[`LinkEmail link variant should render as default 1`] = `
 </div>
 `;
 
-exports[`LinkEmail link variant should support trait props 1`] = `
+exports[`LinkPhone link variant should support trait props 1`] = `
 .emotion-0 {
   color: rgb(255, 170, 0);
   text-decoration-color: rgb(255, 170, 0);
@@ -337,7 +337,7 @@ exports[`LinkEmail link variant should support trait props 1`] = `
     class="emotion-0"
     color="primary"
     cursor="alias"
-    href="mailto:test@example.com?subject=Example subject&body=Example body."
+    href="tel:1234567890"
     role="link"
   >
     example
@@ -345,7 +345,7 @@ exports[`LinkEmail link variant should support trait props 1`] = `
 </div>
 `;
 
-exports[`LinkEmail should render as default 1`] = `
+exports[`LinkPhone should render as default 1`] = `
 .emotion-0 {
   color: rgb(1, 1, 1);
   text-decoration-color: rgb(1, 1, 1);
@@ -436,7 +436,7 @@ exports[`LinkEmail should render as default 1`] = `
 <div>
   <a
     class="emotion-0"
-    href="mailto:test@example.com?subject=Example subject&body=Example body."
+    href="tel:1234567890"
     role="link"
   >
     example

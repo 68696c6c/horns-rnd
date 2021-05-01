@@ -2,7 +2,7 @@ import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 
 import { clickableButtonDemo } from '../../../_story'
-import { Colorway, Font, Size } from '../../../config'
+import { Colorway, Cursor, Font, Size } from '../../../config'
 import { ButtonProps } from '../../quarks'
 
 import { Button } from '.'
@@ -29,6 +29,7 @@ Props.args = {
   padding: { all: Size.Small },
   radius: { all: Size.Large },
   font: Font.Emphasized,
+  cursor: Cursor.Alias,
 }
 
 export const Traits = () => clickableButtonDemo(Default, { ...Default.args })

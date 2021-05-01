@@ -13,8 +13,6 @@ export {
   LinkProps,
   StyledLinkButton,
   StyledLink,
-  styleLink,
-  styleButton,
   BaseNavItemProps,
   NavItemLayout,
   NavItemVariant,

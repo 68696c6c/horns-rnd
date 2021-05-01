@@ -14,7 +14,7 @@ export const LinkPhone: FC<LinkPhoneProps> = ({
 }: LinkPhoneProps) => {
   const Tag = useMemo(() => getLinkVariantTag(variant), [variant])
   return (
-    <Tag {...others} href={`tel:${number}`}>
+    <Tag {...others} href={`tel:${number}`} role="link">
       {children}
     </Tag>
   )

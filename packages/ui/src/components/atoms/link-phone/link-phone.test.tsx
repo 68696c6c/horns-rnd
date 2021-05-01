@@ -4,12 +4,12 @@ import { render, screen, assertStateStyles } from '../../test'
 import { LinkVariant as Variant } from '../../quarks'
 
 import { Default, LinkVariant, ButtonVariant } from './stories'
-import { LinkEmailProps } from '.'
+import { LinkPhoneProps } from '.'
 
-describe('LinkEmail', () => {
-  let defaultArgs: LinkEmailProps
+describe('LinkPhone', () => {
+  let defaultArgs: LinkPhoneProps
   beforeEach(() => {
-    defaultArgs = { ...(Default.args as LinkEmailProps) }
+    defaultArgs = { ...(Default.args as LinkPhoneProps) }
   })
 
   it('should render as default', () => {
@@ -28,7 +28,7 @@ describe('LinkEmail', () => {
     })
     it('should support trait props', () => {
       const { container } = render(
-        <LinkVariant {...(LinkVariant.args as LinkEmailProps)}>
+        <LinkVariant {...(LinkVariant.args as LinkPhoneProps)}>
           example
         </LinkVariant>,
       )
@@ -84,7 +84,7 @@ describe('LinkEmail', () => {
     })
     it('should support trait props', () => {
       const { container } = render(
-        <ButtonVariant {...(ButtonVariant.args as LinkEmailProps)}>
+        <ButtonVariant {...(ButtonVariant.args as LinkPhoneProps)}>
           example
         </ButtonVariant>,
       )

@@ -3,29 +3,27 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 
 import { clickableButtonDemo, clickableLinkDemo } from '../../../_story'
 import { Colorway, Cursor, Font } from '../../../config'
-import { LinkVariant as Variant } from '../../quarks'
+import { LinkProps, LinkVariant as Variant } from '../../quarks'
 
-import { LinkPhone, LinkPhoneProps } from '.'
+import { LinkFromContext } from '.'
 
 export default {
-  title: 'Atoms/LinkPhone',
-  component: LinkPhone,
+  title: 'Atoms/LinkFromContext',
+  component: LinkFromContext,
 } as Meta
 
-const Template: Story<LinkPhoneProps> = ({
-  children,
-  ...others
-}: LinkPhoneProps) => <LinkPhone {...others}>{children}</LinkPhone>
+const Template: Story<LinkProps> = ({ children, ...others }: LinkProps) => (
+  // eslint-disable-next-line jsx-a11y/anchor-is-valid
+  <LinkFromContext {...others}>{children}</LinkFromContext>
+)
 
 export const Default = Template.bind({})
 Default.args = {
-  number: '1234567890',
-  children: 'LinkPhone',
+  children: 'LinkFromContext',
 }
 
 export const LinkVariant = Template.bind({})
 LinkVariant.args = {
-  ...Default.args,
   variant: Variant.Link,
   color: Colorway.Primary,
   font: Font.Emphasized,
@@ -38,7 +36,6 @@ export const LinkVariantTraits = () =>
 
 export const ButtonVariant = Template.bind({})
 ButtonVariant.args = {
-  ...Default.args,
   variant: Variant.Button,
   color: Colorway.Primary,
   font: Font.Emphasized,

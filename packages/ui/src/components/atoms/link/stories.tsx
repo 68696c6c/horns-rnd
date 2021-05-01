@@ -1,10 +1,11 @@
 import React from 'react'
-import { Story, Meta } from '@storybook/react/types-6-0'
+import { Meta, Story } from '@storybook/react/types-6-0'
 
 import { clickableButtonDemo, clickableLinkDemo } from '../../../_story'
-import { LinkVariant as Variant } from '../../quarks'
+import { Colorway, Cursor, Font } from '../../../config'
+import { LinkProps, LinkVariant as Variant } from '../../quarks'
 
-import { Link, LinkProps } from '.'
+import { Link } from '.'
 
 export default {
   title: 'Atoms/Link',
@@ -12,31 +13,35 @@ export default {
 } as Meta
 
 const Template: Story<LinkProps> = ({ children, ...others }: LinkProps) => (
+  // eslint-disable-next-line jsx-a11y/anchor-is-valid
   <Link {...others}>{children}</Link>
 )
 
 export const Default = Template.bind({})
 Default.args = {
-  href: '#',
-  children: 'Default',
+  children: 'Link',
 }
 
 export const LinkVariant = Template.bind({})
 LinkVariant.args = {
-  href: '#',
   variant: Variant.Link,
+  color: Colorway.Primary,
+  font: Font.Emphasized,
+  cursor: Cursor.Alias,
   children: 'Link Variant',
 }
 
 export const LinkVariantTraits = () =>
-  clickableLinkDemo(LinkVariant, { ...LinkVariant.args })
+  clickableLinkDemo(LinkVariant, { variant: Variant.Link })
 
 export const ButtonVariant = Template.bind({})
 ButtonVariant.args = {
-  href: '#',
   variant: Variant.Button,
+  color: Colorway.Primary,
+  font: Font.Emphasized,
+  cursor: Cursor.Alias,
   children: 'Button Variant',
 }
 
 export const ButtonVariantTraits = () =>
-  clickableButtonDemo(ButtonVariant, { ...ButtonVariant.args })
+  clickableButtonDemo(ButtonVariant, { variant: Variant.Button })

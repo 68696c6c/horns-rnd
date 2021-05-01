@@ -1,6 +1,11 @@
 // Clickables are interactive elements that can be clicked on, like buttons, links, and nav items.
-import { ElementType } from 'react'
-import styled from '@emotion/styled'
+/**
+ * This file is using ComponentType instead of the recommended ElementType because ElementType
+ * doesn't work with the Emotion styled function and the objective is to provide a custom component
+ * that can be passed to that function.
+ */
+import { ComponentType } from 'react'
+import styled, { StyledComponent } from '@emotion/styled'
 import { css } from '@emotion/react'
 
 import {
@@ -80,7 +85,11 @@ export const StyledLinkButton = styled.a(buttonStyles)
 
 export const StyledButton = styled.button(buttonStyles)
 
-export interface BaseLinkProps extends ButtonProps {
+export interface BaseLinkProps
+  extends Parent,
+    Chromatic,
+    Interactive,
+    Typographic {
   variant?: LinkVariant
 }
 
@@ -133,14 +142,13 @@ export const StyledLink = styled.a(linkStyles)
 export const getLinkVariantTag = (variant?: LinkVariant) =>
   variant === LinkVariant.Button ? StyledLinkButton : StyledLink
 
-export const styleLink = (CustomComponent: any) =>
-  styled(CustomComponent)(linkStyles)
-
-export const styleButton = (CustomComponent: any) =>
-  styled(CustomComponent)(buttonStyles)
-
-export const styleCustomLinkTag = (Tag: ElementType, variant?: LinkVariant) =>
-  variant === LinkVariant.Button ? styleButton(Tag) : styleLink(Tag)
+export const styleCustomLinkTag = (
+  Tag: ComponentType,
+  variant?: LinkVariant,
+): StyledComponent<any> =>
+  variant === LinkVariant.Button
+    ? styled(Tag)(buttonStyles)
+    : styled(Tag)(linkStyles)
 
 export enum NavItemVariant {
   Background = 'background',

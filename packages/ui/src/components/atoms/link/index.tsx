@@ -10,7 +10,7 @@ export const Link: FC<LinkProps> = ({
 }: LinkProps) => {
   const Tag = useMemo(() => getLinkVariantTag(variant), [variant])
   return (
-    <Tag {...others} href={href}>
+    <Tag {...others} href={href} role="link">
       {children}
     </Tag>
   )

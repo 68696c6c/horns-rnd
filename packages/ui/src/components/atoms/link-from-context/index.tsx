@@ -12,7 +12,7 @@ export const LinkFromContext: FC<LinkProps> = ({
   const Base = useLink()
   const Tag = useMemo(() => styleCustomLinkTag(Base, variant), [variant, Base])
   return (
-    <Tag {...others} href={href}>
+    <Tag {...others} href={href} role="link">
       {children}
     </Tag>
   )
