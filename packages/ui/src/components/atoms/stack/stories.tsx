@@ -2,7 +2,7 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
-import { Breakpoint } from '../../../config'
+import { Breakpoint, Size } from '../../../config'
 
 import { Stack, StackProps } from '.'
 
@@ -34,6 +34,13 @@ Default.args = {
       <div>three</div>
     </>
   ),
+}
+
+export const Props = Template.bind({})
+Props.args = {
+  ...Default.args,
+  padding: { all: Size.Small },
+  gapped: true,
 }
 
 export const Gapped = Template.bind({})

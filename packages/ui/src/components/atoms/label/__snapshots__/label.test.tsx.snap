@@ -24,66 +24,16 @@ exports[`Label should render as default 1`] = `
 </div>
 `;
 
-exports[`Label should render colorway background 1`] = `
-.emotion-0 {
-  color: rgb(1, 1, 1);
-  text-decoration-color: rgb(1, 1, 1);
-  font-family: Helvetica,sans-serif;
-  font-kerning: normal;
-  font-size: medium;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1em;
-  text-align: left;
-  text-decoration-line: none;
-  text-transform: none;
-}
-
-<div>
-  <label
-    class="emotion-0"
-    color="background"
-  >
-    background
-  </label>
-</div>
-`;
-
-exports[`Label should render colorway danger 1`] = `
-.emotion-0 {
-  color: rgb(220, 53, 69);
-  text-decoration-color: rgb(220, 53, 69);
-  font-family: Helvetica,sans-serif;
-  font-kerning: normal;
-  font-size: medium;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1em;
-  text-align: left;
-  text-decoration-line: none;
-  text-transform: none;
-}
-
-<div>
-  <label
-    class="emotion-0"
-    color="danger"
-  >
-    danger
-  </label>
-</div>
-`;
-
-exports[`Label should render colorway info 1`] = `
+exports[`Label should support trait props 1`] = `
 .emotion-0 {
   color: rgb(23, 162, 184);
   text-decoration-color: rgb(23, 162, 184);
   font-family: Helvetica,sans-serif;
   font-kerning: normal;
   font-size: medium;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1em;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.6em;
   text-align: left;
   text-decoration-line: none;
   text-transform: none;
@@ -93,58 +43,9 @@ exports[`Label should render colorway info 1`] = `
   <label
     class="emotion-0"
     color="info"
+    required=""
   >
-    info
-  </label>
-</div>
-`;
-
-exports[`Label should render colorway success 1`] = `
-.emotion-0 {
-  color: rgb(40, 167, 69);
-  text-decoration-color: rgb(40, 167, 69);
-  font-family: Helvetica,sans-serif;
-  font-kerning: normal;
-  font-size: medium;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1em;
-  text-align: left;
-  text-decoration-line: none;
-  text-transform: none;
-}
-
-<div>
-  <label
-    class="emotion-0"
-    color="success"
-  >
-    success
-  </label>
-</div>
-`;
-
-exports[`Label should render colorway warning 1`] = `
-.emotion-0 {
-  color: rgb(255, 193, 7);
-  text-decoration-color: rgb(255, 193, 7);
-  font-family: Helvetica,sans-serif;
-  font-kerning: normal;
-  font-size: medium;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1em;
-  text-align: left;
-  text-decoration-line: none;
-  text-transform: none;
-}
-
-<div>
-  <label
-    class="emotion-0"
-    color="warning"
-  >
-    warning
+    example
   </label>
 </div>
 `;

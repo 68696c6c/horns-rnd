@@ -4,11 +4,12 @@ import { Font } from '../../../config'
 import {
   ChromaticNotification,
   chromaticNotificationText,
+  Parent,
   Typographic,
   typographic,
 } from '../../../traits'
 
-export interface LabelProps extends ChromaticNotification, Typographic {
+export interface LabelProps extends Parent, ChromaticNotification, Typographic {
   htmlFor?: string
   required?: boolean
 }
