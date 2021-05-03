@@ -1,30 +1,36 @@
 import React from 'react'
 
-import { render } from '../../test'
+import { render, screen, assertNoResponsiveStyles } from '../../test'
 
-import { Stack } from '.'
+import { Default, Props } from './stories'
 
 describe('Stack', () => {
   it('should render as default', () => {
     const { container } = render(
-      <Stack>
+      <Default {...Default.args}>
         <div>one</div>
         <div>two</div>
         <div>three</div>
-      </Stack>,
+      </Default>,
     )
     expect(container).toMatchSnapshot()
   })
-
-  // TODO: figure out responsive testing
-  // it('should render the items inline below the breakpoint', () => {
-  //   const { container } = render(
-  //     <Stack breakpoint={Breakpoint.Min}>
-  //       <div>one</div>
-  //       <div>two</div>
-  //       <div>three</div>
-  //     </Stack>,
-  //   )
-  //   expect(container).toMatchSnapshot()
-  // })
+  it('should support trait props', () => {
+    const { container } = render(
+      <Props {...Props.args}>
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+      </Props>,
+    )
+    expect(container).toMatchSnapshot()
+  })
+  describe('responsive behavior', () => {
+    it('should have not stack items below the max breakpoint', () => {
+      render(<Default>example</Default>)
+      assertNoResponsiveStyles(screen.getByText('example'), '1200px', {
+        display: 'grid',
+      })
+    })
+  })
 })

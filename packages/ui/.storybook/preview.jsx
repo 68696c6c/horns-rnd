@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { ThemeProvider } from '@storybook/theming'
+import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport'
 
 import { makeTheme } from '../src/config'
 import { LinkProvider } from '../src'
@@ -39,4 +40,17 @@ export const decorators = [
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
+  viewport: {
+    viewports: {
+      ...MINIMAL_VIEWPORTS,
+      max: {
+        name: 'Max',
+        styles: {
+          height: '1112px',
+          width: '2000px',
+        },
+        type: 'desktop',
+      },
+    },
+  },
 }

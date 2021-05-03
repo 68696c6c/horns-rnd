@@ -43,21 +43,16 @@ Props.args = {
   gapped: true,
 }
 
-export const Gapped = Template.bind({})
-Gapped.args = {
-  breakpoint: Breakpoint.Mobile,
-  gapped: true,
-  children: (
-    <>
-      <div>one</div>
-      <div>two</div>
-      <div>three</div>
-    </>
-  ),
+export const Responsive = Template.bind({})
+Responsive.args = { ...Default.args }
+Responsive.parameters = {
+  viewport: {
+    defaultViewport: 'mobile1',
+  },
 }
 
 export const SingleItem = Template.bind({})
 SingleItem.args = {
-  breakpoint: Breakpoint.Mobile,
+  ...Default.args,
   children: <div>one</div>,
 }

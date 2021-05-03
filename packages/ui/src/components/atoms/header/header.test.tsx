@@ -18,7 +18,7 @@ describe('Header', () => {
     const { container } = render(<Props {...Props.args}>example</Props>)
     expect(container).toMatchSnapshot()
   })
-  describe('container padding', () => {
+  describe('responsive behavior', () => {
     it('should have container padding below the max breakpoint', () => {
       render(<Default>example</Default>)
       assertResponsiveStyles(screen.getByText('example'), '1200px', {
