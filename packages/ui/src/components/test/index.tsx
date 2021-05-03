@@ -1,9 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react'
 import { ThemeProvider } from '@emotion/react'
+import { matchers } from '@emotion/jest'
 import { render as rtlRender } from '@testing-library/react'
 
 import { makeTheme } from '../../config'
+
+expect.extend(matchers)
 
 const Wrapper = ({ children }: React.PropsWithChildren<any>) => (
   <ThemeProvider theme={makeTheme()}>{children}</ThemeProvider>
