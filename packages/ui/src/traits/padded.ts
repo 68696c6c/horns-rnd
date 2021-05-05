@@ -1,8 +1,9 @@
 import _merge from 'lodash.merge'
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Size, SideSizeOptions, Side } from '../../config'
-import { Styled } from '../styled'
+import { Size, SideSizeOptions, Side } from '../config'
+
+import { Styled } from './styled'
 
 export type Sides = {
   [key in Side]: Size | undefined

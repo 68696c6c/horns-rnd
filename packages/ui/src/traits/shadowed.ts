@@ -1,8 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Size } from '../../config'
+import { Size } from '../config'
 
-import { Styled } from '../styled'
+import { Styled } from './styled'
 
 export interface ShadowConfig {
   x?: Size

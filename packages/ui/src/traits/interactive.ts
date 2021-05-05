@@ -1,8 +1,9 @@
 import { EventHandler } from 'react'
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Cursor } from '../../config'
-import { Styled } from '../styled'
+import { Cursor } from '../config'
+
+import { Styled } from './styled'
 
 export interface Interactive {
   cursor?: Cursor

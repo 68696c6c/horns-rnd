@@ -1,7 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Font, UiState, HoverState, HeadingLevel } from '../../config'
-import { Styled } from '../styled'
+import { Font, UiState, HoverState, HeadingLevel } from '../config'
+
+import { Styled } from './styled'
 
 export interface Typographic {
   font?: Font | HeadingLevel

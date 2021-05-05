@@ -1,7 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Breakpoint } from '../../config'
-import { Styled } from '../styled'
+import { Breakpoint } from '../config'
+
+import { Styled } from './styled'
 
 export interface Responsive {
   breakpoint?: Breakpoint

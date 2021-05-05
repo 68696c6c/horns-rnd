@@ -6,6 +6,7 @@ import { ControlProps, controlStyles } from '../../quarks'
 export const Input = styled.input(controlStyles)
 
 export const InputHidden = styled.input()
+
 export interface InputMaskedProps extends ControlProps {
   currency?: string
 }

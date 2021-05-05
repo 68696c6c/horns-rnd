@@ -1,13 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import {
-  Colorway,
-  ColorwayNotification,
-  HoverState,
-  UiState,
-} from '../../config'
+import { Colorway, ColorwayNotification, HoverState, UiState } from '../config'
 
-import { Styled } from '../styled'
+import { Styled } from './styled'
 
 export interface ChromaticArgs extends Styled {
   state?: UiState

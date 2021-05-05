@@ -1,7 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { BordersConfig, BorderProperties } from '../../config'
-import { Styled } from '../styled'
+import { BordersConfig, BorderProperties } from '../config'
+
+import { Styled } from './styled'
 
 export interface Bordered {
   border?: BordersConfig | BorderProperties

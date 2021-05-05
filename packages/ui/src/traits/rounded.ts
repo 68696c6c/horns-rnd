@@ -1,6 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react'
 
 import { Size, CornerSizeOptions, isSize } from '../config'
+
 import { Styled } from './styled'
 
 export const evalCorners = (
