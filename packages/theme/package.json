@@ -1,6 +1,6 @@
 {
   "name": "@horns/theme",
-  "version": "0.0.1-dev.17",
+  "version": "0.0.1-dev.18",
   "description": "Theme generation for Horns UI",
   "main": "dist/cjs/bundle.min.js",
   "author": "68696c6c@gmail.com",
