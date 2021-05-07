@@ -39,7 +39,10 @@ export const decorators = [
 ]
 
 export const parameters = {
+  // This argTypesRegex generates Storybook actions for all props that start with "on".
+  // For example, onClick events will log to the Actions pane.
   actions: { argTypesRegex: '^on[A-Z].*' },
+  controls: { sort: 'alpha' },
   viewport: {
     viewports: {
       ...MINIMAL_VIEWPORTS,

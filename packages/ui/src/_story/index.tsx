@@ -10,6 +10,7 @@ import {
   Font,
   HoverState,
   StatusState,
+  Cursor,
 } from '../config'
 
 const codeStyles = () => css`
@@ -454,3 +455,32 @@ export const makeTableRow = (i: string): Record<string, string> => ({
   updated_at: '',
   deleted_at: '',
 })
+
+// TODO: is there a better way to set control options?
+export const colorwayArgTypes = {
+  color: {
+    options: Object.values(Colorway),
+    control: 'select',
+  },
+}
+
+export const colorwayNotificationArgTypes = {
+  color: {
+    options: Object.values(ColorwayNotification),
+    control: 'select',
+  },
+}
+
+export const fontArgTypes = {
+  font: {
+    options: Object.values(Font),
+    control: 'select',
+  },
+}
+
+export const cursorArgTypes = {
+  cursor: {
+    options: Object.values(Cursor),
+    control: 'select',
+  },
+}

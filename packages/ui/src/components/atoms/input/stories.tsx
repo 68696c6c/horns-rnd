@@ -2,7 +2,13 @@
 import React, { useRef } from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 
-import { controlDemo, StyledDemo } from '../../../_story'
+import {
+  controlDemo,
+  StyledDemo,
+  colorwayNotificationArgTypes,
+  fontArgTypes,
+  cursorArgTypes,
+} from '../../../_story'
 import {
   ColorwayNotification,
   Cursor,
@@ -16,6 +22,11 @@ import { Input, InputProps, InputRef } from '.'
 export default {
   title: 'Atoms/Input',
   component: Input,
+  argTypes: {
+    ...colorwayNotificationArgTypes,
+    ...fontArgTypes,
+    ...cursorArgTypes,
+  },
 } as Meta
 
 const Template: Story<InputProps> = (props: InputProps) => <Input {...props} />
