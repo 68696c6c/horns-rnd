@@ -1,8 +1,11 @@
 import fs from 'fs'
 
-export const generateTheme = (outputPath: string, name?: string): void => {
-  const result = { name }
-  fs.writeFile(outputPath, JSON.stringify(result), (err) => {
-    console.log(err)
-  })
+import { makeTheme, Config } from './config'
+
+export const generateTheme = (
+  baseTheme: Partial<Config>,
+  outputPath: string,
+): void => {
+  const result = makeTheme(baseTheme)
+  fs.writeFileSync(outputPath, JSON.stringify(result))
 }

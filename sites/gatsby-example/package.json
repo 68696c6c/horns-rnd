@@ -11,6 +11,7 @@
     "serve": "yarn build && gatsby serve"
   },
   "dependencies": {
+    "@horns/theme": "^0.0.1-dev.17",
     "@horns/ui": "^0.0.1-dev.17",
     "gatsby": "^2.32.3",
     "gatsby-image": "^2.11.0",
