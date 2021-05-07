@@ -1,6 +1,6 @@
 {
   "name": "@horns/cli",
-  "version": "0.0.1-dev.20",
+  "version": "0.0.1-dev.21",
   "description": "CLI theme generator and other tools for Horns UI.",
   "bin": "dist/index.js",
   "author": "68696c6c@gmail.com",
