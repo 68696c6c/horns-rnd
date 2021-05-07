@@ -25,7 +25,7 @@
     "ex:analyze": "yarn build && yarn workspace gatsby-example analyze",
     "net:dev": "yarn workspace gatsby-netlify develop",
     "net:serve": "yarn workspace gatsby-netlify serve",
-    "release": "yarn build && lerna publish",
+    "release": "yarn theme:build && yarn build && lerna publish",
     "precommit": "lint-staged",
     "prepare": "husky install"
   },
