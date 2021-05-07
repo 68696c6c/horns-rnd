@@ -1,6 +1,6 @@
 {
   "name": "@horns/cli",
-  "version": "0.0.1-dev.19",
+  "version": "0.0.1-dev.20",
   "description": "CLI theme generator and other tools for Horns UI.",
   "main": "dist/cjs/bundle.min.js",
   "author": "68696c6c@gmail.com",
@@ -12,7 +12,7 @@
     "build:watch": "rollup -cw"
   },
   "dependencies": {
-    "@horns/theme": "^0.0.1-dev.19",
+    "@horns/theme": "^0.0.1-dev.20",
     "@types/ejs": "^3.0.6",
     "@types/node": "^15.0.2",
     "ejs": "^3.1.6"
