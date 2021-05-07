@@ -1,13 +1,13 @@
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
-const { generateTheme } = require('@horns/cli')
+// const { generateTheme } = require('@horns/cli')
 
-const baseTheme = require('./theme.config')
-
-exports.onPreInit = () => {
-  console.log('generate theme')
-  generateTheme(baseTheme, './theme.js')
-}
+// const baseTheme = require('./theme.config')
+//
+// exports.onPreInit = () => {
+//   console.log('generate theme')
+//   generateTheme(baseTheme, './theme.js')
+// }
 
 exports.onCreateWebpackConfig = ({ stage, actions }) => {
   const analyzerMode = process.env.INTERACTIVE_ANALYZE ? 'server' : 'json'

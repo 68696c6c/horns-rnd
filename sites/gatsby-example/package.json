@@ -8,7 +8,8 @@
     "clean": "gatsby clean",
     "develop": "yarn clean && gatsby develop",
     "build": "yarn clean && gatsby build",
-    "serve": "yarn build && gatsby serve"
+    "serve": "yarn build && gatsby serve",
+    "theme": "@horns/cli -f theme.config.js"
   },
   "dependencies": {
     "@horns/ui": "^0.0.1-dev.20",

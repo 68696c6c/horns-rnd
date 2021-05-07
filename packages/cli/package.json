@@ -2,20 +2,23 @@
   "name": "@horns/cli",
   "version": "0.0.1-dev.20",
   "description": "CLI theme generator and other tools for Horns UI.",
-  "main": "dist/cjs/bundle.min.js",
+  "bin": "dist/index.js",
   "author": "68696c6c@gmail.com",
   "license": "GPL",
   "private": false,
   "sideEffects": false,
   "scripts": {
-    "build": "rollup -c",
-    "build:watch": "rollup -cw"
+    "dev": "ts-node src/index.ts",
+    "build": "tsc"
   },
   "dependencies": {
     "@horns/theme": "^0.0.1-dev.20",
     "@types/ejs": "^3.0.6",
     "@types/node": "^15.0.2",
-    "ejs": "^3.1.6"
+    "@types/yargs": "^16.0.1",
+    "chokidar": "^3.5.1",
+    "ejs": "^3.1.6",
+    "yargs": "^17.0.1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^19.0.0",
@@ -23,6 +26,7 @@
     "rollup": "^2.47.0",
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-typescript2": "^0.30.0",
+    "ts-node": "^9.1.1",
     "typescript": "^4.1.5"
   },
   "publishConfig": {
