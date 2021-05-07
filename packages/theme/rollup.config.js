@@ -28,7 +28,7 @@ export default {
       typescript: require('typescript'),
     }),
     resolve({
-      extensions: ['.ts', '.tsx'],
+      extensions: ['.ts', '.tsx', '.ejs'],
     }),
     commonjs(),
   ],

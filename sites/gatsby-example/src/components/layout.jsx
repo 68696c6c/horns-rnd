@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
           <nav>
             <LinkFromContext href="/">Home - LinkFromContext</LinkFromContext>
             <GatsbyLink to="/page-2">Page 2 - GatsbyLink</GatsbyLink>
-            <LinkFromContext href="/page-2" variant="button">Page 2 - LinkFromContext</LinkFromContext>
+            <LinkFromContext href="/page-2" variant="button" color="primary">Page 2 - LinkFromContext</LinkFromContext>
             <LinkFromContext href="https://google.com" target="_blank">External - LinkFromContext</LinkFromContext>
           </nav>
         </Header>
