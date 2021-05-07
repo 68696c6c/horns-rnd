@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-import { Cursor, Font, HoverState, Size, StatusState } from '../../../config'
+import { Cursor, Font, HoverState, Size, StatusState } from '@horns/theme'
+
 import {
   Bordered,
   bordered,

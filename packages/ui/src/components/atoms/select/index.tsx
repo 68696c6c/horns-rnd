@@ -7,7 +7,8 @@ import React, {
   Ref,
 } from 'react'
 
-import { Colorway, ControlOption, InputType } from '../../../config'
+import { Colorway, ControlOption, InputType } from '@horns/theme'
+
 import { useMenu, useValues, Values } from '../../../hooks'
 
 import * as Styled from './styles'

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { Theme } from '../config'
+import { Theme } from '@horns/theme'
 
 export interface Styled {
   theme: Theme

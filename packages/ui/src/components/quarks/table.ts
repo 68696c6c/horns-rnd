@@ -1,6 +1,7 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Font, OverflowOption } from '../../config'
+
+import { Font, OverflowOption } from '@horns/theme'
 
 import { Styled, padded, typographic, Parent } from '../../traits'
 

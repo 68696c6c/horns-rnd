@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-import { Font } from '../../../config'
-import { Styled } from '../../../traits'
+import { Font } from '@horns/theme'
 
+import { Styled } from '../../../traits'
 import { Stack, Columns, Label } from '../../atoms'
 
 export const Message = styled(Label)`

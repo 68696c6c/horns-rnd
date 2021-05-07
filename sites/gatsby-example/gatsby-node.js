@@ -1,6 +1,6 @@
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
-const { generateTheme } = require('@horns/theme')
+const { generateTheme } = require('@horns/cli')
 
 const baseTheme = require('./theme.config')
 

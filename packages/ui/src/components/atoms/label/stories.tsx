@@ -1,8 +1,9 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
+import { ColorwayNotification, Font } from '@horns/theme'
+
 import { messageDemo } from '../../../_story'
-import { ColorwayNotification, Font } from '../../../config'
 
 import { Label, LabelProps } from '.'
 

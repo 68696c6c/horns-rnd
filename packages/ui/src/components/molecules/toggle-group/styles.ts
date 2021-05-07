@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-import { Font } from '../../../config'
+import { Font } from '@horns/theme'
+
 import { Label as LabelAtom } from '../../atoms'
 
 interface ToggleGroupProps {

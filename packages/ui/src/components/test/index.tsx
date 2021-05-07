@@ -4,7 +4,7 @@ import { ThemeProvider } from '@emotion/react'
 import { matchers } from '@emotion/jest'
 import { render as rtlRender } from '@testing-library/react'
 
-import { makeTheme } from '../../config'
+import { makeTheme } from '@horns/theme'
 
 expect.extend(matchers)
 

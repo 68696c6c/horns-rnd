@@ -2,7 +2,7 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 
-import { ToggleType } from '../../../config'
+import { ToggleType } from '@horns/theme'
 
 import { ToggleGroup } from '.'
 

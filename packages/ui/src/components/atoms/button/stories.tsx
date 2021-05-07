@@ -1,13 +1,14 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 
+import { BorderStyle, Colorway, Cursor, Font, Size } from '@horns/theme'
+
 import {
   clickableButtonDemo,
   colorwayArgTypes,
   fontArgTypes,
   cursorArgTypes,
 } from '../../../_story'
-import { BorderStyle, Colorway, Cursor, Font, Size } from '../../../config'
 import { ButtonProps } from '../../quarks'
 
 import { Button } from '.'

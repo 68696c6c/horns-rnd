@@ -2,7 +2,8 @@ import React, { forwardRef, FC, Ref, ForwardedRef, LegacyRef } from 'react'
 import { createNumberMask } from 'text-mask-addons'
 import MaskedInput from 'react-text-mask'
 
-import { InputType } from '../../../config'
+import { InputType } from '@horns/theme'
+
 import { ControlProps } from '../../quarks'
 
 import * as Styled from './styles'

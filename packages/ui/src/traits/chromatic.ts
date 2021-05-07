@@ -1,6 +1,11 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Colorway, ColorwayNotification, HoverState, UiState } from '../config'
+import {
+  Colorway,
+  ColorwayNotification,
+  HoverState,
+  UiState,
+} from '@horns/theme'
 
 import { Styled } from './styled'
 

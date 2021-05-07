@@ -2,7 +2,7 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 
-import { InputType, ToggleType } from '../../../config'
+import { InputType, ToggleType } from '@horns/theme'
 
 import { BaseControlType, FormControl } from '.'
 

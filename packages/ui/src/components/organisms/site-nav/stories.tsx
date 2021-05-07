@@ -2,9 +2,10 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 
+import { Colorway } from '@horns/theme'
+
 import { SiteNav } from '.'
 import { NavItemVariant } from '../../quarks'
-import { Colorway } from '../../../config'
 
 export default {
   title: 'Organisms/SiteNav',

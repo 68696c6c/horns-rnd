@@ -1,8 +1,9 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
+import { Colorway, Size } from '@horns/theme'
+
 import { blockDemo } from '../../../_story'
-import { Colorway, Size } from '../../../config'
 import { BlockProps } from '../../quarks'
 
 import { Footer } from '.'

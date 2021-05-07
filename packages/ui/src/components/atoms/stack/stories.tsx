@@ -2,7 +2,7 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
-import { Breakpoint, Size } from '../../../config'
+import { Breakpoint, Size } from '@horns/theme'
 
 import { Stack, StackProps } from '.'
 

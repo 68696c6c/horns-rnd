@@ -2,8 +2,9 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
+import { Breakpoint } from '@horns/theme'
+
 import { StyledCode } from '../../../_story'
-import { Breakpoint } from '../../../config'
 
 import { Columns, ColumnsProps } from '.'
 

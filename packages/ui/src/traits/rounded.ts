@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Size, CornerSizeOptions, isSize } from '../config'
+import { Size, CornerSizeOptions, isSize } from '@horns/theme'
 
 import { Styled } from './styled'
 

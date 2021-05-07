@@ -2,7 +2,8 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
-import { Breakpoint } from '../../../config'
+import { Breakpoint } from '@horns/theme'
+
 import { AutoGrid, AutoGridProps } from '.'
 
 export default {

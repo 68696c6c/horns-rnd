@@ -2,7 +2,8 @@ import React, { Dispatch, FC, MouseEvent, useEffect } from 'react'
 import _union from 'lodash.union'
 import _without from 'lodash.without'
 
-import { Colorway } from '../../../config'
+import { Colorway } from '@horns/theme'
+
 import { Responsive } from '../../../traits'
 import { NavItemLayout, BaseNavItemProps } from '../../quarks'
 import {

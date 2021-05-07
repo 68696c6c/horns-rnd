@@ -1,7 +1,8 @@
 import React from 'react'
 
+import { Colorway, Font, HeadingLevel } from '@horns/theme'
+
 import { render } from '../../test'
-import { Colorway, Font, HeadingLevel } from '../../../config'
 
 import { T, Props, Heading, SubHeading } from './stories'
 

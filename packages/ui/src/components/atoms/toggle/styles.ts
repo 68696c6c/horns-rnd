@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-import { Colorway, Cursor, StatusState, ToggleType } from '../../../config'
+import { Colorway, Cursor, StatusState, ToggleType } from '@horns/theme'
+
 import { chromatic, chromaticControl } from '../../../traits'
 import { ControlProps, controlStyles } from '../../quarks'
 

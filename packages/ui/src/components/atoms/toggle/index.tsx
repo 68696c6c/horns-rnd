@@ -1,7 +1,7 @@
 import React from 'react'
 import { v4 as uuid } from 'uuid'
 
-import { ToggleType } from '../../../config'
+import { ToggleType } from '@horns/theme'
 
 import * as Styled from './styles'
 

@@ -1,6 +1,7 @@
 import React, { FC, ReactNode } from 'react'
 
-import { Colorway } from '../../../config'
+import { Colorway } from '@horns/theme'
+
 import { NavItemLayout, MenuContainer, BaseNavItemProps } from '../../quarks'
 import { NavLinkWithID } from '../../../hooks'
 

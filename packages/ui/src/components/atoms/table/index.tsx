@@ -1,6 +1,7 @@
 import React, { memo, FC } from 'react'
 
-import { OverflowOption } from '../../../config'
+import { OverflowOption } from '@horns/theme'
+
 import { useID, useRowIDs } from '../../../hooks'
 import { TableProps, TableRows, Overflow } from '../../quarks'
 

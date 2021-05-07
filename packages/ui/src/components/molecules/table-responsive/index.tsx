@@ -1,6 +1,7 @@
 import React, { memo, FC, useEffect, useState } from 'react'
 
-import { OverflowOption } from '../../../config'
+import { OverflowOption } from '@horns/theme'
+
 import {
   HTMLDataset,
   TableRows,

@@ -1,9 +1,11 @@
-/* eslint-disable react/prop-types */
+/* eslint-disable react/prop-types,no-console */
 import React from 'react'
 import { ThemeProvider } from '@storybook/theming'
 import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport'
 
-import { makeTheme } from '../src/config'
+// eslint-disable-next-line import/no-unresolved
+import { makeTheme } from '@horns/theme'
+
 import { LinkProvider } from '../src'
 
 export const StorybookLink = ({

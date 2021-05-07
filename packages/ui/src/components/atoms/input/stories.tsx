@@ -3,19 +3,20 @@ import React, { useRef } from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 
 import {
+  ColorwayNotification,
+  Cursor,
+  Font,
+  InputType,
+  Size,
+} from '@horns/theme'
+
+import {
   controlDemo,
   StyledDemo,
   colorwayNotificationArgTypes,
   fontArgTypes,
   cursorArgTypes,
 } from '../../../_story'
-import {
-  ColorwayNotification,
-  Cursor,
-  Font,
-  InputType,
-  Size,
-} from '../../../config'
 
 import { Input, InputProps, InputRef } from '.'
 

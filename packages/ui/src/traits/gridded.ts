@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Theme, Size } from '../config'
+import { Theme, Size } from '@horns/theme'
 
 export interface Gridded {
   gapped?: boolean

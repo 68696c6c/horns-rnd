@@ -1,14 +1,18 @@
-import fs from 'fs'
-import ejs from 'ejs'
-
-import { makeTheme, Config } from './config'
-
-export const generateTheme = (
-  baseTheme: Partial<Config>,
-  outputPath: string,
-): void => {
-  const theme = JSON.stringify(makeTheme(baseTheme), null, 2)
-  const template = `/** THIS FILE IS GENERATED, DO NOT EDIT */\nconst theme = <%- theme %>\n\nexport default theme\n`
-  const result = ejs.render(template, { theme })
-  fs.writeFileSync(outputPath, result)
-}
+export { BorderStyle, BordersConfig, BorderProperties } from './borders'
+export { Breakpoint } from './breakpoints'
+export { Colorway, ColorwayNotification } from './colors'
+export { Cursor } from './cursors'
+export { makeTheme, Theme, Config } from './theme'
+export { Size, SideSizeOptions, CornerSizeOptions, isSize } from './sizes'
+export { Font, HeadingLevel } from './typography'
+export {
+  Side,
+  UiState,
+  HoverState,
+  StatusState,
+  Corner,
+  InputType,
+  ToggleType,
+  OverflowOption,
+  ControlOption,
+} from './utils'

@@ -1,4 +1,4 @@
-import { Size } from '../config'
+import { Size } from '@horns/theme'
 
 import { evalCorners } from './rounded'
 

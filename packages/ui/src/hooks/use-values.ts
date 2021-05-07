@@ -8,7 +8,7 @@ import {
 } from 'react'
 import { useDebouncedCallback } from 'use-debounce'
 
-import { ControlOption } from '../config'
+import { ControlOption } from '@horns/theme'
 
 export const defaultFilterOptions: FilterOptionsFunc = (
   value,

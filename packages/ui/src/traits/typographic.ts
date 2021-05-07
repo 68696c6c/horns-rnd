@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Font, UiState, HoverState, HeadingLevel } from '../config'
+import { Font, UiState, HoverState, HeadingLevel } from '@horns/theme'
 
 import { Styled } from './styled'
 

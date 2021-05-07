@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Size } from '../config'
+import { Size } from '@horns/theme'
 
 import { Styled } from './styled'
 

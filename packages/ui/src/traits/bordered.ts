@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { BordersConfig, BorderProperties } from '../config'
+import { BordersConfig, BorderProperties } from '@horns/theme'
 
 import { Styled } from './styled'
 

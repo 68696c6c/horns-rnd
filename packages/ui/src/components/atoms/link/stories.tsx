@@ -1,8 +1,9 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 
+import { Colorway, Cursor, Font } from '@horns/theme'
+
 import { clickableButtonDemo, clickableLinkDemo } from '../../../_story'
-import { Colorway, Cursor, Font } from '../../../config'
 import { LinkProps, LinkVariant as Variant } from '../../quarks'
 
 import { Link } from '.'

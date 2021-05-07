@@ -1,7 +1,7 @@
 import { EventHandler } from 'react'
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Cursor } from '../config'
+import { Cursor } from '@horns/theme'
 
 import { Styled } from './styled'
 

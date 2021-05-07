@@ -1,7 +1,8 @@
 import React, { FC, useMemo } from 'react'
 
+import { Font } from '@horns/theme'
+
 import { useLink } from '../../../context'
-import { Font } from '../../../config'
 
 import { NavItemProps, getVariantTag } from './styles'
 

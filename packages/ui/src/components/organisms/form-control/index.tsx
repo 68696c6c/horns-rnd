@@ -2,7 +2,8 @@ import React, { FC, ForwardedRef, forwardRef, Ref } from 'react'
 import { StyledComponent } from '@emotion/styled'
 import { v4 as uuid } from 'uuid'
 
-import { ColorwayNotification, InputType, ToggleType } from '../../../config'
+import { ColorwayNotification, InputType, ToggleType } from '@horns/theme'
+
 import {
   ColumnsProps,
   Input,

@@ -2,7 +2,8 @@
 import { EventHandler } from 'react'
 import { css } from '@emotion/react'
 
-import { Cursor, Font, HoverState, StatusState } from '../../config'
+import { Cursor, Font, HoverState, StatusState } from '@horns/theme'
+
 import {
   Bordered,
   bordered,

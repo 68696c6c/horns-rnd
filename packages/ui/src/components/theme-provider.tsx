@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react'
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
 
-import { Theme } from '../config'
+import { Theme } from '@horns/theme'
 
 interface ThemeProviderProps {
   children: ReactNode

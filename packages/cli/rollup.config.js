@@ -1,17 +1,17 @@
 import del from 'rollup-plugin-delete'
 import resolve from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
 import typescript from 'rollup-plugin-typescript2'
 
 import pkg from './package.json'
 
-const external = [...Object.keys(pkg.dependencies)]
+const external = ['@types/ejs', '@types/node', 'ejs']
 
 export default {
   input: 'src/index.ts',
   output: {
-    dir: 'dist/esm',
-    format: 'es',
-    preserveModules: true,
+    file: pkg.main,
+    format: 'cjs',
     sourcemap: true,
   },
   external,
@@ -24,5 +24,6 @@ export default {
     resolve({
       extensions: ['.ts', '.tsx'],
     }),
+    commonjs(),
   ],
 }

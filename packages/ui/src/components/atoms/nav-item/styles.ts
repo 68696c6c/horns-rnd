@@ -16,7 +16,8 @@ import {
   Side,
   Size,
   StatusState,
-} from '../../../config'
+} from '@horns/theme'
+
 import {
   Styled,
   chromatic,

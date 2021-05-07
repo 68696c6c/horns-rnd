@@ -8,7 +8,8 @@ import React, {
 } from 'react'
 import { useDebouncedCallback } from 'use-debounce'
 
-import { Font, InputType, ControlOption } from '../../../config'
+import { Font, InputType, ControlOption } from '@horns/theme'
+
 import { TableProps, TableRows } from '../../quarks'
 import { PaginationProps, useID, usePagination } from '../../../hooks'
 import { Input, Select, Label, T } from '../../atoms'

@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Breakpoint } from '../config'
+import { Breakpoint } from '@horns/theme'
 
 import { Styled } from './styled'
 

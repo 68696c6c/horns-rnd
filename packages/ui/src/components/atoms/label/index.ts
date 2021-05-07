@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 
-import { Font } from '../../../config'
+import { Font } from '@horns/theme'
+
 import {
   ChromaticNotification,
   chromaticNotificationText,

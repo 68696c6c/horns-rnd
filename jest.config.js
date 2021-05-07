@@ -3,4 +3,7 @@ module.exports = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['./jest.setup.ts'],
   snapshotSerializers: ['@emotion/jest/serializer'],
+  moduleNameMapper: {
+    '@horns/theme': '<rootDir>/packages/theme/src',
+  },
 }

@@ -16,7 +16,8 @@ import {
   HoverState,
   Size,
   StatusState,
-} from '../../config'
+} from '@horns/theme'
+
 import {
   Bordered,
   bordered,

@@ -2,7 +2,8 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 
-import { BorderStyle, Colorway, Size } from '../../../config'
+import { BorderStyle, Colorway, Size } from '@horns/theme'
+
 import { NavItemLayout, NavItemVariant } from '../../quarks'
 
 import { NavItem } from '.'

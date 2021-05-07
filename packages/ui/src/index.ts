@@ -41,5 +41,3 @@ export {
 } from './components'
 
 export { LinkProvider } from './context'
-
-export { Theme, Config } from './config'

@@ -11,7 +11,7 @@ import {
   HoverState,
   StatusState,
   Cursor,
-} from '../config'
+} from '@horns/theme'
 
 const codeStyles = () => css`
   border-radius: 0.33em;

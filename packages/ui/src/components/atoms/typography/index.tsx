@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 
-import { Font, HeadingLevel } from '../../../config'
+import { Font, HeadingLevel } from '@horns/theme'
+
 import { Parent, Chromatic, Typographic } from '../../../traits'
 import { StyledLink } from '../../quarks'
 

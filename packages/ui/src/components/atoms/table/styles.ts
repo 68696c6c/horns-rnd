@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-import { Colorway } from '../../../config'
+import { Colorway } from '@horns/theme'
+
 import { chromaticSurface, Styled } from '../../../traits'
 import { TableProps, tableStyles } from '../../quarks'
 

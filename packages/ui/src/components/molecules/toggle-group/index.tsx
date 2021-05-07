@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { v4 as uuid } from 'uuid'
 
-import { ControlOption, ToggleType } from '../../../config'
+import { ControlOption, ToggleType } from '@horns/theme'
+
 import { ControlProps } from '../../quarks'
 import { Toggle } from '../../atoms'
 

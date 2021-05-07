@@ -1,7 +1,8 @@
 import React from 'react'
 
+import { InputType } from '@horns/theme'
+
 import { render } from '../../test'
-import { InputType } from '../../../config'
 
 import { Default, Props } from './stories'
 

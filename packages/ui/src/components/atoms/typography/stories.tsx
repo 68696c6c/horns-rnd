@@ -1,6 +1,8 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 
+import { Colorway, Font, HeadingLevel } from '@horns/theme'
+
 import {
   chromaticTextDemo,
   StyledDemo,
@@ -8,7 +10,6 @@ import {
   StyledPre,
   typographicDemo,
 } from '../../../_story'
-import { Colorway, Font, HeadingLevel } from '../../../config'
 
 import {
   Heading as HeadingAtom,

@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-import { Cursor } from '../../../config'
+import { Cursor } from '@horns/theme'
+
 import { Parent } from '../../../traits'
 import { ControlProps, controlStyles } from '../../quarks'
 

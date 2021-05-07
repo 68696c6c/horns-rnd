@@ -2,7 +2,8 @@
 import { useEffect, useState } from 'react'
 import { useTheme } from '@emotion/react'
 
-import { Breakpoint } from '../config'
+import { Breakpoint } from '@horns/theme'
+
 import { valueToNumber } from '../utils'
 
 interface WindowDimensions {

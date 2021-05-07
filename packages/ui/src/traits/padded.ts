@@ -1,7 +1,7 @@
 import _merge from 'lodash.merge'
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Size, SideSizeOptions, Side } from '../config'
+import { Size, SideSizeOptions, Side } from '@horns/theme'
 
 import { Styled } from './styled'
 
