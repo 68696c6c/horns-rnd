@@ -19,6 +19,7 @@
     "docs:watch": "yarn boot && yarn workspace @horns/ui docs:watch",
     "build": "yarn boot && yarn workspace @horns/ui build",
     "build:watch": "yarn boot && yarn workspace @horns/ui build:watch",
+    "theme:build": "yarn boot && yarn workspace @horns/theme build",
     "ex:dev": "yarn build && yarn workspace gatsby-example develop",
     "ex:serve": "yarn build && yarn workspace gatsby-example serve",
     "ex:analyze": "yarn build && yarn workspace gatsby-example analyze",
