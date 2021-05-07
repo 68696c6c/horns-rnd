@@ -11,7 +11,7 @@ export const generateTheme = (
 ): void => {
   console.log('generating theme')
 
-  const filename = path.join(__dirname, '/theme.ejs')
+  const filename = path.join(__dirname, './theme.ejs')
   console.log('filename', filename)
 
   const template = fs.readFileSync(filename)
@@ -23,10 +23,10 @@ export const generateTheme = (
   const theme = makeTheme(baseTheme)
   console.log('theme.name', theme.name)
 
-  ejs.renderFile(outputPath, { theme }, (err, str) => {
+  ejs.renderFile(filename, { theme }, (err, str) => {
     console.log('err', err)
     console.log('str', str)
+    console.log('outputPath', outputPath)
+    fs.writeFileSync(outputPath, str)
   })
-
-  // fs.writeFileSync(outputPath, JSON.stringify(result))
 }
