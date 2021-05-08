@@ -2,7 +2,9 @@
   "name": "@horns/cli",
   "version": "0.0.1-dev.21",
   "description": "CLI theme generator and other tools for Horns UI.",
-  "bin": "dist/index.js",
+  "bin": {
+    "horns": "dist/index.js"
+  },
   "author": "68696c6c@gmail.com",
   "license": "GPL",
   "private": false,
