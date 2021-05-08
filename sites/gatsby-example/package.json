@@ -1,6 +1,6 @@
 {
   "name": "gatsby-example",
-  "version": "0.0.1-dev.21",
+  "version": "0.0.1-dev.22",
   "description": "Example Gatsby project.",
   "private": true,
   "scripts": {
@@ -28,7 +28,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "@horns/cli": "^0.0.1-dev.21",
+    "@horns/cli": "^0.0.1-dev.22",
     "webpack-bundle-analyzer": "^4.4.0"
   }
 }
