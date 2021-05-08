@@ -4,6 +4,7 @@ module.exports = {
     pallet: {
       primary: 'rebeccapurple',
       secondary: 'orange',
+      tertiary: 'dodgerblue',
     }
   }
 }

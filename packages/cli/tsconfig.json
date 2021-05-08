@@ -9,12 +9,5 @@
     "rootDir": "src",
     "outDir": "dist",
     "moduleResolution": "node"
-  },
-  "include": [
-    ".eslintrc.js",
-    "./**/*"
-  ],
-  "exclude": [
-    "node_modules",
-  ]
+  }
 }

@@ -71,24 +71,24 @@ const theme = {
     },
     "tertiary": {
       "base": {
-        "base": "rgb(0, 153, 153)",
+        "base": "rgb(30, 144, 255)",
         "readable": "rgb(255, 255, 255)",
-        "border": "rgb(0, 122, 122)"
+        "border": "rgb(0, 116, 228)"
       },
       "hover": {
-        "base": "rgb(0, 122, 122)",
+        "base": "rgb(0, 116, 228)",
         "readable": "rgb(255, 255, 255)",
-        "border": "rgb(0, 153, 153)"
+        "border": "rgb(30, 144, 255)"
       },
       "active": {
-        "base": "rgb(0, 81, 81)",
+        "base": "rgb(0, 77, 151)",
         "readable": "rgb(255, 255, 255)",
-        "border": "rgb(0, 122, 122)"
+        "border": "rgb(0, 116, 228)"
       },
       "inactive": {
-        "base": "rgb(64, 140, 140)",
+        "base": "rgb(79, 136, 191)",
         "readable": "rgb(255, 255, 255)",
-        "border": "rgb(89, 135, 135)"
+        "border": "rgb(98, 132, 165)"
       }
     },
     "dark": {

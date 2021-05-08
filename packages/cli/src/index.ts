@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import chalk from 'chalk'
 import chokidar from 'chokidar'
 import fs from 'fs'
 import ejs from 'ejs'
@@ -12,19 +13,33 @@ const args = yargs.options({
   out: { type: 'string', alias: 'o' },
 }).argv
 
-export const generateTheme = (
+const input = args.file || 'theme.config.js'
+const output = args.out || 'theme.js'
+
+const logSuccess = (...msg: any) => console.log(chalk.green(...msg))
+const logError = (error: Error) => console.error(chalk.red(error.stack))
+
+const writeThemeFile = (
   baseTheme: Partial<Config>,
   outputPath: string,
 ): void => {
   const theme = JSON.stringify(makeTheme(baseTheme), null, 2)
   const template = `/** THIS FILE IS GENERATED, DO NOT EDIT */\nconst theme = <%- theme %>\n\nexport default theme\n`
   const result = ejs.render(template, { theme })
-  console.log('outputPath', outputPath)
   fs.writeFileSync(outputPath, result)
 }
 
-const input = args.file || 'theme.config.js'
-const output = args.out || 'theme.js'
+const generateTheme = () => {
+  logSuccess(`generating theme from ${input} to ${output}`)
+  const inputPath = path.resolve(input)
+  const outputPath = path.resolve(output)
+  import(inputPath)
+    .then((a) => {
+      writeThemeFile(a, outputPath)
+      logSuccess('watching for changes...')
+    })
+    .catch(logError)
+}
 
 const watcher = chokidar.watch(input, {
   ignored: /^\./,
@@ -32,22 +47,6 @@ const watcher = chokidar.watch(input, {
 })
 
 watcher
-  .on('add', (filepath: string) => {
-    console.log('File', filepath, 'has been added')
-  })
-  .on('change', (filepath: string) => {
-    console.log('File', filepath, 'has been changed')
-    const inputPath = path.resolve(input)
-    const outputPath = path.resolve(output)
-    console.log('inputPath', inputPath)
-    import(inputPath).then((a) => {
-      generateTheme(a, outputPath)
-    })
-  })
-  .on('unlink', (filepath: string) => {
-    console.log('File', filepath, 'has been removed')
-  })
-  .on('error', (error: Error) => {
-    console.error('Error happened', error)
-    process.exitCode = 1
-  })
+  .on('ready', generateTheme)
+  .on('change', generateTheme)
+  .on('error', logError)

@@ -15,9 +15,11 @@
   },
   "dependencies": {
     "@horns/theme": "^0.0.1-dev.23",
+    "@types/chalk": "^2.2.0",
     "@types/ejs": "^3.0.6",
     "@types/node": "^15.0.2",
     "@types/yargs": "^16.0.1",
+    "chalk": "^4.1.1",
     "chokidar": "^3.5.1",
     "ejs": "^3.1.6",
     "yargs": "^17.0.1"
