@@ -1,6 +1,6 @@
 {
   "name": "@horns/cli",
-  "version": "0.0.1-dev.22",
+  "version": "0.0.1-dev.23",
   "description": "CLI theme generator and other tools for Horns UI.",
   "bin": {
     "horns": "dist/index.js"
@@ -14,7 +14,7 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@horns/theme": "^0.0.1-dev.20",
+    "@horns/theme": "^0.0.1-dev.23",
     "@types/ejs": "^3.0.6",
     "@types/node": "^15.0.2",
     "@types/yargs": "^16.0.1",

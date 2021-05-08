@@ -1,6 +1,6 @@
 {
   "name": "@horns/theme",
-  "version": "0.0.1-dev.20",
+  "version": "0.0.1-dev.23",
   "description": "Theme modelling for Horns UI and CLI.",
   "main": "dist/cjs/bundle.min.js",
   "module": "dist/esm/index.js",
