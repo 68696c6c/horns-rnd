@@ -2,7 +2,8 @@ module.exports = {
   name: 'my-theme',
   colors: {
     pallet: {
-      primary: 'rebeccapurple'
+      primary: 'rebeccapurple',
+      secondary: 'orange',
     }
   }
 }

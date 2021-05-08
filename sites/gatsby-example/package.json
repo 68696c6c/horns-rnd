@@ -9,7 +9,7 @@
     "develop": "yarn clean && gatsby develop",
     "build": "yarn clean && gatsby build",
     "serve": "yarn build && gatsby serve",
-    "theme": "horns -f theme.config.js"
+    "theme": "horns -f src/theme.config.js -o src/theme.js"
   },
   "dependencies": {
     "@horns/ui": "^0.0.1-dev.20",

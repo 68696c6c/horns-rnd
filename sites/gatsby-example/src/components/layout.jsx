@@ -3,8 +3,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql, Link as GatsbyLink } from 'gatsby'
 
-import { LinkFromContext, LinkProvider, Header, Main, Footer } from '@horns/ui'
+import { LinkFromContext, LinkProvider, Header, Main, Footer, ThemeProvider } from '@horns/ui'
 
+// import theme from '../theme'
 import { CustomLink } from './link'
 
 const Layout = ({ children }) => {
@@ -19,14 +20,13 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
       <LinkProvider Component={CustomLink}>
         <Header>
           <nav>
             <LinkFromContext href="/">Home - LinkFromContext</LinkFromContext>
             <GatsbyLink to="/page-2">Page 2 - GatsbyLink</GatsbyLink>
             <LinkFromContext href="/page-2" variant="button" color="primary">Page 2 - LinkFromContext</LinkFromContext>
-            <LinkFromContext href="https://google.com" target="_blank">External - LinkFromContext</LinkFromContext>
+            <LinkFromContext href="https://google.com" target="_blank" variant="button" color="secondary">External - LinkFromContext</LinkFromContext>
           </nav>
         </Header>
         <Main>{children}</Main>
@@ -35,7 +35,6 @@ const Layout = ({ children }) => {
           <LinkFromContext href="https://www.gatsbyjs.com">Gatsby</LinkFromContext>
         </Footer>
       </LinkProvider>
-    </>
   )
 }
 

@@ -2,6 +2,7 @@
   "name": "@horns/theme",
   "version": "0.0.1-dev.20",
   "description": "Theme modelling for Horns UI and CLI.",
+  "main": "dist/cjs/bundle.min.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "author": "68696c6c@gmail.com",
@@ -22,6 +23,7 @@
     "lodash.merge": "^4.6.2"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "rollup": "^2.47.0",
     "rollup-plugin-delete": "^2.0.0",

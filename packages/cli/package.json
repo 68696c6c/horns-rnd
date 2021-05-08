@@ -10,7 +10,7 @@
   "private": false,
   "sideEffects": false,
   "scripts": {
-    "dev": "ts-node src/index.ts",
+    "dev": "tsc && node --experimental-modules --experimental-specifier-resolution=node --loader ts-node/esm  src/index.ts",
     "build": "tsc"
   },
   "dependencies": {
@@ -23,7 +23,6 @@
     "yargs": "^17.0.1"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "rollup": "^2.47.0",
     "rollup-plugin-delete": "^2.0.0",

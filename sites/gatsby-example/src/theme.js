@@ -49,24 +49,24 @@ const theme = {
     },
     "secondary": {
       "base": {
-        "base": "rgb(26, 153, 255)",
-        "readable": "rgb(255, 255, 255)",
-        "border": "rgb(0, 125, 225)"
+        "base": "rgb(255, 165, 0)",
+        "readable": "rgb(1, 1, 1)",
+        "border": "rgb(204, 132, 0)"
       },
       "hover": {
-        "base": "rgb(0, 125, 225)",
-        "readable": "rgb(255, 255, 255)",
-        "border": "rgb(26, 153, 255)"
+        "base": "rgb(204, 132, 0)",
+        "readable": "rgb(1, 1, 1)",
+        "border": "rgb(255, 165, 0)"
       },
       "active": {
-        "base": "rgb(0, 83, 149)",
+        "base": "rgb(135, 87, 0)",
         "readable": "rgb(255, 255, 255)",
-        "border": "rgb(0, 125, 225)"
+        "border": "rgb(204, 132, 0)"
       },
       "inactive": {
-        "base": "rgb(77, 140, 191)",
-        "readable": "rgb(255, 255, 255)",
-        "border": "rgb(97, 135, 165)"
+        "base": "rgb(191, 146, 64)",
+        "readable": "rgb(1, 1, 1)",
+        "border": "rgb(165, 138, 89)"
       }
     },
     "tertiary": {
