@@ -23,6 +23,7 @@ export {
   Checkbox,
   Radio,
   T,
+  P,
   Heading,
   SubHeading,
 } from './atoms'

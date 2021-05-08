@@ -77,6 +77,9 @@ export const navItemStyles = ({
       display: ${layout === NavItemLayout.Horizontal
         ? 'inline-block'
         : 'block'};
+      &:visited {
+        ${chromatic({ theme, color })}
+      }
     `,
   ]
 }

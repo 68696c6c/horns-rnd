@@ -24,6 +24,7 @@ export {
   Checkbox,
   Radio,
   T,
+  P,
   Heading,
   SubHeading,
   // Molecules

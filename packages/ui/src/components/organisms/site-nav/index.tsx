@@ -105,12 +105,10 @@ export const SiteNav: FC<SiteNavProps> = ({
             key={link.id}
             href={link.href}
             onClick={(event: MouseEvent<HTMLAnchorElement>) => {
-              return handleClick(
-                event,
-                navLinkIDMap,
-                openLinkIDs,
-                setOpenLinkIDs,
-              )
+              if (!link.links) {
+                return
+              }
+              handleClick(event, navLinkIDMap, openLinkIDs, setOpenLinkIDs)
             }}
             current={currentLinkIDs.includes(link.id)}
           >

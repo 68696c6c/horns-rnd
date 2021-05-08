@@ -1,5 +1,9 @@
 import React, { FC, ReactNode } from 'react'
-import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
+import {
+  css,
+  Global,
+  ThemeProvider as EmotionThemeProvider,
+} from '@emotion/react'
 
 import { Theme } from '@horns/theme'
 
@@ -12,7 +16,17 @@ const ThemeProvider: FC<ThemeProviderProps> = ({
   children,
   theme,
 }: ThemeProviderProps) => (
-  <EmotionThemeProvider theme={theme}>{children}</EmotionThemeProvider>
+  <>
+    <Global
+      styles={css`
+        body {
+          margin: 0;
+          padding: 0;
+        }
+      `}
+    />
+    <EmotionThemeProvider theme={theme}>{children}</EmotionThemeProvider>
+  </>
 )
 
 export default ThemeProvider

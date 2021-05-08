@@ -71,6 +71,12 @@ export const T: FC<TypographyProps> = ({
   }
 }
 
+export const P = ({ children, ...others }: TypographyProps) => (
+  <T {...others} font={Font.Paragraph}>
+    {children}
+  </T>
+)
+
 export const Heading = ({ children, ...others }: TypographyProps) => (
   <T {...others} font={HeadingLevel.H1}>
     {children}
