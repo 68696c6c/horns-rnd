@@ -37,4 +37,40 @@ Props.args = {
   fluid: false,
 }
 
+export const ResponsiveMobile = Template.bind({})
+ResponsiveMobile.args = {
+  ...Default.args,
+  color: Colorway.Secondary,
+  fluid: false,
+}
+ResponsiveMobile.parameters = {
+  viewport: {
+    defaultViewport: 'mobile1',
+  },
+}
+
+export const ResponsiveMax = Template.bind({})
+ResponsiveMax.args = {
+  ...Default.args,
+  color: Colorway.Tertiary,
+  fluid: false,
+}
+ResponsiveMax.parameters = {
+  viewport: {
+    defaultViewport: 'max',
+  },
+}
+
+export const ResponsiveFluid = Template.bind({})
+ResponsiveFluid.args = {
+  ...Default.args,
+  color: Colorway.Primary,
+  fluid: true,
+}
+ResponsiveFluid.parameters = {
+  viewport: {
+    defaultViewport: 'max',
+  },
+}
+
 export const Traits = () => blockDemo(Main, {})
