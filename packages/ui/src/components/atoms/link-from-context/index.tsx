@@ -1,16 +1,20 @@
 import React, { FC, useMemo } from 'react'
 
-import { useLink } from '../../../context'
-import { LinkProps, styleCustomLinkTag } from '../../quarks'
+import { CustomLink, LinkProps, styleCustomLinkTag } from '../../quarks'
 
-export const LinkFromContext: FC<LinkProps> = ({
+export interface LinkFromContextProps extends LinkProps, CustomLink {}
+
+export const LinkFromContext: FC<LinkFromContextProps> = ({
+  LinkComponent,
   children,
   variant,
   href,
   ...others
-}: LinkProps) => {
-  const Base = useLink()
-  const Tag = useMemo(() => styleCustomLinkTag(Base, variant), [variant, Base])
+}: LinkFromContextProps) => {
+  const Tag = useMemo(() => styleCustomLinkTag(LinkComponent, variant), [
+    variant,
+    LinkComponent,
+  ])
   return (
     <Tag {...others} href={href} role="link">
       {children}

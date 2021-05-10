@@ -10,10 +10,12 @@ import { css } from '@emotion/react'
 
 import {
   BorderStyle,
+  Colorway,
   Colorway as ColorwayOption,
   Cursor,
   Font,
   HoverState,
+  Side,
   Size,
   StatusState,
 } from '@horns/theme'
@@ -35,6 +37,7 @@ import {
   Typographic,
   typographic,
 } from '../../traits'
+import { valueToNumber } from '../../utils'
 
 export enum LinkVariant {
   Link = 'link',
@@ -154,7 +157,6 @@ export const styleCustomLinkTag = (
 export enum NavItemVariant {
   Background = 'background',
   Border = 'border',
-  Colorway = 'colorway',
   Underline = 'underline',
 }
 
@@ -169,4 +171,166 @@ export interface BaseNavItemProps extends Chromatic, Typographic {
   currentColor?: ColorwayOption
   currentBorderWidth?: Size
   currentBorderStyle?: BorderStyle
+  current?: boolean
+}
+
+export interface CustomLink {
+  /**
+   * This file is using ComponentType instead of the recommended ElementType because ElementType
+   * doesn't work with the Emotion styled function and the objective is to provide a custom component
+   * that can be passed to that function.
+   */
+  LinkComponent: ComponentType<any>
+}
+
+export interface NavItemProps
+  extends Parent,
+    Interactive,
+    Padded,
+    BaseNavItemProps,
+    CustomLink,
+    Anchor {}
+
+export const navItemStyles = ({
+  theme,
+  cursor,
+  color,
+  padding,
+  font,
+  layout: layoutProp,
+}: Styled & Omit<NavItemProps, 'LinkComponent'>) => {
+  const layout = layoutProp || NavItemLayout.Horizontal
+  const { buttons } = theme
+  return [
+    chromatic,
+    interactive({
+      theme,
+      cursor,
+      cursorDefault: Cursor.Pointer,
+      hoverStyles: [chromatic({ theme, color, state: HoverState.Hover })],
+      activeStyles: [chromatic({ theme, color, state: HoverState.Active })],
+      inactiveStyles: [
+        chromatic({ theme, color, state: StatusState.Inactive }),
+      ],
+    }),
+    padded({ theme, padding, paddingDefault: buttons.padding }),
+    typographic({ theme, font, fontDefault: Font.Nav }),
+    css`
+      display: ${layout === NavItemLayout.Horizontal
+        ? 'inline-block'
+        : 'block'};
+      &:visited {
+        ${chromatic({ theme, color })}
+      }
+    `,
+  ]
+}
+
+const navItemBackgroundStyles = [
+  navItemStyles,
+  ({
+    theme,
+    color: colorProp,
+    current,
+    currentColor,
+  }: Styled & Omit<NavItemProps, 'LinkComponent'>) => {
+    const color = current ? currentColor : colorProp
+    return chromatic({ theme, color })
+  },
+]
+
+const navItemBorderStyles = [
+  navItemStyles,
+  ({
+    theme,
+    current,
+    layout: layoutProp,
+    currentColor,
+    currentBorderWidth: currentBorderWidthProp,
+    currentBorderStyle,
+  }: Styled & Omit<NavItemProps, 'LinkComponent'>) => {
+    if (current) {
+      const layout = layoutProp || NavItemLayout.Horizontal
+      const currentBorderWidth = currentBorderWidthProp || Size.XSmall
+      const c = theme.colors[currentColor || Colorway.Typography]
+      const bColor =
+        currentColor === Colorway.Background ? c.base.readable : c.base.base
+
+      const paddingProps = theme.buttons.padding
+
+      let side = 'left'
+      let borderKey = Side.Left
+      let padding = paddingProps.left || paddingProps.x || paddingProps.all
+      if (layout === NavItemLayout.Horizontal) {
+        side = 'bottom'
+        borderKey = Side.Bottom
+        padding = paddingProps.bottom || paddingProps.y || paddingProps.all
+      }
+
+      const pv = valueToNumber(theme.sizes[padding || Size.Min])
+      const bv = valueToNumber(theme.sizes[currentBorderWidth])
+      const paddingValue = pv - bv
+      const paddingFinal = paddingValue >= 0 && `${paddingValue}px !important`
+
+      return [
+        bordered({
+          theme,
+          border: {
+            all: {
+              width: Size.Min,
+            },
+            [borderKey]: {
+              width: currentBorderWidth,
+              style: currentBorderStyle || BorderStyle.Solid,
+            },
+          },
+        }),
+        css`
+          padding-${side}: ${paddingFinal};
+          border-${side}-color: ${bColor} !important;
+        `,
+      ]
+    }
+    return null
+  },
+]
+
+const navItemUnderlineStyles = [
+  navItemStyles,
+  ({ current }: NavItemProps) =>
+    current &&
+    css`
+      text-decoration: underline !important;
+    `,
+]
+
+const NavItemBackground = styled.a(navItemBackgroundStyles)
+const NavItemUnderline = styled.a(navItemUnderlineStyles)
+const NavItemBorder = styled.a(navItemBorderStyles)
+
+export const getNavItemVariantTag = (
+  variant?: NavItemVariant,
+): StyledComponent<any> => {
+  switch (variant) {
+    case NavItemVariant.Background:
+      return NavItemBackground
+    case NavItemVariant.Underline:
+      return NavItemUnderline
+    default:
+      return NavItemBorder
+  }
+}
+
+export const styleCustomNavItemTag = (
+  Base: ComponentType<any>,
+  variant?: NavItemVariant,
+): StyledComponent<any> => {
+  switch (variant) {
+    case NavItemVariant.Background:
+      return styled(Base)(navItemBackgroundStyles)
+    case NavItemVariant.Underline:
+      return styled(Base)(navItemUnderlineStyles)
+    default:
+      return styled(Base)(navItemBorderStyles)
+  }
 }

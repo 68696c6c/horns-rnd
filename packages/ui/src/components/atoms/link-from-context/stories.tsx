@@ -3,17 +3,24 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 
 import { Colorway, Cursor, Font } from '@horns/theme'
 
-import { clickableButtonDemo, clickableLinkDemo } from '../../../_story'
-import { LinkProps, LinkVariant as Variant } from '../../quarks'
+import {
+  clickableButtonDemo,
+  clickableLinkDemo,
+  StorybookLink,
+} from '../../../_story'
+import { LinkVariant as Variant } from '../../quarks'
 
-import { LinkFromContext } from '.'
+import { LinkFromContext, LinkFromContextProps } from '.'
 
 export default {
   title: 'Atoms/LinkFromContext',
   component: LinkFromContext,
 } as Meta
 
-const Template: Story<LinkProps> = ({ children, ...others }: LinkProps) => (
+const Template: Story<LinkFromContextProps> = ({
+  children,
+  ...others
+}: LinkFromContextProps) => (
   // eslint-disable-next-line jsx-a11y/anchor-is-valid
   <LinkFromContext {...others}>{children}</LinkFromContext>
 )
@@ -21,10 +28,12 @@ const Template: Story<LinkProps> = ({ children, ...others }: LinkProps) => (
 export const Default = Template.bind({})
 Default.args = {
   children: 'LinkFromContext',
+  LinkComponent: StorybookLink,
 }
 
 export const LinkVariant = Template.bind({})
 LinkVariant.args = {
+  ...Default.args,
   variant: Variant.Link,
   color: Colorway.Primary,
   font: Font.Emphasized,
@@ -37,6 +46,7 @@ export const LinkVariantTraits = () =>
 
 export const ButtonVariant = Template.bind({})
 ButtonVariant.args = {
+  ...Default.args,
   variant: Variant.Button,
   color: Colorway.Primary,
   font: Font.Emphasized,

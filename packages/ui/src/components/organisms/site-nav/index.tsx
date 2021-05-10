@@ -5,7 +5,7 @@ import _without from 'lodash.without'
 import { Colorway } from '@horns/theme'
 
 import { Responsive } from '../../../traits'
-import { NavItemLayout, BaseNavItemProps } from '../../quarks'
+import { NavItemLayout, BaseNavItemProps, CustomLink } from '../../quarks'
 import {
   NavLink,
   navLinkIDDataAttribute,
@@ -18,7 +18,7 @@ import { NavItem } from '../../atoms'
 
 import * as Styled from './styles'
 
-export interface SiteNavProps extends Responsive, BaseNavItemProps {
+export interface SiteNavProps extends Responsive, BaseNavItemProps, CustomLink {
   currentPath?: string
   links?: NavLink[]
   menuColor?: Colorway
@@ -47,6 +47,7 @@ const handleClick = (
 }
 
 export const SiteNav: FC<SiteNavProps> = ({
+  LinkComponent,
   links,
   currentPath,
   variant,
@@ -76,6 +77,7 @@ export const SiteNav: FC<SiteNavProps> = ({
   }, [isMobile, setOpenLinkIDs])
 
   const navItemProps = {
+    LinkComponent,
     currentColor,
     currentBorderWidth,
     currentBorderStyle,

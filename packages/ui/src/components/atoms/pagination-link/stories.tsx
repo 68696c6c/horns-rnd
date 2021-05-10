@@ -4,28 +4,27 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 
 import { BorderStyle, Colorway, Size } from '@horns/theme'
 
-import { StorybookLink } from '../../../_story'
 import { NavItemLayout, NavItemVariant } from '../../quarks'
 
-import { NavItem } from '.'
+import { PaginationLink } from '.'
 
 export default {
-  title: 'Atoms/NavItem',
-  component: NavItem,
+  title: 'Atoms/PaginationLink',
+  component: PaginationLink,
 } as Meta
 
 export const Default: Story = () => (
   <>
-    <h1>NavItem</h1>
+    <h1>PaginationLink</h1>
     <p>
-      The <em>NavItem</em> component has three variants.
+      The <em>PaginationLink</em> component has three variants.
     </p>
   </>
 )
 
 export const Background: Story = () => (
   <>
-    <h1>NavItem background variant</h1>
+    <h1>PaginationLink background variant</h1>
     <p>
       The <em>background</em> variant provides a themed nav item that uses a
       background color to indicate that it is the current active item.
@@ -36,44 +35,36 @@ export const Background: Story = () => (
     </p>
     <div>
       <div>
-        <NavItem
-          LinkComponent={StorybookLink}
-          href="#"
+        <PaginationLink
           variant={NavItemVariant.Background}
           color={Colorway.Dark}
         >
           horizontal nav item
-        </NavItem>
+        </PaginationLink>
       </div>
       <div>
-        <NavItem
-          LinkComponent={StorybookLink}
-          href="#"
+        <PaginationLink
           variant={NavItemVariant.Background}
           layout={NavItemLayout.Vertical}
           color={Colorway.Neutral}
         >
           vertical nav item
-        </NavItem>
+        </PaginationLink>
       </div>
     </div>
     <div>
       <div>
-        <NavItem
-          LinkComponent={StorybookLink}
-          href="#"
+        <PaginationLink
           variant={NavItemVariant.Background}
           color={Colorway.Dark}
           currentColor={Colorway.Primary}
           current
         >
           current horizontal nav item
-        </NavItem>
+        </PaginationLink>
       </div>
       <div>
-        <NavItem
-          LinkComponent={StorybookLink}
-          href="#"
+        <PaginationLink
           variant={NavItemVariant.Background}
           layout={NavItemLayout.Vertical}
           color={Colorway.Neutral}
@@ -81,32 +72,25 @@ export const Background: Story = () => (
           current
         >
           current vertical nav item
-        </NavItem>
+        </PaginationLink>
       </div>
     </div>
 
     <h2>Layout Prop</h2>
     <div>
       <div>
-        <NavItem
-          LinkComponent={StorybookLink}
-          href="#"
-          variant={NavItemVariant.Background}
-          current
-        >
+        <PaginationLink variant={NavItemVariant.Background} current>
           current horizontal nav item
-        </NavItem>
+        </PaginationLink>
       </div>
       <div>
-        <NavItem
-          LinkComponent={StorybookLink}
-          href="#"
+        <PaginationLink
           variant={NavItemVariant.Background}
           layout={NavItemLayout.Vertical}
           current
         >
           current vertical nav item
-        </NavItem>
+        </PaginationLink>
       </div>
     </div>
   </>
@@ -114,7 +98,7 @@ export const Background: Story = () => (
 
 export const Border: Story = () => (
   <>
-    <h1>NavItem border variant</h1>
+    <h1>PaginationLink border variant</h1>
     <p>
       The <em>border</em> variant provides a themed nav item that uses a border
       to indicate that it is the current active item.
@@ -126,34 +110,28 @@ export const Border: Story = () => (
     </p>
     <div>
       <div>
-        <NavItem
-          LinkComponent={StorybookLink}
-          href="#"
+        <PaginationLink
           variant={NavItemVariant.Border}
           color={Colorway.Secondary}
           current
         >
           current horizontal nav item
-        </NavItem>
+        </PaginationLink>
       </div>
       <div>
-        <NavItem
-          LinkComponent={StorybookLink}
-          href="#"
+        <PaginationLink
           variant={NavItemVariant.Border}
           color={Colorway.Tertiary}
           layout={NavItemLayout.Vertical}
           current
         >
           current vertical nav item
-        </NavItem>
+        </PaginationLink>
       </div>
     </div>
     <div>
       <div>
-        <NavItem
-          LinkComponent={StorybookLink}
-          href="#"
+        <PaginationLink
           variant={NavItemVariant.Border}
           color={Colorway.Neutral}
           currentColor={Colorway.Success}
@@ -161,12 +139,10 @@ export const Border: Story = () => (
           current
         >
           current horizontal nav item
-        </NavItem>
+        </PaginationLink>
       </div>
       <div>
-        <NavItem
-          LinkComponent={StorybookLink}
-          href="#"
+        <PaginationLink
           variant={NavItemVariant.Border}
           color={Colorway.Neutral}
           layout={NavItemLayout.Vertical}
@@ -175,32 +151,25 @@ export const Border: Story = () => (
           current
         >
           current vertical nav item
-        </NavItem>
+        </PaginationLink>
       </div>
     </div>
 
     <h2>Layout Prop</h2>
     <div>
       <div>
-        <NavItem
-          LinkComponent={StorybookLink}
-          href="#"
-          variant={NavItemVariant.Border}
-          current
-        >
+        <PaginationLink variant={NavItemVariant.Border} current>
           current horizontal nav item
-        </NavItem>
+        </PaginationLink>
       </div>
       <div>
-        <NavItem
-          LinkComponent={StorybookLink}
-          href="#"
+        <PaginationLink
           variant={NavItemVariant.Border}
           layout={NavItemLayout.Vertical}
           current
         >
           current vertical nav item
-        </NavItem>
+        </PaginationLink>
       </div>
     </div>
   </>
@@ -208,82 +177,67 @@ export const Border: Story = () => (
 
 export const Underline: Story = () => (
   <>
-    <h1>NavItem underline variant</h1>
+    <h1>PaginationLink underline variant</h1>
     <p>
       The <em>underline</em> variant provides a themed nav item that uses a
       typographic underline to indicate that it is the current active item.
     </p>
     <div>
       <div>
-        <NavItem
-          LinkComponent={StorybookLink}
-          href="#"
+        <PaginationLink
           variant={NavItemVariant.Underline}
           color={Colorway.Dark}
         >
           horizontal nav item
-        </NavItem>
+        </PaginationLink>
       </div>
       <div>
-        <NavItem
-          LinkComponent={StorybookLink}
-          href="#"
+        <PaginationLink
           variant={NavItemVariant.Underline}
           layout={NavItemLayout.Vertical}
           color={Colorway.Neutral}
         >
           vertical nav item
-        </NavItem>
+        </PaginationLink>
       </div>
     </div>
     <div>
       <div>
-        <NavItem
-          LinkComponent={StorybookLink}
-          href="#"
+        <PaginationLink
           variant={NavItemVariant.Underline}
           color={Colorway.Secondary}
           current
         >
           current horizontal nav item
-        </NavItem>
+        </PaginationLink>
       </div>
       <div>
-        <NavItem
-          LinkComponent={StorybookLink}
-          href="#"
+        <PaginationLink
           variant={NavItemVariant.Underline}
           color={Colorway.Tertiary}
           layout={NavItemLayout.Vertical}
           current
         >
           current vertical nav item
-        </NavItem>
+        </PaginationLink>
       </div>
     </div>
 
     <h2>Layout Prop</h2>
     <div>
       <div>
-        <NavItem
-          LinkComponent={StorybookLink}
-          href="#"
-          variant={NavItemVariant.Underline}
-          current
-        >
+        <PaginationLink variant={NavItemVariant.Underline} current>
           current horizontal nav item
-        </NavItem>
+        </PaginationLink>
       </div>
       <div>
-        <NavItem
-          LinkComponent={StorybookLink}
-          href="#"
+        <PaginationLink
           variant={NavItemVariant.Underline}
           layout={NavItemLayout.Vertical}
           current
         >
           current vertical nav item
-        </NavItem>
+        </PaginationLink>
       </div>
     </div>
   </>

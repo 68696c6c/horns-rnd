@@ -1,6 +1,3 @@
-export const makeIntArray = (itemCount: number): number[] =>
-  [...Array(itemCount + 1).keys()].slice(1, itemCount + 1)
-
 export const valueToNumber = (cssVal: string): number =>
   Number(
     cssVal

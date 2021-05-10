@@ -18,6 +18,10 @@ export {
   NavItemVariant,
   getLinkVariantTag,
   styleCustomLinkTag,
+  CustomLink,
+  NavItemProps,
+  getNavItemVariantTag,
+  styleCustomNavItemTag,
 } from './clickable'
 export { ControlProps, controlStyles } from './control'
 export { GridProps, gridStyles } from './grid'

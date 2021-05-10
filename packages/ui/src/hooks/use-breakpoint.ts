@@ -40,10 +40,10 @@ export const useBreakpoint = (initialBreakpoint?: Breakpoint): boolean => {
   }, [])
 
   useEffect(() => {
-    const breakInt = valueToNumber(theme.breakpoints[breakpoint])
     if (typeof windowSize.width === 'undefined') {
       return
     }
+    const breakInt = valueToNumber(theme.breakpoints[breakpoint])
     if (windowSize.width <= breakInt && !isMobile) {
       setIsMobile(true)
     } else if (windowSize.width > breakInt && isMobile) {

@@ -1,9 +1,11 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
+import _range from 'lodash.range'
 
 import { makeTableRow } from '../../../_story'
-import { makeIntArray } from '../../../utils'
+
+import { TableProps } from '../../quarks'
 
 import { Table } from '.'
 
@@ -12,32 +14,52 @@ export default {
   component: Table,
 } as Meta
 
-const tableData = makeIntArray(9).map((i) => makeTableRow(`${i}`))
-
-export const Default: Story = () => (
+const Template: Story<TableProps> = ({
+  rowData,
+  height,
+  minWidth,
+  children,
+  ...others
+}: TableProps) => (
   <>
-    <h1>Table</h1>
     <p>
       The <em>Table</em> component applies theming to the HTML{' '}
-      <code>table</code> tab and its children, <code>thead</code>,{' '}
-      <code>tbody</code>, <code>tr</code>, <code>td</code>, and <code>td</code>.
+      <code>table</code> tag and its children; <code>thead</code>,{' '}
+      <code>tbody</code>, <code>tr</code>, <code>th</code>, and <code>td</code>.
     </p>
     <p>
       The <em>Table</em> component works using standard HTML children and does
       not require any other Horns components to create fully themed tables.
     </p>
-    <Table minWidth="1200px">
+    <p>
+      Alternatively, if the <code>rowData</code> prop is provided, the{' '}
+      <em>Table</em> component will dynamically render that content, ignoring
+      any children.
+    </p>
+    <Table rowData={rowData} minWidth={minWidth} height={height} {...others}>
+      {children}
+    </Table>
+  </>
+)
+
+const exampleRowData = _range(4)
+
+export const Default = Template.bind({})
+Default.args = {
+  minWidth: '1200px',
+  children: (
+    <>
       <thead>
         <tr>
-          {makeIntArray(6).map((i) => (
+          {exampleRowData.map((i) => (
             <th key={`row-header-${i}`}>Row 0, Column {i} Heading</th>
           ))}
         </tr>
       </thead>
       <tbody>
-        {makeIntArray(6).map((rowIndex) => (
+        {exampleRowData.map((rowIndex) => (
           <tr key={`row-${rowIndex}`}>
-            {makeIntArray(6).map((colIndex) => (
+            {exampleRowData.map((colIndex) => (
               <td key={`row-${rowIndex}-column-${colIndex}`}>
                 Row {rowIndex}, Column {colIndex} Content
               </td>
@@ -45,12 +67,12 @@ export const Default: Story = () => (
           </tr>
         ))}
       </tbody>
-    </Table>
-    <h2>Rows from Prop</h2>
-    <p>
-      The <em>Table</em> component can generate a table using the{' '}
-      <em>rowData</em> prop.
-    </p>
-    <Table rowData={tableData} minWidth="1200px" />
-  </>
-)
+    </>
+  ),
+}
+
+export const UsingRowDataProp = Template.bind({})
+UsingRowDataProp.args = {
+  ...Default.args,
+  rowData: exampleRowData.map((i) => makeTableRow(`${i}`)),
+}

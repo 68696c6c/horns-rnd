@@ -4,8 +4,10 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 
 import { Colorway } from '@horns/theme'
 
-import { SiteNav } from '.'
+import { StorybookLink } from '../../../_story'
 import { NavItemVariant } from '../../quarks'
+
+import { SiteNav } from '.'
 
 export default {
   title: 'Organisms/SiteNav',
@@ -49,7 +51,11 @@ export const Default: Story = () => (
       <em>currentBorderStyle</em> props used by the NavItem atoms and uses these
       props to styling its items.
     </p>
-    <SiteNav currentPath="/four/four/three" links={links} />
+    <SiteNav
+      LinkComponent={StorybookLink}
+      currentPath="/four/four/three"
+      links={links}
+    />
   </>
 )
 
@@ -57,6 +63,7 @@ export const BackgroundVariant: Story = () => (
   <div>
     <h1>Background Variant</h1>
     <SiteNav
+      LinkComponent={StorybookLink}
       variant={NavItemVariant.Background}
       color={Colorway.Secondary}
       currentColor={Colorway.Dark}
@@ -71,6 +78,7 @@ export const BorderVariant: Story = () => (
   <div>
     <h1>Border Variant</h1>
     <SiteNav
+      LinkComponent={StorybookLink}
       variant={NavItemVariant.Border}
       color={Colorway.Tertiary}
       currentColor={Colorway.Neutral}
@@ -84,6 +92,7 @@ export const UnderlineVariant: Story = () => (
   <div>
     <h1>Underline Variant</h1>
     <SiteNav
+      LinkComponent={StorybookLink}
       variant={NavItemVariant.Underline}
       color={Colorway.Warning}
       currentPath="/three"

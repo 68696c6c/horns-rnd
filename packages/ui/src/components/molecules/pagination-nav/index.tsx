@@ -1,9 +1,11 @@
 import React, { FC, useEffect, useState, MouseEvent } from 'react'
+import _range from 'lodash.range'
 
-import { NavItem } from '../../atoms'
-import { makeIntArray } from '../../../utils'
+import { PaginationLink } from '../../atoms'
 
 import * as Styled from './styles'
+
+const makePageRange = (totalPages: number) => _range(1, totalPages + 1)
 
 export const PaginationNav: FC<Styled.PaginationNavProps> = ({
   totalPages: totalPagesProp,
@@ -21,7 +23,7 @@ export const PaginationNav: FC<Styled.PaginationNavProps> = ({
   const currentPage = currentPageProp || 1
 
   const [current, setCurrent] = useState(currentPage)
-  const [pages, setPages] = useState(() => makeIntArray(totalPages))
+  const [pages, setPages] = useState(() => makePageRange(totalPages))
 
   useEffect(() => {
     if (typeof onChange !== 'undefined') {
@@ -34,15 +36,14 @@ export const PaginationNav: FC<Styled.PaginationNavProps> = ({
   }, [currentPage])
 
   useEffect(() => {
-    setPages(makeIntArray(totalPages))
+    setPages(makePageRange(totalPages))
   }, [totalPages])
 
   return (
     <Styled.PaginationNav currentPage={current} {...others}>
       {pages.map((page) => (
-        <NavItem
+        <PaginationLink
           key={page}
-          href="#"
           variant={variant}
           font={font}
           layout={layout}
@@ -56,7 +57,7 @@ export const PaginationNav: FC<Styled.PaginationNavProps> = ({
           }}
         >
           {page}
-        </NavItem>
+        </PaginationLink>
       ))}
     </Styled.PaginationNav>
   )

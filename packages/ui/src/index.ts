@@ -40,5 +40,3 @@ export {
   // ThemeProvider
   ThemeProvider,
 } from './components'
-
-export { LinkProvider } from './context'

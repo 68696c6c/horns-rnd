@@ -484,3 +484,29 @@ export const cursorArgTypes = {
     control: 'select',
   },
 }
+
+export interface StorybookLinkProps {
+  href?: string
+  children?: Node
+  current?: boolean
+  menuColor?: any
+  currentColor?: any
+  currentBorderWidth?: any
+  currentBorderStyle?: any
+}
+
+export const StorybookLink = ({
+  href,
+  children,
+  current,
+  menuColor,
+  currentColor,
+  currentBorderWidth,
+  currentBorderStyle,
+  ...others
+}: StorybookLinkProps) => (
+  // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/interactive-supports-focus
+  <a {...others} role="link">
+    {children}
+  </a>
+)

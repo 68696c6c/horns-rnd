@@ -2,6 +2,7 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 
+import { PaginationNavProps } from './styles'
 import { PaginationNav } from '.'
 
 export default {
@@ -9,13 +10,20 @@ export default {
   component: PaginationNav,
 } as Meta
 
-export const Default: Story = () => (
-  <>
-    <h1>PaginationNav</h1>
-    <p>
-      The <em>PaginationNav</em> component provides a fully themed and
-      functional pagination menu.
-    </p>
-    <PaginationNav totalPages={10} currentPage={3} />
-  </>
+const Template: Story<PaginationNavProps> = ({
+  totalPages,
+  currentPage,
+  ...others
+}: PaginationNavProps) => (
+  <PaginationNav
+    totalPages={totalPages}
+    currentPage={currentPage}
+    {...others}
+  />
 )
+
+export const Default = Template.bind({})
+Default.args = {
+  totalPages: 10,
+  currentPage: 3,
+}

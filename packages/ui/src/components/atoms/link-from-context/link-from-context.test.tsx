@@ -1,14 +1,15 @@
 import React from 'react'
 
 import { render, screen, assertStateStyles } from '../../test'
-import { LinkVariant as Variant, LinkProps } from '../../quarks'
+import { LinkVariant as Variant } from '../../quarks'
 
 import { Default, LinkVariant, ButtonVariant } from './stories'
+import { LinkFromContextProps } from '.'
 
 describe('LinkFromContext', () => {
-  let defaultArgs: LinkProps
+  let defaultArgs: LinkFromContextProps
   beforeEach(() => {
-    defaultArgs = { ...(Default.args as LinkProps) }
+    defaultArgs = { ...(Default.args as LinkFromContextProps) }
   })
 
   it('should render as default', () => {
@@ -27,7 +28,9 @@ describe('LinkFromContext', () => {
     })
     it('should support trait props', () => {
       const { container } = render(
-        <LinkVariant {...(LinkVariant.args as LinkProps)}>example</LinkVariant>,
+        <LinkVariant {...(LinkVariant.args as LinkFromContextProps)}>
+          example
+        </LinkVariant>,
       )
       expect(container).toMatchSnapshot()
     })
@@ -81,7 +84,7 @@ describe('LinkFromContext', () => {
     })
     it('should support trait props', () => {
       const { container } = render(
-        <ButtonVariant {...(ButtonVariant.args as LinkProps)}>
+        <ButtonVariant {...(ButtonVariant.args as LinkFromContextProps)}>
           example
         </ButtonVariant>,
       )

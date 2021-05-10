@@ -38,6 +38,6 @@ export {
 
 export { DataTable, FormControl, SiteNav } from './organisms'
 
-export { LinkProps } from './quarks'
+export { LinkProps, NavItemProps } from './quarks'
 
 export { default as ThemeProvider } from './theme-provider'
