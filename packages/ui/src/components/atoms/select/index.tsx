@@ -5,6 +5,7 @@ import React, {
   LegacyRef,
   ForwardedRef,
   Ref,
+  useRef,
 } from 'react'
 
 import { Colorway, ControlOption, InputType } from '@horns/theme'
@@ -55,15 +56,16 @@ const BaseSelect: FC<SelectProps> = ({
   defaultValue: defaultValueProp,
   ...others
 }: SelectProps) => {
+  const filterRef = useRef<HTMLInputElement>(null)
   const showFilter = showFilterProp || typeof filterOptions !== 'undefined'
   const {
-    filterRef,
     values,
     displayValues,
     options,
     handleFilter,
     handleOptionClick,
   } = useValues({
+    filterRef,
     multiple,
     filterOptions,
     placeholder: placeholderProp,
@@ -85,6 +87,10 @@ const BaseSelect: FC<SelectProps> = ({
   const handleFilterClick = (e: MouseEvent<HTMLInputElement>) =>
     e.stopPropagation()
 
+  const idCombobox = `${id}-combobox`
+  const idListbox = `${id}-listbox`
+  const idTextbox = `${id}-textbox`
+
   return (
     <>
       <input
@@ -94,7 +100,14 @@ const BaseSelect: FC<SelectProps> = ({
         name={name}
         value={values.join(',')}
       />
-      <Styled.Container open={open} minWidth={minWidth}>
+      <Styled.Container
+        id={idCombobox}
+        open={open}
+        minWidth={minWidth}
+        role="combobox"
+        aria-expanded={open && true}
+        aria-owns={showFilter ? idTextbox : undefined}
+      >
         <Styled.Select
           {...others}
           ref={controlRef}
@@ -106,36 +119,48 @@ const BaseSelect: FC<SelectProps> = ({
           {displayValues.join(', ')}
         </Styled.Select>
         <Styled.MenuContainer>
-          <Styled.SelectDropdown ref={menuRef} open={open} color={color}>
+          <Styled.SelectDropdown
+            id={idListbox}
+            ref={menuRef}
+            open={open}
+            color={color}
+            role="listbox"
+          >
             {showFilter && (
               <Styled.FilterOption>
                 <Styled.Filter
                   ref={filterRef}
                   type={InputType.Text}
-                  id={`${id}-select-filter`}
+                  id={idTextbox}
                   name={`${name}_select_filter`}
                   onClick={handleFilterClick}
                   onKeyUp={handleFilter}
                   autoComplete="off"
+                  aria-autocomplete="none"
+                  role="textbox"
+                  aria-controls={idListbox}
                 />
               </Styled.FilterOption>
             )}
-            {options.map(({ label, value }) => (
-              <Styled.SelectOption
-                key={`${id}-select-option-${label}`}
-                value={value}
-                label={label}
-                onClick={(event: MouseEvent<HTMLLIElement>) => {
-                  handleOptionClick(event)
-                  toggleOpen()
-                }}
-                color={
-                  values.includes(value) ? Colorway.BackgroundAlt : undefined
-                }
-              >
-                {label}
-              </Styled.SelectOption>
-            ))}
+            {options.map(({ label, value }) => {
+              const isSelected = values.includes(value)
+              return (
+                <Styled.SelectOption
+                  key={`${id}-select-option-${label}`}
+                  value={value}
+                  label={label}
+                  onClick={(event: MouseEvent<HTMLLIElement>) => {
+                    handleOptionClick(event)
+                    toggleOpen()
+                  }}
+                  color={isSelected ? Colorway.BackgroundAlt : undefined}
+                  role="option"
+                  aria-selected={isSelected}
+                >
+                  {label}
+                </Styled.SelectOption>
+              )
+            })}
           </Styled.SelectDropdown>
         </Styled.MenuContainer>
       </Styled.Container>

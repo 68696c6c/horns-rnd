@@ -13,7 +13,7 @@ export const menuStyles = () => [
       return shadowed({ theme, shadow })
     }
     return css`
-      display: none;
+      visibility: hidden;
     `
   },
   () => css`

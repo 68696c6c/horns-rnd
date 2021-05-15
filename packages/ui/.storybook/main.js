@@ -20,7 +20,11 @@ function getPackageDir(filepath) {
 
 module.exports = {
   stories: ['../src/**/stories.tsx', '../src/**/*.stories.tsx'],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
+  addons: [
+    '@storybook/addon-a11y',
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+  ],
   // After adding @emotion/babel-plugin to use component selectors, Storybook started throwing
   // "Can't resolve '@emotion/styled/base'" errors.  Adding this webpackFinal seems to fix the
   // problem. https://github.com/storybookjs/storybook/issues/13277#issuecomment-751733550

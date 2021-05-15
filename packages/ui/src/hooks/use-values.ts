@@ -1,11 +1,4 @@
-import {
-  EventHandler,
-  MouseEvent,
-  RefObject,
-  useEffect,
-  useRef,
-  useState,
-} from 'react'
+import { EventHandler, MouseEvent, RefObject, useEffect, useState } from 'react'
 import { useDebouncedCallback } from 'use-debounce'
 
 import { ControlOption } from '@horns/theme'
@@ -76,6 +69,7 @@ export type FilterOptionsFunc = (
 ) => void
 
 export interface ValuesArgs {
+  filterRef: RefObject<HTMLInputElement>
   options: ControlOption[]
   multiple?: boolean
   filterOptions?: FilterOptionsFunc
@@ -86,7 +80,7 @@ export interface ValuesArgs {
 }
 
 export interface ValuesResult {
-  filterRef: RefObject<HTMLInputElement>
+  // filterRef: RefObject<HTMLInputElement>
   values: Values
   displayValues: Values
   options: ControlOption[]
@@ -95,6 +89,7 @@ export interface ValuesResult {
 }
 
 export const useValues = ({
+  filterRef,
   multiple,
   filterOptions,
   onChange,
@@ -108,7 +103,7 @@ export const useValues = ({
   const defaultValues =
     typeof defaultValuesProp === 'undefined' ? [] : defaultValuesProp
 
-  const filterRef = useRef<HTMLInputElement>(null)
+  // const filterRef = useRef<HTMLInputElement>(null)
 
   const [displayValues, setDisplayValues] = useState<Values>([placeholder])
   const [values, setValues] = useState<Values>(defaultValues)
@@ -187,7 +182,7 @@ export const useValues = ({
   }, [changeEvent, onChange])
 
   return {
-    filterRef,
+    // filterRef,
     values,
     displayValues,
     options,
