@@ -69,7 +69,7 @@ export type FilterOptionsFunc = (
 ) => void
 
 export interface ValuesArgs {
-  filterRef: RefObject<HTMLInputElement>
+  filterRef?: RefObject<HTMLInputElement>
   options: ControlOption[]
   multiple?: boolean
   filterOptions?: FilterOptionsFunc
@@ -80,7 +80,6 @@ export interface ValuesArgs {
 }
 
 export interface ValuesResult {
-  // filterRef: RefObject<HTMLInputElement>
   values: Values
   displayValues: Values
   options: ControlOption[]
@@ -103,8 +102,6 @@ export const useValues = ({
   const defaultValues =
     typeof defaultValuesProp === 'undefined' ? [] : defaultValuesProp
 
-  // const filterRef = useRef<HTMLInputElement>(null)
-
   const [displayValues, setDisplayValues] = useState<Values>([placeholder])
   const [values, setValues] = useState<Values>(defaultValues)
   const [options, setOptions] = useState<ControlOption[]>(optionsProp)
@@ -117,7 +114,7 @@ export const useValues = ({
 
   const handleFilter = () => {
     debouncedFilterOptions(
-      filterRef.current?.value || '',
+      filterRef?.current?.value || '',
       optionsProp,
       (result: ControlOption[]) => setOptions(result),
     )

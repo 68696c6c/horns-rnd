@@ -1,43 +1,50 @@
+import { ForwardedRef } from 'react'
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-import { Cursor, Font, HoverState, Size, StatusState } from '@horns/theme'
-
 import {
-  Bordered,
-  bordered,
-  ChromaticNotification,
-  chromaticControl,
-  rounded,
-  Rounded,
-  Styled,
-  padded,
-  Padded,
-  shadowed,
-  Chromatic,
-  Interactive,
-  Typographic,
-  chromatic,
-  typographic,
-  interactive,
-} from '../../../traits'
+  ControlOption,
+  Cursor,
+  Font,
+  HoverState,
+  Size,
+  StatusState,
+} from '@horns/theme'
+
+import { Values } from '../../../hooks'
 import {
   ControlProps,
   controlStyles,
   MenuProps,
   menuStyles,
 } from '../../quarks'
+import {
+  bordered,
+  Bordered,
+  chromatic,
+  Chromatic,
+  chromaticControl,
+  ChromaticNotification,
+  interactive,
+  Interactive,
+  isBorderProperties,
+  padded,
+  Padded,
+  rounded,
+  Rounded,
+  Shadowed,
+  shadowed,
+  Styled,
+  typographic,
+  Typographic,
+} from '../../../traits'
 
-export interface ComboboxProps extends ControlProps {
-  open?: boolean
-  placeholder?: string
-}
-
-export interface ContainerProps extends MenuProps {
+export interface ContainerProps extends MenuProps, Rounded {
   minWidth?: number
 }
 
 export const Container = styled.div<ContainerProps>(
+  rounded,
   ({ theme, open, shadow }) => open && shadowed({ theme, shadow }),
   ({ minWidth }) =>
     css`
@@ -47,28 +54,42 @@ export const Container = styled.div<ContainerProps>(
     `,
 )
 
-export const Textbox = styled.input(
+// TODO: no "any"! what is the correct type??
+const comboboxControlStyles = (): any[] => [
   controlStyles,
-  () => css`
-    position: absolute;
-    width: 100%;
-    left: 0;
+  css`
     box-sizing: border-box;
     height: auto;
     min-height: 1em;
+    width: 100%;
   `,
-)
+]
 
-export const TextboxWidthController = styled.span(
-  controlStyles,
-  () =>
+export interface ComboboxProps
+  extends Omit<ControlProps, 'defaultValue'>,
+    Shadowed {
+  open?: boolean
+  placeholder?: string
+  options?: ControlOption[]
+  forwardedRef?: ForwardedRef<HTMLInputElement | undefined>
+  defaultValue?: Values
+}
+
+export const Textbox = styled.input<ComboboxProps>(
+  comboboxControlStyles,
+  () => css`
+    position: absolute;
+    left: 0;
+  `,
+  ({ open }) =>
+    open &&
     css`
-      box-sizing: border-box;
-      height: auto;
-      min-height: 1em;
-      width: 100%;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     `,
 )
+
+export const TextboxWidthController = styled.span(comboboxControlStyles)
 
 export interface TextboxWrapperProps {
   open?: boolean
@@ -88,13 +109,9 @@ export const TextboxWrapper = styled.span<TextboxWrapperProps>(
 )
 
 export const DisplayValue = styled.div<ControlProps & TextboxWrapperProps>(
-  controlStyles,
+  comboboxControlStyles,
   ({ minWidth }) =>
     css`
-      box-sizing: border-box;
-      height: auto;
-      min-height: 1em;
-      width: 100%;
       min-width: ${minWidth && `${minWidth}px`};
     `,
   ({ open }) =>
@@ -129,16 +146,30 @@ export const Listbox = styled.ul<ListboxProps>(
     // Padding is included and then set to zero on the sides so that if the border radius is
     // increased hopefully the bottom padding will prevent the last item from overlapping the bottom
     // corners of the dropdown.
-    () => css`
-      border-top: none;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-      top: -${theme.sizes[theme.controls.border.all?.width as Size]};
-      padding-left: 0;
-      padding-right: 0;
-      margin: 0;
-      list-style-type: none;
-    `,
+    () => {
+      let borderWidth
+      if (isBorderProperties(border)) {
+        borderWidth = border.width
+      } else if (border?.all?.width) {
+        borderWidth = border.all.width
+      } else if (border?.y?.width) {
+        borderWidth = border.y.width
+      } else if (border?.top?.width) {
+        borderWidth = border.top.width
+      } else {
+        borderWidth = theme.controls.border.all?.width
+      }
+      return css`
+        border-top: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        top: -${theme.sizes[borderWidth as Size]};
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
+        list-style-type: none;
+      `
+    },
   ],
 )
 

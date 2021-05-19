@@ -2,7 +2,13 @@
 import { EventHandler } from 'react'
 import { css } from '@emotion/react'
 
-import { Cursor, Font, HoverState, StatusState } from '@horns/theme'
+import {
+  ControlOption,
+  Cursor,
+  Font,
+  HoverState,
+  StatusState,
+} from '@horns/theme'
 
 import {
   Bordered,
@@ -37,6 +43,10 @@ export interface ControlProps
   multiline?: boolean
   multiple?: boolean
   autoComplete?: string
+}
+
+export interface ControlOptionProps {
+  options?: ControlOption[]
 }
 
 export const controlStyles = ({

@@ -1,73 +1,57 @@
-/* global window */
 import {
-  Dispatch,
   MutableRefObject,
-  SetStateAction,
   useCallback,
   useEffect,
   useRef,
   useState,
 } from 'react'
 
-export interface MenuProps {
+export interface MenuArgs {
   onOpen?(): void
   onClose?(): void
-  initialOpen?: boolean
-  forceWidth?: boolean
+  isMenuElement(target: EventTarget): boolean
 }
 
-const setWidth = <C extends HTMLElement, M extends HTMLElement>(
-  controlRef: MutableRefObject<C | null>,
-  menuRef: MutableRefObject<M | null>,
-  setMinWidth: Dispatch<SetStateAction<number>>,
-): void => {
-  const controlWidth = controlRef?.current?.offsetWidth || 0
-  const menuWidth = menuRef?.current?.offsetWidth || 0
-  if (controlWidth < menuWidth) {
-    setMinWidth(menuWidth)
-  } else if (controlWidth > menuWidth) {
-    setMinWidth(controlWidth)
-  }
+export interface MenuResult<M extends HTMLElement> {
+  open: boolean
+  minWidth: number
+  toggleOpen: () => void
+  menuRef: MutableRefObject<M | null>
 }
 
-export const useMenu = <C extends HTMLElement, M extends HTMLElement>({
-  initialOpen,
+export const useMenu = <M extends HTMLElement>({
   onOpen,
   onClose,
-  forceWidth,
-}: MenuProps): [
-  boolean,
-  number,
-  () => void,
-  MutableRefObject<C | null>,
-  MutableRefObject<M | null>,
-] => {
-  const controlRef = useRef<C>(null)
+  isMenuElement,
+}: MenuArgs): MenuResult<M> => {
   const menuRef = useRef<M>(null)
-
+  const [open, setOpen] = useState(false)
   const [minWidth, setMinWidth] = useState(0)
-
-  const [open, setOpen] = useState(initialOpen || forceWidth || false)
-
-  const handleClick = useCallback((event) => {
-    if (event.target !== controlRef.current) {
-      setOpen(false)
-    }
+  const toggleOpen = () => {
+    setOpen(!open)
+  }
+  useEffect(() => {
+    const menuWidth = menuRef?.current?.offsetWidth || 0
+    setMinWidth(menuWidth)
   }, [])
+
+  const handleClick = useCallback(
+    (event) => {
+      if (!isMenuElement(event.target)) {
+        setOpen(false)
+      }
+    },
+    [isMenuElement],
+  )
 
   useEffect(() => {
     window.addEventListener('click', handleClick)
     return () => {
       window.removeEventListener('click', handleClick)
     }
-  })
-
-  const toggleOpen = () => {
-    setOpen(!open)
-  }
+  }, [handleClick])
 
   useEffect(() => {
-    setWidth(controlRef, menuRef, setMinWidth)
     if (open) {
       if (typeof onOpen !== 'undefined') {
         onOpen()
@@ -75,14 +59,12 @@ export const useMenu = <C extends HTMLElement, M extends HTMLElement>({
     } else if (typeof onClose !== 'undefined') {
       onClose()
     }
-  }, [open, onClose, onOpen])
+  }, [open, onOpen, onClose])
 
-  useEffect(() => {
-    if (forceWidth) {
-      setWidth(controlRef, menuRef, setMinWidth)
-      setOpen(false)
-    }
-  }, [forceWidth])
-
-  return [open, minWidth, toggleOpen, controlRef, menuRef]
+  return {
+    open,
+    minWidth,
+    toggleOpen,
+    menuRef,
+  }
 }

@@ -2,6 +2,8 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
+import { ColorwayNotification, Cursor, Font, Size } from '@horns/theme'
+
 import { Combobox, ComboboxProps } from '.'
 
 export default {
@@ -29,6 +31,15 @@ Default.args = {
   options,
 }
 
+export const Filter = Template.bind({})
+Filter.args = {
+  ...Default.args,
+  id: 'filter-select',
+  name: 'filter',
+  placeholder: 'Filter one...',
+  showFilter: true,
+}
+
 export const Multiselect = Template.bind({})
 Multiselect.args = {
   ...Default.args,
@@ -36,4 +47,28 @@ Multiselect.args = {
   name: 'example_multiselect',
   placeholder: 'Select one or more...',
   multiple: true,
+}
+
+export const MultiselectFilter = Template.bind({})
+MultiselectFilter.args = {
+  ...Default.args,
+  id: 'filter-multiselect',
+  name: 'filter_multiselect',
+  placeholder: 'Filter one or more...',
+  multiple: true,
+  showFilter: true,
+}
+
+export const Props = Template.bind({})
+Props.args = {
+  id: 'example-select',
+  name: 'example_select',
+  placeholder: 'Select one...',
+  options,
+  border: { all: { width: Size.Small } },
+  color: ColorwayNotification.Info,
+  padding: { all: Size.Small },
+  radius: { all: Size.Large },
+  font: Font.Emphasized,
+  cursor: Cursor.Alias,
 }

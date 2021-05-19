@@ -1,20 +1,9 @@
-import React, {
-  FC,
-  MouseEvent,
-  LegacyRef,
-  ForwardedRef,
-  useRef,
-  useState,
-  useEffect,
-  MutableRefObject,
-  Dispatch,
-  SetStateAction,
-  useCallback,
-} from 'react'
+import React, { FC, MouseEvent, LegacyRef, ForwardedRef, useRef } from 'react'
 
 import { Colorway, ControlOption, InputType } from '@horns/theme'
 
-import { useValues, Values } from '../../../hooks'
+import { useMenu, useValues, Values } from '../../../hooks'
+import { ControlOptionProps } from '../../quarks'
 
 import * as Styled from './styles'
 
@@ -25,19 +14,12 @@ export type FilterOptionsFuncProp = (
 ) => void
 
 export interface ComboboxProps
-  extends Omit<Styled.ComboboxProps, 'defaultValue'> {
-  options?: ControlOption[]
+  extends Omit<Styled.ComboboxProps, 'defaultValue'>,
+    ControlOptionProps {
   filterOptions?: FilterOptionsFuncProp
   forwardedRef?: ForwardedRef<HTMLInputElement | undefined>
   defaultValue?: Values
-}
-
-const setWidth = <M extends HTMLElement>(
-  menuRef: MutableRefObject<M | null>,
-  setMinWidth: Dispatch<SetStateAction<number>>,
-) => {
-  const menuWidth = menuRef?.current?.offsetWidth || 0
-  setMinWidth(menuWidth)
+  showFilter?: boolean
 }
 
 // TODO: this is an attempt at making a more accessible Select component; replace Select with this.
@@ -49,13 +31,18 @@ export const Combobox: FC<ComboboxProps> = ({
   onChange,
   color,
   forwardedRef,
+  shadow,
+  radius,
+  showFilter,
   options: optionsProp,
   placeholder: placeholderProp,
   defaultValue: defaultValueProp,
   ...others
 }: ComboboxProps) => {
-  const idCombobox = `${id}-combobox`
   const idListbox = `${id}-listbox`
+  const displayRef = useRef(null)
+
+  const idCombobox = `${id}-combobox`
   const comboboxRef = useRef<HTMLInputElement>(null)
 
   const {
@@ -75,44 +62,24 @@ export const Combobox: FC<ComboboxProps> = ({
     timeout: 100,
   })
 
-  // TODO: reconcile this behavior with the useMenu hook.
-  const displayRef = useRef(null)
-  const menuRef = useRef(null)
-  const [open, setOpen] = useState(false)
-  const [minWidth, setMinWidth] = useState(0)
-  const toggleOpen = () => {
-    setOpen(!open)
-  }
-  useEffect(() => {
-    setWidth<HTMLUListElement>(menuRef, setMinWidth)
-  }, [])
-  const handleClick = useCallback((event) => {
-    if (
-      event.target !== comboboxRef.current &&
-      event.target !== displayRef.current
-    ) {
-      setOpen(false)
-    }
-  }, [])
-  useEffect(() => {
-    window.addEventListener('click', handleClick)
-    return () => {
-      window.removeEventListener('click', handleClick)
-    }
-  }, [handleClick])
-  useEffect(() => {
-    setWidth<HTMLUListElement>(menuRef, setMinWidth)
-  }, [values])
-  useEffect(() => {
-    if (open) {
-      comboboxRef.current?.focus()
-    } else if (comboboxRef.current) {
+  const onOpen = () => comboboxRef.current?.focus()
+  const onClose = () => {
+    if (comboboxRef.current) {
       comboboxRef.current.value = ''
     }
-  }, [open])
+  }
+
+  const isMenuElement = (target: EventTarget) =>
+    target === comboboxRef.current || target === displayRef.current
+
+  const { open, minWidth, toggleOpen, menuRef } = useMenu<HTMLUListElement>({
+    onOpen,
+    onClose,
+    isMenuElement,
+  })
 
   return (
-    <Styled.Container>
+    <Styled.Container open={open} shadow={shadow} radius={radius}>
       <input
         ref={forwardedRef as LegacyRef<HTMLInputElement>}
         type="hidden"
@@ -121,56 +88,75 @@ export const Combobox: FC<ComboboxProps> = ({
         value={values.join(',')}
       />
       <Styled.DisplayValue
+        {...others}
         ref={displayRef}
-        open={open}
+        open={!showFilter ? false : open}
         minWidth={minWidth}
         onClick={toggleOpen}
+        multiple={multiple}
+        color={color}
+        radius={radius}
       >
-        {open ? '' : displayValues.join(', ')}
+        {showFilter && open ? '' : displayValues.join(', ')}
       </Styled.DisplayValue>
-      <Styled.TextboxWrapper open={open} minWidth={minWidth}>
-        <Styled.TextboxWidthController aria-hidden>
-          {displayValues.join(', ')}
-        </Styled.TextboxWidthController>
-        <Styled.Textbox
-          {...others}
-          ref={comboboxRef}
-          id={idCombobox}
-          role="combobox"
-          autoComplete="off"
-          aria-autocomplete="none"
-          aria-owns={idListbox}
-          aria-expanded={open}
-          aria-haspopup="true"
-          onClick={toggleOpen}
-          onKeyUp={handleFilter}
-          type={InputType.Text}
-          placeholder={displayValues.join(', ')}
-          multiple={multiple}
-          color={color}
-        />
-      </Styled.TextboxWrapper>
+      {showFilter && (
+        <Styled.TextboxWrapper open={open} minWidth={minWidth}>
+          <Styled.TextboxWidthController aria-hidden>
+            {displayValues.join(', ')}
+          </Styled.TextboxWidthController>
+          <Styled.Textbox
+            {...others}
+            ref={comboboxRef}
+            id={idCombobox}
+            role="combobox"
+            autoComplete="off"
+            aria-autocomplete="none"
+            aria-owns={idListbox}
+            aria-expanded={open}
+            aria-haspopup="true"
+            onClick={toggleOpen}
+            onKeyUp={handleFilter}
+            type={InputType.Text}
+            placeholder={displayValues.join(', ')}
+            multiple={multiple}
+            color={color}
+            shadow={shadow}
+            radius={radius}
+            open={open}
+          />
+        </Styled.TextboxWrapper>
+      )}
       <Styled.ListboxContainer>
-        <Styled.Listbox id={idListbox} ref={menuRef} open={open} role="listbox">
-          {options.map(({ label, value }) => {
-            const isSelected = values.includes(value)
-            return (
-              <Styled.Option
-                key={`${id}-select-option-${label}`}
-                value={value}
-                label={label}
-                onClick={(event: MouseEvent<HTMLLIElement>) => {
-                  handleOptionClick(event)
-                  toggleOpen()
-                }}
-                color={isSelected ? Colorway.BackgroundAlt : undefined}
-                role="option"
-                aria-selected={isSelected}
-              >
-                {label}
-              </Styled.Option>
-            )
-          })}
+        <Styled.Listbox
+          {...others}
+          color={color}
+          shadow={shadow}
+          radius={radius}
+          id={id}
+          ref={menuRef}
+          open={open}
+          role="listbox"
+        >
+          {options &&
+            options.map(({ label, value }) => {
+              const isSelected = values.includes(value)
+              return (
+                <Styled.Option
+                  key={`${id}-option-${label}`}
+                  value={value}
+                  label={label}
+                  onClick={(event: MouseEvent<HTMLLIElement>) => {
+                    handleOptionClick(event)
+                    toggleOpen()
+                  }}
+                  color={isSelected ? Colorway.BackgroundAlt : undefined}
+                  role="option"
+                  aria-selected={isSelected}
+                >
+                  {label}
+                </Styled.Option>
+              )
+            })}
         </Styled.Listbox>
       </Styled.ListboxContainer>
     </Styled.Container>

@@ -10,7 +10,8 @@ import React, {
 
 import { Colorway, ControlOption, InputType } from '@horns/theme'
 
-import { useMenu, useValues, Values } from '../../../hooks'
+import { useValues, Values } from '../../../hooks'
+import { useMenu } from './use-menu'
 
 import * as Styled from './styles'
 

@@ -1,4 +1,4 @@
-export { bordered, Bordered } from './bordered'
+export { bordered, Bordered, isBorderProperties } from './bordered'
 export {
   chromatic,
   chromaticText,

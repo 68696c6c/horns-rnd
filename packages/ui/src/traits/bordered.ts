@@ -4,6 +4,13 @@ import { BordersConfig, BorderProperties } from '@horns/theme'
 
 import { Styled } from './styled'
 
+export const isBorderProperties = (
+  tbd?: BordersConfig | BorderProperties,
+): tbd is BorderProperties =>
+  typeof tbd !== 'undefined' &&
+  typeof (tbd as BorderProperties).width === 'undefined' &&
+  typeof (tbd as BorderProperties).style === 'undefined'
+
 export interface Bordered {
   border?: BordersConfig | BorderProperties
 }
