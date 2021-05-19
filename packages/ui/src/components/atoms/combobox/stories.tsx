@@ -61,8 +61,8 @@ MultiselectFilter.args = {
 
 export const Props = Template.bind({})
 Props.args = {
-  id: 'example-select',
-  name: 'example_select',
+  id: 'props-select',
+  name: 'props_select',
   placeholder: 'Select one...',
   options,
   border: { all: { width: Size.Small } },

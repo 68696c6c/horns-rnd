@@ -1,4 +1,12 @@
-import React, { FC, MouseEvent, LegacyRef, ForwardedRef, useRef } from 'react'
+import React, {
+  FC,
+  MouseEvent,
+  LegacyRef,
+  ForwardedRef,
+  useRef,
+  forwardRef,
+  Ref,
+} from 'react'
 
 import { Colorway, ControlOption, InputType } from '@horns/theme'
 
@@ -6,6 +14,7 @@ import { useMenu, useValues, Values } from '../../../hooks'
 import { ControlOptionProps } from '../../quarks'
 
 import * as Styled from './styles'
+import { SelectProps } from '../select'
 
 export type FilterOptionsFuncProp = (
   value: string,
@@ -132,7 +141,7 @@ export const Combobox: FC<ComboboxProps> = ({
           color={color}
           shadow={shadow}
           radius={radius}
-          id={id}
+          id={idListbox}
           ref={menuRef}
           open={open}
           role="listbox"
@@ -162,3 +171,15 @@ export const Combobox: FC<ComboboxProps> = ({
     </Styled.Container>
   )
 }
+
+export const Select = forwardRef(
+  (props: SelectProps, ref: Ref<HTMLInputElement | undefined>) => (
+    <Combobox {...props} forwardedRef={ref} />
+  ),
+)
+
+export const Multiselect = forwardRef(
+  (props: SelectProps, ref: Ref<HTMLInputElement | undefined>) => (
+    <Combobox {...props} forwardedRef={ref} multiple />
+  ),
+)
