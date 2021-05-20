@@ -21,7 +21,7 @@ export type FilterOptionsFuncProp = (
   callback: (result: ControlOption[]) => void,
 ) => void
 
-export interface ComboboxProps
+export interface SelectProps
   extends Omit<Styled.ComboboxProps, 'defaultValue'>,
     ControlOptionProps {
   filterOptions?: FilterOptionsFuncProp
@@ -30,7 +30,7 @@ export interface ComboboxProps
   showFilter?: boolean
 }
 
-export const Combobox: FC<ComboboxProps> = ({
+const BaseSelect: FC<SelectProps> = ({
   id,
   multiple,
   filterOptions,
@@ -45,7 +45,7 @@ export const Combobox: FC<ComboboxProps> = ({
   placeholder: placeholderProp,
   defaultValue: defaultValueProp,
   ...others
-}: ComboboxProps) => {
+}: SelectProps) => {
   const idListbox = `${id}-listbox`
   const displayRef = useRef(null)
 
@@ -171,13 +171,13 @@ export const Combobox: FC<ComboboxProps> = ({
 }
 
 export const Select = forwardRef(
-  (props: ComboboxProps, ref: Ref<HTMLInputElement | undefined>) => (
-    <Combobox {...props} forwardedRef={ref} />
+  (props: SelectProps, ref: Ref<HTMLInputElement | undefined>) => (
+    <BaseSelect {...props} forwardedRef={ref} />
   ),
 )
 
 export const Multiselect = forwardRef(
-  (props: ComboboxProps, ref: Ref<HTMLInputElement | undefined>) => (
-    <Combobox {...props} forwardedRef={ref} multiple />
+  (props: SelectProps, ref: Ref<HTMLInputElement | undefined>) => (
+    <BaseSelect {...props} forwardedRef={ref} multiple />
   ),
 )

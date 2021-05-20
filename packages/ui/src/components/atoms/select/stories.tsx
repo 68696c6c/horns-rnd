@@ -4,11 +4,11 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 
 import { ColorwayNotification, Cursor, Font, Size } from '@horns/theme'
 
-import { Combobox, ComboboxProps } from '.'
+import { BaseSelect, SelectProps } from '.'
 
 export default {
   title: 'Atoms/Combobox',
-  component: Combobox,
+  component: BaseSelect,
 } as Meta
 
 const options = [
@@ -19,8 +19,8 @@ const options = [
   { label: 'Five', value: '5' },
 ]
 
-const Template: Story<ComboboxProps> = (props: ComboboxProps) => (
-  <Combobox {...props} />
+const Template: Story<SelectProps> = (props: SelectProps) => (
+  <BaseSelect {...props} />
 )
 
 export const Default = Template.bind({})
