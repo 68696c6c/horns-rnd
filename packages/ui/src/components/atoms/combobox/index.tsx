@@ -14,7 +14,6 @@ import { useMenu, useValues, Values } from '../../../hooks'
 import { ControlOptionProps } from '../../quarks'
 
 import * as Styled from './styles'
-import { SelectProps } from '../select'
 
 export type FilterOptionsFuncProp = (
   value: string,
@@ -31,7 +30,6 @@ export interface ComboboxProps
   showFilter?: boolean
 }
 
-// TODO: this is an attempt at making a more accessible Select component; replace Select with this.
 export const Combobox: FC<ComboboxProps> = ({
   id,
   multiple,
@@ -173,13 +171,13 @@ export const Combobox: FC<ComboboxProps> = ({
 }
 
 export const Select = forwardRef(
-  (props: SelectProps, ref: Ref<HTMLInputElement | undefined>) => (
+  (props: ComboboxProps, ref: Ref<HTMLInputElement | undefined>) => (
     <Combobox {...props} forwardedRef={ref} />
   ),
 )
 
 export const Multiselect = forwardRef(
-  (props: SelectProps, ref: Ref<HTMLInputElement | undefined>) => (
+  (props: ComboboxProps, ref: Ref<HTMLInputElement | undefined>) => (
     <Combobox {...props} forwardedRef={ref} multiple />
   ),
 )
