@@ -26,6 +26,10 @@ import {
   typographic,
 } from '../../traits'
 
+export interface ControlOptionProps {
+  options?: ControlOption[]
+}
+
 export interface ControlProps
   extends Bordered,
     ChromaticNotification,
@@ -43,10 +47,6 @@ export interface ControlProps
   multiline?: boolean
   multiple?: boolean
   autoComplete?: string
-}
-
-export interface ControlOptionProps {
-  options?: ControlOption[]
 }
 
 export const controlStyles = ({

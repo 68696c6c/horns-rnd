@@ -21,6 +21,6 @@ export const gridStyles = ({
   responsive({
     theme,
     breakpoint,
-    responsiveStyles: gridded(theme, gapped, gap),
+    responsiveStyles: gridded({ theme, gapped, gap }),
   }),
 ]

@@ -1,17 +1,19 @@
 import { css, SerializedStyles } from '@emotion/react'
 
-import { Theme, Size } from '@horns/theme'
+import { Size } from '@horns/theme'
+
+import { Styled } from './styled'
 
 export interface Gridded {
   gapped?: boolean
   gap?: Size
 }
 
-export const gridded = (
-  theme: Theme,
-  gapped?: boolean,
-  gap?: Size,
-): SerializedStyles => css`
+export const gridded = ({
+  theme,
+  gapped,
+  gap,
+}: Styled & Gridded): SerializedStyles => css`
   display: grid;
   grid-gap: ${gapped && theme.sizes[gap || theme.grid.gap]};
 `
