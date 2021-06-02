@@ -2,11 +2,13 @@ import React, { ElementType, FC } from 'react'
 
 import { ULType } from '@horns/theme'
 
+import { useRowIDs } from '../../../hooks'
+
 import * as Styled from './styles'
 
 export interface LIProps extends Styled.LIProps {
   Icon?: ElementType
-  type?: ULType
+  listType?: ULType
 }
 
 export const LI: FC<LIProps> = ({
@@ -43,35 +45,40 @@ export const UL: FC<ULProps> = ({
   markerColor,
   font,
   itemData,
-  type: typeProp,
+  listType: listTypeProp,
   Icon,
   ...others
 }: ULProps) => {
-  const type = typeProp || ULType.Disc
+  const [itemIDs] = useRowIDs(itemData)
+  const listType = listTypeProp || ULType.Disc
   if (itemData && itemData.length > 0) {
     return (
       <Styled.UL
         color={color}
         markerColor={markerColor}
         font={font}
-        type={type}
+        listType={listType}
         {...others}
       >
         {itemData.map(
-          ({
-            Icon: ItemIcon,
-            children: itemChildren,
-            color: itemColor,
-            markerColor: itemMarkerColor,
-            font: itemFont,
-            type: itemType,
-          }: LIProps) => (
+          (
+            {
+              Icon: ItemIcon,
+              children: itemChildren,
+              color: itemColor,
+              markerColor: itemMarkerColor,
+              font: itemFont,
+              listType: itemType,
+            }: LIProps,
+            index,
+          ) => (
             <LI
+              key={itemIDs[index]}
               Icon={ItemIcon || Icon}
               color={itemColor || color}
               markerColor={itemMarkerColor || markerColor}
               font={itemFont || font}
-              type={itemType || type}
+              listType={itemType || listType}
             >
               {itemChildren}
             </LI>
@@ -85,7 +92,7 @@ export const UL: FC<ULProps> = ({
       color={color}
       markerColor={markerColor}
       font={font}
-      type={type}
+      listType={listType}
       {...others}
     >
       {children}

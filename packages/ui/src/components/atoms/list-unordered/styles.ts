@@ -12,20 +12,20 @@ import {
 } from '../../quarks'
 
 export interface ULProps extends ListProps {
-  type?: ULType
+  listType?: ULType
 }
 
 export const UL = styled.ul<ULProps>(
   listStyles,
-  ({ type }) =>
+  ({ listType }) =>
     css`
-      list-style-type: ${type};
+      list-style-type: ${listType};
     `,
 )
 
 export interface LIProps extends BaseLIProps {
   hasIcon?: boolean
-  type?: ULType
+  listType?: ULType
 }
 
 export const LI = styled(BaseLI)<LIProps>(

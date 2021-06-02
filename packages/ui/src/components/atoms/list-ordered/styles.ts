@@ -11,23 +11,23 @@ import {
 } from '../../quarks'
 
 export interface LIProps extends BaseLIProps {
-  type?: OLType
+  listType?: OLType
 }
 
 export const LI = styled(BaseLI)<LIProps>(
-  ({ type }) => css`
-    list-style-type: ${type};
+  ({ listType }) => css`
+    list-style-type: ${listType};
   `,
 )
 
 export interface OLProps extends ListProps {
-  type?: OLType
+  listType?: OLType
 }
 
 export const OL = styled.ol<OLProps>(
   listStyles,
-  ({ type }) =>
+  ({ listType }) =>
     css`
-      list-style-type: ${type};
+      list-style-type: ${listType};
     `,
 )

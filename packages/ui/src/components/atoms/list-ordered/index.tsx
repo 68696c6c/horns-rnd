@@ -2,6 +2,8 @@ import React, { ElementType, FC } from 'react'
 
 import { OLType } from '@horns/theme'
 
+import { useRowIDs } from '../../../hooks'
+
 import * as Styled from './styles'
 
 export interface OLProps extends Styled.OLProps {
@@ -16,32 +18,37 @@ export const OL: FC<OLProps> = ({
   font,
   itemData,
   Icon,
-  type: typeProp,
+  listType: listTypeProp,
   ...others
 }: OLProps) => {
-  const type = typeProp || OLType.l
+  const [itemIDs] = useRowIDs(itemData)
+  const listType = listTypeProp || OLType.Decimal
   if (itemData && itemData.length > 0) {
     return (
       <Styled.OL
         color={color}
         markerColor={markerColor}
         font={font}
-        type={type}
+        listType={listType}
         {...others}
       >
         {itemData.map(
-          ({
-            children: itemChildren,
-            color: itemColor,
-            markerColor: itemMarkerColor,
-            font: itemFont,
-            type: itemType,
-          }: Styled.LIProps) => (
+          (
+            {
+              children: itemChildren,
+              color: itemColor,
+              markerColor: itemMarkerColor,
+              font: itemFont,
+              listType: itemType,
+            }: Styled.LIProps,
+            index,
+          ) => (
             <Styled.LI
+              key={itemIDs[index]}
               color={itemColor || color}
               markerColor={itemMarkerColor || markerColor}
               font={itemFont || font}
-              type={itemType || type}
+              listType={itemType || listType}
             >
               {itemChildren}
             </Styled.LI>
@@ -55,7 +62,7 @@ export const OL: FC<OLProps> = ({
       color={color}
       markerColor={markerColor}
       font={font}
-      type={type}
+      listType={listType}
       {...others}
     >
       {children}

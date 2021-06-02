@@ -40,7 +40,7 @@ Props.args = {
   font: Font.Strong,
   gapped: true,
   gap: Size.XXSmall,
-  type: OLType.A,
+  listType: OLType.A,
 }
 
 export const ItemData = Template.bind({})
